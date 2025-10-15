@@ -1,0 +1,105 @@
+{
+  "success": true,
+  "creationTimestamp": 1730210666,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1}{2} : \\frac{1}{5}$"
+        },
+        {
+          "id": "NjoAv",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1730210836582,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{1}{2} : \\frac{1}{5}$  is niet gelijk aan  $\\frac{6}{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{6}{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{6}{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{5}{2}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1}{2} : \\left(\\frac{1}{5}\\right)$"
+            },
+            {
+              "result": "$\\frac{1}{2}\\cdot \\frac{5}{1}$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Delen door een breuk is vermenigvuldigen met het omgekeerde"
+            },
+            {
+              "result": "$\\frac{5}{2}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "nl": "Echte breuken delen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

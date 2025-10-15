@@ -1,0 +1,161 @@
+{
+  "success": true,
+  "creationTimestamp": 1740090374,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{6}{7}\\times \\frac{1}{2}$"
+        },
+        {
+          "id": "tpWru",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1740090376861,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticMultiplicationProper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Multiply the fractions</h1>Multiply the numerators and multiply the denominators",
+                    "expression": "$\\frac{6}{7}\\times \\frac{1}{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1740090431859,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticMultiplicationProper",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Arithmetic error:  $\\frac{6}{7}\\times \\frac{1}{2}$  is not equal to  $\\frac{2}{7}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{2}{7}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{2}{7}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1740090457593,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticMultiplicationProper",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3}{7}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticMultiplicationProper",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticMultiplicationProper",
+                "weight": -100
+              },
+              {
+                "id": "FractionArithmeticMultiplicationProper",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{3}{7}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{6}{7}\\times \\frac{1}{2}$"
+            },
+            {
+              "result": "$\\frac{6}{7\\times 2}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Multiply the fractions"
+            },
+            {
+              "result": "$\\frac{3}{7}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Divide the numerator and the denominator by their common factor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "en": "Multiplying proper fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

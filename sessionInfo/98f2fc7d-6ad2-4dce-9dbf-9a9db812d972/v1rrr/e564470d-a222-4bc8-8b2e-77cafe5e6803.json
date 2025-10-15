@@ -1,0 +1,139 @@
+{
+  "success": true,
+  "creationTimestamp": 1749030156,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 x + \\text{-}3 x \\cdot 4 x - x \\cdot 3 x $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1749030215178,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -100,
+                    "errors": [
+                      "ChangingTermType"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de gelijksoortige termen  $\\text{-}3 x \\cdot 4 x \\text{ en } \\text{-}x \\cdot 3 x $  niet goed samengenomen.</h1>De som is van de vorm  $\\ldots\\cdot x \\cdot x $",
+                    "expression": "$3 x - \\begingroup\\color{darkred}\\begingroup 9 x ^{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3x+-9x^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749030236250,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $\\text{-}3\\cdot 4$",
+                    "expression": "$3 x + \\begingroup\\color{#336699}\\begingroup \\text{-}3\\endgroup\\endgroup x \\cdot \\begingroup\\color{#336699}\\begingroup 4\\endgroup\\endgroup x + \\text{-}x \\cdot 3 x $"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -100,
+                "errors": [
+                  "ChangingTermType"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$3 x - 15 x ^{2}$",
+          "derivation": [
+            {
+              "expression": "$3 x + \\text{-}3\\cdot 4 x \\cdot x + \\text{-}3 x \\cdot x $"
+            },
+            {
+              "result": "$3 x - 12 x \\cdot x - 3 x \\cdot x $",
+              "description": "Reken uit:  $\\text{-}3\\cdot 4$"
+            },
+            {
+              "result": "$3 x - 15 x \\cdot x $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$3 x - 15 x ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "ChangingTermType",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De soort aanpassen bij optellen van gelijksoortige termen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "success": true,
+  "creationTimestamp": 1733172493,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf zo kort mogelijk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}\\sqrt{17}+ \\sqrt{17}- \\sqrt{38}$"
+        },
+        {
+          "id": "WbEOf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733172520297,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAddConcept",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\text{-}\\sqrt{17}+ \\sqrt{17}$  is niet gelijk aan  $2 \\sqrt{17}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2 \\sqrt{17}\\endgroup\\endgroup- \\sqrt{38}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{17}-\\sqrt{38}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733172542403,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$0\\ -\\ \\sqrt{38}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.6666666666666666,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1733172671510,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{38}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.6666666666666666,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1733172675043,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Bereken de som</h1>Het optellen van nul verandert het resultaat niet",
+                    "expression": "$0- \\sqrt{38}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733172694896,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-\\sqrt{38}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticAddConcept",
+                "weight": -100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}\\sqrt{38}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}\\sqrt{17}+ \\sqrt{17}- \\sqrt{38}$"
+            },
+            {
+              "result": "$\\text{-}\\sqrt{38}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAddConcept": {
+      "descr": {
+        "nl": "Optellen en aftrekken begrijpen"
+      },
+      "stepType": "CONCEPT"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

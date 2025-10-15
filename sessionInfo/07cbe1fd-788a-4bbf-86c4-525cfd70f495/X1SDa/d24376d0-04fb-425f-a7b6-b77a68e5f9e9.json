@@ -1,0 +1,132 @@
+{
+  "success": true,
+  "creationTimestamp": 1734378000,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 n ^{2}+ 3 n - 60$"
+        },
+        {
+          "id": "X1SDa",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1734378061909,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\left(n-5\\right)\\left(n+6\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1734378082027,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\left(n-4\\right)\\left(n+5\\right)$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$3 \\left(n + 5\\right) \\left(n - 4\\right)$",
+          "derivation": [
+            {
+              "expression": "$3 n ^{2}+ 3 n - 60$"
+            },
+            {
+              "result": "$3 \\left(n ^{2}+ n - 20\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren"
+            },
+            {
+              "result": "$3 \\left(n + 5\\right) \\left(n - 4\\right)$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Ontbind met de som-product-methode"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "nl": "Een kwadratische expressie ontbinden via de som-productmethode"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

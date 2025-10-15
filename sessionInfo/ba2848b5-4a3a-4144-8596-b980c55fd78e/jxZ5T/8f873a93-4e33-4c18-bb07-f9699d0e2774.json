@@ -1,0 +1,175 @@
+{
+  "success": true,
+  "creationTimestamp": 1729000721,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{3}{2}/\\frac{13}{6}$"
+        },
+        {
+          "id": "jxZ5T",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1729000741784,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDivisionProper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Delen door een breuk is vermenigvuldigen met het omgekeerde",
+                    "expression": "$\\frac{3}{2}/\\left(\\frac{13}{6}\\right)$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729000768785,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{18}{26}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.33333333333333326,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimplifyProper"
+                ]
+              },
+              {
+                "timestamp": 1729000779676,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDivisionProper",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticMultiplicationProper",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{9}{13}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticDivisionProper",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticDivisionProper",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticMultiplicationProper",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{9}{13}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{3}{2}/\\left(\\frac{13}{6}\\right)$"
+            },
+            {
+              "result": "$\\frac{3}{2}\\cdot \\frac{6}{13}$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Delen door een breuk is vermenigvuldigen met het omgekeerde"
+            },
+            {
+              "result": "$\\frac{3\\cdot 6}{2\\cdot 13}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            },
+            {
+              "result": "$\\frac{3\\cdot 3}{13}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Deel de gemeenschappelijke factor weg uit teller en noemer"
+            },
+            {
+              "result": "$\\frac{9}{13}$",
+              "description": "Reken uit:  $3\\cdot 3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "nl": "Echte breuken delen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

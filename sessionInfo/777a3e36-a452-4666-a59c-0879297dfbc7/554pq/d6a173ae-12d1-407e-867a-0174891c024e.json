@@ -1,0 +1,163 @@
+{
+  "success": true,
+  "creationTimestamp": 1740663501,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{2} \\left(2+ 3 \\sqrt{8}\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1740663564039,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{2}+3\\sqrt{2}\\sqrt{8}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1740663586600,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$5\\sqrt{2}\\sqrt{8}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1740663631375,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Vermenigvuldig de wortels",
+                    "expression": "$2 \\sqrt{2}+ 3 \\begingroup\\color{#336699}\\begingroup \\sqrt{2}\\endgroup\\endgroup \\begingroup\\color{#336699}\\begingroup \\sqrt{8}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1740663650569,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{2}+3\\sqrt{16}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1740663728590,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$12+2\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$2 \\sqrt{2}+ 12$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{2} \\left(2+ 3 \\sqrt{8}\\right)$"
+            },
+            {
+              "result": "$2 \\sqrt{2}+ 3 \\sqrt{2} \\sqrt{8}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$2 \\sqrt{2}+ 3 \\sqrt{16}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$2 \\sqrt{2}+ 4\\cdot 3$",
+              "description": "Bepaal de wortel van  $16$"
+            },
+            {
+              "result": "$2 \\sqrt{2}+ 12$",
+              "description": "Reken uit:  $4\\cdot 3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

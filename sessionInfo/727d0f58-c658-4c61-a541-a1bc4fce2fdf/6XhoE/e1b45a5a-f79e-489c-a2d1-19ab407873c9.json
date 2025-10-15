@@ -1,0 +1,122 @@
+{
+  "success": true,
+  "creationTimestamp": 1749145274,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$1\\frac{3}{4}\\cdot 1\\frac{7}{9}$"
+        },
+        {
+          "id": "6XhoE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1749145416774,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{7}{4}\\cdot \\frac{16}{9}$  is niet gelijk aan  $\\frac{102}{36}$ .",
+                    "expression": "$\\frac{7}{4}\\cdot \\frac{16}{9}=\\frac{102}{36}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{7}{4}\\cdot\\frac{16}{9}=\\frac{102}{36}=2\\frac{30}{36}=2\\frac{10}{12}=2\\frac{5}{6}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{28}{9}$",
+          "derivation": [
+            {
+              "expression": "$1\\frac{3}{4}\\cdot 1\\frac{7}{9}$"
+            },
+            {
+              "result": "$\\frac{7}{4}\\cdot \\frac{16}{9}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Herschrijf  $1\\frac{3}{4}$  en  $1\\frac{7}{9}$  naar 'gewone' breuken"
+            },
+            {
+              "result": "$\\frac{7\\cdot 16}{4\\cdot 9}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            },
+            {
+              "result": "$\\frac{4\\cdot 7}{9}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Deel de gemeenschappelijke factor weg uit teller en noemer"
+            },
+            {
+              "result": "$\\frac{28}{9}$",
+              "description": "Reken uit:  $4\\cdot 7$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

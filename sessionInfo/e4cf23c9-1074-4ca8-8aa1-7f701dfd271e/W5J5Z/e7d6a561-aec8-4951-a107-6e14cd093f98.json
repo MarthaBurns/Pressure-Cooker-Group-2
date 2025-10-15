@@ -1,0 +1,160 @@
+{
+  "success": true,
+  "creationTimestamp": 1747123253,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(4 s - 4\\right) \\left(s - 4\\right)$"
+        },
+        {
+          "id": "W5J5Z",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1747123265530,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$(4s-4)(s-4)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "ExpandDoubleBracketsMultiplication",
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1747123345449,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -10
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>$\\left(a + b \\right) \\left(c + d \\right)=a \\cdot c + a \\cdot d + b \\cdot c + b \\cdot d $",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 4 s + 16 s - 4 s + 16\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4s+16s+-4s+16$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747123368862,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de dubbele haakjes weg</h1>$\\left(a + b \\right) \\left(c + d \\right)=a \\cdot c + a \\cdot d + b \\cdot c + b \\cdot d $",
+                    "expression": "$\\left(4 s - 4\\right) \\left(s - 4\\right)$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -10
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$4 s ^{2}- 20 s + 16$",
+          "derivation": [
+            {
+              "expression": "$\\left(4 s - 4\\right) \\left(s - 4\\right)$"
+            },
+            {
+              "result": "$4 s \\cdot s - 16 s - 4 s + 16$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$4 s \\cdot s - 20 s + 16$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$4 s ^{2}- 20 s + 16$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

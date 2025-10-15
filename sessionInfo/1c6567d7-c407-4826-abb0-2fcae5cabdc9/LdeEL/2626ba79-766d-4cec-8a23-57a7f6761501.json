@@ -1,0 +1,220 @@
+{
+  "success": true,
+  "creationTimestamp": 1750256813,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes weg en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$6 x + 3 \\left(6 x + 4\\right)$"
+        },
+        {
+          "id": "LdeEL",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1750257495992,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$36x+12$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1750257554608,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$36x+24x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1750257557219,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de haakjes uit</h1>Vermenigvuldig elke term binnen de haakjes met  $3$",
+                    "expression": "$6 x + \\begingroup\\color{#336699}\\begingroup 3 \\left(6 x + 4\\right)\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750257577594,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$18x+12$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.5,
+                "inputStatus": "FINISHED"
+              },
+              {
+                "timestamp": 1750257581078,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Ga door met de opgave</h1>$6 x + 18 x + 12$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750257599412,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$6x+18x+12$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1750257611695,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  },
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$24x+12$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$24 x + 12$",
+          "derivation": [
+            {
+              "expression": "$6 x + 3 \\left(6 x + 4\\right)$"
+            },
+            {
+              "result": "$6 x + 18 x + 12$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$24 x + 12$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

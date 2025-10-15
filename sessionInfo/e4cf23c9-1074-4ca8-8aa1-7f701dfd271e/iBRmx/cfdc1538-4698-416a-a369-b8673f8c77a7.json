@@ -1,0 +1,139 @@
+{
+  "success": true,
+  "creationTimestamp": 1750844676,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Expand the brackets."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(\\text{-}5+ s \\right) \\left(s + 4\\right)$"
+        },
+        {
+          "id": "iBRmx",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1750844704586,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-5s-20+s^{2}+4s$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1750844721409,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": 100
+                  },
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$s^{2}-s-20$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": 100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$s ^{2}- s - 20$",
+          "derivation": [
+            {
+              "expression": "$\\left(\\text{-}5+ s \\right) \\left(s + 4\\right)$"
+            },
+            {
+              "result": "$\\text{-}5 s - 20+ s \\times s + 4 s $",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Expand the double brackets"
+            },
+            {
+              "result": "$\\text{-}s - 20+ s \\times s $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            },
+            {
+              "result": "$s ^{2}- s - 20$",
+              "description": "Write the repeated multiplication as a power"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "en": "Expanding a product of two sums"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "success": true,
+  "creationTimestamp": 1747129619,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 t ^{2}+ 5 t ^{5}$"
+        },
+        {
+          "id": "44WB6",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1747129678010,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$1t^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1747129713925,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt  $5 t ^{5}+ 5 t ^{2}$  niet goed ontbonden in factoren.</h1>$t ^{2}\\cdot 1\\cdot 5 t $  is niet gelijk aan  $5 t ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 1 t ^{2} \\left(5 t + 5 t ^{3}\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$1t^{2}\\left(5t+5t^{3}\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747129760344,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$1t^{ }\\left(5t+5t^{4}\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FactorSingleBrackets",
+                  "FactorSingleBrackets"
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$5 t ^{2} \\left(t + 1\\right) \\left(t ^{2}- t + 1\\right)$",
+          "derivation": [
+            {
+              "expression": "$5 t ^{2}+ 5 t ^{5}$"
+            },
+            {
+              "result": "$5 \\left(t ^{5}+ t ^{2}\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren"
+            },
+            {
+              "result": "$5 t ^{2} \\left(t ^{3}+ 1\\right)$",
+              "skills": [
+                "FactorSingleBrackets",
+                "AlgebraProductOfPowerFunctions"
+              ],
+              "description": "Ontbind in factoren: haal de factor  $t ^{2}$  buiten haakjes."
+            },
+            {
+              "result": "$5 t ^{2} \\left(t + 1\\right) \\left(t ^{2}- t + 1\\right)$",
+              "skills": [
+                "FactorLinearFactor"
+              ],
+              "description": "Ontbind een factor  $t + 1$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "nl": "De machtsregels voor vermenigvuldigen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FactorLinearFactor": {
+      "descr": {
+        "nl": "Een lineaire factor ontbinden uit een polynoom van hogere graad"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

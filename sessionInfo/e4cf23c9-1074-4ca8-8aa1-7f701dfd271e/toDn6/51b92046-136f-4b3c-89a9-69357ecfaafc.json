@@ -1,0 +1,124 @@
+{
+  "success": true,
+  "creationTimestamp": 1730141429,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(2 t - 3\\right)^{2}$"
+        },
+        {
+          "id": "toDn6",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1730141491332,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>$\\left(a + b \\right)^{2}=a ^{2}+ 2 a  b + b ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}9+ 4 t \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-9+4t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$4 RandVarResult ^{2}\\left(t \\right)- 12 RandVarResult \\left(t \\right)+ 9$",
+          "derivation": [
+            {
+              "expression": "$\\left(2 RandVarResult \\left(t \\right)- 3\\right)^{2}$"
+            },
+            {
+              "result": "$\\left(2 RandVarResult \\left(t \\right)\\right)^{2}- 12 RandVarResult \\left(t \\right)+ \\left(\\text{-}3\\right)^{2}$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$\\left(2 RandVarResult \\left(t \\right)\\right)^{2}- 12 RandVarResult \\left(t \\right)+ 3^{2}$",
+              "description": "Bij een even macht is de uitkomst altijd positief"
+            },
+            {
+              "result": "$\\left(2 RandVarResult \\left(t \\right)\\right)^{2}- 12 RandVarResult \\left(t \\right)+ 9$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            },
+            {
+              "result": "$2^{2} RandVarResult ^{2}\\left(t \\right)- 12 RandVarResult \\left(t \\right)+ 9$",
+              "description": "Werk de macht uit"
+            },
+            {
+              "result": "$4 RandVarResult ^{2}\\left(t \\right)- 12 RandVarResult \\left(t \\right)+ 9$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

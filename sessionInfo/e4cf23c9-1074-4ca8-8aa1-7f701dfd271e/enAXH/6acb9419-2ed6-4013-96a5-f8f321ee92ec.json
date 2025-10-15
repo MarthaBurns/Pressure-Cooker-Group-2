@@ -1,0 +1,209 @@
+{
+  "success": true,
+  "creationTimestamp": 1750239448,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(x - 3\\right)^{2}$"
+        },
+        {
+          "id": "enAXH",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750239463153,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1750239475100,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$x^{2\\ }\\ 6$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1750239490631,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsSquare",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk het kwadraat uit</h1>Schrijf  $\\left(x - 3\\right)^{2}$  als  $\\left(x - 3\\right) \\left(x - 3\\right)$  en werk de haakjes weg",
+                    "expression": "$\\left(x - 3\\right)^{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750239507508,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(x-3\\right)\\left(x-3\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "ExpandDoubleBracketsMultiplication",
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1750239554046,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100,
+                    "errors": [
+                      "MissingTerms"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>Je hebt niet alle termen vermenigvuldigd.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup x ^{2}- 3 x \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$x^{2\\ }-\\ 3x\\ $"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsSquare",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100,
+                "errors": [
+                  "MissingTerms"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$x ^{2}- 6 x + 9$",
+          "derivation": [
+            {
+              "expression": "$\\left(x - 3\\right)^{2}$"
+            },
+            {
+              "result": "$x ^{2}- 6 x + \\left(\\text{-}3\\right)^{2}$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$x ^{2}- 6 x + 3^{2}$",
+              "description": "Bij een even macht is de uitkomst altijd positief"
+            },
+            {
+              "result": "$x ^{2}- 6 x + 9$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "MissingTerms",
+          "type": [
+            "MISCONCEPTION",
+            "MISTAKE"
+          ],
+          "descr": {
+            "nl": "Er ontbreken termen bij het uitwerken van dubbele haakjes."
+          }
+        }
+      ]
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

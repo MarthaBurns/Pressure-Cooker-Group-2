@@ -1,0 +1,163 @@
+{
+  "success": true,
+  "creationTimestamp": 1750331401,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$x ^{2}+ 3 x \\times 3 x $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750331517461,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$x^{2+9x^{2}}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1750331659864,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Calculate:  $3\\times 3$",
+                    "expression": "$x ^{2}+ \\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup x \\times \\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup x $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750331675527,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "this part is not correct.",
+                    "expression": "$x ^{2}+ \\begingroup\\color{darkred}\\begingroup 9\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$x^{2}+9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750332046703,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Calculate:  $3\\times 3$",
+                    "expression": "$x ^{2}+ \\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup x \\times \\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup x $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750332049479,
+                "event": "HINT",
+                "tags": [],
+                "annotations": []
+              },
+              {
+                "timestamp": 1750332075245,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "this part is not correct.",
+                    "expression": "$x ^{2}+ \\begingroup\\color{darkred}\\begingroup x ^{2}+ 9\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$x^{2}+x^{2}+9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$10 x ^{2}$",
+          "derivation": [
+            {
+              "expression": "$x ^{2}+ 3\\times 3 x \\times x $"
+            },
+            {
+              "result": "$x ^{2}+ 9 x \\times x $",
+              "description": "Calculate:  $3\\times 3$"
+            },
+            {
+              "result": "$x ^{2}+ 9 x ^{2}$",
+              "description": "Write the repeated multiplication as a power"
+            },
+            {
+              "result": "$10 x ^{2}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "creationTimestamp": 1748936839,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3+ 3 t \\cdot 3 t $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1748936865742,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 9^{2}\\endgroup\\endgroup+ 3$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$9^{2}+3$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1748936884632,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3+9t^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$3+ 9 t ^{2}$",
+          "derivation": [
+            {
+              "expression": "$3+ 3\\cdot 3 t \\cdot t $"
+            },
+            {
+              "result": "$3+ 9 t \\cdot t $",
+              "description": "Reken uit:  $3\\cdot 3$"
+            },
+            {
+              "result": "$3+ 9 t ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {},
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

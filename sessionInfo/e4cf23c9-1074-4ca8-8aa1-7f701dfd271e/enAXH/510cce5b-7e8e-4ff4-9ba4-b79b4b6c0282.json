@@ -1,0 +1,149 @@
+{
+  "success": true,
+  "creationTimestamp": 1749292919,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Expand the brackets."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(4+ t \\right)^{2}$"
+        },
+        {
+          "id": "enAXH",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749292970161,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not expand the double brackets correctly.</h1>The term  $4$  is incorrect.",
+                    "expression": "$t ^{2}+ 8 t + \\begingroup\\color{darkred}\\begingroup 4\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4\\ +\\ 8t\\ +\\ t^{2\\ }$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749292994226,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$16\\ =\\ 8\\ t\\ =\\ t^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1749293007245,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsSquare",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$16+8t+t^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100
+              },
+              {
+                "id": "ExpandDoubleBracketsSquare",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$t ^{2}+ 8 t + 16$",
+          "derivation": [
+            {
+              "expression": "$\\left(4+ t \\right)^{2}$"
+            },
+            {
+              "result": "$4^{2}+ 8 t + t ^{2}$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Expand the square"
+            },
+            {
+              "result": "$t ^{2}+ 8 t + 16$",
+              "description": "Calculate the power by repeated multiplication"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "en": "Expanding a square of a sum of terms"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "en": "Expanding a product of two sums"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

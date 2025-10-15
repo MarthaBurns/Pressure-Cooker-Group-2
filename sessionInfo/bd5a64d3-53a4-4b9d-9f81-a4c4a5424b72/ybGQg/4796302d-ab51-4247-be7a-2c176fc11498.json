@@ -1,0 +1,140 @@
+{
+  "success": true,
+  "creationTimestamp": 1749737000,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Solve the equation."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 n ^{2}=500$"
+        },
+        {
+          "id": "ybGQg",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1749737013367,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$n^{2}=100$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1749737049937,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "This is not a valid mathematical expression.",
+                    "expression": "$\\text{Incorrect expression}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$n=\\sqrt{100\\ }or\\ n=\\sqrt[-]{100}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1749737076615,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You wrote the two solutions of the quadratic equation incorrectly</h1>Use for solving  $x ^{2}=a $  with  $a > 0$  that  $x =\\sqrt{a }\\vee x =\\text{-}\\sqrt{a }$",
+                    "expression": "$n =\\sqrt{100}\\vee \\begingroup\\color{darkred}\\begingroup n =\\sqrt{\\text{-}100}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$n=\\sqrt{100\\ }or\\ n=\\sqrt{-100}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$n =\\text{-}10\\vee n =10$",
+          "derivation": [
+            {
+              "expression": "$5 n ^{2}=500$"
+            },
+            {
+              "result": "$n ^{2}=100$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Divide both sides by  $5$"
+            },
+            {
+              "result": "$n =\\sqrt{100}\\vee n =\\text{-}\\sqrt{100}$",
+              "description": "Take the root on both sides of the equation"
+            },
+            {
+              "result": "$n =\\text{-}10\\vee n =10$",
+              "description": "Calculate the square root of  $100$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "en": "Divide by the coefficient of the variable to get the solution."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "en": "Multiply or divide an equation using the balance method"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "success": true,
+  "creationTimestamp": 1733396155,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$14=\\text{-}46+ 10 p $"
+        },
+        {
+          "id": "2hmEy",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1733396169282,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Balansmethode: Tel links en rechts  $46$  erbij op.",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 14\\endgroup\\endgroup=\\begingroup\\color{#336699}\\begingroup \\text{-}46\\endgroup\\endgroup+ 10 p $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733396291085,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Dit is geen vergelijking.</h1>Je invoer moet een '='-teken bevatten.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 32+ 56 p \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$32+56p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733396400848,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": -10
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de balansmethode niet goed toegepast.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 32=56 p \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$32=56p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": -10
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$p =6$",
+          "derivation": [
+            {
+              "expression": "$14=\\text{-}46+ 10 p $"
+            },
+            {
+              "result": "$60=10 p $",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Tel links en rechts  $46$  erbij op."
+            },
+            {
+              "result": "$p =6$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $10$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

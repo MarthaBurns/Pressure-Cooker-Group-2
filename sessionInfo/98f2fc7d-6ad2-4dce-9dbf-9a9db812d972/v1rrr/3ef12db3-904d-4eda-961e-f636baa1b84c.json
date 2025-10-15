@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "creationTimestamp": 1750873880,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 t \\times t + 7$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1750873900018,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfPowerFunctions",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$t \\times t $  does not equal  $t $ .</h1>$t ^{p }\\times t ^{q }=t ^{p + q }$",
+                    "expression": "$5 \\begingroup\\color{darkred}\\begingroup t \\endgroup\\endgroup+ 7$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$5t\\ +\\ 7$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750873936860,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$5t^{2}\\ +\\ 7$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfPowerFunctions",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$5 t ^{2}+ 7$",
+          "derivation": [
+            {
+              "expression": "$5 t \\times t + 7$"
+            },
+            {
+              "result": "$5 t ^{2}+ 7$",
+              "description": "Write the repeated multiplication as a power"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "en": "Apply the rule for multiplying power functions"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

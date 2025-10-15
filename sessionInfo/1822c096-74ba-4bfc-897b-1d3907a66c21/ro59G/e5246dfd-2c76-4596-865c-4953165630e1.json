@@ -1,0 +1,156 @@
+{
+  "success": true,
+  "creationTimestamp": 1750242309,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2+ 6 p - 7 p $"
+        },
+        {
+          "id": "ro59G",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1750242324221,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de termen  $6 p \\text{ en } \\text{-}7 p $  niet goed samengenomen",
+                    "expression": "$2+ \\begingroup\\color{darkred}\\begingroup 6 p \\endgroup\\endgroup+ \\begingroup\\color{darkred}\\begingroup 7 p \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2+6p+7p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750242346179,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2+6p-7p$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1750242369161,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$6p-7p=-1p$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "TRUE_EXPRESSION"
+              },
+              {
+                "timestamp": 1750242400623,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2+-1p$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -50
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$2- p $",
+          "derivation": [
+            {
+              "expression": "$2+ 6 p - 7 p $"
+            },
+            {
+              "result": "$2- p $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

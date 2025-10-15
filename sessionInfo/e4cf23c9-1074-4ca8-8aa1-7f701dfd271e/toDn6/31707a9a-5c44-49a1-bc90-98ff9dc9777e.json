@@ -1,0 +1,180 @@
+{
+  "success": true,
+  "creationTimestamp": 1750142595,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(\\text{-}3 x - 2\\right)^{2}$"
+        },
+        {
+          "id": "toDn6",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750142800726,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>De term  $9 x $  klopt niet.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 9 x \\endgroup\\endgroup+ 4+ 12 x $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$9x+4+12x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750142860983,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>$\\left(a - b \\right)^{2}=a ^{2}- 2 a  b + b ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 21 x - 4\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$21x-4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750142876376,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>$\\left(a - b \\right)^{2}=a ^{2}- 2 a  b + b ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 21 x + 4\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$21x+4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$9 x ^{2}+ 12 x + 4$",
+          "derivation": [
+            {
+              "expression": "$\\left(\\text{-}3 x - 2\\right)^{2}$"
+            },
+            {
+              "result": "$\\left(\\text{-}3 x \\right)^{2}+ 12 x + \\left(\\text{-}2\\right)^{2}$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$\\left(3 x \\right)^{2}+ 12 x + 2^{2}$",
+              "description": "Bij een even macht is de uitkomst altijd positief"
+            },
+            {
+              "result": "$\\left(3 x \\right)^{2}+ 12 x + 4$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            },
+            {
+              "result": "$3^{2} x ^{2}+ 12 x + 4$",
+              "description": "Werk de macht uit"
+            },
+            {
+              "result": "$9 x ^{2}+ 12 x + 4$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

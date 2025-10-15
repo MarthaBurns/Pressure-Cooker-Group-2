@@ -1,0 +1,121 @@
+{
+  "success": true,
+  "creationTimestamp": 1759839447,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(m - 2\\right) \\left(5+ m \\right)$"
+        },
+        {
+          "id": "iBRmx",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1759839485707,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": 10,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>$\\left(a + b \\right) \\left(c + d \\right)=a \\cdot c + a \\cdot d + b \\cdot c + b \\cdot d $",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\mathrm{m5}+ m ^{2}- 2 m + 10\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$m5+m^{2}+10-2m$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": 10,
+                "source": "ERROR_FEEDBACK"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$m ^{2}+ 3 m - 10$",
+          "derivation": [
+            {
+              "expression": "$\\left(m - 2\\right) \\left(5+ m \\right)$"
+            },
+            {
+              "result": "$5 m + m \\cdot m - 10- 2 m $",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$3 m + m \\cdot m - 10$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$m ^{2}+ 3 m - 10$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

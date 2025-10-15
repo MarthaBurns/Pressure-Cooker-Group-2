@@ -1,0 +1,148 @@
+{
+  "success": true,
+  "creationTimestamp": 1759834067,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(2- p \\right)^{2}$"
+        },
+        {
+          "id": "enAXH",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1759834151439,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>De term  $\\text{-}3 p $  klopt niet.",
+                    "expression": "$p ^{2}- \\begingroup\\color{darkred}\\begingroup 3 p \\endgroup\\endgroup+ 4$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4-3p+p^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759834169721,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>De term  $3 p $  klopt niet.",
+                    "expression": "$p ^{2}+ \\begingroup\\color{darkred}\\begingroup 3 p \\endgroup\\endgroup+ 4$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$p^{2}+3p+4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$p ^{2}- 4 p + 4$",
+          "derivation": [
+            {
+              "expression": "$\\left(2- p \\right)^{2}$"
+            },
+            {
+              "result": "$2^{2}- 4 p + \\left(\\text{-}p \\right)^{2}$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$4- 4 p + \\left(\\text{-}p \\right)^{2}$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            },
+            {
+              "result": "$p ^{2}- 4 p + 4$",
+              "description": "Bij een even macht is de uitkomst altijd positief"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

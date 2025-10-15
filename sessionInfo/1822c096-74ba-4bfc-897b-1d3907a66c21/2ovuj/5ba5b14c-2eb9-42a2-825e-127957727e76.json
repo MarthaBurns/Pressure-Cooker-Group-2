@@ -1,0 +1,205 @@
+{
+  "success": true,
+  "creationTimestamp": 1751797789,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$8 x ^{3}+ 9 x ^{2}- x ^{3}$"
+        },
+        {
+          "id": "2ovuj",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1751798893644,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$^{7x^{3}+9x^{2}}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1751798979062,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$_{7x^{3}+9x^{2}}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1751798983907,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $x ^{3}$  zijn gelijksoortig.",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 8 x ^{3}\\endgroup\\endgroup+ 9 x ^{2}- \\begingroup\\color{#336699}\\begingroup x ^{3}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1751799039841,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de termen  $8 x ^{3}\\text{ en } \\text{-}x ^{3}$  niet goed samengenomen",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 8 x ^{3}\\endgroup\\endgroup+ 9 x ^{2}+ \\begingroup\\color{darkred}\\begingroup x ^{3}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$8x^{3}+9x^{2}+x^{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1751799101929,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -50
+                  },
+                  {
+                    "id": "NumberArithmeticAddConcept",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de termen  $8 x ^{3}\\text{ en } \\text{-}x ^{3}$  niet goed samengenomen",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 9 x ^{3}\\endgroup\\endgroup+ 9 x ^{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$9x^{3}+9x^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -50
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -50
+              },
+              {
+                "id": "NumberArithmeticAddConcept",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$7 x ^{3}+ 9 x ^{2}$",
+          "derivation": [
+            {
+              "expression": "$8 x ^{3}+ 9 x ^{2}- x ^{3}$"
+            },
+            {
+              "result": "$7 x ^{3}+ 9 x ^{2}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAddConcept": {
+      "descr": {
+        "nl": "Optellen en aftrekken begrijpen"
+      },
+      "stepType": "CONCEPT"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "success": true,
+  "creationTimestamp": 1750874725,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$36 x + 42$"
+        },
+        {
+          "id": "j8fxR",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750874829584,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not factor  $36 x + 42$  correctly.</h1>$2\\times 12$  does not equal  $36 x $",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2 \\left(12+ 21\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\left(12+21\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$6 \\left(6 x + 7\\right)$",
+          "derivation": [
+            {
+              "expression": "$36 x + 42$"
+            },
+            {
+              "result": "$6 \\left(6 x + 7\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Factorise"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "en": "Factoring a common factor"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "creationTimestamp": 1747225815,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$6+ \\text{-}2 p \\cdot \\text{-}7$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1747225830525,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\text{-}2\\cdot \\text{-}7$  is niet gelijk aan  $28$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 28\\endgroup\\endgroup p + 6$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$28p+6$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747225841169,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$14p+6$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$6+ 14 p $",
+          "derivation": [
+            {
+              "expression": "$6- \\text{-}2\\cdot 7 p $"
+            },
+            {
+              "result": "$6+ 14 p $",
+              "description": "Reken uit:  $\\text{-}2\\cdot \\text{-}7$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

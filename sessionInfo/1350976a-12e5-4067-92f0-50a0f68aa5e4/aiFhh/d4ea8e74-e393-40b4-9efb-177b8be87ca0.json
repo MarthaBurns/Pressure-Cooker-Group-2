@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "creationTimestamp": 1749399812,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{a }{25}=\\frac{1}{3}$"
+        },
+        {
+          "id": "aiFhh",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749399864590,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsOperationsMultiply",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt rechts met  $225$  vermenigvuldigd, maar links met  $25$ .</h1>Je moet aan beide zijden dezelfde bewerking toepassen.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup a =75\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$a=75$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749399965538,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$a=\\frac{25}{3}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsOperationsMultiply",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$a =\\frac{25}{3}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{a }{25}=\\frac{1}{3}$"
+            },
+            {
+              "result": "$a =\\frac{25}{3}$",
+              "description": "Vermenigvuldig links en rechts met  $25$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

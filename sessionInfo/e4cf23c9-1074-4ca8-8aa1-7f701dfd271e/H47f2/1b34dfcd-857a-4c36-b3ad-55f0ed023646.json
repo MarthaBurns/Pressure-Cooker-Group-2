@@ -1,0 +1,108 @@
+{
+  "success": true,
+  "creationTimestamp": 1759232444,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 \\left(x - 3\\right)^{2}$"
+        },
+        {
+          "id": "H47f2",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1759232594623,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$5x-15^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$5 x ^{2}- 30 x + 45$",
+          "derivation": [
+            {
+              "expression": "$5 \\left(x - 3\\right)^{2}$"
+            },
+            {
+              "result": "$5 \\left(x ^{2}- 6 x + \\left(\\text{-}3\\right)^{2}\\right)$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$5 \\left(x ^{2}- 6 x + 3^{2}\\right)$",
+              "description": "Bij een even macht is de uitkomst altijd positief"
+            },
+            {
+              "result": "$5 \\left(x ^{2}- 6 x + 9\\right)$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            },
+            {
+              "result": "$5 x ^{2}- 30 x + 45$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

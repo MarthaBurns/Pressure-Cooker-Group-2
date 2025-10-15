@@ -1,0 +1,108 @@
+{
+  "success": true,
+  "creationTimestamp": 1750875591,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2 x + x \\times 4$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750875606801,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAdditionInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$2 x + x \\times 4$  does not equal  $12 x $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 12 x \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$12x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticAdditionInteger",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$6 x $",
+          "derivation": [
+            {
+              "expression": "$2 x + 4 x $"
+            },
+            {
+              "result": "$6 x $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAdditionInteger": {
+      "descr": {
+        "en": "Adding integer numbers"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

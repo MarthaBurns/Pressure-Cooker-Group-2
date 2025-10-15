@@ -1,0 +1,116 @@
+{
+  "success": true,
+  "creationTimestamp": 1734474286,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{5}{9+ \\sqrt{7}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1734474373198,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{45-5\\sqrt{7}}{86}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{45- 5 \\sqrt{7}}{74}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{5}{9+ \\sqrt{7}}$"
+            },
+            {
+              "result": "$\\frac{5 \\left(9- \\sqrt{7}\\right)}{\\left(9+ \\sqrt{7}\\right) \\left(9- \\sqrt{7}\\right)}$",
+              "description": "Rationalise the denominator"
+            },
+            {
+              "result": "$\\frac{5 \\left(9- \\sqrt{7}\\right)}{9^{2}- \\left(\\sqrt{7}\\right)^{2}}$",
+              "skills": [
+                "ExpandDoubleDifferenceSquares"
+              ],
+              "description": "Expand the double brackets"
+            },
+            {
+              "result": "$\\frac{5 \\left(9- \\sqrt{7}\\right)}{81- \\left(\\sqrt{7}\\right)^{2}}$",
+              "description": "Calculate the power by repeated multiplication"
+            },
+            {
+              "result": "$\\frac{5 \\left(9- \\sqrt{7}\\right)}{81- 7}$",
+              "description": "The root and the square cancel"
+            },
+            {
+              "result": "$\\frac{5 \\left(9- \\sqrt{7}\\right)}{74}$",
+              "description": "Calculate:  $81- 7$"
+            },
+            {
+              "result": "$\\frac{45- 5 \\sqrt{7}}{74}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Expand the brackets"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleDifferenceSquares": {
+      "descr": {
+        "en": "Expanding into a differences of squares"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "en": "Expanding a single pair of parentheses"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

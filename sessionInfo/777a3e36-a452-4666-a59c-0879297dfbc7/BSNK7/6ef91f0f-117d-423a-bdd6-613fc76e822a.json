@@ -1,0 +1,155 @@
+{
+  "success": true,
+  "creationTimestamp": 1733989459,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{8}+ 3 \\sqrt{56}\\cdot 4 \\sqrt{7}$"
+        },
+        {
+          "id": "BSNK7",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733989461742,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$\\sqrt{8}+ \\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup \\sqrt{56}\\cdot \\begingroup\\color{#336699}\\begingroup 4\\endgroup\\endgroup \\sqrt{7}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733989522432,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $4 \\sqrt{7}\\cdot 3$  is niet gelijk aan  $12$ .",
+                    "expression": "$\\sqrt{8}+ \\begingroup\\color{darkred}\\begingroup 12\\endgroup\\endgroup \\sqrt{56}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{8}+12\\sqrt{56}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733989556973,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{8}+12\\sqrt{56}\\sqrt{7}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1733989565564,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Vermenigvuldig de wortels",
+                    "expression": "$\\sqrt{8}+ 12 \\begingroup\\color{#336699}\\begingroup \\sqrt{56}\\endgroup\\endgroup \\begingroup\\color{#336699}\\begingroup \\sqrt{7}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733989616729,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{8}+12\\sqrt{392}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\sqrt{8}+ 12 \\sqrt{392}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{8}+ 3\\cdot 4 \\sqrt{56} \\sqrt{7}$"
+            },
+            {
+              "result": "$\\sqrt{8}+ 12 \\sqrt{56} \\sqrt{7}$",
+              "description": "Reken uit:  $3\\cdot 4$"
+            },
+            {
+              "result": "$\\sqrt{8}+ 12 \\sqrt{392}$",
+              "description": "Vermenigvuldig de wortels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

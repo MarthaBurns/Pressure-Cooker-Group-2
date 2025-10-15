@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "creationTimestamp": 1736847870,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf als één wortel."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{3}\\cdot \\sqrt{7}$"
+        },
+        {
+          "id": "wm0IM",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1736847881142,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\sqrt{7} \\sqrt{3}$  is niet gelijk aan  $\\sqrt{10}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{10}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{10}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1736847894551,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{21}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -50
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\sqrt{21}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{3} \\sqrt{7}$"
+            },
+            {
+              "result": "$\\sqrt{21}$",
+              "description": "Vermenigvuldig de wortels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "nl": "De regels voor vermenigvuldigen van wortels toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

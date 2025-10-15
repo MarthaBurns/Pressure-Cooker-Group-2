@@ -1,0 +1,191 @@
+{
+  "success": true,
+  "creationTimestamp": 1732721224,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}2 \\left(t + 3\\right)^{2}$"
+        },
+        {
+          "id": "H47f2",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1732721246563,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-2\\left(t+3\\right)^{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "ExpandDoubleBracketsSquare",
+                  "ExpandSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1732721277493,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>De term  $\\mathrm{t6}$  klopt niet.",
+                    "expression": "$\\text{-}2 \\left(\\begingroup\\color{darkred}\\begingroup \\mathrm{t6}\\endgroup\\endgroup+ t ^{2}+ 9\\right)$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-2\\left(t^{2}+t6+9\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732721290751,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-2\\left(t^{2}+6t+9\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.2857142857142857,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "ExpandSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1732721344079,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsSquare",
+                    "weight": 100
+                  },
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(-2t^{2}-12t-18\\right)$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100
+              },
+              {
+                "id": "ExpandDoubleBracketsSquare",
+                "weight": 100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}2 t ^{2}- 12 t - 18$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}2 \\left(t + 3\\right)^{2}$"
+            },
+            {
+              "result": "$\\text{-}2 \\left(t ^{2}+ 6 t + 3^{2}\\right)$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$\\text{-}2 \\left(t ^{2}+ 6 t + 9\\right)$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            },
+            {
+              "result": "$\\text{-}2 t ^{2}- 12 t - 18$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

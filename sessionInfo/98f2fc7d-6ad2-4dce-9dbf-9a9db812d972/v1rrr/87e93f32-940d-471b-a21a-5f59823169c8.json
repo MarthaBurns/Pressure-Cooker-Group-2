@@ -1,0 +1,106 @@
+{
+  "success": true,
+  "creationTimestamp": 1748341673,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}3 t - t \\cdot \\text{-}7- 7\\cdot 2 t $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1748341714603,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de termen  $\\text{-}3 t , \\text{-}t \\cdot \\text{-}7\\text{ en } \\text{-}7\\cdot 2 t $  niet goed samengenomen",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}3 t \\endgroup\\endgroup- \\begingroup\\color{darkred}\\begingroup 7 t \\endgroup\\endgroup- \\begingroup\\color{darkred}\\begingroup 14 t \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-3t-7t-14t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -50
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}10 t $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}3 t - \\text{-}7 t - 7\\cdot 2 t $"
+            },
+            {
+              "result": "$\\text{-}3 t + 7 t - 14 t $",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\text{-}10 t $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

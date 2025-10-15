@@ -1,0 +1,159 @@
+{
+  "success": true,
+  "creationTimestamp": 1738060131,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5 \\left(\\text{-}5 a - 4\\right)$"
+        },
+        {
+          "id": "2a1sr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1738060220444,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>De term  $9$  klopt niet.",
+                    "expression": "$25 a + \\begingroup\\color{darkred}\\begingroup 9\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$25a+9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1738060234915,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>De term  $\\text{-}9$  klopt niet.",
+                    "expression": "$25 a - \\begingroup\\color{darkred}\\begingroup 9\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$25a+-9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1738060261135,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$25a+20$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              },
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$25 a + 20$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5 \\left(\\text{-}5 a - 4\\right)$"
+            },
+            {
+              "result": "$25 a + 20$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

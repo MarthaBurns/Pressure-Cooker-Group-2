@@ -1,0 +1,118 @@
+{
+  "success": true,
+  "creationTimestamp": 1741721877,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{\\text{-}\\frac{1}{5}}{2\\frac{1}{3}}$"
+        },
+        {
+          "id": "F3GYs",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1741721969639,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Arithmetic error:  $\\left(\\text{-}\\frac{1}{5}\\right) \\div 2\\frac{1}{3}$  is not equal to  $\\text{-}\\frac{15}{7}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}\\frac{15}{7}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-\\frac{15}{7}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}\\frac{3}{35}$",
+          "derivation": [
+            {
+              "expression": "$\\left(\\text{-}\\frac{1}{5}\\right) \\div 2\\frac{1}{3}$"
+            },
+            {
+              "result": "$\\left(\\text{-}\\frac{1}{5}\\right) \\div \\frac{7}{3}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Rewrite  $2\\frac{1}{3}$  into an improper fraction"
+            },
+            {
+              "result": "$\\text{-}\\frac{1}{5}\\times \\frac{3}{7}$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Use 'Invert and multiply' to calculate the division by  $\\frac{7}{3}$"
+            },
+            {
+              "result": "$\\text{-}\\frac{3}{35}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Multiply the fractions"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "en": "Writing a mixed fraction into a similar improper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "en": "Dividing proper fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "en": "Multiplying proper fractions"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

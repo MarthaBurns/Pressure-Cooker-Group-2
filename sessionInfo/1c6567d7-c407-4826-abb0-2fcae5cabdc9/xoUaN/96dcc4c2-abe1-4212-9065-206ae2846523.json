@@ -1,0 +1,201 @@
+{
+  "success": true,
+  "creationTimestamp": 1737714205,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes weg en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$1- 6 \\left(2 n - 3\\right)- 3 \\left(4 n - 2\\right)$"
+        },
+        {
+          "id": "xoUaN",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1737714241580,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$1+ \\begingroup\\color{darkred}\\begingroup 18+ 4+ 12 n + 12 n \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$1+12n+18+12n+4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737714253276,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$1+ \\begingroup\\color{darkred}\\begingroup 18+ 6+ 12 n + 12 n \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$1+12n+18+12n+6$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737714307517,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$1+ \\begingroup\\color{darkred}\\begingroup 18+ 12 n - 12 n + 6\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$1+12n+18-12n+6$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737714342298,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$1-12n+18-12n+6$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1737714361706,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  },
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  },
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-24n+25$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": true
+            }
+          },
+          "solution": "$25- 24 n $",
+          "derivation": [
+            {
+              "expression": "$1- 6 \\left(2 n - 3\\right)- 3 \\left(4 n - 2\\right)$"
+            },
+            {
+              "result": "$1- 12 n + 18- 12 n + 6$",
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$25- 12 n - 12 n $",
+              "description": "Reken uit:  $1+ 18+ 6$"
+            },
+            {
+              "result": "$25- 24 n $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

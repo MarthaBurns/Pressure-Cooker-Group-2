@@ -1,0 +1,144 @@
+{
+  "success": true,
+  "creationTimestamp": 1750148043,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 x \\cdot \\text{-}3 x + 4 x ^{2}+ 4\\cdot \\text{-}3 x $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0.33333333333333326,
+            "events": [
+              {
+                "timestamp": 1750148100895,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-15x^{2}+4x^{2}-12x$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.33333333333333326,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1750148121291,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -100,
+                    "errors": [
+                      "ChangingTermType"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de gelijksoortige termen  $\\text{-}15 x ^{2}\\text{ en } 4 x ^{2}$  niet goed samengenomen.</h1>De som is van de vorm  $\\ldots\\cdot x ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}11 x ^{4}\\endgroup\\endgroup- 12 x $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-11x^{4}-12x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.33333333333333326,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -100,
+                "errors": [
+                  "ChangingTermType"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}11 x ^{2}- 12 x $",
+          "derivation": [
+            {
+              "expression": "$5\\cdot \\text{-}3 x \\cdot x + 4 x ^{2}- 4\\cdot 3 x $"
+            },
+            {
+              "result": "$\\text{-}15 x \\cdot x + 4 x ^{2}- 12 x $",
+              "description": "Reken uit:  $4\\cdot \\text{-}3$"
+            },
+            {
+              "result": "$\\text{-}15 x ^{2}+ 4 x ^{2}- 12 x $",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$\\text{-}11 x ^{2}- 12 x $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "ChangingTermType",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De soort aanpassen bij optellen van gelijksoortige termen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

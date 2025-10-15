@@ -1,0 +1,114 @@
+{
+  "success": true,
+  "creationTimestamp": 1750409808,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$4 p + 2 p \\times 3 p $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750409844504,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$4 p + 2 p \\times 3 p $  does not equal  $18 p $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 18 p \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$18p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750409858951,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$18p^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1750409893209,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$4p+2p=6p\\times3p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$4 p + 6 p ^{2}$",
+          "derivation": [
+            {
+              "expression": "$4 p + 2\\times 3 p \\times p $"
+            },
+            {
+              "result": "$4 p + 6 p \\times p $",
+              "description": "Calculate:  $2\\times 3$"
+            },
+            {
+              "result": "$4 p + 6 p ^{2}$",
+              "description": "Write the repeated multiplication as a power"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {},
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

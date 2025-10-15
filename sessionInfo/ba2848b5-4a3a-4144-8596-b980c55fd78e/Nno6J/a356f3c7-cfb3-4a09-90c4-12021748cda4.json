@@ -1,0 +1,143 @@
+{
+  "success": true,
+  "creationTimestamp": 1732532562,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{8}{9}+ \\frac{2}{7}$"
+        },
+        {
+          "id": "Nno6J",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1732532686190,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Split the mixed fraction</h1>$2\\frac{8}{9}=2+ \\frac{8}{9}$",
+                    "expression": "$2\\frac{8}{9}+ \\frac{2}{7}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1732532732379,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3 \\ \\frac{11}{63}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{200}{63}$",
+          "derivation": [
+            {
+              "expression": "$2\\frac{8}{9}+ \\frac{2}{7}$"
+            },
+            {
+              "result": "$2+ \\frac{8}{9}+ \\frac{2}{7}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Split the mixed fraction"
+            },
+            {
+              "result": "$2+ \\frac{74}{63}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            },
+            {
+              "result": "$\\frac{200}{63}$",
+              "skills": [
+                "FractionArithmeticIntegerToFraction"
+              ],
+              "description": "Rewrite  $2+ \\frac{74}{63}$  into a single fraction"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "en": "Adding mixed fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticIntegerToFraction": {
+      "descr": {
+        "en": "Writing an integer number into a fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

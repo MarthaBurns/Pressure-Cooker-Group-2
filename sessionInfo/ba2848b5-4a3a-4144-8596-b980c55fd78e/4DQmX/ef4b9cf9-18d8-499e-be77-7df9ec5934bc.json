@@ -1,0 +1,222 @@
+{
+  "success": true,
+  "creationTimestamp": 1733215049,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1}{3}/2\\frac{1}{2}$"
+        },
+        {
+          "id": "4DQmX",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733215101725,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{1}{3}/2\\frac{1}{2}$  is niet gelijk aan  $\\frac{5}{6}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{5}{6}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{5}{6}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733215106879,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Schrijf  $2\\frac{1}{2}$  om naar een gewone breuk",
+                    "expression": "$\\frac{1}{3}/2\\frac{1}{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733215127953,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1}{3}:\\frac{5}{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticDivisionProper",
+                  "FractionArithmeticMultiplicationProper"
+                ]
+              },
+              {
+                "timestamp": 1733215129493,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDivisionProper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Delen door een breuk is vermenigvuldigen met het omgekeerde",
+                    "expression": "$\\frac{1}{3}/\\left(\\frac{5}{2}\\right)$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733215141823,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticDivisionProper",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticMultiplicationProper",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{2}{15}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticDivisionProper",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticDivisionProper",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticMultiplicationProper",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{2}{15}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1}{3}/2\\frac{1}{2}$"
+            },
+            {
+              "result": "$\\frac{1}{3}/\\left(\\frac{5}{2}\\right)$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Schrijf  $2\\frac{1}{2}$  om naar een gewone breuk"
+            },
+            {
+              "result": "$\\frac{1}{3}\\cdot \\frac{2}{5}$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Delen door een breuk is vermenigvuldigen met het omgekeerde"
+            },
+            {
+              "result": "$\\frac{2}{15}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "nl": "Echte breuken delen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

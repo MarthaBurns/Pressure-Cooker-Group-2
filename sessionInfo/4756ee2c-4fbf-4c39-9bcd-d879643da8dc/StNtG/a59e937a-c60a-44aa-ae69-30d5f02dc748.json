@@ -1,0 +1,150 @@
+{
+  "success": true,
+  "creationTimestamp": 1742558637,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$6 t - 42=10- 7 t $"
+        },
+        {
+          "id": "StNtG",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1742558748627,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": -10
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de balansmethode niet goed toegepast.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup t =\\text{-}32\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$t=-32$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": -10
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$t =4$",
+          "derivation": [
+            {
+              "expression": "$6 t - 42=10- 7 t $"
+            },
+            {
+              "result": "$6 t + 7 t - 42=10$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: tel er links en rechts  $7 t $  bij op"
+            },
+            {
+              "result": "$13 t - 42=10$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$13 t =52$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Tel links en rechts  $42$  erbij op."
+            },
+            {
+              "result": "$t =4$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $13$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "success": true,
+  "creationTimestamp": 1742847158,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{3}{4}\\cdot 2\\frac{1}{2}$"
+        },
+        {
+          "id": "F9UCF",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0.7142857142857143,
+            "events": [
+              {
+                "timestamp": 1742847237492,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticMultiplicationProper",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{3}{4}\\cdot 2\\frac{1}{2}$  is niet gelijk aan  $2\\frac{3}{8}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2\\frac{3}{8}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\frac{3}{8}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1742847284473,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Schrijf  $2\\frac{1}{2}$  om naar een gewone breuk",
+                    "expression": "$\\frac{3}{4}\\cdot \\begingroup\\color{#336699}\\begingroup 2\\frac{1}{2}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1742847470002,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{15}{8}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.7142857142857143,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimilarImproperToMixed"
+                ]
+              },
+              {
+                "timestamp": 1742847505843,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarImproperToMixed",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Vereenvoudig de breuk door de helen eruit te halen",
+                    "expression": "$\\frac{15}{8}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticMultiplicationProper",
+                "weight": -100
+              },
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticSimilarImproperToMixed",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$1\\frac{7}{8}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{3}{4}\\cdot 2\\frac{1}{2}$"
+            },
+            {
+              "result": "$\\frac{3}{4}\\cdot \\frac{5}{2}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Schrijf  $2\\frac{1}{2}$  om naar een gewone breuk"
+            },
+            {
+              "result": "$\\frac{15}{8}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            },
+            {
+              "result": "$1\\frac{7}{8}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Vereenvoudig de breuk door de helen eruit te halen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "success": true,
+  "creationTimestamp": 1757457618,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{5}{9}+ 1\\frac{1}{4}$"
+        },
+        {
+          "id": "Nno6J",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1757457711146,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{5}{9}+ 1\\frac{1}{4}$  does not equal  $\\frac{29}{36}$ .",
+                    "expression": "$\\frac{5}{9}+ 1\\frac{1}{4}=\\frac{29}{36}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$=\\frac{29}{36}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$1\\frac{29}{36}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{5}{9}+ 1\\frac{1}{4}$"
+            },
+            {
+              "result": "$1+ \\frac{1}{4}+ \\frac{5}{9}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Split the mixed fraction"
+            },
+            {
+              "result": "$1+ \\frac{29}{36}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            },
+            {
+              "result": "$1\\frac{29}{36}$",
+              "skills": [
+                "FractionArithmeticSimilarImproperToMixed"
+              ],
+              "description": "Rewrite  $1+ \\frac{29}{36}$  into a single fraction"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "en": "Adding mixed fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "en": "Writing an improper fraction into a similar mixed fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

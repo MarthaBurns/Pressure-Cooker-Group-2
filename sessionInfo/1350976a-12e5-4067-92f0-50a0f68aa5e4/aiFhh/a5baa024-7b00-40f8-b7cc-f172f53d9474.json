@@ -1,0 +1,220 @@
+{
+  "success": true,
+  "creationTimestamp": 1756894596,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Löse die Gleichung."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{t }{4}=\\frac{1}{3}$"
+        },
+        {
+          "id": "aiFhh",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1756894613049,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Du hast den Faktor  $4$  in der Nenner vergessen.",
+                    "expression": "$t $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$t=\\frac{4}{12}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1756894637149,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsOperationsMultiply",
+                    "weight": 100,
+                    "errors": [
+                      "MultiplyDivide"
+                    ],
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Du hast die linke Seite mit  $4$  multipliziert, aber die rechte Seite durch  $4$  geteilt.</h1>Du solltest gleiche Operation an beide Seiten machen.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup t =\\frac{4}{48}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$t=\\frac{4}{48}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1756894690388,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$t=\\frac{16}{12}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.33333333333333326,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimplifyProper"
+                ]
+              },
+              {
+                "timestamp": 1756894709491,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$t=\\frac{160}{120}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.33333333333333326,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimplifyProper"
+                ]
+              },
+              {
+                "timestamp": 1756894718596,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Ist das die korrekte Variable?",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup T \\endgroup\\endgroup=\\frac{4}{3}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$T=\\frac{4}{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.33333333333333326,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1756894734834,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$t=\\frac{4}{3}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsOperationsMultiply",
+                "weight": 100,
+                "errors": [
+                  "MultiplyDivide"
+                ],
+                "source": "ERROR_FEEDBACK"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": true
+            }
+          },
+          "solution": "$t =\\frac{4}{3}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{t }{4}=\\frac{1}{3}$"
+            },
+            {
+              "result": "$t =\\frac{4}{3}$",
+              "description": "Multipliziere beide Seiten mit  $4$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "en": "Multiply or divide an equation using the balance method"
+      },
+      "stepType": "STRATEGY",
+      "errors": [
+        {
+          "id": "MultiplyDivide",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "en": "Multiplying on one side and dividing on the other side of the equation."
+          }
+        }
+      ]
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

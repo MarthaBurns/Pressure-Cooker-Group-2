@@ -1,0 +1,132 @@
+{
+  "success": true,
+  "creationTimestamp": 1734469894,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}9 m ^{2}- 90 m - 144$"
+        },
+        {
+          "id": "SFLF3",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1734470019921,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-9\\left(m+8\\left(m+2\\right)\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1734470029385,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-9\\left(m+8\\right)\\left(m+2\\right)$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}9 \\left(m + 8\\right) \\left(m + 2\\right)$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}9 m ^{2}- 90 m - 144$"
+            },
+            {
+              "result": "$\\text{-}9 \\left(m ^{2}+ 10 m + 16\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren"
+            },
+            {
+              "result": "$\\text{-}9 \\left(m + 8\\right) \\left(m + 2\\right)$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Ontbind met de som-product-methode"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "nl": "Een kwadratische expressie ontbinden via de som-productmethode"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "success": true,
+  "creationTimestamp": 1750073038,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$8 : \\frac{2}{3}$"
+        },
+        {
+          "id": "tgs1M",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1750073067238,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt een factor  $x $  teveel in de teller.",
+                    "expression": "$x $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$8\\ x\\ \\frac{3}{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750073075476,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $8 : \\left(\\frac{2}{3}\\right)$  is niet gelijk aan  $8\\frac{3}{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 8\\frac{3}{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$8\\ \\frac{3}{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750073086790,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDivisionProper",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$12$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticDivisionProper",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$12$",
+          "derivation": [
+            {
+              "expression": "$8 : \\left(\\frac{2}{3}\\right)$"
+            },
+            {
+              "result": "$12$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Delen door een breuk is vermenigvuldigen met het omgekeerde"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "nl": "Echte breuken delen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

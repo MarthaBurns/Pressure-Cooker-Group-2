@@ -1,0 +1,99 @@
+{
+  "success": true,
+  "creationTimestamp": 1737114607,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{5}+ 3 \\sqrt{25}\\cdot 2 \\sqrt{5}$"
+        },
+        {
+          "id": "BSNK7",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1737114718654,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$6\\sqrt{150}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$31 \\sqrt{5}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{5}+ 3\\cdot 2 \\sqrt{25} \\sqrt{5}$"
+            },
+            {
+              "result": "$\\sqrt{5}+ 6 \\sqrt{25} \\sqrt{5}$",
+              "description": "Reken uit:  $3\\cdot 2$"
+            },
+            {
+              "result": "$\\sqrt{5}+ 6\\cdot 5 \\sqrt{5}$",
+              "description": "Bepaal de wortel van  $25$"
+            },
+            {
+              "result": "$\\sqrt{5}+ 30 \\sqrt{5}$",
+              "description": "Reken uit:  $6\\cdot 5$"
+            },
+            {
+              "result": "$31 \\sqrt{5}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

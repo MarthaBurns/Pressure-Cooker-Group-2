@@ -1,0 +1,143 @@
+{
+  "success": true,
+  "creationTimestamp": 1740137898,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 \\left(\\text{-}4 x - 2\\right) \\left(x + 2\\right)$"
+        },
+        {
+          "id": "tWS6h",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1740137948253,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": 100
+                  },
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  },
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-12x^{2}-30x-12$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": 100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}12 x ^{2}- 30 x - 12$",
+          "derivation": [
+            {
+              "expression": "$3 \\left(\\text{-}4 x - 2\\right) \\left(x + 2\\right)$"
+            },
+            {
+              "result": "$3 \\left(\\text{-}4 x \\cdot x - 8 x - 2 x - 4\\right)$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$3 \\left(\\text{-}4 x \\cdot x - 10 x - 4\\right)$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$3 \\left(\\text{-}4 x ^{2}- 10 x - 4\\right)$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$\\text{-}12 x ^{2}- 30 x - 12$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

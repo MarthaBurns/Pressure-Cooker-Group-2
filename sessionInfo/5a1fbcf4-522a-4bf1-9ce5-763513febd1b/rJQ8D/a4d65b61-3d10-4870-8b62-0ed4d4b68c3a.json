@@ -1,0 +1,146 @@
+{
+  "success": true,
+  "creationTimestamp": 1733903790,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{75}$"
+        },
+        {
+          "id": "rJQ8D",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1733903843412,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -100,
+                    "errors": [
+                      "MultiplyingFactor"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt rechtstreeks  $5$  buiten de wortel gehaald, maar dat is niet toegestaan.</h1>De regel voor vermenigvuldigen met wortels luidt:  $\\sqrt{a \\cdot b }=\\sqrt{a }\\cdot \\sqrt{b }$ . Als je deze wilt\ntoepassen zul je eerst de wortel moeten nemen van  $5$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{15}\\cdot 5\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{15}5$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733903849339,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{15}\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1733903857802,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Vermenigvuldig de wortels",
+                    "expression": "$\\sqrt{15} \\sqrt{5}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -100,
+                "errors": [
+                  "MultiplyingFactor"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$5 \\sqrt{3}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{75}$"
+            },
+            {
+              "result": "$\\sqrt{25} \\sqrt{3}$",
+              "description": "Vereenvoudig de wortel"
+            },
+            {
+              "result": "$5 \\sqrt{3}$",
+              "description": "Bepaal de wortel van  $25$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "nl": "De regels voor vermenigvuldigen van wortels toepassen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "MultiplyingFactor",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De factor direct met de radicand vermenigvuldigen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

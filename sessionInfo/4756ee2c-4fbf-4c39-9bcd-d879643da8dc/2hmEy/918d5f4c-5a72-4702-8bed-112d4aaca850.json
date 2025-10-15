@@ -1,0 +1,166 @@
+{
+  "success": true,
+  "creationTimestamp": 1759739329,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}10 p + 118=18$"
+        },
+        {
+          "id": "2hmEy",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1759739358554,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAdditionInteger",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de balansmethode niet goed toegepast.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}10 p =100\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-10p\\ =\\ 100$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759739388505,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "source": "HINT"
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Balansmethode: Haal links en rechts  $118$  eraf.",
+                    "expression": "$\\text{-}10 p + \\begingroup\\color{#336699}\\begingroup 118\\endgroup\\endgroup=\\begingroup\\color{#336699}\\begingroup 18\\endgroup\\endgroup$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticAdditionInteger",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "source": "HINT"
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$p =10$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}10 p + 118=18$"
+            },
+            {
+              "result": "$\\text{-}10 p =\\text{-}100$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Haal links en rechts  $118$  eraf."
+            },
+            {
+              "result": "$p =10$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $\\text{-}10$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "NumberArithmeticAdditionInteger": {
+      "descr": {
+        "nl": "Gehele getallen optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

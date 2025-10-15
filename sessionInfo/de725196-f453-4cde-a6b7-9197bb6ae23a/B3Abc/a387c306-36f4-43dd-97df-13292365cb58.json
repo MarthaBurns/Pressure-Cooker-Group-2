@@ -1,0 +1,174 @@
+{
+  "success": true,
+  "creationTimestamp": 1734448841,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{22}{8}- \\frac{1}{2}$"
+        },
+        {
+          "id": "B3Abc",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1734448938149,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{22}{8}- \\frac{1}{2}$  is niet gelijk aan  $\\frac{8}{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{8}{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{8}{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1734449004235,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{22}{8}- \\frac{1}{2}$  is niet gelijk aan  $\\frac{4}{1}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{4}{1}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{4}{1}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1734449130785,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{9}{4}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": -100
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": -100
+              },
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{9}{4}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{22}{8}- \\frac{1}{2}$"
+            },
+            {
+              "result": "$\\frac{11}{4}- \\frac{1}{2}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Vereenvoudig de breuk"
+            },
+            {
+              "result": "$\\frac{9}{4}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Maak de breuken gelijknamig"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "nl": "Ongelijknamige breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

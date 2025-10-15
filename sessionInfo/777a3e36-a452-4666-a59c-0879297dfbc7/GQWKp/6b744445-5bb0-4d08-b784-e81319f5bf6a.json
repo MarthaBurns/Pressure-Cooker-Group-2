@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "creationTimestamp": 1733401423,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 \\sqrt{3}\\cdot 6 \\sqrt{6}$"
+        },
+        {
+          "id": "GQWKp",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733401435339,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $3 \\sqrt{3}\\cdot 6 \\sqrt{6}$  is niet gelijk aan  $18$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 18\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$18$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733401446815,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$18\\sqrt{18}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$18 \\sqrt{18}$",
+          "derivation": [
+            {
+              "expression": "$3\\cdot 6 \\sqrt{3} \\sqrt{6}$"
+            },
+            {
+              "result": "$18 \\sqrt{3} \\sqrt{6}$",
+              "description": "Reken uit:  $3\\cdot 6$"
+            },
+            {
+              "result": "$18 \\sqrt{18}$",
+              "description": "Vermenigvuldig de wortels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

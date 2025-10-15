@@ -1,0 +1,169 @@
+{
+  "success": true,
+  "creationTimestamp": 1759074520,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Write as concise as possible."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5 \\sqrt{2}- 5 \\sqrt{2}$"
+        },
+        {
+          "id": "ElNu7",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1759074531396,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Did you forget the term  $\\text{-}5 \\sqrt{2}$ ?",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}5 \\sqrt{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-5\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759074536591,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAdditionInteger",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\text{-}5 \\sqrt{2}- 5 \\sqrt{2}$  does not equal  $\\sqrt{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759074539805,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Calculation error:  $\\text{-}5 \\sqrt{2}- 5 \\sqrt{2}$  does not equal  $2$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759074545209,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Combine the similar terms</h1>The terms with  $\\sqrt{2}$  are similar.",
+                    "expression": "$\\text{-}5 \\sqrt{2}- 5 \\sqrt{2}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticAdditionInteger",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}10 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5 \\sqrt{2}- 5 \\sqrt{2}$"
+            },
+            {
+              "result": "$\\text{-}10 \\sqrt{2}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAdditionInteger": {
+      "descr": {
+        "en": "Adding integer numbers"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

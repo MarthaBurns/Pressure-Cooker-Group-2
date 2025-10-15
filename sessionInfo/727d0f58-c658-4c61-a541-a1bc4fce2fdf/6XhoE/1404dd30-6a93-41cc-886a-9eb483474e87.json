@@ -1,0 +1,161 @@
+{
+  "success": true,
+  "creationTimestamp": 1758267066,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$1\\frac{1}{2}\\cdot 1\\frac{1}{5}$"
+        },
+        {
+          "id": "6XhoE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1758267127135,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticMultiplicationMixed",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $1\\frac{1}{2}\\cdot 1\\frac{1}{5}$  is niet gelijk aan  $3$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758267129360,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Herschrijf  $1\\frac{1}{2}$  en  $1\\frac{1}{5}$  naar 'gewone' breuken",
+                    "expression": "$1\\frac{1}{2}\\cdot 1\\frac{1}{5}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticMultiplicationMixed",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{9}{5}$",
+          "derivation": [
+            {
+              "expression": "$1\\frac{1}{2}\\cdot 1\\frac{1}{5}$"
+            },
+            {
+              "result": "$\\frac{3}{2}\\cdot \\frac{6}{5}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Herschrijf  $1\\frac{1}{2}$  en  $1\\frac{1}{5}$  naar 'gewone' breuken"
+            },
+            {
+              "result": "$\\frac{3\\cdot 6}{2\\cdot 5}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            },
+            {
+              "result": "$\\frac{3\\cdot 3}{5}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Deel de gemeenschappelijke factor weg uit teller en noemer"
+            },
+            {
+              "result": "$\\frac{9}{5}$",
+              "description": "Reken uit:  $3\\cdot 3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationMixed": {
+      "descr": {
+        "nl": "Gemengde breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

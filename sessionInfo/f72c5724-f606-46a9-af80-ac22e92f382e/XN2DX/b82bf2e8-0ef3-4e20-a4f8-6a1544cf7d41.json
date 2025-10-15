@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "creationTimestamp": 1750708890,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$20 n ^{2}+ 20 n $"
+        },
+        {
+          "id": "XN2DX",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750708931435,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$20\\left(\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1750708953204,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$20\\left(n^{\\left(2+n\\right)}\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$20 n  \\left(n + 1\\right)$",
+          "derivation": [
+            {
+              "expression": "$20 n ^{2}+ 20 n $"
+            },
+            {
+              "result": "$20 \\left(n ^{2}+ n \\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren"
+            },
+            {
+              "result": "$20 n  \\left(n + 1\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren: haal de factor  $n $  buiten haakjes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

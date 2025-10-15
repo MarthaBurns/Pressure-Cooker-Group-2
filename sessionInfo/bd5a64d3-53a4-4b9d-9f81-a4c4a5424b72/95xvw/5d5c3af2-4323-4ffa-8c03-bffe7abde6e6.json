@@ -1,0 +1,138 @@
+{
+  "success": true,
+  "creationTimestamp": 1748083171,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}64+ \\left(4 p - 10\\right)^{2}=0$"
+        },
+        {
+          "id": "95xvw",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1748083340632,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 256 p ^{2}- 640\\endgroup\\endgroup=0$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$256p^{2}-640=0$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1748083354343,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 256 p - 640\\endgroup\\endgroup=0$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$256p-640=0$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$p =\\frac{1}{2}\\vee p =\\frac{9}{2}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}64+ \\left(4 p - 10\\right)^{2}=0$"
+            },
+            {
+              "result": "$\\left(4 p - 10\\right)^{2}=64$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Tel links en rechts  $64$  erbij op."
+            },
+            {
+              "result": "$4 p - 10=\\sqrt{64}\\vee 4 p - 10=\\text{-}\\sqrt{64}$",
+              "description": "Herleid de vergelijking door links en rechts de wortel te nemen"
+            },
+            {
+              "result": "$4 p - 10=8\\vee 4 p - 10=\\text{-}8$",
+              "description": "Bepaal de wortel van  $64$"
+            },
+            {
+              "result": "$4 p =18\\vee 4 p =2$",
+              "description": "Balansmethode: Tel links en rechts  $10$  erbij op."
+            },
+            {
+              "result": "$p =\\frac{18}{4}\\vee p =\\frac{2}{4}$",
+              "description": "Deel links en rechts door  $4$"
+            },
+            {
+              "result": "$p =\\frac{1}{2}\\vee p =\\frac{9}{2}$",
+              "description": "Vereenvoudig de breuk"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

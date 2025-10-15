@@ -1,0 +1,159 @@
+{
+  "success": true,
+  "creationTimestamp": 1747915855,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}3 x \\cdot \\text{-}5 x + 4 x ^{2}$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1747915875674,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-3x\\times-5x=15x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1747915881049,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-3x\\times-5x=15x^{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "TRUE_EXPRESSION"
+              },
+              {
+                "timestamp": 1747915901611,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$15x+4x^{2}=19x^{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1747915922494,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $\\text{-}3\\cdot \\text{-}5$",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\text{-}3\\endgroup\\endgroup x \\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}5\\endgroup\\endgroup x + 4 x ^{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1747915955066,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$15x^{2}+4x^{2}=19x^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$19 x ^{2}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}3\\cdot \\text{-}5 x \\cdot x + 4 x ^{2}$"
+            },
+            {
+              "result": "$15 x \\cdot x + 4 x ^{2}$",
+              "description": "Reken uit:  $\\text{-}3\\cdot \\text{-}5$"
+            },
+            {
+              "result": "$15 x ^{2}+ 4 x ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$19 x ^{2}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

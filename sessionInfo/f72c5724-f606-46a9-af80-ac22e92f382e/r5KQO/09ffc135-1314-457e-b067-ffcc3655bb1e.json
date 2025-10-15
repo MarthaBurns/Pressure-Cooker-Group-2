@@ -1,0 +1,176 @@
+{
+  "success": true,
+  "creationTimestamp": 1747130399,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}36 a ^{5}+ 6 a ^{2}- 42$"
+        },
+        {
+          "id": "r5KQO",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1747130496256,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$6a^{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1747130664679,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt  $\\text{-}36 a ^{5}+ 6 a ^{2}- 42$  niet goed ontbonden in factoren.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 6 a  \\left(\\text{-}11^{4}+ 1 a - 12\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6a\\left(-11^{4}+1a-12\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747130836544,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6\\left(-11^{^{5}}+a^{2}\\ +\\ 12\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1747130934017,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt  $\\text{-}36 a ^{5}+ 6 a ^{2}- 42$  niet goed ontbonden in factoren.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 6 \\left(\\text{-}6^{5}+ a ^{2}+ 7\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6\\left(-6^{5}+a^{2}+7\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$6 \\left(a + 1\\right) \\left(\\text{-}6 a ^{4}+ 6 a ^{3}- 6 a ^{2}+ 7 a - 7\\right)$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}36 a ^{5}+ 6 a ^{2}- 42$"
+            },
+            {
+              "result": "$6 \\left(\\text{-}6 a ^{5}+ a ^{2}- 7\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren"
+            },
+            {
+              "result": "$6 \\left(a + 1\\right) \\left(\\text{-}6 a ^{4}+ 6 a ^{3}- 6 a ^{2}+ 7 a - 7\\right)$",
+              "skills": [
+                "FactorLinearFactor"
+              ],
+              "description": "Ontbind een factor  $a + 1$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FactorLinearFactor": {
+      "descr": {
+        "nl": "Een lineaire factor ontbinden uit een polynoom van hogere graad"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

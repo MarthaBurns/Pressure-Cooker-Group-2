@@ -1,0 +1,178 @@
+{
+  "success": true,
+  "creationTimestamp": 1759308900,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 a + \\left(3 a - 2\\right) \\left(a - 3\\right)$"
+        },
+        {
+          "id": "O3mgi",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1759309018978,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3a+3a^{2}-9a-2a+6$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1759309048414,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$2$  is niet gelijk aan  $6$ .",
+                    "expression": "$\\text{-}8 a + 3 a ^{\\begingroup\\color{darkred}\\begingroup 2=6\\endgroup\\endgroup}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-8a+3a^{2=6}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1759309058740,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-8a+3a^{2}+6$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$3 a ^{2}- 8 a + 6$",
+          "derivation": [
+            {
+              "expression": "$3 a + \\left(3 a - 2\\right) \\left(a - 3\\right)$"
+            },
+            {
+              "result": "$3 a + 3 a \\cdot a - 9 a - 2 a + 6$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$3 a + 3 a \\cdot a - 11 a + 6$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$3 a + 3 a ^{2}- 11 a + 6$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$3 a ^{2}- 8 a + 6$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

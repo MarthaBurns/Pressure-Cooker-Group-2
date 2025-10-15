@@ -1,0 +1,214 @@
+{
+  "success": true,
+  "creationTimestamp": 1740404336,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes weg en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}4 t + 4 \\left(\\text{-}4 t + 3\\right)$"
+        },
+        {
+          "id": "LdeEL",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1740404402943,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$16t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1740404408568,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$17t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1740404419979,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de haakjes uit</h1>Vermenigvuldig elke term binnen de haakjes met  $4$",
+                    "expression": "$\\text{-}4 t + \\begingroup\\color{#336699}\\begingroup 4 \\left(\\text{-}4 t + 3\\right)\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1740404436860,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$4\\cdot-4=-16$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "TRUE_EXPRESSION"
+              },
+              {
+                "timestamp": 1740404449873,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\cdot4=12$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "TRUE_EXPRESSION"
+              },
+              {
+                "timestamp": 1740404478195,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-4t+-16t+12$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1740404495479,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  },
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-20t+12$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}20 t + 12$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}4 t + 4 \\left(\\text{-}4 t + 3\\right)$"
+            },
+            {
+              "result": "$\\text{-}4 t - 16 t + 12$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}20 t + 12$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

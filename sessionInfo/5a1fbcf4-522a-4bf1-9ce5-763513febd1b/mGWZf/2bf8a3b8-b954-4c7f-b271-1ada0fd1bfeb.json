@@ -1,0 +1,108 @@
+{
+  "success": true,
+  "creationTimestamp": 1729525587,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{8}{5+ \\sqrt{2}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1729525608579,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{8\\sqrt{2}}{7}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{40- 8 \\sqrt{2}}{23}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{8}{5+ \\sqrt{2}}$"
+            },
+            {
+              "result": "$\\frac{8 \\left(5- \\sqrt{2}\\right)}{\\left(5+ \\sqrt{2}\\right) \\left(5- \\sqrt{2}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{8 \\left(5- \\sqrt{2}\\right)}{25- \\left(\\sqrt{2}\\right)^{2}}$",
+              "skills": [
+                "ExpandDoubleDifferenceSquares"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{8 \\left(5- \\sqrt{2}\\right)}{23}$",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\frac{40- 8 \\sqrt{2}}{23}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleDifferenceSquares": {
+      "descr": {
+        "nl": "Een product uitschrijven als het het verschil van twee kwadraten"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

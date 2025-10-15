@@ -1,0 +1,150 @@
+{
+  "success": true,
+  "creationTimestamp": 1760088720,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(s + 4\\right)^{2}$"
+        },
+        {
+          "id": "enAXH",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1760088804134,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$s^{2}+4s+4s+16$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1760088822428,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $s $  zijn gelijksoortig.",
+                    "expression": "$s ^{2}+ \\begingroup\\color{#336699}\\begingroup 4 s \\endgroup\\endgroup+ \\begingroup\\color{#336699}\\begingroup 4 s \\endgroup\\endgroup+ 16$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1760088824610,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsSquare",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$s^{2\\ }+8s+16$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "source": "HINT"
+              },
+              {
+                "id": "ExpandDoubleBracketsSquare",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$s ^{2}+ 8 s + 16$",
+          "derivation": [
+            {
+              "expression": "$\\left(s + 4\\right)^{2}$"
+            },
+            {
+              "result": "$s ^{2}+ 8 s + 4^{2}$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$s ^{2}+ 8 s + 16$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

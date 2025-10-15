@@ -1,0 +1,119 @@
+{
+  "success": true,
+  "creationTimestamp": 1747298383,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}8- 7\\cdot \\text{-}t + \\text{-}4 t \\cdot 5 t $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1747298435097,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\text{-}20 t ^{2}+ \\begingroup\\color{darkred}\\begingroup \\text{-}7 t + 8\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-20t^{2}-7t--8$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747298462126,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt afgetrokken, maar je moet optellen.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}20 t ^{2}- 7 t \\endgroup\\endgroup- 8$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-20t^{2}-7t+-8$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747298470279,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-20t^{2}+7t+-8$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}20 t ^{2}+ 7 t - 8$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}8- 7\\cdot \\text{-}1 t + \\text{-}4\\cdot 5 t \\cdot t $"
+            },
+            {
+              "result": "$\\text{-}8+ 7 t - 20 t \\cdot t $",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\text{-}20 t ^{2}+ 7 t - 8$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {},
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

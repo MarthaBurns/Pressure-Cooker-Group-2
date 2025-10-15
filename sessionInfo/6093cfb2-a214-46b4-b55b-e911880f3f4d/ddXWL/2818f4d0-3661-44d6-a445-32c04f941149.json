@@ -1,0 +1,207 @@
+{
+  "success": true,
+  "creationTimestamp": 1759050948,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{5}{9}+ \\frac{1}{4}$"
+        },
+        {
+          "id": "ddXWL",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1759050965431,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": 100,
+                    "errors": [
+                      "AddedDenominator"
+                    ],
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You should not add the denominators when adding fractions.</h1>Make sure the fractions have the same denominator.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{6}{13}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{6}{13}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759050990161,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Use the same denominator for both fractions</h1>Choose  $36$  as new denominator",
+                    "expression": "$\\frac{5}{9}+ \\frac{1}{4}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1759051013814,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{5}{36}+\\frac{1}{36}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1759051051164,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperCommonDenominator",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{20}{36}+\\frac{9}{36}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticAddProperCommonDenominator"
+                ]
+              },
+              {
+                "timestamp": 1759051062811,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{29}{36}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": 100,
+                "errors": [
+                  "AddedDenominator"
+                ],
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{29}{36}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{5}{9}+ \\frac{1}{4}$"
+            },
+            {
+              "result": "$\\frac{29}{36}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE",
+      "errors": [
+        {
+          "id": "AddedDenominator",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "en": "Adding the denominators when adding simple fractions."
+          }
+        }
+      ]
+    },
+    "FractionArithmeticAddProperCommonDenominator": {
+      "descr": {
+        "en": "Adding proper fractions with common denominators"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

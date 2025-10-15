@@ -1,0 +1,149 @@
+{
+  "success": true,
+  "creationTimestamp": 1737981641,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$9 a + a ^{2}=0$"
+        },
+        {
+          "id": "Vs6VE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1737981661986,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$a=9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1737981665631,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Er zijn meer oplossingen</h1>Schrijf je antwoord in de vorm  $a =0- 9\\vee a =\\ldots$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup a =0- 9\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$a=0-9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737981670469,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Er zijn meer oplossingen</h1>Schrijf je antwoord in de vorm  $a =\\text{-}9\\vee a =\\ldots$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup a =\\text{-}9\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$a=-9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$a =\\text{-}9\\vee a =0$",
+          "derivation": [
+            {
+              "expression": "$9 a + a ^{2}=0$"
+            },
+            {
+              "result": "$a  \\left(9+ a \\right)=0$",
+              "description": "Haal de factor  $a $  buiten haakjes."
+            },
+            {
+              "result": "$a =0\\vee 9+ a =0$",
+              "skills": [
+                "EquationsSplitFactors"
+              ],
+              "description": "Minstens één factor is gelijk aan nul"
+            },
+            {
+              "result": "$a =\\text{-}9\\vee a =0$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Haal links en rechts  $9$  eraf."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsSplitFactors": {
+      "descr": {
+        "nl": "Elke factor gelijkstellen aan nul"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

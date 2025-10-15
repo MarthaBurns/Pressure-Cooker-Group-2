@@ -1,0 +1,138 @@
+{
+  "success": true,
+  "creationTimestamp": 1741362027,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1\\frac{4}{8}}{1\\frac{2}{9}}$"
+        },
+        {
+          "id": "cH76j",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1741362222202,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Arithmetic error:  $\\frac{1\\frac{4}{8}}{1\\frac{2}{9}}$  is not equal to  $\\frac{18}{33}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{18}{33}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{18}{33}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{27}{22}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1\\frac{4}{8}}{1\\frac{2}{9}}$"
+            },
+            {
+              "result": "$\\frac{1\\frac{1}{2}}{1\\frac{2}{9}}$",
+              "skills": [
+                "FractionArithmeticSimilarMixed"
+              ],
+              "description": "Simplify the fraction"
+            },
+            {
+              "result": "$\\frac{3}{2}/1\\frac{2}{9}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Rewrite  $1\\frac{1}{2}$  into an improper fraction"
+            },
+            {
+              "result": "$\\frac{3}{2}/\\left(\\frac{11}{9}\\right)$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Rewrite  $1\\frac{2}{9}$  into an improper fraction"
+            },
+            {
+              "result": "$\\frac{3}{2}\\times \\frac{9}{11}$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Use 'Invert and multiply' to calculate the division by  $\\frac{11}{9}$"
+            },
+            {
+              "result": "$\\frac{27}{22}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Multiply the fractions"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixed": {
+      "descr": {
+        "en": "Writing a similar mixed fraction"
+      },
+      "stepType": "CONCEPT"
+    },
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "en": "Writing a mixed fraction into a similar improper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "en": "Dividing proper fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "en": "Multiplying proper fractions"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

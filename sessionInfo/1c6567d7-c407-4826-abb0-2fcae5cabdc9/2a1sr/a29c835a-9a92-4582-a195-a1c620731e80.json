@@ -1,0 +1,181 @@
+{
+  "success": true,
+  "creationTimestamp": 1759310022,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5 \\left(\\text{-}2+ 5 a \\right)$"
+        },
+        {
+          "id": "2a1sr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1759310042262,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>De term  $125 a $  klopt niet.",
+                    "expression": "$10+ \\begingroup\\color{darkred}\\begingroup 125 a \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$10+125a$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759310054320,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "errors": [
+                      "SignError"
+                    ],
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Bij het uitwerken van de haakjes heb je het teken niet overal goed.</h1>Let op dat  $\\text{-}5$  negatief is.",
+                    "expression": "$10+ \\begingroup\\color{darkred}\\begingroup 25 a \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$10+25a$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759310066069,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$10+-25a$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "errors": [
+                  "SignError"
+                ],
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$10- 25 a $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5 \\left(\\text{-}2+ 5 a \\right)$"
+            },
+            {
+              "result": "$10- 25 a $",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "SignError",
+          "type": [
+            "MISCONCEPTION",
+            "MISTAKE"
+          ],
+          "descr": {
+            "nl": "Een tekenfout maken."
+          }
+        }
+      ]
+    },
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "success": true,
+  "creationTimestamp": 1749476536,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$28+ 7 a $"
+        },
+        {
+          "id": "eZx3R",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749476555097,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$7\\left(4+1a\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.5,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1749476571775,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 5 a \\endgroup\\endgroup\\cdot 7$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$7\\left(5a\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.5,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749476605662,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$7\\left(4+a\\right)$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$7 \\left(a + 4\\right)$",
+          "derivation": [
+            {
+              "expression": "$28+ 7 a $"
+            },
+            {
+              "result": "$7 \\left(a + 4\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

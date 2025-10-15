@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "creationTimestamp": 1747614836,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}3 \\left(m - 5\\right)^{2}- 2$"
+        },
+        {
+          "id": "TX6Sm",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1747615136883,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}3 m ^{2}+ 15 m + 15 m + 75\\endgroup\\endgroup- 2$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-3m^{2}+15m+15m+75-2$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}3 m ^{2}+ 30 m - 77$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}3 \\left(m - 5\\right)^{2}- 2$"
+            },
+            {
+              "result": "$\\text{-}3 \\left(m ^{2}- 10 m + \\left(\\text{-}5\\right)^{2}\\right)- 2$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$\\text{-}3 \\left(m ^{2}- 10 m + 5^{2}\\right)- 2$",
+              "description": "Bij een even macht is de uitkomst altijd positief"
+            },
+            {
+              "result": "$\\text{-}3 \\left(m ^{2}- 10 m + 25\\right)- 2$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            },
+            {
+              "result": "$\\text{-}3 m ^{2}+ 30 m - 75- 2$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}3 m ^{2}+ 30 m - 77$",
+              "description": "Reken uit:  $\\text{-}75- 2$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

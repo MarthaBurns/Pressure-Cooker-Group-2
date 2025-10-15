@@ -1,0 +1,103 @@
+{
+  "success": true,
+  "creationTimestamp": 1732699196,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 \\sqrt{6}\\cdot 7 \\sqrt{7}$"
+        },
+        {
+          "id": "GQWKp",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1732699552799,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\sqrt{7}\\cdot 3\\cdot 7 \\sqrt{6}$  is niet gelijk aan  $\\sqrt{882}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{882}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{882}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -50
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$21 \\sqrt{42}$",
+          "derivation": [
+            {
+              "expression": "$3\\cdot 7 \\sqrt{6} \\sqrt{7}$"
+            },
+            {
+              "result": "$21 \\sqrt{6} \\sqrt{7}$",
+              "description": "Reken uit:  $3\\cdot 7$"
+            },
+            {
+              "result": "$21 \\sqrt{42}$",
+              "description": "Vermenigvuldig de wortels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "nl": "De regels voor vermenigvuldigen van wortels toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

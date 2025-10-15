@@ -1,0 +1,182 @@
+{
+  "success": true,
+  "creationTimestamp": 1756898026,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{2}{4}- \\frac{1}{5}$"
+        },
+        {
+          "id": "ibxuY",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1756898149351,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$2\\frac{2}{4}$  is not equal to  $1$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 1\\endgroup\\endgroup- \\frac{1}{5}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$1-\\frac{1}{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1756898223802,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{5}{2}-\\frac{1}{5}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticAddProperUnlikeDenominator",
+                  "FractionArithmeticAddProperCommonDenominator"
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "source": "NEXT_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$2\\frac{3}{10}$",
+          "derivation": [
+            {
+              "expression": "$2\\frac{2}{4}- \\frac{1}{5}$"
+            },
+            {
+              "result": "$2+ \\frac{2}{4}- \\frac{1}{5}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Split the mixed fraction"
+            },
+            {
+              "result": "$2+ \\frac{1}{2}- \\frac{1}{5}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Simplify the fraction"
+            },
+            {
+              "result": "$2+ \\frac{3}{10}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            },
+            {
+              "result": "$2\\frac{3}{10}$",
+              "skills": [
+                "FractionArithmeticSimilarImproperToMixed"
+              ],
+              "description": "Rewrite  $2+ \\frac{3}{10}$  into a single fraction"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "en": "Adding mixed fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "en": "Writing an improper fraction into a similar mixed fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "en": "Writing a mixed fraction into a similar improper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperCommonDenominator": {
+      "descr": {
+        "en": "Adding proper fractions with common denominators"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

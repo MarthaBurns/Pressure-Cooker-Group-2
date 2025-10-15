@@ -1,0 +1,186 @@
+{
+  "success": true,
+  "creationTimestamp": 1733474734,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes weg en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 a - 2 \\left(\\text{-}a - 1\\right)+ 5 \\left(\\text{-}6 a + 4\\right)$"
+        },
+        {
+          "id": "xoUaN",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733474757442,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3a+2a+2-30a+20$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1733474772767,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -50
+                  },
+                  {
+                    "id": "NumberArithmeticAdditionInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de termen  $3 a , 2 a \\text{ en } \\text{-}30 a $  niet goed samengenomen",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 25 a \\endgroup\\endgroup+ 22$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$25a+22$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733474796248,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  },
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  },
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-25a+22$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -50
+              },
+              {
+                "id": "NumberArithmeticAdditionInteger",
+                "weight": -100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}25 a + 22$",
+          "derivation": [
+            {
+              "expression": "$3 a - 2 \\left(\\text{-}a - 1\\right)+ 5 \\left(\\text{-}6 a + 4\\right)$"
+            },
+            {
+              "result": "$3 a + 2 a + 2- 30 a + 20$",
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$3 a + 2 a + 22- 30 a $",
+              "description": "Reken uit:  $2+ 20$"
+            },
+            {
+              "result": "$\\text{-}25 a + 22$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAdditionInteger": {
+      "descr": {
+        "nl": "Gehele getallen optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

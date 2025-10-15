@@ -1,0 +1,191 @@
+{
+  "success": true,
+  "creationTimestamp": 1756817735,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{4}{5}\\cdot \\frac{2}{3}$"
+        },
+        {
+          "id": "F9UCF",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1756817790838,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{28}{15}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.7142857142857143,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimilarMixedToImproper"
+                ]
+              },
+              {
+                "timestamp": 1756817813985,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarImproperToMixed",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{28}{15}$  is niet gelijk aan  $1\\frac{14}{15}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 1\\frac{14}{15}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$1\\frac{14}{15}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.7142857142857143,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1756817830132,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticMultiplicationProper",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$1\\frac{13}{15}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimilarImproperToMixed",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticMultiplicationProper",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$1\\frac{13}{15}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{2}{3}\\cdot 2\\frac{4}{5}$"
+            },
+            {
+              "result": "$\\frac{2}{3}\\cdot \\frac{14}{5}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Schrijf  $2\\frac{4}{5}$  om naar een gewone breuk"
+            },
+            {
+              "result": "$\\frac{28}{15}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            },
+            {
+              "result": "$1\\frac{13}{15}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Vereenvoudig de breuk door de helen eruit te halen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

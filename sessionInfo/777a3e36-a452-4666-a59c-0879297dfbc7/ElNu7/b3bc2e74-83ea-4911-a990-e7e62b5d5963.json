@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "creationTimestamp": 1737116020,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf zo kort mogelijk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}\\sqrt{3}- 7 \\sqrt{3}$"
+        },
+        {
+          "id": "ElNu7",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1737116034104,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAddConcept",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\text{-}\\sqrt{3}- 7 \\sqrt{3}$  is niet gelijk aan  $6 \\sqrt{3}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 6 \\sqrt{3}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6\\sqrt{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737116049019,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $\\sqrt{3}$  zijn gelijksoortig.",
+                    "expression": "$\\text{-}\\sqrt{3}- 7 \\sqrt{3}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticAddConcept",
+                "weight": -100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}8 \\sqrt{3}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}\\sqrt{3}- 7 \\sqrt{3}$"
+            },
+            {
+              "result": "$\\text{-}8 \\sqrt{3}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAddConcept": {
+      "descr": {
+        "nl": "Optellen en aftrekken begrijpen"
+      },
+      "stepType": "CONCEPT"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

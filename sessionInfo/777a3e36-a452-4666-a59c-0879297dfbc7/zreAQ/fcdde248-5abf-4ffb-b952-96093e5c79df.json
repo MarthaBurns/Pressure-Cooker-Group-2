@@ -1,0 +1,102 @@
+{
+  "success": true,
+  "creationTimestamp": 1738002007,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{6}- 2 \\sqrt{6}\\cdot 5 \\sqrt{6}$"
+        },
+        {
+          "id": "zreAQ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1738002031957,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt opgeteld, maar je moet aftrekken.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{6}+ 10 \\sqrt{36}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{6}+10\\sqrt{36}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1738002033841,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$\\sqrt{6}+ \\begingroup\\color{#336699}\\begingroup \\text{-}2\\endgroup\\endgroup \\sqrt{6}\\cdot \\begingroup\\color{#336699}\\begingroup 5\\endgroup\\endgroup \\sqrt{6}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\sqrt{6}- 60$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{6}- 2\\cdot 5 \\sqrt{6} \\sqrt{6}$"
+            },
+            {
+              "result": "$\\sqrt{6}- 10 \\sqrt{6} \\sqrt{6}$",
+              "description": "Reken uit:  $\\text{-}2\\cdot 5$"
+            },
+            {
+              "result": "$\\sqrt{6}- 10\\cdot 6$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\sqrt{6}- 60$",
+              "description": "Reken uit:  $\\text{-}10\\cdot 6$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {},
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

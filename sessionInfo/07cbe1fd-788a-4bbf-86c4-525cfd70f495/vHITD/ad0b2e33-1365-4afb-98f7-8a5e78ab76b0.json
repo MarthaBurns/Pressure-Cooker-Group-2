@@ -1,0 +1,111 @@
+{
+  "success": true,
+  "creationTimestamp": 1748851225,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2+ x ^{2}+ 3 x $"
+        },
+        {
+          "id": "vHITD",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1748851255303,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\left(x+3x\\right)^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1748851256341,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Ontbind met de som-product-methode</h1>Bedenk welke twee getallen opgeteld  $3$  en vermenigvuldigd  $2$  zijn",
+                    "expression": "$x ^{2}+ 3 x + 2$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\left(x + 2\\right) \\left(x + 1\\right)$",
+          "derivation": [
+            {
+              "expression": "$x ^{2}+ 3 x + 2$"
+            },
+            {
+              "result": "$\\left(x + 2\\right) \\left(x + 1\\right)$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Ontbind met de som-product-methode"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "nl": "Een kwadratische expressie ontbinden via de som-productmethode"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

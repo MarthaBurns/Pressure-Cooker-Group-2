@@ -1,0 +1,242 @@
+{
+  "success": true,
+  "creationTimestamp": 1734464750,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Solve the equation."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}4 \\left(3 m + 3\\right)=\\text{-}3 \\left(16 m - 8\\right)$"
+        },
+        {
+          "id": "wCjgQ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1734464779767,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$m=$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1734464786436,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodDivideCoefficient",
+                    "weight": 100,
+                    "source": "HINT"
+                  },
+                  {
+                    "id": "EquationsOperationsMultiply",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Deel beide zijden van de vergelijking door  $\\text{-}4$",
+                    "expression": "$\\text{-}4 \\left(3 m + 3\\right)=\\text{-}3 \\left(16 m - 8\\right)$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1734464798455,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$m=-\\frac{3}{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1734464805731,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$m=$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1734464820250,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$m=\\frac{-3}{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsBalanceMethodDivideCoefficient",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "EquationsOperationsMultiply",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$m =1$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}4 \\left(3 m + 3\\right)=\\text{-}3 \\left(16 m - 8\\right)$"
+            },
+            {
+              "result": "$3 m + 3=\\frac{3}{4} \\left(16 m - 8\\right)$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel beide zijden van de vergelijking door  $\\text{-}4$"
+            },
+            {
+              "result": "$3 m + 3=12 m - 6$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$3 m - 12 m + 3=\\text{-}6$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: haal links en rechts er  $12 m $  van af"
+            },
+            {
+              "result": "$\\text{-}9 m + 3=\\text{-}6$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\text{-}9 m =\\text{-}9$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Haal links en rechts  $3$  eraf."
+            },
+            {
+              "result": "$m =1$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $\\text{-}9$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

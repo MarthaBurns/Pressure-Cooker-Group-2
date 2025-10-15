@@ -1,0 +1,126 @@
+{
+  "success": true,
+  "creationTimestamp": 1729686931,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{7}{9+ \\sqrt{7}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1729686951449,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleDifferenceSquares",
+                    "weight": 100
+                  },
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{63-7\\sqrt{7}}{74}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleDifferenceSquares",
+                "weight": 100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{63- 7 \\sqrt{7}}{74}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{7}{9+ \\sqrt{7}}$"
+            },
+            {
+              "result": "$\\frac{7 \\left(9- \\sqrt{7}\\right)}{\\left(9+ \\sqrt{7}\\right) \\left(9- \\sqrt{7}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{7 \\left(9- \\sqrt{7}\\right)}{81- \\left(\\sqrt{7}\\right)^{2}}$",
+              "skills": [
+                "ExpandDoubleDifferenceSquares"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{7 \\left(9- \\sqrt{7}\\right)}{74}$",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\frac{63- 7 \\sqrt{7}}{74}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleDifferenceSquares": {
+      "descr": {
+        "nl": "Een product uitschrijven als het het verschil van twee kwadraten"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

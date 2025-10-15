@@ -1,0 +1,123 @@
+{
+  "success": true,
+  "creationTimestamp": 1747394265,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2 a + a ^{2}=0$"
+        },
+        {
+          "id": "Vs6VE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1747394355064,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$a=-2a=0$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1747394358039,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Haal de factor  $a $  buiten haakjes.",
+                    "expression": "$2 a + a ^{2}=0$"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$a =\\text{-}2\\vee a =0$",
+          "derivation": [
+            {
+              "expression": "$2 a + a ^{2}=0$"
+            },
+            {
+              "result": "$a  \\left(2+ a \\right)=0$",
+              "description": "Haal de factor  $a $  buiten haakjes."
+            },
+            {
+              "result": "$a =0\\vee 2+ a =0$",
+              "skills": [
+                "EquationsSplitFactors"
+              ],
+              "description": "Minstens één factor is gelijk aan nul"
+            },
+            {
+              "result": "$a =\\text{-}2\\vee a =0$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Haal links en rechts  $2$  eraf."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsSplitFactors": {
+      "descr": {
+        "nl": "Elke factor gelijkstellen aan nul"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

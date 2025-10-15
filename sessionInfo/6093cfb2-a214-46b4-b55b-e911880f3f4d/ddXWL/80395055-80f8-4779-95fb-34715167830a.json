@@ -1,0 +1,142 @@
+{
+  "success": true,
+  "creationTimestamp": 1747173253,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1}{6}+ \\frac{2}{3}$"
+        },
+        {
+          "id": "ddXWL",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1747173298093,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": -100,
+                    "errors": [
+                      "AddedDenominator"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You should not add the denominators when adding fractions.</h1>Make sure the fractions have the same denominator.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{3}{9}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3}{9}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747173323352,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Use the same denominator for both fractions</h1>Choose  $6$  as new denominator",
+                    "expression": "$\\frac{1}{6}+ \\frac{2}{3}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": -100,
+                "errors": [
+                  "AddedDenominator"
+                ]
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{5}{6}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1}{6}+ \\frac{2}{3}$"
+            },
+            {
+              "result": "$\\frac{5}{6}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE",
+      "errors": [
+        {
+          "id": "AddedDenominator",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "en": "Adding the denominators when adding simple fractions."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

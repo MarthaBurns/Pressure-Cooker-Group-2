@@ -1,0 +1,134 @@
+{
+  "success": true,
+  "creationTimestamp": 1748361788,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1}{5}+ 2\\frac{2}{3}$"
+        },
+        {
+          "id": "Nno6J",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1748362005843,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$2\\frac{2}{3}$  is niet gelijk aan  $\\frac{2}{8}$ .",
+                    "expression": "$\\frac{1}{5}+ \\begingroup\\color{darkred}\\begingroup \\frac{2}{8}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1}{5}+\\frac{2}{8}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$2\\frac{13}{15}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1}{5}+ 2\\frac{2}{3}$"
+            },
+            {
+              "result": "$2+ \\frac{2}{3}+ \\frac{1}{5}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Splits de samengestelde breuk"
+            },
+            {
+              "result": "$2+ \\frac{13}{15}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Maak de breuken gelijknamig"
+            },
+            {
+              "result": "$2\\frac{13}{15}$",
+              "skills": [
+                "FractionArithmeticSimilarImproperToMixed"
+              ],
+              "description": "Schrijf  $2+ \\frac{13}{15}$  als één breuk:"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "nl": "Gemengde breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "nl": "Ongelijknamige breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

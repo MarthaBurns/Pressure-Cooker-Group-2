@@ -1,0 +1,154 @@
+{
+  "success": true,
+  "creationTimestamp": 1748272154,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1}{4}/\\frac{5}{6}$"
+        },
+        {
+          "id": "GWXvT",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1748272306116,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{1}{4}/\\left(\\frac{5}{6}\\right)$  is niet gelijk aan  $\\frac{5}{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{5}{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{5}{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1748272404090,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDivisionProper",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticMultiplicationProper",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3}{10}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticDivisionProper",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticMultiplicationProper",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{3}{10}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1}{4}/\\left(\\frac{5}{6}\\right)$"
+            },
+            {
+              "result": "$\\frac{1}{4}\\cdot \\frac{6}{5}$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Delen door een breuk is vermenigvuldigen met het omgekeerde"
+            },
+            {
+              "result": "$\\frac{6}{4\\cdot 5}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            },
+            {
+              "result": "$\\frac{3}{2\\cdot 5}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Deel de gemeenschappelijke factor weg uit teller en noemer"
+            },
+            {
+              "result": "$\\frac{3}{10}$",
+              "description": "Reken uit:  $2\\cdot 5$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "nl": "Echte breuken delen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

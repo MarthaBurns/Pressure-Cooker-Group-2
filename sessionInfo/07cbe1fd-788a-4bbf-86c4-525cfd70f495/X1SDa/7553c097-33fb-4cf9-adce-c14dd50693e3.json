@@ -1,0 +1,155 @@
+{
+  "success": true,
+  "creationTimestamp": 1731925106,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}7 s ^{2}- 28 s + 315$"
+        },
+        {
+          "id": "X1SDa",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1731925145566,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-7s^{2}-28s+315$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FactorDoubleSumProduct",
+                  "FactorSingleBrackets",
+                  "FactorSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1731925196630,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}49 s \\endgroup\\endgroup- 28 s + 315$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-49s-28s+315$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1731925212466,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Ontbind met de som-product-methode.</h1>Bedenk welke twee getallen opgeteld  $\\text{-}28$  en vermenigvuldigd  $\\text{-}2205$  zijn",
+                    "expression": "$\\text{-}7 s ^{2}- 28 s + 315$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}7 \\left(s + 9\\right) \\left(s - 5\\right)$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}7 s ^{2}- 28 s + 315$"
+            },
+            {
+              "result": "$7 \\left(\\text{-}s ^{2}- 4 s + 45\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren"
+            },
+            {
+              "result": "$\\text{-}7 \\left(s ^{2}+ 4 s - 45\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind een factor  $\\text{-}1$  uit de kwadratische uitdrukking"
+            },
+            {
+              "result": "$\\text{-}7 \\left(s + 9\\right) \\left(s - 5\\right)$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Ontbind met de som-product-methode"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "nl": "Een kwadratische expressie ontbinden via de som-productmethode"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "success": true,
+  "creationTimestamp": 1749566001,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$n ^{2}- 2 n - 8=0$"
+        },
+        {
+          "id": "Vj5mZ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1749566009465,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$n=2$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1749566011377,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Er zijn meer oplossingen</h1>Schrijf je antwoord in de vorm  $n =\\text{-}2\\vee n =\\ldots$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup n =\\text{-}2\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$n=-2$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749566017159,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$n=-2,\\ n=2$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$n =\\text{-}2\\vee n =4$",
+          "derivation": [
+            {
+              "expression": "$n ^{2}- 2 n - 8=0$"
+            },
+            {
+              "result": "$\\left(n + 2\\right) \\left(n - 4\\right)=0$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Ontbind met de som-product-methode"
+            },
+            {
+              "result": "$n + 2=0\\vee n - 4=0$",
+              "skills": [
+                "EquationsSplitFactors"
+              ],
+              "description": "Minstens één factor is gelijk aan nul"
+            },
+            {
+              "result": "$n =\\text{-}2\\vee n =4$",
+              "description": "Balansmethode: Tel links en rechts  $4$  erbij op."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "nl": "Een kwadratische expressie ontbinden via de som-productmethode"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "EquationsSplitFactors": {
+      "descr": {
+        "nl": "Elke factor gelijkstellen aan nul"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "success": true,
+  "creationTimestamp": 1734006730,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf zo kort mogelijk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{26}- \\sqrt{15}+ \\sqrt{26}$"
+        },
+        {
+          "id": "WbEOf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1734006754795,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Ben je de term  $\\sqrt{26}$  vergeten?",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}\\sqrt{15}+ \\sqrt{26}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-\\sqrt{15}+\\ \\sqrt{26}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1734006771260,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{15}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1734006773333,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $\\sqrt{26}$  zijn gelijksoortig.",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\sqrt{26}\\endgroup\\endgroup- \\sqrt{15}+ \\begingroup\\color{#336699}\\begingroup \\sqrt{26}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1734006791771,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{26}-\\sqrt{15}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$2 \\sqrt{26}- \\sqrt{15}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{26}- \\sqrt{15}+ \\sqrt{26}$"
+            },
+            {
+              "result": "$2 \\sqrt{26}- \\sqrt{15}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

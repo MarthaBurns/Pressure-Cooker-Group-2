@@ -1,0 +1,212 @@
+{
+  "success": true,
+  "creationTimestamp": 1750948105,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{1}{8}\\cdot 2\\frac{6}{7}$"
+        },
+        {
+          "id": "6XhoE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750948207685,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticMultiplicationMixed",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $2\\frac{1}{8}\\cdot 2\\frac{6}{7}$  is niet gelijk aan  $5\\frac{20}{64}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 5\\frac{20}{64}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$5\\frac{20}{64}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750948252205,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Herschrijf  $2\\frac{1}{8}$  en  $2\\frac{6}{7}$  naar 'gewone' breuken",
+                    "expression": "$2\\frac{1}{8}\\cdot 2\\frac{6}{7}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750948271853,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$2\\frac{6}{7}$  is niet gelijk aan  $\\frac{20}{8}$ .",
+                    "expression": "$\\frac{17}{8}\\cdot \\begingroup\\color{darkred}\\begingroup \\frac{20}{8}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{17}{8}\\cdot\\frac{20}{8}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750948293406,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Herschrijf  $2\\frac{1}{8}$  en  $2\\frac{6}{7}$  naar 'gewone' breuken",
+                    "expression": "$2\\frac{1}{8}\\cdot 2\\frac{6}{7}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticMultiplicationMixed",
+                "weight": -100
+              },
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "weight": -100
+              },
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{85}{14}$",
+          "derivation": [
+            {
+              "expression": "$2\\frac{1}{8}\\cdot 2\\frac{6}{7}$"
+            },
+            {
+              "result": "$\\frac{17}{8}\\cdot \\frac{20}{7}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Herschrijf  $2\\frac{1}{8}$  en  $2\\frac{6}{7}$  naar 'gewone' breuken"
+            },
+            {
+              "result": "$\\frac{17\\cdot 20}{8\\cdot 7}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            },
+            {
+              "result": "$\\frac{5\\cdot 17}{2\\cdot 7}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Deel de gemeenschappelijke factor weg uit teller en noemer"
+            },
+            {
+              "result": "$\\frac{85}{14}$",
+              "description": "Reken uit:  $2\\cdot 7$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationMixed": {
+      "descr": {
+        "nl": "Gemengde breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

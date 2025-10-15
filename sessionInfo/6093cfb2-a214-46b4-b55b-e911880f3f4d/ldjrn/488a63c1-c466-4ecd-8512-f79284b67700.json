@@ -1,0 +1,187 @@
+{
+  "success": true,
+  "creationTimestamp": 1757409815,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{1}{8}+ 1\\frac{5}{7}$"
+        },
+        {
+          "id": "ldjrn",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1757409890828,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddMixed",
+                    "weight": 100,
+                    "errors": [
+                      "IncorrectFractionalPart"
+                    ],
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt  $\\frac{5}{7}+ \\frac{1}{8}$  niet goed berekend.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3\\frac{46}{56}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\frac{46}{56}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1757409922467,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddMixed",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticSimilarImproperToMixed",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\frac{47}{56}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticAddMixed",
+                "weight": 100,
+                "errors": [
+                  "IncorrectFractionalPart"
+                ],
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "FractionArithmeticAddMixed",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticSimilarImproperToMixed",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$3\\frac{47}{56}$",
+          "derivation": [
+            {
+              "expression": "$2\\frac{1}{8}+ 1\\frac{5}{7}$"
+            },
+            {
+              "result": "$3+ \\frac{1}{8}+ \\frac{5}{7}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Splits de samengestelde breuken  $2\\frac{1}{8}$  en  $1\\frac{5}{7}$"
+            },
+            {
+              "result": "$3+ \\frac{47}{56}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Maak de breuken gelijknamig"
+            },
+            {
+              "result": "$3\\frac{47}{56}$",
+              "skills": [
+                "FractionArithmeticSimilarImproperToMixed"
+              ],
+              "description": "Schrijf  $3+ \\frac{47}{56}$  als één breuk:"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "nl": "Gemengde breuken optellen"
+      },
+      "stepType": "CALCULATE",
+      "errors": [
+        {
+          "id": "IncorrectFractionalPart",
+          "type": [
+            "MISCONCEPTION",
+            "MISTAKE"
+          ],
+          "descr": {
+            "nl": "Het breukgedeelte verkeerd optellen bij het optellen van gemengde breuken."
+          }
+        }
+      ]
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "nl": "Ongelijknamige breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "success": true,
+  "creationTimestamp": 1750120926,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Expand the brackets."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(p - 3\\right)^{2}$"
+        },
+        {
+          "id": "enAXH",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750121336494,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not expand the double brackets correctly.</h1>$\\left(a + b \\right)^{2}=a ^{2}+ 2 a  b + b ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup p ^{2}- 3\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$p^{2}-3$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750121352520,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not expand the double brackets correctly.</h1>$\\left(a + b \\right)^{2}=a ^{2}+ 2 a  b + b ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup p ^{2}- 9\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$p^{2}-9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$p ^{2}- 6 p + 9$",
+          "derivation": [
+            {
+              "expression": "$\\left(p - 3\\right)^{2}$"
+            },
+            {
+              "result": "$p ^{2}- 6 p + \\left(\\text{-}3\\right)^{2}$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Expand the square"
+            },
+            {
+              "result": "$p ^{2}- 6 p + 3^{2}$",
+              "description": "When the exponent is an even number, the result is always positive"
+            },
+            {
+              "result": "$p ^{2}- 6 p + 9$",
+              "description": "Calculate the power by repeated multiplication"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "en": "Expanding a square of a sum of terms"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "en": "Expanding a product of two sums"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

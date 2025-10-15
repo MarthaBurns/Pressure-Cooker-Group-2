@@ -1,0 +1,209 @@
+{
+  "success": true,
+  "creationTimestamp": 1729000020,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf als een breuk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "${6,\\!2} $"
+        },
+        {
+          "id": "xL52Z",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1729000024601,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDecimalToFraction",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Schrijf  ${6,\\!2} $  als  $\\frac{62}{10}$",
+                    "expression": "${6,\\!2} $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729000031103,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{62}{10}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.7142857142857143,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimplifyProper"
+                ]
+              },
+              {
+                "timestamp": 1729000036945,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticEquivalentConcept",
+                    "weight": -100,
+                    "errors": [
+                      "EquivalentNumeratorDenominator"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "De breuken  $\\frac{62}{10}$  en  $\\frac{62}{100}$  zijn niet gelijkwaardig.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{62}{100}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{62}{100}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.7142857142857143,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729000055802,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDecimalToFraction",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{31}{5}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticDecimalToFraction",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticEquivalentConcept",
+                "weight": -100,
+                "errors": [
+                  "EquivalentNumeratorDenominator"
+                ]
+              },
+              {
+                "id": "FractionArithmeticDecimalToFraction",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{31}{5}$",
+          "derivation": [
+            {
+              "expression": "${6,\\!2} $"
+            },
+            {
+              "result": "$\\frac{62}{10}$",
+              "skills": [
+                "FractionArithmeticDecimalToFraction"
+              ],
+              "description": "Schrijf  ${6,\\!2} $  als  $\\frac{62}{10}$"
+            },
+            {
+              "result": "$\\frac{31}{5}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Vereenvoudig de breuk"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticDecimalToFraction": {
+      "descr": {
+        "nl": "Een decimaal getal als een breuk schrijven"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticEquivalentConcept": {
+      "descr": {
+        "nl": "Begrijpen dat breuken gelijkwaardig kunnen zijn"
+      },
+      "stepType": "CONCEPT",
+      "errors": [
+        {
+          "id": "EquivalentNumeratorDenominator",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De relatie tussen teller en noemer niet begrijpen bij het vergelijken van breuken"
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "creationTimestamp": 1752615590,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1}{2}+ \\frac{4}{6}$"
+        },
+        {
+          "id": "ddXWL",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1752615646904,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{1}{2}+ \\frac{4}{6}$  is not equal to  $\\frac{3}{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{3}{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3}{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{7}{6}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1}{2}+ \\frac{4}{6}$"
+            },
+            {
+              "result": "$\\frac{1}{2}+ \\frac{2}{3}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Simplify the fraction"
+            },
+            {
+              "result": "$\\frac{7}{6}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

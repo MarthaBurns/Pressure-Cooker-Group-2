@@ -1,0 +1,182 @@
+{
+  "success": true,
+  "creationTimestamp": 1747225580,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$y + 4\\cdot 3 y $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1747225594228,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$y+12y$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.33333333333333326,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1747225598827,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Ben je de term  $y $  vergeten?",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 12 y \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$12y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.33333333333333326,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747225627562,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -100,
+                    "errors": [
+                      "ChangingTermType"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de gelijksoortige termen  $y \\text{ en } 12 y $  niet goed samengenomen.</h1>De som is van de vorm  $\\ldots\\cdot y $",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 12 y ^{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$12y^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.33333333333333326,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747225641208,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$13y$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -100,
+                "errors": [
+                  "ChangingTermType"
+                ]
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$13 y $",
+          "derivation": [
+            {
+              "expression": "$y + 4\\cdot 3 y $"
+            },
+            {
+              "result": "$y + 12 y $",
+              "description": "Reken uit:  $4\\cdot 3$"
+            },
+            {
+              "result": "$13 y $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "ChangingTermType",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De soort aanpassen bij optellen van gelijksoortige termen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

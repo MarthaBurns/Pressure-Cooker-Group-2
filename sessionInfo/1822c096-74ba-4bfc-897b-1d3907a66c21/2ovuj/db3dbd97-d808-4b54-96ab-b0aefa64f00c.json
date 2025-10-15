@@ -1,0 +1,142 @@
+{
+  "success": true,
+  "creationTimestamp": 1730627279,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$7 x ^{3}+ 4- 2 x ^{3}$"
+        },
+        {
+          "id": "2ovuj",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1730627295691,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -100,
+                    "errors": [
+                      "ChangingTermType"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de gelijksoortige termen  $7 x ^{3}\\text{ en } \\text{-}2 x ^{3}$  niet goed samengenomen.</h1>De som is van de vorm  $\\ldots\\cdot x ^{3}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 5 x ^{2}\\endgroup\\endgroup+ 4$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$5x^{2}+4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1730627316958,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$5x^{3}+4$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -100,
+                "errors": [
+                  "ChangingTermType"
+                ]
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$5 x ^{3}+ 4$",
+          "derivation": [
+            {
+              "expression": "$7 x ^{3}+ 4- 2 x ^{3}$"
+            },
+            {
+              "result": "$5 x ^{3}+ 4$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "ChangingTermType",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De soort aanpassen bij optellen van gelijksoortige termen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

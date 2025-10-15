@@ -1,0 +1,177 @@
+{
+  "success": true,
+  "creationTimestamp": 1734472136,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$4 \\sqrt{2} \\left(\\sqrt{32}+ 4\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1734472228001,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not compute the multiplication correctly.</h1>The term  $8 \\sqrt{2}$  is incorrect.",
+                    "expression": "$4 \\sqrt{2} \\sqrt{32}+ \\begingroup\\color{darkred}\\begingroup 8 \\sqrt{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4\\sqrt{2}\\sqrt{32}+8\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1734472257688,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$4\\sqrt{2}\\sqrt{32}+16\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1734472276649,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$20\\sqrt{2}\\sqrt{32}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1734472290678,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Simplify the product of two roots",
+                    "expression": "$4 \\begingroup\\color{#336699}\\begingroup \\sqrt{2}\\endgroup\\endgroup \\begingroup\\color{#336699}\\begingroup \\sqrt{32}\\endgroup\\endgroup+ 16 \\sqrt{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1734472304587,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$4\\sqrt{2}\\sqrt{32}+16\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$32+ 16 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$4 \\sqrt{2} \\left(\\sqrt{32}+ 4\\right)$"
+            },
+            {
+              "result": "$4 \\left(\\sqrt{2} \\sqrt{32}+ 4 \\sqrt{2}\\right)$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Expand the brackets"
+            },
+            {
+              "result": "$4 \\left(\\sqrt{64}+ 4 \\sqrt{2}\\right)$",
+              "description": "Simplify the product of two roots"
+            },
+            {
+              "result": "$4 \\left(8+ 4 \\sqrt{2}\\right)$",
+              "description": "Calculate the square root of  $64$"
+            },
+            {
+              "result": "$32+ 16 \\sqrt{2}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Expand the brackets"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "en": "Expanding a single pair of parentheses"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "en": "Multiplying integer numbers"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "success": true,
+  "creationTimestamp": 1748602705,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5 x ^{2}- 6\\cdot \\text{-}4 x + 4 x \\cdot \\text{-}x $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0.5,
+            "events": [
+              {
+                "timestamp": 1748602850401,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-9x^{2}-24x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1748602858011,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $\\text{-}6\\cdot \\text{-}4$",
+                    "expression": "$\\text{-}5 x ^{2}+ \\begingroup\\color{#336699}\\begingroup \\text{-}6\\endgroup\\endgroup\\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}4\\endgroup\\endgroup x + 4 x \\cdot \\text{-}1 x $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1748602882631,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplyNegative",
+                    "weight": -100,
+                    "errors": [
+                      "General"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt een tekenfout gemaakt bij het vermenigvuldigen</h1>$\\text{-}6\\cdot \\text{-}4$  is niet gelijk aan  $\\text{-}24$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}24\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-24$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1748602893788,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$24$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.5,
+                "inputStatus": "FINISHED"
+              },
+              {
+                "timestamp": 1748602925208,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-9x^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.5,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1748602951642,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-9x^{^{2}}+24x$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.5,
+                "inputStatus": "PARSE_ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplyNegative",
+                "weight": -100,
+                "errors": [
+                  "General"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}9 x ^{2}+ 24 x $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5 x ^{2}- \\text{-}6\\cdot 4 x + 4\\cdot \\text{-}1 x \\cdot x $"
+            },
+            {
+              "result": "$\\text{-}5 x ^{2}+ 24 x - 4 x \\cdot x $",
+              "description": "Reken uit:  $\\text{-}6\\cdot \\text{-}4$"
+            },
+            {
+              "result": "$\\text{-}5 x ^{2}+ 24 x - 4 x ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$\\text{-}9 x ^{2}+ 24 x $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticMultiplyNegative": {
+      "descr": {
+        "nl": "Vermenigvuldigen met negatieve getallen"
+      },
+      "stepType": "CONCEPT",
+      "errors": [
+        {
+          "id": "General",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De regels voor vermenigvuldigen met een negatief getal niet kennen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

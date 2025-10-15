@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "creationTimestamp": 1748774642,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5 y + 4 y \\cdot \\text{-}3 y $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1748774666259,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3y^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1748774704679,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\text{-}5 y - 4 y \\cdot 3 y $  is niet gelijk aan  $3 y $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3 y \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1748774714936,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $4\\cdot \\text{-}3$",
+                    "expression": "$\\text{-}5 y + \\begingroup\\color{#336699}\\begingroup 4\\endgroup\\endgroup y \\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}3\\endgroup\\endgroup y $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1748774771860,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je moet vermenigvuldigen met  $y $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}5\\endgroup\\endgroup- 12 y ^{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-5-12y^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}5 y - 12 y ^{2}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5 y - 4\\cdot 3 y \\cdot y $"
+            },
+            {
+              "result": "$\\text{-}5 y - 12 y \\cdot y $",
+              "description": "Reken uit:  $4\\cdot \\text{-}3$"
+            },
+            {
+              "result": "$\\text{-}5 y - 12 y ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {},
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

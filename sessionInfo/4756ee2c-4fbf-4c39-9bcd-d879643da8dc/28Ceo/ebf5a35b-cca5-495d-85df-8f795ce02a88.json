@@ -1,0 +1,150 @@
+{
+  "success": true,
+  "creationTimestamp": 1740655787,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Solve the equation."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "${0,\\!6} - {0,\\!9}  s =\\text{-}{8,\\!2} - {0,\\!1}  s $"
+        },
+        {
+          "id": "28Ceo",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1740655948023,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": -10
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de balansmethode niet goed toegepast.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup s =\\text{-}11\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$s=-11$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": -10
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$s =11$",
+          "derivation": [
+            {
+              "expression": "${0,\\!6} - {0,\\!9}  s =\\text{-}{8,\\!2} - {0,\\!1}  s $"
+            },
+            {
+              "result": "$\\text{-}{0,\\!9}  s + {0,\\!1}  s + {0,\\!6} =\\text{-}{8,\\!2} $",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: tel er links en rechts  ${0,\\!1}  s $  bij op"
+            },
+            {
+              "result": "$\\text{-}{0,\\!8}  s + {0,\\!6} =\\text{-}{8,\\!2} $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\text{-}{0,\\!8}  s =\\text{-}{8,\\!8} $",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Haal links en rechts  ${0,\\!6} $  eraf."
+            },
+            {
+              "result": "$s =11$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $\\text{-}{0,\\!8} $"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

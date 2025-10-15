@@ -1,0 +1,162 @@
+{
+  "success": true,
+  "creationTimestamp": 1749026423,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{192}$"
+        },
+        {
+          "id": "rJQ8D",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1749026449944,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$2 \\sqrt{91}$  is niet gelijk aan  $\\sqrt{192}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2 \\sqrt{91}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{91}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749026517853,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -100,
+                    "errors": [
+                      "MultiplyingFactor"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt rechtstreeks  $2$  buiten de wortel gehaald, maar dat is niet toegestaan.</h1>De regel voor vermenigvuldigen met wortels luidt:  $\\sqrt{a \\cdot b }=\\sqrt{a }\\cdot \\sqrt{b }$ . Als je deze wilt\ntoepassen zul je eerst de wortel moeten nemen van  $2$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2 \\sqrt{96}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{96}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749026529810,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$1\\sqrt{96}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -50
+              },
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -100,
+                "errors": [
+                  "MultiplyingFactor"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$8 \\sqrt{3}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{192}$"
+            },
+            {
+              "result": "$\\sqrt{64} \\sqrt{3}$",
+              "description": "Vereenvoudig de wortel"
+            },
+            {
+              "result": "$8 \\sqrt{3}$",
+              "description": "Bepaal de wortel van  $64$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "nl": "De regels voor vermenigvuldigen van wortels toepassen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "MultiplyingFactor",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De factor direct met de radicand vermenigvuldigen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

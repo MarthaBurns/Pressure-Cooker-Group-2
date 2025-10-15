@@ -1,0 +1,134 @@
+{
+  "success": true,
+  "creationTimestamp": 1747916295,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}4 p \\cdot \\text{-}4 p - 4 p $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1747916344823,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplyNegative",
+                    "weight": -100,
+                    "errors": [
+                      "General"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt een tekenfout gemaakt bij het vermenigvuldigen</h1>$\\text{-}4\\cdot \\text{-}4$  is niet gelijk aan  $\\text{-}16$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}16\\endgroup\\endgroup p ^{2}- 4 p $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-16p^{2}-4p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747916359989,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$16p^{2}-4p$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplyNegative",
+                "weight": -100,
+                "errors": [
+                  "General"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$16 p ^{2}- 4 p $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}4\\cdot \\text{-}4 p \\cdot p - 4 p $"
+            },
+            {
+              "result": "$16 p \\cdot p - 4 p $",
+              "description": "Reken uit:  $\\text{-}4\\cdot \\text{-}4$"
+            },
+            {
+              "result": "$16 p ^{2}- 4 p $",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplyNegative": {
+      "descr": {
+        "nl": "Vermenigvuldigen met negatieve getallen"
+      },
+      "stepType": "CONCEPT",
+      "errors": [
+        {
+          "id": "General",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De regels voor vermenigvuldigen met een negatief getal niet kennen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

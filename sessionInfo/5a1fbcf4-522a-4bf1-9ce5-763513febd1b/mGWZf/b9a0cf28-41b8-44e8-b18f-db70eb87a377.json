@@ -1,0 +1,109 @@
+{
+  "success": true,
+  "creationTimestamp": 1729686454,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1}{9+ \\sqrt{8}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1729686476920,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleDifferenceSquares",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{9-2\\sqrt{2}}{73}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleDifferenceSquares",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{9- 2 \\sqrt{2}}{73}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1}{9+ \\sqrt{8}}$"
+            },
+            {
+              "result": "$\\frac{9- \\sqrt{8}}{\\left(9+ \\sqrt{8}\\right) \\left(9- \\sqrt{8}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{9- \\sqrt{8}}{81- \\left(\\sqrt{8}\\right)^{2}}$",
+              "skills": [
+                "ExpandDoubleDifferenceSquares"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{9- \\sqrt{8}}{73}$",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\frac{9- 2 \\sqrt{2}}{73}$",
+              "description": "Vereenvoudig de wortel"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleDifferenceSquares": {
+      "descr": {
+        "nl": "Een product uitschrijven als het het verschil van twee kwadraten"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

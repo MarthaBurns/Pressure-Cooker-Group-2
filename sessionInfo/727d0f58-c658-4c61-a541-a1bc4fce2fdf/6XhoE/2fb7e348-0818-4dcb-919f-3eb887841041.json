@@ -1,0 +1,154 @@
+{
+  "success": true,
+  "creationTimestamp": 1759257364,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{2}{7}\\times 1\\frac{3}{5}$"
+        },
+        {
+          "id": "6XhoE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1759257478606,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticMultiplicationMixed",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Arithmetic error:  $2\\frac{2}{7}\\times 1\\frac{3}{5}$  is not equal to  $\\frac{138}{35}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{138}{35}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{138}{35}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759257535393,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticMultiplicationProper",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{128}{35}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticMultiplicationMixed",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticMultiplicationProper",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{128}{35}$",
+          "derivation": [
+            {
+              "expression": "$2\\frac{2}{7}\\times 1\\frac{3}{5}$"
+            },
+            {
+              "result": "$\\frac{16}{7}\\times \\frac{8}{5}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Rewrite  $2\\frac{2}{7}$  and  $1\\frac{3}{5}$  into improper fractions"
+            },
+            {
+              "result": "$\\frac{128}{35}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Multiply the fractions"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "en": "Writing a mixed fraction into a similar improper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "en": "Multiplying proper fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationMixed": {
+      "descr": {
+        "en": "Multiplying mixed fractions"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

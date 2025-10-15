@@ -1,0 +1,172 @@
+{
+  "success": true,
+  "creationTimestamp": 1735244095,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{7}{8}+ \\frac{2}{3}$"
+        },
+        {
+          "id": "Nno6J",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1735244197261,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{11}{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1735244220717,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Split the mixed fraction</h1>$2\\frac{7}{8}=2+ \\frac{7}{8}$",
+                    "expression": "$2\\frac{7}{8}+ \\frac{2}{3}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1735244266208,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$2\\frac{7}{8}$  is not equal to  $\\frac{23}{86}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{23}{86}\\endgroup\\endgroup+ \\frac{2}{3}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{23}{86}+\\frac{2}{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1735244280340,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Split the mixed fraction</h1>$2\\frac{7}{8}=2+ \\frac{7}{8}$",
+                    "expression": "$2\\frac{7}{8}+ \\frac{2}{3}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{85}{24}$",
+          "derivation": [
+            {
+              "expression": "$2\\frac{7}{8}+ \\frac{2}{3}$"
+            },
+            {
+              "result": "$2+ \\frac{7}{8}+ \\frac{2}{3}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Split the mixed fraction"
+            },
+            {
+              "result": "$2+ \\frac{37}{24}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            },
+            {
+              "result": "$\\frac{85}{24}$",
+              "skills": [
+                "FractionArithmeticIntegerToFraction"
+              ],
+              "description": "Rewrite  $2+ \\frac{37}{24}$  into a single fraction"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "en": "Adding mixed fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticIntegerToFraction": {
+      "descr": {
+        "en": "Writing an integer number into a fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "en": "Writing a mixed fraction into a similar improper fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

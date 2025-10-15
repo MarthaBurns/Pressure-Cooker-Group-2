@@ -1,0 +1,150 @@
+{
+  "success": true,
+  "creationTimestamp": 1733070898,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}3 y \\cdot 5 y + 2 y + \\text{-}5 y \\cdot \\text{-}y $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733070956038,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -100,
+                    "errors": [
+                      "ChangingTermType"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de gelijksoortige termen  $\\text{-}3 y \\cdot 5 y \\text{ en } \\text{-}5 y \\cdot \\text{-}1 y $  niet goed samengenomen.</h1>De som is van de vorm  $\\ldots\\cdot y \\cdot y $",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 10 y ^{2}\\endgroup\\endgroup+ 2 y $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$10y^{2}+2y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733071011892,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-10y^{2}+2y$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -100,
+                "errors": [
+                  "ChangingTermType"
+                ]
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}10 y ^{2}+ 2 y $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}3\\cdot 5 y \\cdot y + 2 y - 5\\cdot \\text{-}1 y \\cdot y $"
+            },
+            {
+              "result": "$\\text{-}15 y \\cdot y + 2 y + 5 y \\cdot y $",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\text{-}10 y \\cdot y + 2 y $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\text{-}10 y ^{2}+ 2 y $",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "ChangingTermType",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De soort aanpassen bij optellen van gelijksoortige termen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

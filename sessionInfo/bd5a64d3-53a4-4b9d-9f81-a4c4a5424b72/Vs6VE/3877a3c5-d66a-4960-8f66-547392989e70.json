@@ -1,0 +1,207 @@
+{
+  "success": true,
+  "creationTimestamp": 1748895871,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$n ^{2}- 10 n =0$"
+        },
+        {
+          "id": "Vs6VE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1748895886227,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$n\\left(n-10\\right)=0$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "EquationsSplitFactors",
+                  "EquationsBalanceMethodArrangeTerms",
+                  "EquationsOperationsAdd"
+                ]
+              },
+              {
+                "timestamp": 1748895924810,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$n=-10$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1748895957588,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "EquationsSplitFactors",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Minstens één factor is gelijk aan nul</h1>Als  $a \\cdot b =0$  dan  $a =0\\vee b =0$ .",
+                    "expression": "$n  \\left(n - 10\\right)=0$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1748895985301,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$n=0\\ of\\ n=-10$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1748895997224,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsSplitFactors",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$n=0\\ of\\ n=10$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsSplitFactors",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "EquationsSplitFactors",
+                "weight": 100
+              },
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "weight": 100
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$n =0\\vee n =10$",
+          "derivation": [
+            {
+              "expression": "$n ^{2}- 10 n =0$"
+            },
+            {
+              "result": "$n  \\left(n - 10\\right)=0$",
+              "description": "Haal de factor  $n $  buiten haakjes."
+            },
+            {
+              "result": "$n =0\\vee n - 10=0$",
+              "skills": [
+                "EquationsSplitFactors"
+              ],
+              "description": "Minstens één factor is gelijk aan nul"
+            },
+            {
+              "result": "$n =0\\vee n =10$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Tel links en rechts  $10$  erbij op."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsSplitFactors": {
+      "descr": {
+        "nl": "Elke factor gelijkstellen aan nul"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

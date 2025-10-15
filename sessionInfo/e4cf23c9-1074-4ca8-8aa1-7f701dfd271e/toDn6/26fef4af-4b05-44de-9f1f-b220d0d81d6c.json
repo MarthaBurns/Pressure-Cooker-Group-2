@@ -1,0 +1,132 @@
+{
+  "success": true,
+  "creationTimestamp": 1730141785,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(\\text{-}2 t - 4\\right)^{2}$"
+        },
+        {
+          "id": "toDn6",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1730141835837,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4t^{^{2}}+8t+16+8t$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1730141881621,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsSquare",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$16+16t+4t^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsSquare",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$4 RandVarResult ^{2}\\left(t \\right)+ 16 RandVarResult \\left(t \\right)+ 16$",
+          "derivation": [
+            {
+              "expression": "$\\left(\\text{-}2 RandVarResult \\left(t \\right)- 4\\right)^{2}$"
+            },
+            {
+              "result": "$\\left(\\text{-}2 RandVarResult \\left(t \\right)\\right)^{2}+ 16 RandVarResult \\left(t \\right)+ \\left(\\text{-}4\\right)^{2}$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$\\left(2 RandVarResult \\left(t \\right)\\right)^{2}+ 16 RandVarResult \\left(t \\right)+ 4^{2}$",
+              "description": "Bij een even macht is de uitkomst altijd positief"
+            },
+            {
+              "result": "$\\left(2 RandVarResult \\left(t \\right)\\right)^{2}+ 16 RandVarResult \\left(t \\right)+ 16$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            },
+            {
+              "result": "$2^{2} RandVarResult ^{2}\\left(t \\right)+ 16 RandVarResult \\left(t \\right)+ 16$",
+              "description": "Werk de macht uit"
+            },
+            {
+              "result": "$4 RandVarResult ^{2}\\left(t \\right)+ 16 RandVarResult \\left(t \\right)+ 16$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

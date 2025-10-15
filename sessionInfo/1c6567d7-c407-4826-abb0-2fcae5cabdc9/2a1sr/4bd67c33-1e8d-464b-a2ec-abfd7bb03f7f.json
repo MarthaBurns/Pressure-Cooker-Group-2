@@ -1,0 +1,125 @@
+{
+  "success": true,
+  "creationTimestamp": 1749168680,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}3 \\left(2- 4 n \\right)$"
+        },
+        {
+          "id": "2a1sr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1749168701707,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ArithmeticOrderMultiplication",
+                    "weight": -100,
+                    "errors": [
+                      "MultiplicationAddition"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Bereken in de juiste volgorde</h1>$2- 4 n =2+ \\left(\\text{-}4 n \\right)$",
+                    "expression": "$\\text{-}3\\cdot \\begingroup\\color{darkred}\\begingroup \\text{-}2 n \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-3\\cdot-2n$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ArithmeticOrderMultiplication",
+                "weight": -100,
+                "errors": [
+                  "MultiplicationAddition"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}6+ 12 n $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}3 \\left(2- 4 n \\right)$"
+            },
+            {
+              "result": "$\\text{-}6+ 12 n $",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ArithmeticOrderMultiplication": {
+      "descr": {
+        "nl": "Volgorde van operaties met vermenigvuldiging"
+      },
+      "stepType": "CALCULATE",
+      "errors": [
+        {
+          "id": "MultiplicationAddition",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Optellen terwijl vermenigvuldiging voorrang heeft."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

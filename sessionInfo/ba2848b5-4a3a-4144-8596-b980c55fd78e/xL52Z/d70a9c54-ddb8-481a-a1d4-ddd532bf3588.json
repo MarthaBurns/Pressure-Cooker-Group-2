@@ -1,0 +1,172 @@
+{
+  "success": true,
+  "creationTimestamp": 1732819987,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf als een breuk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "${2,\\!5} $"
+        },
+        {
+          "id": "xL52Z",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1732820018463,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{250}{10}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1732820019791,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDecimalToFraction",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Schrijf  ${2,\\!5} $  als  $\\frac{25}{10}$",
+                    "expression": "${2,\\!5} $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1732820031293,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{25}{10}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.7142857142857143,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimplifyProper"
+                ]
+              },
+              {
+                "timestamp": 1732820043259,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDecimalToFraction",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{5}{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticDecimalToFraction",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticDecimalToFraction",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{5}{2}$",
+          "derivation": [
+            {
+              "expression": "${2,\\!5} $"
+            },
+            {
+              "result": "$\\frac{25}{10}$",
+              "skills": [
+                "FractionArithmeticDecimalToFraction"
+              ],
+              "description": "Schrijf  ${2,\\!5} $  als  $\\frac{25}{10}$"
+            },
+            {
+              "result": "$\\frac{5}{2}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Vereenvoudig de breuk"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticDecimalToFraction": {
+      "descr": {
+        "nl": "Een decimaal getal als een breuk schrijven"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

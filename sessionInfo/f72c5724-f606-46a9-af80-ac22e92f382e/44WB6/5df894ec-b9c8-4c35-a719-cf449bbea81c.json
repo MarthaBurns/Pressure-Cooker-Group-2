@@ -1,0 +1,200 @@
+{
+  "success": true,
+  "creationTimestamp": 1746773911,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$33 p ^{4}+ 33 p ^{2}$"
+        },
+        {
+          "id": "44WB6",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0.5,
+            "events": [
+              {
+                "timestamp": 1746774133576,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt  $33 p ^{4}+ 33 p ^{2}$  niet goed ontbonden in factoren.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 33 p ^{2} \\left(33 p ^{2}+ 33\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$33p^{2\\ }\\left(33p^{2}+33\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1746774191871,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$33p^{2}\\left(1p^{2}+1\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.5,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1747040260291,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100,
+                    "errors": [
+                      "SkippingTerms"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Je hebt niet alle termen van  $1 p ^{2}+ 1$  met  $p ^{2}\\cdot 33$  vermenigvuldigd.",
+                    "expression": "$33 p ^{2}+ \\begingroup\\color{darkred}\\begingroup 1\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$33p^{2}+1$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.5,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747040283627,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>De term  $33$  klopt niet.",
+                    "expression": "$33 p ^{2}+ \\begingroup\\color{darkred}\\begingroup 33\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$33p^{2}+33$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.5,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100,
+                "errors": [
+                  "SkippingTerms"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$33 p ^{2} \\left(p ^{2}+ 1\\right)$",
+          "derivation": [
+            {
+              "expression": "$33 p ^{4}+ 33 p ^{2}$"
+            },
+            {
+              "result": "$33 \\left(p ^{4}+ p ^{2}\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren"
+            },
+            {
+              "result": "$33 p ^{2} \\left(p ^{2}+ 1\\right)$",
+              "skills": [
+                "FactorSingleBrackets",
+                "AlgebraProductOfPowerFunctions"
+              ],
+              "description": "Ontbind in factoren: haal de factor  $p ^{2}$  buiten haakjes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "nl": "De machtsregels voor vermenigvuldigen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "SkippingTerms",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Niet alle termen vermenigvuldigen met de coëfficiënt."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

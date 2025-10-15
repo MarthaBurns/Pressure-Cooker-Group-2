@@ -1,0 +1,258 @@
+{
+  "success": true,
+  "creationTimestamp": 1758093487,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes weg en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 \\left(\\text{-}4 a - 5\\right)+ 5 a $"
+        },
+        {
+          "id": "LdeEL",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1758093504956,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Vermenigvuldig elke term binnen de haakjes met  $5$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 20 a \\endgroup\\endgroup- \\begingroup\\color{darkred}\\begingroup 20\\endgroup\\endgroup+ 5 a $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$20a+5a-20$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758093522277,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$25a-20$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1758093532806,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-25a-20$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1758093555197,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-25a-25$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1758093573344,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-20a-25+5a$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1758093581910,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 50,
+                    "source": "ERROR_FEEDBACK"
+                  },
+                  {
+                    "id": "NumberArithmeticAdditionInteger",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de termen  $\\text{-}20 a \\text{ en } 5 a $  niet goed samengenomen",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 15 a \\endgroup\\endgroup- 25$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$15a-25$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758093606197,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-15a-25$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 50,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "NumberArithmeticAdditionInteger",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 5
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}15 a - 25$",
+          "derivation": [
+            {
+              "expression": "$5 \\left(\\text{-}4 a - 5\\right)+ 5 a $"
+            },
+            {
+              "result": "$\\text{-}20 a - 25+ 5 a $",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}15 a - 25$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAdditionInteger": {
+      "descr": {
+        "nl": "Gehele getallen optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 5,
+      "marksPenalty": 0
+    }
+  }
+}

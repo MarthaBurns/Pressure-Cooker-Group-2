@@ -1,0 +1,190 @@
+{
+  "success": true,
+  "creationTimestamp": 1732609238,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(s - 2\\right)^{2}$"
+        },
+        {
+          "id": "enAXH",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1732609358251,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>$\\left(a + b \\right)^{2}=a ^{2}+ 2 a  b + b ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup s ^{4}- 4 s \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$s^{4}-4s$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732609359765,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsSquare",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk het kwadraat uit</h1>Schrijf  $\\left(s - 2\\right)^{2}$  als  $\\left(s - 2\\right) \\left(s - 2\\right)$  en werk de haakjes weg",
+                    "expression": "$\\left(s - 2\\right)^{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1732609429485,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>$\\left(a + b \\right)^{2}=a ^{2}+ 2 a  b + b ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup s ^{4}+ 4 s \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$s^{4}+4s$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732609438482,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsSquare",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk het kwadraat uit</h1>Schrijf  $\\left(s - 2\\right)^{2}$  als  $\\left(s - 2\\right) \\left(s - 2\\right)$  en werk de haakjes weg",
+                    "expression": "$\\left(s - 2\\right)^{2}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100
+              },
+              {
+                "id": "ExpandDoubleBracketsSquare",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100
+              },
+              {
+                "id": "ExpandDoubleBracketsSquare",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$s ^{2}- 4 s + 4$",
+          "derivation": [
+            {
+              "expression": "$\\left(s - 2\\right)^{2}$"
+            },
+            {
+              "result": "$s ^{2}- 4 s + \\left(\\text{-}2\\right)^{2}$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$s ^{2}- 4 s + 2^{2}$",
+              "description": "Bij een even macht is de uitkomst altijd positief"
+            },
+            {
+              "result": "$s ^{2}- 4 s + 4$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

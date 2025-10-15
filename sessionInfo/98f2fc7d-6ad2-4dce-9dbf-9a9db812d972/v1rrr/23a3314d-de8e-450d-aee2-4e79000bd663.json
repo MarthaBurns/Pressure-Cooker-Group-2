@@ -1,0 +1,153 @@
+{
+  "success": true,
+  "creationTimestamp": 1749124467,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}3\\cdot \\text{-}4 x + 5 x + \\text{-}2 x \\cdot 2 x $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749124483079,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $\\text{-}3\\cdot \\text{-}4$",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\text{-}3\\endgroup\\endgroup\\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}4\\endgroup\\endgroup x + 5 x + \\text{-}2 x \\cdot 2 x $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1749124504585,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$12x+5x+-4x^{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.33333333333333326,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1749124516891,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$17 x + \\begingroup\\color{darkred}\\begingroup 4\\endgroup\\endgroup x ^{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$17x+4x^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.33333333333333326,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749124524628,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$17x+-4x^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$17 x - 4 x ^{2}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}3\\cdot \\text{-}4 x + 5 x + \\text{-}2\\cdot 2 x \\cdot x $"
+            },
+            {
+              "result": "$12 x + 5 x - 4 x \\cdot x $",
+              "description": "Reken uit:  $\\text{-}2\\cdot 2$"
+            },
+            {
+              "result": "$17 x - 4 x \\cdot x $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$17 x - 4 x ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

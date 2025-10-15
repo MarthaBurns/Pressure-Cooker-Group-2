@@ -1,0 +1,183 @@
+{
+  "success": true,
+  "creationTimestamp": 1750014577,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}2 \\left(\\text{-}4 x - 3\\right) \\left(x + 4\\right)$"
+        },
+        {
+          "id": "tWS6h",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750014775375,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Vermenigvuldig elke term binnen de haakjes met  $\\left(x + 4\\right)\\cdot \\text{-}2$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 14 x \\endgroup\\endgroup+ \\begingroup\\color{darkred}\\begingroup 24\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$14x+24$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750014788904,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de dubbele haakjes weg</h1>$\\left(a + b \\right) \\left(c + d \\right)=a \\cdot c + a \\cdot d + b \\cdot c + b \\cdot d $",
+                    "expression": "$\\text{-}2 \\begingroup\\color{#336699}\\begingroup \\left(\\text{-}4 x - 3\\right) \\left(x + 4\\right)\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750014882588,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -10
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de dubbele haakjes niet goed uitgewerkt.</h1>$\\left(a + b \\right) \\left(c + d \\right)=a \\cdot c + a \\cdot d + b \\cdot c + b \\cdot d $",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}4 x ^{2}- 16 x - 14\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-14-4x^{2}-16x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -10
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$8 x ^{2}+ 38 x + 24$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}2 \\left(\\text{-}4 x - 3\\right) \\left(x + 4\\right)$"
+            },
+            {
+              "result": "$\\text{-}2 \\left(\\text{-}4 x \\cdot x - 16 x - 3 x - 12\\right)$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\text{-}2 \\left(\\text{-}4 x \\cdot x - 19 x - 12\\right)$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\text{-}2 \\left(\\text{-}4 x ^{2}- 19 x - 12\\right)$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$8 x ^{2}+ 38 x + 24$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

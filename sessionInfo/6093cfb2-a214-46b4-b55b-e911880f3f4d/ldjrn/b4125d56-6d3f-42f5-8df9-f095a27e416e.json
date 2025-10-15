@@ -1,0 +1,195 @@
+{
+  "success": true,
+  "creationTimestamp": 1745068878,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$1\\frac{4}{5}+ 1\\frac{2}{4}$"
+        },
+        {
+          "id": "ldjrn",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1745068982806,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Split the mixed fractions  $1\\frac{4}{5}$  and  $1\\frac{2}{4}$</h1>$1\\frac{4}{5}+ 1\\frac{2}{4}=1+ \\frac{4}{5}+ 1+ \\frac{2}{4}$",
+                    "expression": "$1\\frac{4}{5}+ 1\\frac{2}{4}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1745069021304,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1745069063812,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddMixed",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$1\\frac{4}{5}+ 1\\frac{2}{4}$  is not equal to  $3\\frac{9}{10}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3\\frac{9}{10}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\ \\frac{9}{10}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1745069121708,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddMixed",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$1\\frac{4}{5}+ 1\\frac{2}{4}$  is not equal to  $3\\frac{2}{5}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3\\frac{2}{5}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\ \\frac{2}{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticAddMixed",
+                "weight": -100
+              },
+              {
+                "id": "FractionArithmeticAddMixed",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{33}{10}$",
+          "derivation": [
+            {
+              "expression": "$1\\frac{4}{5}+ 1\\frac{2}{4}$"
+            },
+            {
+              "result": "$2+ \\frac{4}{5}+ \\frac{2}{4}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Split the mixed fractions  $1\\frac{4}{5}$  and  $1\\frac{2}{4}$"
+            },
+            {
+              "result": "$2+ \\frac{4}{5}+ \\frac{1}{2}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Simplify the fraction"
+            },
+            {
+              "result": "$2+ \\frac{13}{10}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            },
+            {
+              "result": "$\\frac{33}{10}$",
+              "skills": [
+                "FractionArithmeticIntegerToFraction"
+              ],
+              "description": "Rewrite  $2+ \\frac{13}{10}$  into a single fraction"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "en": "Adding mixed fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticIntegerToFraction": {
+      "descr": {
+        "en": "Writing an integer number into a fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

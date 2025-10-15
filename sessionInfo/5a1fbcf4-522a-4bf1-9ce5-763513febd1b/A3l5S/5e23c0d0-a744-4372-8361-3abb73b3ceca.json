@@ -1,0 +1,143 @@
+{
+  "success": true,
+  "creationTimestamp": 1734445671,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{7}{\\sqrt{7}}$"
+        },
+        {
+          "id": "A3l5S",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1734445682999,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt uit teller en noemer ongelijke factoren weggedeeld.</h1>De factored  $7$  in de teller en  $\\sqrt{7}$  in de noemer vallen niet tegen elkaar weg.",
+                    "expression": "$1$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$1$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1734445686221,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{7}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\sqrt{7}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{7}{\\sqrt{7}}$"
+            },
+            {
+              "result": "$\\frac{7}{7^{\\frac{1}{2}}}$",
+              "skills": [
+                "AlgebraPowerRuleRoots"
+              ],
+              "description": "Schrijf de wortel om naar een machtsfunctie"
+            },
+            {
+              "result": "$7^{1- \\frac{1}{2}}$",
+              "skills": [
+                "AlgebraDivisionOfPowerFunctions"
+              ],
+              "description": "Deel  $7^{\\frac{1}{2}}$  weg uit teller en noemer"
+            },
+            {
+              "result": "$7^{\\frac{1}{2}}$",
+              "skills": [
+                "FractionArithmeticAddProperCommonDenominator",
+                "FractionArithmeticIntegerToFraction"
+              ],
+              "description": "Schrijf  $1- \\frac{1}{2}$  als één breuk:"
+            },
+            {
+              "result": "$\\sqrt{7}$",
+              "description": "Herschrijf de machtsfunctie tot een machtswortel"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraPowerRuleRoots": {
+      "descr": {
+        "nl": "De machtsregels voor wortels toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraDivisionOfPowerFunctions": {
+      "descr": {
+        "nl": "De regel voor delen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FractionArithmeticAddProperCommonDenominator": {
+      "descr": {
+        "nl": "Gelijknamige echte breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticIntegerToFraction": {
+      "descr": {
+        "nl": "Een geheel getal als een breuk schrijven"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

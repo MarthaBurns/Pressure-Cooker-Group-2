@@ -1,0 +1,171 @@
+{
+  "success": true,
+  "creationTimestamp": 1732722652,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5 \\left(n + 4\\right)^{2}- 4$"
+        },
+        {
+          "id": "TX6Sm",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1732722671607,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-5\\left(n+4\\right)\\left(n+4\\right)-4$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "ExpandDoubleBracketsMultiplication",
+                  "AlgebraAddingLikeTerms",
+                  "ExpandSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1732722712034,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100,
+                    "errors": [
+                      "MissingBrackets"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je bent haakjes vergeten te zetten.</h1>Je hebt  $\\left(n + 4\\right) \\left(n + 4\\right)$  goed uitgewerkt, maar je bent de haakjes vergeten om  $4 n + 4 n + 16+ n ^{2}$  te vermenigvuldigen met  $\\text{-}5$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}5 n ^{2}+ 4 n + 4 n + 16\\endgroup\\endgroup- 4$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-5n^{2}+4n+4n+16-4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100,
+                "errors": [
+                  "MissingBrackets"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}5 n ^{2}- 40 n - 84$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5 \\left(n + 4\\right)^{2}- 4$"
+            },
+            {
+              "result": "$\\text{-}5 \\left(n ^{2}+ 8 n + 4^{2}\\right)- 4$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$\\text{-}5 \\left(n ^{2}+ 8 n + 16\\right)- 4$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            },
+            {
+              "result": "$\\text{-}5 n ^{2}- 40 n - 80- 4$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}5 n ^{2}- 40 n - 84$",
+              "description": "Reken uit:  $\\text{-}80- 4$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "MissingBrackets",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Geen haakjes schrijven in het resultaat, terwijl deze wel noodzakelijk zijn."
+          }
+        }
+      ]
+    },
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

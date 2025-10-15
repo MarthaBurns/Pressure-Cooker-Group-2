@@ -1,0 +1,175 @@
+{
+  "success": true,
+  "creationTimestamp": 1730722257,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$p ^{2}+ 9 p =0$"
+        },
+        {
+          "id": "Vs6VE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0.3333333333333333,
+            "events": [
+              {
+                "timestamp": 1730722269473,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Haal de factor  $p $  buiten haakjes.",
+                    "expression": "$p ^{2}+ 9 p =0$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1730722289315,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$p\\left(p+9\\right)=0$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "EquationsSplitFactors",
+                  "EquationsBalanceMethodArrangeTerms",
+                  "EquationsOperationsAdd"
+                ]
+              },
+              {
+                "timestamp": 1730722336439,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$9$  is niet gelijk aan  $0$ .",
+                    "expression": "$p =0\\vee \\begingroup\\color{darkred}\\begingroup 9=0\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$p=0\\ \\vee9=0$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1730722354545,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$p=0\\ \\vee p=-0$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1730722359766,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$p=0$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.3333333333333333,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$p =\\text{-}9\\vee p =0$",
+          "derivation": [
+            {
+              "expression": "$p ^{2}+ 9 p =0$"
+            },
+            {
+              "result": "$p  \\left(p + 9\\right)=0$",
+              "description": "Haal de factor  $p $  buiten haakjes."
+            },
+            {
+              "result": "$p =0\\vee p + 9=0$",
+              "skills": [
+                "EquationsSplitFactors"
+              ],
+              "description": "Minstens één factor is gelijk aan nul"
+            },
+            {
+              "result": "$p =\\text{-}9\\vee p =0$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Haal links en rechts  $9$  eraf."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsSplitFactors": {
+      "descr": {
+        "nl": "Elke factor gelijkstellen aan nul"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

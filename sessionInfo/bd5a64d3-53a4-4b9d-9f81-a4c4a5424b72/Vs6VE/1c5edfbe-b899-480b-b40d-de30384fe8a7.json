@@ -1,0 +1,137 @@
+{
+  "success": true,
+  "creationTimestamp": 1730116461,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$7 s + s ^{2}=0$"
+        },
+        {
+          "id": "Vs6VE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1730116710195,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsSplitFactors",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$s=0\\ v\\ s=-7$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsSplitFactors",
+                "weight": 100
+              },
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "weight": 100
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$RandVarResult \\left(s \\right)=0\\vee RandVarResult \\left(s \\right)=\\text{-}7$",
+          "derivation": [
+            {
+              "expression": "$7 RandVarResult \\left(s \\right)+ RandVarResult ^{2}\\left(s \\right)=0$"
+            },
+            {
+              "result": "$RandVarResult \\left(s \\right) \\left(7+ RandVarResult \\left(s \\right)\\right)=0$",
+              "description": "Haal de factor  $RandVarResult \\left(s \\right)$  buiten haakjes."
+            },
+            {
+              "result": "$RandVarResult \\left(s \\right)=0\\vee 7+ RandVarResult \\left(s \\right)=0$",
+              "skills": [
+                "EquationsSplitFactors"
+              ],
+              "description": "Minstens één factor is gelijk aan nul"
+            },
+            {
+              "result": "$RandVarResult \\left(s \\right)=0\\vee RandVarResult \\left(s \\right)=\\text{-}7$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Haal links en rechts  $7$  eraf."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsSplitFactors": {
+      "descr": {
+        "nl": "Elke factor gelijkstellen aan nul"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

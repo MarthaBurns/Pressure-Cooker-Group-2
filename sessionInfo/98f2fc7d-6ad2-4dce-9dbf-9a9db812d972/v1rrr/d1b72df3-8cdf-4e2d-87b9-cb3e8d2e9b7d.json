@@ -1,0 +1,128 @@
+{
+  "success": true,
+  "creationTimestamp": 1749500919,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}8+ \\text{-}4 y \\cdot 8$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1749500975275,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplyNegative",
+                    "weight": -100,
+                    "errors": [
+                      "General"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt een tekenfout gemaakt bij het vermenigvuldigen</h1>$\\text{-}4\\cdot 8$  is niet gelijk aan  $32$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 32\\endgroup\\endgroup y - 8$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$32y+-8$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749500980374,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $\\text{-}4\\cdot 8$",
+                    "expression": "$\\text{-}8+ \\begingroup\\color{#336699}\\begingroup \\text{-}4\\endgroup\\endgroup y \\cdot \\begingroup\\color{#336699}\\begingroup 8\\endgroup\\endgroup$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplyNegative",
+                "weight": -100,
+                "errors": [
+                  "General"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}8- 32 y $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}8- 4\\cdot 8 y $"
+            },
+            {
+              "result": "$\\text{-}8- 32 y $",
+              "description": "Reken uit:  $\\text{-}4\\cdot 8$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplyNegative": {
+      "descr": {
+        "nl": "Vermenigvuldigen met negatieve getallen"
+      },
+      "stepType": "CONCEPT",
+      "errors": [
+        {
+          "id": "General",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De regels voor vermenigvuldigen met een negatief getal niet kennen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

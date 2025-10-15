@@ -1,0 +1,201 @@
+{
+  "success": true,
+  "creationTimestamp": 1758553876,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1}{4}+ \\frac{1}{8}$"
+        },
+        {
+          "id": "ddXWL",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1758553908003,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticEquivalentConcept",
+                    "weight": 100,
+                    "errors": [
+                      "EquivalentNumeratorDenominator"
+                    ],
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "De breuken  $\\frac{1}{8}$  en  $\\frac{1}{4}$  zijn niet gelijkwaardig.",
+                    "expression": "$\\frac{1}{4}+ \\begingroup\\color{darkred}\\begingroup \\frac{1}{4}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1}{4}+\\frac{1}{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758553926791,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1}{4}+\\frac{1}{8}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticAddProperUnlikeDenominator",
+                  "FractionArithmeticAddProperCommonDenominator"
+                ]
+              },
+              {
+                "timestamp": 1758553940127,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperCommonDenominator",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{2}{8}+\\frac{1}{8}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticAddProperCommonDenominator"
+                ]
+              },
+              {
+                "timestamp": 1758553946020,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3}{8}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticEquivalentConcept",
+                "weight": 100,
+                "errors": [
+                  "EquivalentNumeratorDenominator"
+                ],
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{3}{8}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1}{4}+ \\frac{1}{8}$"
+            },
+            {
+              "result": "$\\frac{3}{8}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Maak de breuken gelijknamig"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "nl": "Ongelijknamige breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticEquivalentConcept": {
+      "descr": {
+        "nl": "Begrijpen dat breuken gelijkwaardig kunnen zijn"
+      },
+      "stepType": "CONCEPT",
+      "errors": [
+        {
+          "id": "EquivalentNumeratorDenominator",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De relatie tussen teller en noemer niet begrijpen bij het vergelijken van breuken"
+          }
+        }
+      ]
+    },
+    "FractionArithmeticAddProperCommonDenominator": {
+      "descr": {
+        "nl": "Gelijknamige echte breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

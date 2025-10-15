@@ -1,0 +1,136 @@
+{
+  "success": true,
+  "creationTimestamp": 1733819150,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$m \\cdot 3 m ^{2}\\cdot 3 m $"
+        },
+        {
+          "id": "I1",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733819157753,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je moet vermenigvuldigen met  $3$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3\\endgroup\\endgroup m ^{4}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3m^{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733819166210,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $3\\cdot 3$  is niet gelijk aan  $6$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 6\\endgroup\\endgroup m ^{4}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6m^{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733819172812,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$9m^{4}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$9 m ^{4}$",
+          "derivation": [
+            {
+              "expression": "$3\\cdot 3 m  m ^{2} m $"
+            },
+            {
+              "result": "$9 m  m ^{2} m $",
+              "description": "Reken uit:  $3\\cdot 3$"
+            },
+            {
+              "result": "$9 m ^{4}$",
+              "description": "Bij vermenigvuldigen van machten kun je de exponenten optellen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

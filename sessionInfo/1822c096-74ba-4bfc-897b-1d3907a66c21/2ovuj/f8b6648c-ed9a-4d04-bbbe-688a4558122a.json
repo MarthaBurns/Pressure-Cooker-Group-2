@@ -1,0 +1,160 @@
+{
+  "success": true,
+  "creationTimestamp": 1729152659,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 p ^{3}- p - 6 p - 9 p ^{3}+ 9$"
+        },
+        {
+          "id": "2ovuj",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1729152748307,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\text{-}9 p ^{3}+ \\begingroup\\color{darkred}\\begingroup 7 p \\endgroup\\endgroup+ 9$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-9p^{3}+7p+9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729152760694,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\text{-}9 p ^{3}+ \\begingroup\\color{darkred}\\begingroup 5 p \\endgroup\\endgroup+ 9$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-9p^{3}+5p+9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729152762647,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $p $  zijn gelijksoortig.",
+                    "expression": "$5 p ^{3}- \\begingroup\\color{#336699}\\begingroup p \\endgroup\\endgroup- \\begingroup\\color{#336699}\\begingroup 6 p \\endgroup\\endgroup- 9 p ^{3}+ 9$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729152776991,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de termen  $5 p ^{3}\\text{ en } \\text{-}9 p ^{3}$  niet goed samengenomen",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}9 p ^{3}\\endgroup\\endgroup- 7 p + 9$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-9p^{3}-7p+9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -50
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}4 p ^{3}- 7 p + 9$",
+          "derivation": [
+            {
+              "expression": "$5 p ^{3}- p - 6 p - 9 p ^{3}+ 9$"
+            },
+            {
+              "result": "$\\text{-}4 p ^{3}- 7 p + 9$",
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

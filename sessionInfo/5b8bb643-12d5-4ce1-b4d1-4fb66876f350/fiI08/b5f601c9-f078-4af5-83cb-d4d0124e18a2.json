@@ -1,0 +1,109 @@
+{
+  "success": true,
+  "creationTimestamp": 1741361705,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{2}{3} \\div 10$"
+        },
+        {
+          "id": "fiI08",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1741361767629,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Arithmetic error:  $\\frac{2}{3} \\div 10$  is not equal to  $15$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 15\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$15$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{1}{15}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{2}{3} \\div 10$"
+            },
+            {
+              "result": "$\\frac{2}{10\\times 3}$",
+              "skills": [
+                "FractionArithmeticDivisionProperByNumber"
+              ],
+              "description": "Simplify the fraction"
+            },
+            {
+              "result": "$\\frac{1}{5\\times 3}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Divide the numerator and the denominator by their common factor"
+            },
+            {
+              "result": "$\\frac{1}{15}$",
+              "description": "Calculate:  $5\\times 3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticDivisionProperByNumber": {
+      "descr": {
+        "en": "Dividing a proper fraction by a number"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

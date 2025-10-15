@@ -1,0 +1,164 @@
+{
+  "success": true,
+  "creationTimestamp": 1739800761,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$1+ \\text{-}3 y \\cdot \\text{-}2 y $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1739800907557,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-5y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1739800913813,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-5y^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1739800951525,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfPowerFunctions",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt  $\\text{-}3 y \\cdot \\text{-}2 y $  niet goed vereenvoudigd.</h1>Tip: Werk stap-voor-stap. Vermenigvuldig eerst de coefficiënten  $\\text{-}3\\cdot \\text{-}2$ .",
+                    "expression": "$1- \\begingroup\\color{darkred}\\begingroup 6 y \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$1+-6y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1739801413618,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$1+ \\begingroup\\color{darkred}\\begingroup x \\endgroup\\endgroup y ^{2}\\cdot 6$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$1+6xy^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1739801451616,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$1+6y^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfPowerFunctions",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 4
+              },
+              "finished": true
+            }
+          },
+          "solution": "$1+ 6 y ^{2}$",
+          "derivation": [
+            {
+              "expression": "$1- 3\\cdot \\text{-}2 y \\cdot y $"
+            },
+            {
+              "result": "$1+ 6 y \\cdot y $",
+              "description": "Reken uit:  $\\text{-}3\\cdot \\text{-}2$"
+            },
+            {
+              "result": "$1+ 6 y ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "nl": "De machtsregels voor vermenigvuldigen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 4,
+      "marksPenalty": 0
+    }
+  }
+}

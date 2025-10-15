@@ -1,0 +1,126 @@
+{
+  "success": true,
+  "creationTimestamp": 1732267611,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes weg en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$6 \\left(2 t - 4\\right)+ 3$"
+        },
+        {
+          "id": "LdeEL",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0.6666666666666666,
+            "events": [
+              {
+                "timestamp": 1732267637762,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$12t-24+3$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.6666666666666666,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1732267650204,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAddConcept",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Heb je afgetrokken in plaats van opgeteld?",
+                    "expression": "$12 t - \\begingroup\\color{darkred}\\begingroup 27\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$12t-27$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.6666666666666666,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticAddConcept",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$12 t - 21$",
+          "derivation": [
+            {
+              "expression": "$6 \\left(2 t - 4\\right)+ 3$"
+            },
+            {
+              "result": "$12 t - 24+ 3$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$12 t - 21$",
+              "description": "Reken uit:  $\\text{-}24+ 3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAddConcept": {
+      "descr": {
+        "nl": "Optellen en aftrekken begrijpen"
+      },
+      "stepType": "CONCEPT"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

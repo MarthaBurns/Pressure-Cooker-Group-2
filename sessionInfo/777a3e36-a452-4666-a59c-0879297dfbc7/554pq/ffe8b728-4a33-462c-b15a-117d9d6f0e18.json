@@ -1,0 +1,137 @@
+{
+  "success": true,
+  "creationTimestamp": 1734006754,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{6} \\left(\\text{-}3- 3 \\sqrt{24}\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1734006778941,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Vermenigvuldig elke term binnen de haakjes met  $\\sqrt{6}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{18}\\endgroup\\endgroup- \\begingroup\\color{darkred}\\begingroup 3 \\sqrt{24}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{18}-3\\sqrt{24}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1734006781966,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de haakjes uit</h1>Vermenigvuldig elke term binnen de haakjes met  $\\sqrt{6}$",
+                    "expression": "$\\sqrt{6} \\left(\\text{-}3- 3 \\sqrt{24}\\right)$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}3 \\sqrt{6}- 36$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{6} \\left(\\text{-}3- 3 \\sqrt{24}\\right)$"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{6}- 3 \\sqrt{6} \\sqrt{24}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{6}- 3 \\sqrt{144}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{6}- 12\\cdot 3$",
+              "description": "Bepaal de wortel van  $144$"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{6}- 36$",
+              "description": "Reken uit:  $12\\cdot \\text{-}3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

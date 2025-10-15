@@ -1,0 +1,251 @@
+{
+  "success": true,
+  "creationTimestamp": 1737021813,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$7 m ^{2}=63$"
+        },
+        {
+          "id": "ybGQg",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1737021884529,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$7m^{2}-63=0$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "EquationsBalanceMethodArrangeTerms",
+                  "EquationsOperationsAdd",
+                  "EquationsBalanceMethodDivideCoefficient",
+                  "EquationsOperationsMultiply"
+                ]
+              },
+              {
+                "timestamp": 1737021895235,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt  $7 m ^{2}- 63$  niet goed ontbonden in factoren.</h1>$7 m \\cdot \\text{-}9$  is niet gelijk aan  $\\text{-}63$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 7 m  \\left(m - 9\\right)\\endgroup\\endgroup=0$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$7m\\left(m-9\\right)=0$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737021978869,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$m^{2}=9$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1737021983145,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsOperationsPower",
+                    "weight": -100,
+                    "errors": [
+                      "MissingSolutions"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Hoeveel oplossingen verwacht je?</h1>Als  $t ^{2}=c $ , met  $c > 0$ ,  dan geldt  $t =\\sqrt{c }\\vee t =\\text{-}\\sqrt{c }$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup m =3\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$m=3$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737022001789,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodDivideCoefficient",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsOperationsMultiply",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$m=3\\ \\vee\\ m=-3$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "EquationsOperationsPower",
+                "weight": -100,
+                "errors": [
+                  "MissingSolutions"
+                ]
+              },
+              {
+                "id": "EquationsBalanceMethodDivideCoefficient",
+                "weight": 100
+              },
+              {
+                "id": "EquationsOperationsMultiply",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$m =\\text{-}3\\vee m =3$",
+          "derivation": [
+            {
+              "expression": "$7 m ^{2}=63$"
+            },
+            {
+              "result": "$m ^{2}=9$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $7$"
+            },
+            {
+              "result": "$m =\\sqrt{9}\\vee m =\\text{-}\\sqrt{9}$",
+              "description": "Herleid de vergelijking door links en rechts de wortel te nemen"
+            },
+            {
+              "result": "$m =\\text{-}3\\vee m =3$",
+              "description": "Bepaal de wortel van  $9$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "EquationsOperationsPower": {
+      "descr": {
+        "nl": "Een macht toepassen op een vergelijking"
+      },
+      "stepType": "STRATEGY",
+      "errors": [
+        {
+          "id": "MissingSolutions",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Zich niet realiseren dat er meerdere oplossingen zijn van de machtsvergelijking."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "creationTimestamp": 1733683405,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$4 \\sqrt{2}\\cdot 5 \\sqrt{3}$"
+        },
+        {
+          "id": "GQWKp",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733683554126,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $4 \\sqrt{2}\\cdot 5 \\sqrt{3}$  is niet gelijk aan  ${16,\\!65} $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup {16,\\!65} \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$16,65$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733683656263,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$20\\sqrt{6}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$20 \\sqrt{6}$",
+          "derivation": [
+            {
+              "expression": "$4\\cdot 5 \\sqrt{2} \\sqrt{3}$"
+            },
+            {
+              "result": "$20 \\sqrt{2} \\sqrt{3}$",
+              "description": "Reken uit:  $4\\cdot 5$"
+            },
+            {
+              "result": "$20 \\sqrt{6}$",
+              "description": "Vermenigvuldig de wortels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

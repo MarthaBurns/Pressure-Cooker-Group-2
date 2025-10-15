@@ -1,0 +1,125 @@
+{
+  "success": true,
+  "creationTimestamp": 1757486798,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{2}{7}- \\frac{1}{2}$"
+        },
+        {
+          "id": "ibxuY",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1757486916389,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$2\\frac{2}{7}- \\frac{1}{2}$  does not equal  $\\frac{47}{21}$ .",
+                    "expression": "$2\\frac{2}{7}- \\frac{1}{2}=\\frac{47}{21}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$=\\frac{47}{21}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$1\\frac{11}{14}$",
+          "derivation": [
+            {
+              "expression": "$2\\frac{2}{7}- \\frac{1}{2}$"
+            },
+            {
+              "result": "$2+ \\frac{2}{7}- \\frac{1}{2}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Split the mixed fraction"
+            },
+            {
+              "result": "$2- \\frac{3}{14}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            },
+            {
+              "result": "$1\\frac{11}{14}$",
+              "skills": [
+                "FractionArithmeticAddProperCommonDenominator",
+                "FractionArithmeticIntegerToFraction"
+              ],
+              "description": "Rewrite  $2- \\frac{3}{14}$  into a single fraction"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "en": "Adding mixed fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperCommonDenominator": {
+      "descr": {
+        "en": "Adding proper fractions with common denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticIntegerToFraction": {
+      "descr": {
+        "en": "Writing an integer number into a fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

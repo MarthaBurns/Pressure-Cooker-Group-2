@@ -1,0 +1,221 @@
+{
+  "success": true,
+  "creationTimestamp": 1732609744,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$7\\cdot \\frac{3}{8}$"
+        },
+        {
+          "id": "roPhK",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1732609757992,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $7\\cdot \\frac{3}{8}$  is niet gelijk aan  $\\frac{21}{56}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{21}{56}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{21}{56}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732609764281,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Vermenigvuldig  $7\\cdot \\frac{3}{8}$</h1>Je kunt  $7$  als  $\\frac{7}{1}$  schrijven en de regel voor het vermenigvuldigen van breuken gebruiken",
+                    "expression": "$7\\cdot \\frac{3}{8}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1732609781052,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{21}{8}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.33333333333333326,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimilarImproperToMixed"
+                ]
+              },
+              {
+                "timestamp": 1732609782785,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticEquivalentConcept",
+                    "weight": -100,
+                    "errors": [
+                      "EquivalentNumeratorDenominator"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "De breuken  $\\frac{21}{8}$  en  $3$  zijn niet gelijkwaardig.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.33333333333333326,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732609796209,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarImproperToMixed",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\frac{5}{8}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              },
+              {
+                "id": "FractionArithmeticEquivalentConcept",
+                "weight": -100,
+                "errors": [
+                  "EquivalentNumeratorDenominator"
+                ]
+              },
+              {
+                "id": "FractionArithmeticSimilarImproperToMixed",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$2\\frac{5}{8}$",
+          "derivation": [
+            {
+              "expression": "$7\\cdot \\frac{3}{8}$"
+            },
+            {
+              "result": "$\\frac{21}{8}$",
+              "description": "Herleid."
+            },
+            {
+              "result": "$2\\frac{5}{8}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Vereenvoudig de breuk door de helen eruit te halen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticEquivalentConcept": {
+      "descr": {
+        "nl": "Begrijpen dat breuken gelijkwaardig kunnen zijn"
+      },
+      "stepType": "CONCEPT",
+      "errors": [
+        {
+          "id": "EquivalentNumeratorDenominator",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De relatie tussen teller en noemer niet begrijpen bij het vergelijken van breuken"
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

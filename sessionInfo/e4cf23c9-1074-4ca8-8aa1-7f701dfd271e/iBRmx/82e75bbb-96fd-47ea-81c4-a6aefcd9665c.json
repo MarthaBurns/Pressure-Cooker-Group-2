@@ -1,0 +1,166 @@
+{
+  "success": true,
+  "creationTimestamp": 1749224489,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Expand the brackets."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(x + 5\\right) \\left(x - 2\\right)$"
+        },
+        {
+          "id": "iBRmx",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1749224510030,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -10
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not expand the double brackets correctly.</h1>$\\left(a + b \\right) \\left(c + d \\right)=a \\times c + a \\times d + b \\times c + b \\times d $",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup x - 2\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$x5\\cdot x-2$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749224589470,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not expand the double brackets correctly.</h1>The term  $\\mathrm{x2}$  is incorrect.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\mathrm{x2}\\endgroup\\endgroup+ x ^{2}+ 5 x - 10$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$x^{2}+x2+5x-10$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749224596547,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "This is not a valid mathematical expression.",
+                    "expression": "$\\text{Incorrect expression}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$^{ }$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -10
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -50
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$x ^{2}+ 3 x - 10$",
+          "derivation": [
+            {
+              "expression": "$\\left(x + 5\\right) \\left(x - 2\\right)$"
+            },
+            {
+              "result": "$x \\times x - 2 x + 5 x - 10$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Expand the double brackets"
+            },
+            {
+              "result": "$x \\times x + 3 x - 10$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            },
+            {
+              "result": "$x ^{2}+ 3 x - 10$",
+              "description": "Write the repeated multiplication as a power"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "en": "Expanding a product of two sums"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

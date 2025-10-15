@@ -1,0 +1,217 @@
+{
+  "success": true,
+  "creationTimestamp": 1744196287,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes weg en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 a - 2 \\left(\\text{-}6 a - 5\\right)$"
+        },
+        {
+          "id": "LdeEL",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1744196392254,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3a--12a-10=-9a-10$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1744196395308,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de haakjes uit</h1>Vermenigvuldig elke term binnen de haakjes met  $\\text{-}2$",
+                    "expression": "$3 a - \\begingroup\\color{#336699}\\begingroup 2 \\left(\\text{-}6 a - 5\\right)\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1744196510730,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3a--12a-10=3a+12a-10=15a-10$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "TRUE_EXPRESSION"
+              },
+              {
+                "timestamp": 1744196521745,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Vermenigvuldig elke term binnen de haakjes met  $\\text{-}2$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 15 a \\endgroup\\endgroup- \\begingroup\\color{darkred}\\begingroup 10\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$15a-10$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1744196566245,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3a-12a-10=9a-10$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1744196568374,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de haakjes uit</h1>Vermenigvuldig elke term binnen de haakjes met  $\\text{-}2$",
+                    "expression": "$3 a - \\begingroup\\color{#336699}\\begingroup 2 \\left(\\text{-}6 a - 5\\right)\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1744196610411,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$12a$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 4
+              },
+              "finished": false
+            }
+          },
+          "solution": "$15 a + 10$",
+          "derivation": [
+            {
+              "expression": "$3 a - 2 \\left(\\text{-}6 a - 5\\right)$"
+            },
+            {
+              "result": "$3 a + 12 a + 10$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$15 a + 10$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 4,
+      "marksPenalty": 0
+    }
+  }
+}

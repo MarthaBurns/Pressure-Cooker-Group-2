@@ -1,0 +1,199 @@
+{
+  "success": true,
+  "creationTimestamp": 1749416648,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 \\sqrt{2} \\left(\\sqrt{50}+ 5\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749416677904,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$5\\sqrt{100}+25\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1749416686932,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$5\\cdot10+25\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.5,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1749416692500,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ArithmeticOrderMultiplication",
+                    "weight": -100,
+                    "errors": [
+                      "MultiplicationAddition"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Bereken in de juiste volgorde</h1>$5\\cdot 10+ 25 \\sqrt{2}=5\\cdot 10+ \\left(25 \\sqrt{2}\\right)$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 75 \\sqrt{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$75\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.5,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749416698252,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  },
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$50+25\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ArithmeticOrderMultiplication",
+                "weight": -100,
+                "errors": [
+                  "MultiplicationAddition"
+                ]
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$50+ 25 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$5 \\sqrt{2} \\left(\\sqrt{50}+ 5\\right)$"
+            },
+            {
+              "result": "$5 \\left(\\sqrt{2} \\sqrt{50}+ 5 \\sqrt{2}\\right)$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$5 \\left(\\sqrt{100}+ 5 \\sqrt{2}\\right)$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$5 \\left(10+ 5 \\sqrt{2}\\right)$",
+              "description": "Bepaal de wortel van  $100$"
+            },
+            {
+              "result": "$50+ 25 \\sqrt{2}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ArithmeticOrderMultiplication": {
+      "descr": {
+        "nl": "Volgorde van operaties met vermenigvuldiging"
+      },
+      "stepType": "CALCULATE",
+      "errors": [
+        {
+          "id": "MultiplicationAddition",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Optellen terwijl vermenigvuldiging voorrang heeft."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

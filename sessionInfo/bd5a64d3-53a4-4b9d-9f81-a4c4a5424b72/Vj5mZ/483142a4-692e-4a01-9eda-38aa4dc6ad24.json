@@ -1,0 +1,194 @@
+{
+  "success": true,
+  "creationTimestamp": 1746180100,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$t ^{2}+ 18 t + 80=0$"
+        },
+        {
+          "id": "Vj5mZ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1746180142590,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$t=-8\\ \\vee t=8$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1746180147001,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$t=-8\\ \\vee\\ t=8$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1746180153977,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsSplitFactors",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$t=-8\\ \\vee\\ t=-10$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100
+              },
+              {
+                "id": "EquationsSplitFactors",
+                "weight": 100
+              },
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "weight": 100
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": 100
+              },
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "weight": 100
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$t =\\text{-}10\\vee t =\\text{-}8$",
+          "derivation": [
+            {
+              "expression": "$t ^{2}+ 18 t + 80=0$"
+            },
+            {
+              "result": "$\\left(t + 10\\right) \\left(t + 8\\right)=0$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Ontbind met de som-product-methode"
+            },
+            {
+              "result": "$t + 10=0\\vee t + 8=0$",
+              "skills": [
+                "EquationsSplitFactors"
+              ],
+              "description": "Minstens één factor is gelijk aan nul"
+            },
+            {
+              "result": "$t =\\text{-}10\\vee t =\\text{-}8$",
+              "description": "Balansmethode: Haal links en rechts  $8$  eraf."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "nl": "Een kwadratische expressie ontbinden via de som-productmethode"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "EquationsSplitFactors": {
+      "descr": {
+        "nl": "Elke factor gelijkstellen aan nul"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

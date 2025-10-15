@@ -1,0 +1,171 @@
+{
+  "success": true,
+  "creationTimestamp": 1747748141,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}25+ \\left(6 m + 7\\right)^{2}=0$"
+        },
+        {
+          "id": "95xvw",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1747748201271,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$m=5\\ \\vee\\ m=-1$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1747748205771,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$m=-5\\ \\vee\\ m=-1$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1747748209836,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Balansmethode: Tel links en rechts  $25$  erbij op.",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\text{-}25\\endgroup\\endgroup+ \\left(6 m + 7\\right)^{2}=\\begingroup\\color{#336699}\\begingroup 0\\endgroup\\endgroup$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$m =\\text{-}2\\vee m =\\text{-}\\frac{1}{3}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}25+ \\left(6 m + 7\\right)^{2}=0$"
+            },
+            {
+              "result": "$\\left(6 m + 7\\right)^{2}=25$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Tel links en rechts  $25$  erbij op."
+            },
+            {
+              "result": "$6 m + 7=\\sqrt{25}\\vee 6 m + 7=\\text{-}\\sqrt{25}$",
+              "description": "Herleid de vergelijking door links en rechts de wortel te nemen"
+            },
+            {
+              "result": "$6 m + 7=5\\vee 6 m + 7=\\text{-}5$",
+              "description": "Bepaal de wortel van  $25$"
+            },
+            {
+              "result": "$6 m =\\text{-}2\\vee 6 m =\\text{-}12$",
+              "description": "Balansmethode: Haal links en rechts  $7$  eraf."
+            },
+            {
+              "result": "$m =\\text{-}\\frac{2}{6}\\vee m =\\text{-}2$",
+              "description": "Deel links en rechts door  $6$"
+            },
+            {
+              "result": "$m =\\text{-}2\\vee m =\\text{-}\\frac{1}{3}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Vereenvoudig de breuk"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

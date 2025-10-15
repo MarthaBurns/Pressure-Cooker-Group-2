@@ -1,0 +1,118 @@
+{
+  "success": true,
+  "creationTimestamp": 1760081142,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2+ \\text{-}5 t \\cdot \\text{-}8$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1760081167806,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ArithmeticOrderMultiplication",
+                    "weight": 100,
+                    "errors": [
+                      "MultiplicationAddition"
+                    ],
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Bereken in de juiste volgorde</h1>$2- \\text{-}5 t \\cdot 8=2+ \\left(\\text{-}5\\cdot \\text{-}8 t \\right)$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 42 t \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$42t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ArithmeticOrderMultiplication",
+                "weight": 100,
+                "errors": [
+                  "MultiplicationAddition"
+                ],
+                "source": "ERROR_FEEDBACK"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$2+ 40 t $",
+          "derivation": [
+            {
+              "expression": "$2- \\text{-}5\\cdot 8 t $"
+            },
+            {
+              "result": "$2+ 40 t $",
+              "description": "Reken uit:  $\\text{-}5\\cdot \\text{-}8$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ArithmeticOrderMultiplication": {
+      "descr": {
+        "nl": "Volgorde van operaties met vermenigvuldiging"
+      },
+      "stepType": "CALCULATE",
+      "errors": [
+        {
+          "id": "MultiplicationAddition",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Optellen terwijl vermenigvuldiging voorrang heeft."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

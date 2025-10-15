@@ -1,0 +1,188 @@
+{
+  "success": true,
+  "creationTimestamp": 1758017066,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$1\\frac{1}{2}- \\frac{1}{3}$"
+        },
+        {
+          "id": "ibxuY",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1758017343408,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1}{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1758017346177,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddMixed",
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Splits de samengestelde breuk</h1>$1\\frac{1}{2}=1+ \\frac{1}{2}$",
+                    "expression": "$1\\frac{1}{2}- \\frac{1}{3}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1758017439942,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3}{6\\ }en\\ \\frac{2}{6}\\ min\\ elkaar\\ is\\frac{1}{6}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "UNKNOWN_STEP"
+              },
+              {
+                "timestamp": 1758017469205,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddMixed",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticSimilarImproperToMixed",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$1\\frac{1}{6}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticAddMixed",
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticAddMixed",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticSimilarImproperToMixed",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$1\\frac{1}{6}$",
+          "derivation": [
+            {
+              "expression": "$1\\frac{1}{2}- \\frac{1}{3}$"
+            },
+            {
+              "result": "$1+ \\frac{1}{2}- \\frac{1}{3}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Splits de samengestelde breuk"
+            },
+            {
+              "result": "$1+ \\frac{1}{6}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Maak de breuken gelijknamig"
+            },
+            {
+              "result": "$1\\frac{1}{6}$",
+              "skills": [
+                "FractionArithmeticSimilarImproperToMixed"
+              ],
+              "description": "Schrijf  $1+ \\frac{1}{6}$  als één breuk:"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "nl": "Gemengde breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "nl": "Ongelijknamige breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

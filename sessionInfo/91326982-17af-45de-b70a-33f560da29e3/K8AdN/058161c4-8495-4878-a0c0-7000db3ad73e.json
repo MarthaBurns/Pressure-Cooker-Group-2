@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "creationTimestamp": 1750230295,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$7 s \\cdot 8 s $"
+        },
+        {
+          "id": "K8AdN",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1750230320388,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$7\\times8\\times s^{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.6666666666666666,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1750230348267,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $7\\cdot 8$  is niet gelijk aan  $65$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 65\\endgroup\\endgroup s ^{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$65\\times s^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.6666666666666666,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750230357931,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$56s^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$56 s ^{2}$",
+          "derivation": [
+            {
+              "expression": "$7\\cdot 8 s \\cdot s $"
+            },
+            {
+              "result": "$56 s \\cdot s $",
+              "description": "Reken uit:  $7\\cdot 8$"
+            },
+            {
+              "result": "$56 s ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

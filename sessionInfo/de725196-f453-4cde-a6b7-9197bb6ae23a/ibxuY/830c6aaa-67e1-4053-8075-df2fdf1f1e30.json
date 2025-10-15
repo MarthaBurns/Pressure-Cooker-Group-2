@@ -1,0 +1,128 @@
+{
+  "success": true,
+  "creationTimestamp": 1734444084,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{2}{4}- \\frac{1}{2}$"
+        },
+        {
+          "id": "ibxuY",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1734444141387,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticAddProperCommonDenominator",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{10}{4}-\\frac{2}{4}=\\frac{8}{4}=2$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticAddProperCommonDenominator",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$2$",
+          "derivation": [
+            {
+              "expression": "$2\\frac{2}{4}- \\frac{1}{2}$"
+            },
+            {
+              "result": "$2+ \\frac{2}{4}- \\frac{1}{2}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Splits de samengestelde breuk"
+            },
+            {
+              "result": "$2+ \\frac{1}{2}- \\frac{1}{2}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Vereenvoudig de breuk"
+            },
+            {
+              "result": "$2$",
+              "description": "Herleid."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "nl": "Gemengde breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperCommonDenominator": {
+      "descr": {
+        "nl": "Gelijknamige echte breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

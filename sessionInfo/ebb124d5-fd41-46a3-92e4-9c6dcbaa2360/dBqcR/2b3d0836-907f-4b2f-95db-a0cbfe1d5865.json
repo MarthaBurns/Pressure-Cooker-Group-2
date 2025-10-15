@@ -1,0 +1,153 @@
+{
+  "success": true,
+  "creationTimestamp": 1732609034,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{6 a ^{3} p ^{3}}{\\text{-}2 a ^{2} p ^{3}}$"
+        },
+        {
+          "id": "dBqcR",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1732609051917,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraDivisionOfPowerFunctions",
+                    "weight": -100,
+                    "errors": [
+                      "DividingExponents"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de machtsregel voor delen niet goed toegepast.</h1>Je moet de exponenten aftrekken, maar je hebt ze gedeeld.",
+                    "expression": "$\\text{-}\\frac{3 a ^{1} \\begingroup\\color{darkred}\\begingroup p \\endgroup\\endgroup}{1}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-3a^{1}p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732609070018,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-3a$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraDivisionOfPowerFunctions",
+                "weight": -100,
+                "errors": [
+                  "DividingExponents"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}3 a $",
+          "derivation": [
+            {
+              "expression": "$\\frac{6 a ^{3} p ^{3}}{\\text{-}2 a ^{2} p ^{3}}$"
+            },
+            {
+              "result": "$\\text{-}\\frac{6 a  p ^{3}}{2 p ^{3}}$",
+              "skills": [
+                "AlgebraDivisionOfPowerFunctions"
+              ],
+              "description": "Deel de gemeenschappelijke factor weg uit teller en noemer"
+            },
+            {
+              "result": "$\\text{-}\\frac{6 a }{2}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Deel  $p ^{3}$  weg uit de teller en de noemer."
+            },
+            {
+              "result": "$\\text{-}3 a $",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Reken uit:  $\\text{-}\\frac{6}{2}$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraDivisionOfPowerFunctions": {
+      "descr": {
+        "nl": "De regel voor delen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "DividingExponents",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De exponenten delen bij het delen van machtsfuncties."
+          }
+        }
+      ]
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "success": true,
+  "creationTimestamp": 1758045797,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$10\\cdot \\left(\\text{-}9 x \\right)$"
+        },
+        {
+          "id": "hMYzS",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1758045803295,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $10\\cdot \\left(\\text{-}9\\right)$  is niet gelijk aan  $9$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 9\\endgroup\\endgroup x $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$9x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758045806311,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplyNegative",
+                    "weight": 100,
+                    "errors": [
+                      "General"
+                    ],
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt een tekenfout gemaakt bij het vermenigvuldigen</h1>$10\\cdot \\left(\\text{-}9\\right)$  is niet gelijk aan  $90$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 90\\endgroup\\endgroup x $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$90x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758045811091,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-90x$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "NumberArithmeticMultiplyNegative",
+                "weight": 100,
+                "errors": [
+                  "General"
+                ],
+                "source": "ERROR_FEEDBACK"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}90 x $",
+          "derivation": [
+            {
+              "expression": "$10\\cdot \\left(\\text{-}9\\right) x $"
+            },
+            {
+              "result": "$\\text{-}90 x $",
+              "description": "Reken uit:  $10\\cdot \\left(\\text{-}9\\right)$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "NumberArithmeticMultiplyNegative": {
+      "descr": {
+        "nl": "Vermenigvuldigen met negatieve getallen"
+      },
+      "stepType": "CONCEPT",
+      "errors": [
+        {
+          "id": "General",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De regels voor vermenigvuldigen met een negatief getal niet kennen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

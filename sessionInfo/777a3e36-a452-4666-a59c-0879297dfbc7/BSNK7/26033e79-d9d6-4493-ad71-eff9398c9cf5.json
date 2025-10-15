@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "creationTimestamp": 1733994104,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{7}+ 2 \\sqrt{56}\\cdot 5 \\sqrt{8}$"
+        },
+        {
+          "id": "BSNK7",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733994192697,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\sqrt{7}+ \\begingroup\\color{darkred}\\begingroup 8 \\sqrt{7}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{7}+8\\sqrt{7}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733994194753,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$\\sqrt{7}+ \\begingroup\\color{#336699}\\begingroup 2\\endgroup\\endgroup \\sqrt{56}\\cdot \\begingroup\\color{#336699}\\begingroup 5\\endgroup\\endgroup \\sqrt{8}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733994233724,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Ben je de term  $2 \\sqrt{56}\\cdot 5 \\sqrt{8}$  vergeten?",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{7}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{7}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733994262104,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{7\\ }+10\\sqrt{448}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\sqrt{7}+ 10 \\sqrt{448}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{7}+ 2\\cdot 5 \\sqrt{56} \\sqrt{8}$"
+            },
+            {
+              "result": "$\\sqrt{7}+ 10 \\sqrt{56} \\sqrt{8}$",
+              "description": "Reken uit:  $2\\cdot 5$"
+            },
+            {
+              "result": "$\\sqrt{7}+ 10 \\sqrt{448}$",
+              "description": "Vermenigvuldig de wortels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {},
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

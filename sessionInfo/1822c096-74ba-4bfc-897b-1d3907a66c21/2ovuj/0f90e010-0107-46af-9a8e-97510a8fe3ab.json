@@ -1,0 +1,155 @@
+{
+  "success": true,
+  "creationTimestamp": 1732220124,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3+ 4 x ^{2}- 7 x ^{2}+ 6+ x $"
+        },
+        {
+          "id": "2ovuj",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1732220181146,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -50
+                  },
+                  {
+                    "id": "NumberArithmeticAdditionInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de termen  $4 x ^{2}\\text{ en } \\text{-}7 x ^{2}$  niet goed samengenomen",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3 x ^{2}\\endgroup\\endgroup+ x + 9$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$9+3x^{2}+x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732220312749,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de optelling",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup+ 4 x ^{2}- 7 x ^{2}+ \\begingroup\\color{#336699}\\begingroup 6\\endgroup\\endgroup+ x $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1732220344578,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-3x^{2}+9+x$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -50
+              },
+              {
+                "id": "NumberArithmeticAdditionInteger",
+                "weight": -100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}3 x ^{2}+ x + 9$",
+          "derivation": [
+            {
+              "expression": "$3+ 4 x ^{2}- 7 x ^{2}+ 6+ x $"
+            },
+            {
+              "result": "$9+ 4 x ^{2}- 7 x ^{2}+ x $",
+              "description": "Reken uit:  $3+ 6$"
+            },
+            {
+              "result": "$\\text{-}3 x ^{2}+ x + 9$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAdditionInteger": {
+      "descr": {
+        "nl": "Gehele getallen optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

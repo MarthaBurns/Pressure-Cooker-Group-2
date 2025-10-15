@@ -1,0 +1,163 @@
+{
+  "success": true,
+  "creationTimestamp": 1748364964,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{7}{8}\\cdot \\frac{5}{6}$"
+        },
+        {
+          "id": "F9UCF",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0.7142857142857143,
+            "events": [
+              {
+                "timestamp": 1748364992841,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{23}{8}\\times\\frac{5}{6}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.5714285714285714,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticMultiplicationProper",
+                  "FractionArithmeticSimilarImproperToMixed"
+                ]
+              },
+              {
+                "timestamp": 1748365009573,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{115}{48}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.7142857142857143,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimilarImproperToMixed"
+                ]
+              },
+              {
+                "timestamp": 1748365109840,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarImproperToMixed",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{115}{48}$  is niet gelijk aan  $2\\frac{19}{45}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2\\frac{19}{45}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\frac{19}{45}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.7142857142857143,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimilarImproperToMixed",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$2\\frac{19}{48}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{5}{6}\\cdot 2\\frac{7}{8}$"
+            },
+            {
+              "result": "$\\frac{5}{6}\\cdot \\frac{23}{8}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Schrijf  $2\\frac{7}{8}$  om naar een gewone breuk"
+            },
+            {
+              "result": "$\\frac{115}{48}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            },
+            {
+              "result": "$2\\frac{19}{48}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Vereenvoudig de breuk door de helen eruit te halen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

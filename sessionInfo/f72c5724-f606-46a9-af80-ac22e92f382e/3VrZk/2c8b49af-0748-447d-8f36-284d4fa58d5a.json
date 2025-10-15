@@ -1,0 +1,147 @@
+{
+  "success": true,
+  "creationTimestamp": 1729858755,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}220 x ^{2}+ 80 x $"
+        },
+        {
+          "id": "3VrZk",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1729858805082,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt  $\\text{-}220 x ^{2}+ 80 x $  niet goed ontbonden in factoren.</h1>$\\text{-}40 x \\cdot 6 x $  is niet gelijk aan  $\\text{-}220 x ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}40 x  \\left(6 x - 2\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-40x\\left(6x-2\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729858839618,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-20x\\left(11x-4\\right)$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "FactorSingleBrackets",
+                "weight": 100
+              },
+              {
+                "id": "FactorSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$20 RandVarResult \\left(x \\right) \\left(\\text{-}11 RandVarResult \\left(x \\right)+ 4\\right)$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}220 RandVarResult ^{2}\\left(x \\right)+ 80 RandVarResult \\left(x \\right)$"
+            },
+            {
+              "result": "$20 \\left(\\text{-}11 RandVarResult ^{2}\\left(x \\right)+ 4 RandVarResult \\left(x \\right)\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren: haal een factor  $20$  buiten haakjes"
+            },
+            {
+              "result": "$20 RandVarResult \\left(x \\right) \\left(\\text{-}11 RandVarResult \\left(x \\right)+ 4\\right)$",
+              "skills": [
+                "FactorSingleBrackets",
+                "AlgebraProductOfPowerFunctions"
+              ],
+              "description": "Ontbind in factoren: haal de factor  $RandVarResult \\left(x \\right)$  buiten haakjes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "nl": "De machtsregels voor vermenigvuldigen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

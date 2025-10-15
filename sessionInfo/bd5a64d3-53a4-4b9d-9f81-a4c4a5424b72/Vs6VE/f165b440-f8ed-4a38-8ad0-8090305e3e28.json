@@ -1,0 +1,256 @@
+{
+  "success": true,
+  "creationTimestamp": 1748463279,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$a ^{2}+ 10 a =0$"
+        },
+        {
+          "id": "Vs6VE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0.6666666666666666,
+            "events": [
+              {
+                "timestamp": 1748463369075,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$a\\left(a+10\\right)=0$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "EquationsSplitFactors",
+                  "EquationsBalanceMethodArrangeTerms",
+                  "EquationsOperationsAdd"
+                ]
+              },
+              {
+                "timestamp": 1748463407235,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$a=-10$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.3333333333333333,
+                "inputStatus": "FINISHED"
+              },
+              {
+                "timestamp": 1748463423697,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Er zijn meer oplossingen"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1748463615748,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$a=0$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.6666666666666666,
+                "inputStatus": "FINISHED"
+              },
+              {
+                "timestamp": 1748463619272,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Schrijf nu alle oplossingen"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1748463667609,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Dit is geen vergelijking.</h1>Je invoer moet een '='-teken bevatten.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\left(a - 10\\right) \\left(a + 0\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(a-10\\right)\\left(a+0\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1748463709314,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$0\\left(-10+10\\right)=0$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "TRUE_EXPRESSION"
+              },
+              {
+                "timestamp": 1748463742296,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$a=0$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.3333333333333333,
+                "inputStatus": "FINISHED"
+              },
+              {
+                "timestamp": 1748463752029,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$a=-10$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.6666666666666666,
+                "inputStatus": "FINISHED"
+              },
+              {
+                "timestamp": 1748463753781,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Schrijf nu alle oplossingen"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "weight": 100
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 3,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$a =\\text{-}10\\vee a =0$",
+          "derivation": [
+            {
+              "expression": "$a ^{2}+ 10 a =0$"
+            },
+            {
+              "result": "$a  \\left(a + 10\\right)=0$",
+              "description": "Haal de factor  $a $  buiten haakjes."
+            },
+            {
+              "result": "$a =0\\vee a + 10=0$",
+              "skills": [
+                "EquationsSplitFactors"
+              ],
+              "description": "Minstens één factor is gelijk aan nul"
+            },
+            {
+              "result": "$a =\\text{-}10\\vee a =0$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Haal links en rechts  $10$  eraf."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsSplitFactors": {
+      "descr": {
+        "nl": "Elke factor gelijkstellen aan nul"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 3,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "success": true,
+  "creationTimestamp": 1748363068,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{5}{9}\\cdot \\frac{3}{4}$"
+        },
+        {
+          "id": "F9UCF",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0.75,
+            "events": [
+              {
+                "timestamp": 1748363093587,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{23}{9}\\times\\frac{3}{4}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.625,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticMultiplicationProper",
+                  "FractionArithmeticSimilarImproperToMixed"
+                ]
+              },
+              {
+                "timestamp": 1748363106081,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{69}{36}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.75,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimplifyProper",
+                  "FractionArithmeticSimilarImproperToMixed"
+                ]
+              },
+              {
+                "timestamp": 1748363147865,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{23}{12}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.75,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimilarImproperToMixed"
+                ]
+              },
+              {
+                "timestamp": 1748363306486,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarImproperToMixed",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{23}{12}$  is niet gelijk aan  $5\\frac{11}{4}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 5\\frac{11}{4}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$5\\frac{11}{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.75,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimilarImproperToMixed",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$1\\frac{11}{12}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{3}{4}\\cdot 2\\frac{5}{9}$"
+            },
+            {
+              "result": "$\\frac{3}{4}\\cdot \\frac{23}{9}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Schrijf  $2\\frac{5}{9}$  om naar een gewone breuk"
+            },
+            {
+              "result": "$\\frac{3\\cdot 23}{4\\cdot 9}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            },
+            {
+              "result": "$\\frac{23}{3\\cdot 4}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Deel de gemeenschappelijke factor weg uit teller en noemer"
+            },
+            {
+              "result": "$\\frac{23}{12}$",
+              "description": "Reken uit:  $3\\cdot 4$"
+            },
+            {
+              "result": "$1\\frac{11}{12}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Vereenvoudig de breuk door de helen eruit te halen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

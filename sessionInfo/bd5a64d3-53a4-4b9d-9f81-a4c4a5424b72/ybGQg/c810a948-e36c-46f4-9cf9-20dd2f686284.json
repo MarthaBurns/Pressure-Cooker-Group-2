@@ -1,0 +1,126 @@
+{
+  "success": true,
+  "creationTimestamp": 1760011976,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2 s ^{2}=242$"
+        },
+        {
+          "id": "ybGQg",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1760095130459,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2\\;\\mathrm{x11}^{2}\\endgroup\\endgroup=242$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2x11^{2}=242$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1760095142076,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Er zijn meer oplossingen</h1>Schrijf je antwoord in de vorm  $s =\\ldots\\vee s =11$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup s =11\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$s\\ =\\ 11$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$s =\\text{-}11\\vee s =11$",
+          "derivation": [
+            {
+              "expression": "$2 s ^{2}=242$"
+            },
+            {
+              "result": "$s ^{2}=121$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $2$"
+            },
+            {
+              "result": "$s =\\sqrt{121}\\vee s =\\text{-}\\sqrt{121}$",
+              "description": "Herleid de vergelijking door links en rechts de wortel te nemen"
+            },
+            {
+              "result": "$s =\\text{-}11\\vee s =11$",
+              "description": "Bepaal de wortel van  $121$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

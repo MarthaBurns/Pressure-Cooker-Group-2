@@ -1,0 +1,221 @@
+{
+  "success": true,
+  "creationTimestamp": 1732521467,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{17}{6}- \\frac{6}{4}$"
+        },
+        {
+          "id": "yPwul",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1732521789012,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\ 5\\frac{1}{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1732521790724,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Simplify the fraction</h1>You can divide numerator and denominator by  $2$ .",
+                    "expression": "$\\frac{17}{6}+ \\begingroup\\color{#336699}\\begingroup \\left(\\text{-}\\frac{6}{4}\\right)\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1732522043209,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{17}{6}- \\frac{6}{4}$  is not equal to  $\\frac{20}{8}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{20}{8}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{20}{8}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732522046723,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Simplify the fraction</h1>You can divide numerator and denominator by  $2$ .",
+                    "expression": "$\\frac{17}{6}+ \\begingroup\\color{#336699}\\begingroup \\left(\\text{-}\\frac{6}{4}\\right)\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1732522096850,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$1 \\ \\frac{1}{3}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": -100
+              },
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{4}{3}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{17}{6}- \\frac{6}{4}$"
+            },
+            {
+              "result": "$\\frac{17}{6}- \\frac{3}{2}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Simplify the fraction"
+            },
+            {
+              "result": "$\\frac{8}{6}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            },
+            {
+              "result": "$\\frac{4}{3}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Simplify the fraction"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

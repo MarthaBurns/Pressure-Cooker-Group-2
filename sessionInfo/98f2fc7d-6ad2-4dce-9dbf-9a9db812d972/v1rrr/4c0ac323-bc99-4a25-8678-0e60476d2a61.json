@@ -1,0 +1,172 @@
+{
+  "success": true,
+  "creationTimestamp": 1750340822,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$8\\times 2 x + 3 x $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1750341013529,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -50
+                  },
+                  {
+                    "id": "ArithmeticOrderMultiplication",
+                    "weight": -100,
+                    "errors": [
+                      "MultiplicationAddition"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "You did not combine the similar terms  $8\\times 2 x \\text{ and } 3 x $  correctly.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 8\\times 5 x \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$8\\times5x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750341033807,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Calculate:  $8\\times 2$",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 8\\endgroup\\endgroup\\times \\begingroup\\color{#336699}\\begingroup 2\\endgroup\\endgroup x + 3 x $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750341048777,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$19x$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -50
+              },
+              {
+                "id": "ArithmeticOrderMultiplication",
+                "weight": -100,
+                "errors": [
+                  "MultiplicationAddition"
+                ]
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$19 x $",
+          "derivation": [
+            {
+              "expression": "$8\\times 2 x + 3 x $"
+            },
+            {
+              "result": "$16 x + 3 x $",
+              "description": "Calculate:  $8\\times 2$"
+            },
+            {
+              "result": "$19 x $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ArithmeticOrderMultiplication": {
+      "descr": {
+        "en": "Order of operations with multiplication"
+      },
+      "stepType": "CALCULATE",
+      "errors": [
+        {
+          "id": "MultiplicationAddition",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "en": "Adding while multiplication takes precedence."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

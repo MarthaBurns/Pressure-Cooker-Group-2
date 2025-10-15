@@ -1,0 +1,112 @@
+{
+  "success": true,
+  "creationTimestamp": 1729186805,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 x + \\text{-}2 x \\cdot \\text{-}2 x - 6\\cdot 2 x $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1729186902528,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$5 x - \\text{-}2 x \\cdot 2 x - 6\\cdot 2 x $  is niet gelijk aan  $\\text{-}3 x $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}3 x \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-3x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729186906677,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$5 x + \\begingroup\\color{#336699}\\begingroup \\text{-}2\\endgroup\\endgroup x \\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}2\\endgroup\\endgroup x - 6\\cdot 2 x $"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}7 x + 4 x ^{2}$",
+          "derivation": [
+            {
+              "expression": "$5 x - \\text{-}2\\cdot 2 x \\cdot x - 6\\cdot 2 x $"
+            },
+            {
+              "result": "$5 x + 4 x \\cdot x - 12 x $",
+              "description": "Reken uit:  $\\text{-}6\\cdot 2$"
+            },
+            {
+              "result": "$\\text{-}7 x + 4 x \\cdot x $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\text{-}7 x + 4 x ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

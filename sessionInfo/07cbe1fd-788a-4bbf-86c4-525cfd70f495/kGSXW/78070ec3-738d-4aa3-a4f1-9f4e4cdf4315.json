@@ -1,0 +1,121 @@
+{
+  "success": true,
+  "creationTimestamp": 1750406483,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$a ^{2}- 11 a + 10$"
+        },
+        {
+          "id": "kGSXW",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750406778890,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not apply the Product-Sum Rule correctly.</h1>Find two numbers with sum  $\\text{-}11$  and product  $10$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\left(a - 6\\right) \\left(a - 4\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(a\\ -\\ 6\\right)\\ \\left(\\ a\\ -4\\ \\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750406922037,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "This is not a valid mathematical expression.",
+                    "expression": "$\\text{Incorrect expression}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(a\\ -\\ \\right)\\ \\left(\\ a\\ -1\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\left(a - 1\\right) \\left(a - 10\\right)$",
+          "derivation": [
+            {
+              "expression": "$a ^{2}- 11 a + 10$"
+            },
+            {
+              "result": "$\\left(a - 1\\right) \\left(a - 10\\right)$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Factorise using the product-sum method"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "en": "Factoring a quadratic expression using the Sum-Product Rule"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

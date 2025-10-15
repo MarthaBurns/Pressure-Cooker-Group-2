@@ -1,0 +1,125 @@
+{
+  "success": true,
+  "creationTimestamp": 1757486385,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$1\\frac{1}{3}- \\frac{1}{2}$"
+        },
+        {
+          "id": "ibxuY",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1757486738989,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$1\\frac{1}{3}- \\frac{1}{2}$  does not equal  $\\text{-}1\\frac{1}{6}$ .",
+                    "expression": "$1\\frac{1}{3}- \\frac{1}{2}=\\text{-}1\\frac{1}{6}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$=-1\\frac{1}{6}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{5}{6}$",
+          "derivation": [
+            {
+              "expression": "$1\\frac{1}{3}- \\frac{1}{2}$"
+            },
+            {
+              "result": "$1+ \\frac{1}{3}- \\frac{1}{2}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Split the mixed fraction"
+            },
+            {
+              "result": "$1- \\frac{1}{6}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            },
+            {
+              "result": "$\\frac{5}{6}$",
+              "skills": [
+                "FractionArithmeticAddProperCommonDenominator",
+                "FractionArithmeticIntegerToFraction"
+              ],
+              "description": "Rewrite  $1- \\frac{1}{6}$  into a single fraction"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "en": "Adding mixed fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperCommonDenominator": {
+      "descr": {
+        "en": "Adding proper fractions with common denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticIntegerToFraction": {
+      "descr": {
+        "en": "Writing an integer number into a fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "success": true,
+  "creationTimestamp": 1758486860,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{8}{1+ \\sqrt{5}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1758486913747,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{8}{1+ \\sqrt{5}}$  is niet gelijk aan  $\\text{-}2$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}2\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-2$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}2+ 2 \\sqrt{5}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{8}{1+ \\sqrt{5}}$"
+            },
+            {
+              "result": "$\\frac{8 \\left(1- \\sqrt{5}\\right)}{\\left(1+ \\sqrt{5}\\right) \\left(1- \\sqrt{5}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{8 \\left(1- \\sqrt{5}\\right)}{1- \\sqrt{5}+ \\sqrt{5}- \\sqrt{5} \\sqrt{5}}$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{8 \\left(1- \\sqrt{5}\\right)}{1- \\sqrt{5} \\sqrt{5}}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\frac{8 \\left(1- \\sqrt{5}\\right)}{1- 5}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\text{-}2 \\left(1- \\sqrt{5}\\right)$",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\text{-}2+ 2 \\sqrt{5}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

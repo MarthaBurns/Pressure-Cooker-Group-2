@@ -1,0 +1,139 @@
+{
+  "success": true,
+  "creationTimestamp": 1740604265,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{2}{3}\\cdot \\frac{3}{4}$"
+        },
+        {
+          "id": "tpWru",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1740604276240,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{6}{12}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimplifyProper"
+                ]
+              },
+              {
+                "timestamp": 1740604293042,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticEquivalentConcept",
+                    "weight": -100,
+                    "errors": [
+                      "EquivalentNumeratorDenominator"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "De breuken  $\\frac{6}{12}$  en  $\\frac{3}{4}$  zijn niet gelijkwaardig.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{3}{4}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3}{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticEquivalentConcept",
+                "weight": -100,
+                "errors": [
+                  "EquivalentNumeratorDenominator"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{1}{2}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{2}{3}\\cdot \\frac{3}{4}$"
+            },
+            {
+              "result": "$\\frac{1}{2}$",
+              "description": "Herleid."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticEquivalentConcept": {
+      "descr": {
+        "nl": "Begrijpen dat breuken gelijkwaardig kunnen zijn"
+      },
+      "stepType": "CONCEPT",
+      "errors": [
+        {
+          "id": "EquivalentNumeratorDenominator",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De relatie tussen teller en noemer niet begrijpen bij het vergelijken van breuken"
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

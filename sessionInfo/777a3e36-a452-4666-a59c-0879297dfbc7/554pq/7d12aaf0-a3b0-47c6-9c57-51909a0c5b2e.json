@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "creationTimestamp": 1737234219,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2 \\sqrt{5} \\left(\\text{-}2+ \\sqrt{20}\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1737234264941,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{2}\\left(-2\\cdot\\sqrt{5}+\\right)\\sqrt{20}\\cdot\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1737234269558,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de haakjes uit</h1>Vermenigvuldig elke term binnen de haakjes met  $\\sqrt{5}$",
+                    "expression": "$2 \\begingroup\\color{#336699}\\begingroup \\sqrt{5}\\endgroup\\endgroup \\left(\\begingroup\\color{#336699}\\begingroup \\text{-}2+ \\sqrt{20}\\endgroup\\endgroup\\right)$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 0
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}4 \\sqrt{5}+ 20$",
+          "derivation": [
+            {
+              "expression": "$2 \\sqrt{5} \\left(\\text{-}2+ \\sqrt{20}\\right)$"
+            },
+            {
+              "result": "$2 \\left(\\text{-}2 \\sqrt{5}+ \\sqrt{5} \\sqrt{20}\\right)$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$2 \\left(\\text{-}2 \\sqrt{5}+ \\sqrt{100}\\right)$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$2 \\left(\\text{-}2 \\sqrt{5}+ 10\\right)$",
+              "description": "Bepaal de wortel van  $100$"
+            },
+            {
+              "result": "$\\text{-}4 \\sqrt{5}+ 20$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

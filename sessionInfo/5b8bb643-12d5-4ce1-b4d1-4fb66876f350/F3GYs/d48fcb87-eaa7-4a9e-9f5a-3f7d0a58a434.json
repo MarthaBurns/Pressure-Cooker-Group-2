@@ -1,0 +1,153 @@
+{
+  "success": true,
+  "creationTimestamp": 1746747285,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{\\frac{3}{7}}{\\text{-}1\\frac{2}{3}}$"
+        },
+        {
+          "id": "F3GYs",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1746747303405,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Er ontbreekt een factor  $\\text{-}1\\frac{2}{3}$  in de noemer",
+                    "expression": "$\\frac{3}{7}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3}{7}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1746747353937,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{\\frac{3}{7}}{\\text{-}1\\frac{2}{3}}$  is niet gelijk aan  $\\text{-}\\frac{9}{7}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}\\frac{9}{7}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-\\frac{9}{7}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1746747483278,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Maak de noemer positief door noemer en teller met -1 te vermenigvuldigen</h1>Vergeet niet de teller ook van teken te veranderen",
+                    "expression": "$\\frac{\\frac{3}{7}}{\\text{-}1\\frac{2}{3}}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}\\frac{9}{35}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{\\frac{3}{7}}{\\text{-}1\\frac{2}{3}}$"
+            },
+            {
+              "result": "$\\text{-}\\frac{3}{7} : 1\\frac{2}{3}$",
+              "description": "Maak de noemer positief door noemer en teller met -1 te vermenigvuldigen"
+            },
+            {
+              "result": "$\\text{-}\\frac{3}{7} : \\left(\\frac{5}{3}\\right)$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Schrijf  $1\\frac{2}{3}$  om naar een gewone breuk"
+            },
+            {
+              "result": "$\\text{-}\\frac{3}{7}\\cdot \\frac{3}{5}$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Delen door een breuk is vermenigvuldigen met het omgekeerde"
+            },
+            {
+              "result": "$\\text{-}\\frac{9}{35}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "nl": "Echte breuken delen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

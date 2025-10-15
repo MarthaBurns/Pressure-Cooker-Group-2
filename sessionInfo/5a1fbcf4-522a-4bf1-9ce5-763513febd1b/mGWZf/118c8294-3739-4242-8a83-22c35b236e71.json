@@ -1,0 +1,136 @@
+{
+  "success": true,
+  "creationTimestamp": 1744115249,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1}{6+ \\sqrt{2}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1744115271444,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\frac{1^{2}}{\\begingroup\\color{darkred}\\begingroup \\left(6+ \\sqrt{2}\\right)^{2}\\endgroup\\endgroup}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1^{2}}{\\left(6+\\sqrt{2}\\right)^{2}}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1744115290947,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\frac{1^{2}}{\\begingroup\\color{darkred}\\begingroup 6^{2}+ \\left(\\sqrt{2}\\right)^{2}\\endgroup\\endgroup}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1^{2}}{6^{2}+\\sqrt{2}^{2}}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{6- \\sqrt{2}}{34}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1}{6+ \\sqrt{2}}$"
+            },
+            {
+              "result": "$\\frac{6- \\sqrt{2}}{\\left(6+ \\sqrt{2}\\right) \\left(6- \\sqrt{2}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{6- \\sqrt{2}}{36- 6 \\sqrt{2}+ 6 \\sqrt{2}- \\sqrt{2} \\sqrt{2}}$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{6- \\sqrt{2}}{36- \\sqrt{2} \\sqrt{2}}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\frac{6- \\sqrt{2}}{36- 2}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\frac{6- \\sqrt{2}}{34}$",
+              "description": "Reken uit:  $36- 2$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

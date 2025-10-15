@@ -1,0 +1,216 @@
+{
+  "success": true,
+  "creationTimestamp": 1729714696,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}10+ 5 a =2+ 2 a $"
+        },
+        {
+          "id": "StNtG",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1729714757695,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Dit is geen vergelijking.</h1>Je invoer moet een '='-teken bevatten.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 4\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729714765703,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Balansmethode: haal links en rechts er  $2 a $  van af",
+                    "expression": "$\\text{-}10+ \\begingroup\\color{#336699}\\begingroup 5 a \\endgroup\\endgroup=2+ \\begingroup\\color{#336699}\\begingroup 2 a \\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729714802304,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-10+5a=2+2a=4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1729714879534,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-10+5a=2+2a=34$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1729714883661,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-10+5a=2+2a=4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 4
+              },
+              "finished": false
+            }
+          },
+          "solution": "$RandVarResult \\left(a \\right)=4$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}10+ 5 RandVarResult \\left(a \\right)=2+ 2 RandVarResult \\left(a \\right)$"
+            },
+            {
+              "result": "$5 RandVarResult \\left(a \\right)- 2 RandVarResult \\left(a \\right)- 10=2$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: haal links en rechts er  $2 RandVarResult \\left(a \\right)$  van af"
+            },
+            {
+              "result": "$3 RandVarResult \\left(a \\right)- 10=2$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$3 RandVarResult \\left(a \\right)=12$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Tel links en rechts  $10$  erbij op."
+            },
+            {
+              "result": "$RandVarResult \\left(a \\right)=4$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 4,
+      "marksPenalty": 0
+    }
+  }
+}

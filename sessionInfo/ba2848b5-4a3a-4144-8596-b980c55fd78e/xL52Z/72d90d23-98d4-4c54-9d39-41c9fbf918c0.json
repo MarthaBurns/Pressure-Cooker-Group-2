@@ -1,0 +1,137 @@
+{
+  "success": true,
+  "creationTimestamp": 1742238763,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf als een breuk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "${5,\\!125} $"
+        },
+        {
+          "id": "xL52Z",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1742238835571,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$5\\frac{125}{1000}$  is niet gelijk aan  $\\frac{25}{200}$ .",
+                    "expression": "$5\\frac{125}{1000}=\\frac{25}{200}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$5\\frac{125}{1000}=\\frac{25}{200}=\\frac{5}{40}=5\\frac{1}{8}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1742238909379,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDecimalToFraction",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$5\\frac{125}{1000}=5\\frac{25}{200}=5\\frac{5}{40}=5\\frac{1}{8}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticDecimalToFraction",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{41}{8}$",
+          "derivation": [
+            {
+              "expression": "${5,\\!125} $"
+            },
+            {
+              "result": "$\\frac{5125}{1000}$",
+              "skills": [
+                "FractionArithmeticDecimalToFraction"
+              ],
+              "description": "Schrijf  ${5,\\!125} $  als  $\\frac{5125}{1000}$"
+            },
+            {
+              "result": "$\\frac{41}{8}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Vereenvoudig de breuk"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticDecimalToFraction": {
+      "descr": {
+        "nl": "Een decimaal getal als een breuk schrijven"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

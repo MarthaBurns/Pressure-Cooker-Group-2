@@ -1,0 +1,151 @@
+{
+  "success": true,
+  "creationTimestamp": 1732312784,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{2}{\\sqrt{8}}$"
+        },
+        {
+          "id": "A3l5S",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1732312798335,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticMultiplicationProper",
+                    "weight": 100
+                  },
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1}{2}\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticMultiplicationProper",
+                "weight": 100
+              },
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{1}{2} \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{2}{\\sqrt{8}}$"
+            },
+            {
+              "result": "$\\frac{2}{8} \\sqrt{8}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{1}{4} \\sqrt{8}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Vereenvoudig de breuk"
+            },
+            {
+              "result": "$\\frac{1}{4} \\sqrt{4} \\sqrt{2}$",
+              "description": "Vereenvoudig de wortel"
+            },
+            {
+              "result": "$\\frac{1}{4}\\cdot 2 \\sqrt{2}$",
+              "description": "Bepaal de wortel van  $4$"
+            },
+            {
+              "result": "$\\frac{2}{4} \\sqrt{2}$",
+              "skills": [
+                "AlgebraFractionsNumeratorFactor"
+              ],
+              "description": "Vermenigvuldig  $\\frac{1}{4}\\cdot 2$"
+            },
+            {
+              "result": "$\\frac{1}{2} \\sqrt{2}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Vereenvoudig de breuk"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "AlgebraFractionsNumeratorFactor": {
+      "descr": {
+        "nl": "Algebraïsche breuken met een vermenigvuldiging in de teller herleiden tot een product"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

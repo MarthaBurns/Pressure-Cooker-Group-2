@@ -1,0 +1,150 @@
+{
+  "success": true,
+  "creationTimestamp": 1741883477,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{7}{\\sqrt{7}}$"
+        },
+        {
+          "id": "A3l5S",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1741883490021,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$1\\sqrt{7}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.8571428571428571,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1741883496051,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "$1 \\sqrt{7}=\\sqrt{7}$",
+                    "expression": "$1 \\sqrt{7}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1741883501783,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{7}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\sqrt{7}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{7}{\\sqrt{7}}$"
+            },
+            {
+              "result": "$\\frac{7}{7^{\\frac{1}{2}}}$",
+              "skills": [
+                "AlgebraPowerRuleRoots"
+              ],
+              "description": "Rewrite the square root into a power function"
+            },
+            {
+              "result": "$7^{1- \\frac{1}{2}}$",
+              "skills": [
+                "AlgebraDivisionOfPowerFunctions"
+              ],
+              "description": "Divide numerator and denominator by  $7^{\\frac{1}{2}}$"
+            },
+            {
+              "result": "$7^{\\frac{1}{2}}$",
+              "skills": [
+                "FractionArithmeticAddProperCommonDenominator",
+                "FractionArithmeticIntegerToFraction"
+              ],
+              "description": "Rewrite  $1- \\frac{1}{2}$  into a single fraction"
+            },
+            {
+              "result": "$\\sqrt{7}$",
+              "description": "Rewrite the power function into a root"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraPowerRuleRoots": {
+      "descr": {
+        "en": "Apply the power rule for roots"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraDivisionOfPowerFunctions": {
+      "descr": {
+        "en": "Applying the rule for dividing power functions"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FractionArithmeticAddProperCommonDenominator": {
+      "descr": {
+        "en": "Adding proper fractions with common denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticIntegerToFraction": {
+      "descr": {
+        "en": "Writing an integer number into a fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

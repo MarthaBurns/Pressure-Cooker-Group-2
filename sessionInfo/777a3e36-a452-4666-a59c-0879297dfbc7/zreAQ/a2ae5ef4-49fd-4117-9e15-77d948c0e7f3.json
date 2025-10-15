@@ -1,0 +1,177 @@
+{
+  "success": true,
+  "creationTimestamp": 1738000389,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{5}+ 3 \\sqrt{2}\\cdot 4 \\sqrt{2}$"
+        },
+        {
+          "id": "zreAQ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1738000414239,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $4 \\sqrt{2}\\cdot 3$  is niet gelijk aan  $12$ .",
+                    "expression": "$\\sqrt{5}+ \\begingroup\\color{darkred}\\begingroup 12\\endgroup\\endgroup \\sqrt{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{5}+12\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1738000429050,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$\\sqrt{5}+ \\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup \\sqrt{2}\\cdot \\begingroup\\color{#336699}\\begingroup 4\\endgroup\\endgroup \\sqrt{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1738000433654,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$12$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.5,
+                "inputStatus": "FINISHED"
+              },
+              {
+                "timestamp": 1738000443245,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Ga door met de opgave</h1>$\\sqrt{5}+ 12 \\sqrt{2} \\sqrt{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1738000463264,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{5}+12\\sqrt{4}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1738000484480,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\sqrt{5}+ \\begingroup\\color{darkred}\\begingroup 24 \\sqrt{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{5}+24\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\sqrt{5}+ 24$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{5}+ 3\\cdot 4 \\sqrt{2} \\sqrt{2}$"
+            },
+            {
+              "result": "$\\sqrt{5}+ 12 \\sqrt{2} \\sqrt{2}$",
+              "description": "Reken uit:  $3\\cdot 4$"
+            },
+            {
+              "result": "$\\sqrt{5}+ 12\\cdot 2$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\sqrt{5}+ 24$",
+              "description": "Reken uit:  $12\\cdot 2$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

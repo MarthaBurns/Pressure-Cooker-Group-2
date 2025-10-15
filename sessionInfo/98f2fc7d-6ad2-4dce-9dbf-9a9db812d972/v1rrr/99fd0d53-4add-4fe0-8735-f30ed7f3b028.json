@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "creationTimestamp": 1732229877,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}t \\cdot 4 t - 8+ \\text{-}4 t \\cdot \\text{-}4$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1732229969899,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\text{-}4\\cdot \\text{-}4$  is niet gelijk aan  $8$ .",
+                    "expression": "$\\text{-}4 t ^{2}+ \\begingroup\\color{darkred}\\begingroup 8\\endgroup\\endgroup t - 8$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-4t^{2}-8+8t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732229994511,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-4t^{2}+16t-8$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}4 t ^{2}+ 16 t - 8$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}4 t \\cdot t - 8- \\text{-}4\\cdot 4 t $"
+            },
+            {
+              "result": "$\\text{-}4 t \\cdot t - 8+ 16 t $",
+              "description": "Reken uit:  $\\text{-}4\\cdot \\text{-}4$"
+            },
+            {
+              "result": "$\\text{-}4 t ^{2}+ 16 t - 8$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

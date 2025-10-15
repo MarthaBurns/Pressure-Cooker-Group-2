@@ -1,0 +1,189 @@
+{
+  "success": true,
+  "creationTimestamp": 1736264525,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{7}{5+ \\sqrt{8}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1736264567036,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{35-5\\sqrt{8}}{17}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1736264634359,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{35-10\\sqrt{2}}{17}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1736264661703,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Er mist iets in the noemer",
+                    "expression": "$\\frac{35- 7 \\sqrt{8}}{17}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{35-7\\sqrt{8}}{17}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1736264699795,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Er mist iets in the noemer",
+                    "expression": "$\\frac{35- 14 \\sqrt{2}}{17}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{35-14\\sqrt{2}}{17}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 4
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{35- 14 \\sqrt{2}}{17}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{7}{5+ \\sqrt{8}}$"
+            },
+            {
+              "result": "$\\frac{7 \\left(5- \\sqrt{8}\\right)}{\\left(5+ \\sqrt{8}\\right) \\left(5- \\sqrt{8}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{7 \\left(5- \\sqrt{8}\\right)}{25- 5 \\sqrt{8}+ 5 \\sqrt{8}- \\sqrt{8} \\sqrt{8}}$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{7 \\left(5- \\sqrt{8}\\right)}{25- \\sqrt{8} \\sqrt{8}}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\frac{7 \\left(5- \\sqrt{8}\\right)}{25- 8}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\frac{7 \\left(5- \\sqrt{8}\\right)}{17}$",
+              "description": "Reken uit:  $25- 8$"
+            },
+            {
+              "result": "$\\frac{35- 7 \\sqrt{8}}{17}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\frac{35- 7 \\sqrt{4} \\sqrt{2}}{17}$",
+              "description": "Vereenvoudig de wortel"
+            },
+            {
+              "result": "$\\frac{35- 7\\cdot 2 \\sqrt{2}}{17}$",
+              "description": "Bepaal de wortel van  $4$"
+            },
+            {
+              "result": "$\\frac{35- 14 \\sqrt{2}}{17}$",
+              "description": "Reken uit:  $\\text{-}7\\cdot 2$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 4,
+      "marksPenalty": 0
+    }
+  }
+}

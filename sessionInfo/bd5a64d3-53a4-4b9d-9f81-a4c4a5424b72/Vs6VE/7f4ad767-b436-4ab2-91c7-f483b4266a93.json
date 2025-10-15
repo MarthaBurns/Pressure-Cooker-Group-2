@@ -1,0 +1,205 @@
+{
+  "success": true,
+  "creationTimestamp": 1729324171,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$a ^{2}+ 3 a =0$"
+        },
+        {
+          "id": "Vs6VE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1729324203601,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$D=\\ 9$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1729324233813,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\mathrm{x1}\\endgroup\\endgroup=0$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$x1=\\ 0$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729324241722,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup x \\endgroup\\endgroup=0$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$x=0$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729324259216,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$x=-3$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1729324260737,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Haal de factor  $a $  buiten haakjes.",
+                    "expression": "$a ^{2}+ 3 a =0$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729324275987,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$x=-3\\ of\\ x=0$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1729324278718,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Haal de factor  $a $  buiten haakjes.",
+                    "expression": "$a ^{2}+ 3 a =0$"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 5
+              },
+              "finished": false
+            }
+          },
+          "solution": "$V =\\left\\{ \\text{-}3, 0 \\right\\}$",
+          "derivation": [
+            {
+              "expression": "$RandVarResult ^{2}\\left(a \\right)+ 3 RandVarResult \\left(a \\right)=0$"
+            },
+            {
+              "result": "$RandVarResult \\left(a \\right) \\left(RandVarResult \\left(a \\right)+ 3\\right)=0$",
+              "description": "Haal de factor  $RandVarResult \\left(a \\right)$  buiten haakjes."
+            },
+            {
+              "result": "$RandVarResult \\left(a \\right)=0\\vee RandVarResult \\left(a \\right)+ 3=0$",
+              "skills": [
+                "EquationsSplitFactors"
+              ],
+              "description": "Minstens één factor is gelijk aan nul"
+            },
+            {
+              "result": "$RandVarResult \\left(a \\right)=0\\vee RandVarResult \\left(a \\right)=\\text{-}3$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Haal de constanten naar één kant."
+            },
+            {
+              "result": "$V =\\left\\{ \\text{-}3, 0 \\right\\}$",
+              "description": "Schrijf de oplossingsverzameling"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsSplitFactors": {
+      "descr": {
+        "nl": "Elke factor gelijkstellen aan nul"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 5,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "success": true,
+  "creationTimestamp": 1757963211,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 t ^{2}\\cdot 2 t \\cdot t ^{2}$"
+        },
+        {
+          "id": "I1",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1757963241276,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfPowerFunctions",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt  $3 t ^{2}\\cdot 2 t  t ^{2}$  niet goed vereenvoudigd.</h1>Tip: Werk stap-voor-stap. Vermenigvuldig eerst de coefficiënten  $3\\cdot 2$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 5 t ^{4}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$5t^{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1757963254027,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfPowerFunctions",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  },
+                  {
+                    "id": "NumberArithmeticAdditionInteger",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de machtsregel voor vermenigvuldiging niet goed toegepast</h1>$t ^{p } t ^{q }=t ^{p + q }$",
+                    "expression": "$6 \\begingroup\\color{darkred}\\begingroup t ^{4}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6t^{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1757963272374,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$6t^{5}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfPowerFunctions",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "AlgebraProductOfPowerFunctions",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "NumberArithmeticAdditionInteger",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$6 t ^{5}$",
+          "derivation": [
+            {
+              "expression": "$3\\cdot 2 t ^{2} t  t ^{2}$"
+            },
+            {
+              "result": "$6 t ^{2} t  t ^{2}$",
+              "description": "Reken uit:  $3\\cdot 2$"
+            },
+            {
+              "result": "$6 t ^{5}$",
+              "description": "Bij vermenigvuldigen van machten kun je de exponenten optellen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "nl": "De machtsregels voor vermenigvuldigen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAdditionInteger": {
+      "descr": {
+        "nl": "Gehele getallen optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

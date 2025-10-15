@@ -1,0 +1,212 @@
+{
+  "success": true,
+  "creationTimestamp": 1740090348,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate and simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{3}{6}+ \\frac{4}{7}$"
+        },
+        {
+          "id": "ddXWL",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1740090396684,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Simplify the fraction</h1>You can divide numerator and denominator by  $3$ .",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\frac{3}{6}\\endgroup\\endgroup+ \\frac{4}{7}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1740090465860,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{3}{6}+ \\frac{4}{7}$  is not equal to  $\\frac{1}{3}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{1}{3}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1}{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1740090487254,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticEquivalentConcept",
+                    "weight": -100,
+                    "errors": [
+                      "EquivalentNumeratorDenominator"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "The fractions  $\\frac{3}{6}$  and  $\\frac{1}{3}$  are not equivalent.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{1}{3}\\endgroup\\endgroup+ \\frac{4}{7}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1}{3}+\\frac{4}{7}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1740090498185,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimplifyProper",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Simplify the fraction</h1>You can divide numerator and denominator by  $3$ .",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\frac{3}{6}\\endgroup\\endgroup+ \\frac{4}{7}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "weight": -100
+              },
+              {
+                "id": "FractionArithmeticEquivalentConcept",
+                "weight": -100,
+                "errors": [
+                  "EquivalentNumeratorDenominator"
+                ]
+              },
+              {
+                "id": "FractionArithmeticSimplifyProper",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{15}{14}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{3}{6}+ \\frac{4}{7}$"
+            },
+            {
+              "result": "$\\frac{1}{2}+ \\frac{4}{7}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Simplify the fraction"
+            },
+            {
+              "result": "$\\frac{15}{14}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Use the same denominator for both fractions"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "en": "Adding fractions with unlike denominators"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticEquivalentConcept": {
+      "descr": {
+        "en": "Understanding that fractions can be equivalent"
+      },
+      "stepType": "CONCEPT",
+      "errors": [
+        {
+          "id": "EquivalentNumeratorDenominator",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "en": "Not understanding the relationship between size of numerator and denominator when comparing fractions"
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

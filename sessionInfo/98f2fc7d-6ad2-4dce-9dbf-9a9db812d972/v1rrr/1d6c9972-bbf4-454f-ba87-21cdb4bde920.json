@@ -1,0 +1,164 @@
+{
+  "success": true,
+  "creationTimestamp": 1747916288,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}3 y - 9\\cdot 3 y $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1747916334237,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAddConcept",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\text{-}3 y - 9\\cdot 3 y $  is niet gelijk aan  $\\text{-}24 y $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}24 y \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-24y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747916336875,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $\\text{-}9\\cdot 3$",
+                    "expression": "$\\text{-}3 y + \\begingroup\\color{#336699}\\begingroup \\text{-}9\\endgroup\\endgroup\\cdot \\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup y $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1747916349319,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de termen  $\\text{-}3 y \\text{ en } \\text{-}9\\cdot 3 y $  niet goed samengenomen",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}3 y \\endgroup\\endgroup+ \\begingroup\\color{darkred}\\begingroup 27 y \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-3y+27y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747916355363,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $\\text{-}9\\cdot 3$",
+                    "expression": "$\\text{-}3 y + \\begingroup\\color{#336699}\\begingroup \\text{-}9\\endgroup\\endgroup\\cdot \\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup y $"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticAddConcept",
+                "weight": -100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -50
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}30 y $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}3 y - 9\\cdot 3 y $"
+            },
+            {
+              "result": "$\\text{-}3 y - 27 y $",
+              "description": "Reken uit:  $\\text{-}9\\cdot 3$"
+            },
+            {
+              "result": "$\\text{-}30 y $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAddConcept": {
+      "descr": {
+        "nl": "Optellen en aftrekken begrijpen"
+      },
+      "stepType": "CONCEPT"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

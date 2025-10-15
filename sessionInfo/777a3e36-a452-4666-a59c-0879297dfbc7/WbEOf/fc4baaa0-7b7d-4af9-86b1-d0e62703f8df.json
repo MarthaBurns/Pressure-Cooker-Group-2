@@ -1,0 +1,132 @@
+{
+  "success": true,
+  "creationTimestamp": 1738000904,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf zo kort mogelijk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{42}- \\sqrt{82}- \\sqrt{82}- \\sqrt{42}- \\sqrt{42}$"
+        },
+        {
+          "id": "WbEOf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1738001076453,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\sqrt{42}- \\sqrt{82}- \\sqrt{82}- \\sqrt{42}- \\sqrt{42}$  is niet gelijk aan  $0$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 0\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$0$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1738001079409,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $\\sqrt{42}$  zijn gelijksoortig.",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\sqrt{42}\\endgroup\\endgroup- \\sqrt{82}- \\sqrt{82}- \\begingroup\\color{#336699}\\begingroup \\sqrt{42}\\endgroup\\endgroup- \\begingroup\\color{#336699}\\begingroup \\sqrt{42}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1738001096895,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\sqrt{42}- \\sqrt{82}- \\sqrt{82}- \\sqrt{42}- \\sqrt{42}$  is niet gelijk aan  $\\text{-}42$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}42\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-42$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}\\sqrt{42}- 2 \\sqrt{82}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{42}- \\sqrt{82}- \\sqrt{82}- \\sqrt{42}- \\sqrt{42}$"
+            },
+            {
+              "result": "$\\text{-}\\sqrt{42}- 2 \\sqrt{82}$",
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "success": true,
+  "creationTimestamp": 1733656511,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{32}$"
+        },
+        {
+          "id": "rJQ8D",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1733656552813,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{8}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1733656584632,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{4} x \\endgroup\\endgroup \\sqrt{8}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{4}x\\ \\sqrt{8}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733656588038,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Vereenvoudig de wortel</h1>Splits de wortel op een handige manier:  $\\sqrt{8}=\\sqrt{4} \\sqrt{2}$",
+                    "expression": "$2 \\begingroup\\color{#336699}\\begingroup \\sqrt{8}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733656607272,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.5,
+                "inputStatus": "FINISHED"
+              },
+              {
+                "timestamp": 1733656618069,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Ga door met de opgave</h1>$2\\cdot 2 \\sqrt{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733656644395,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $2\\cdot 2 \\sqrt{2}$  is niet gelijk aan  $8$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 8\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$8$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733656656887,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $2 \\sqrt{2}$  is niet gelijk aan  $4$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 4\\endgroup\\endgroup \\sqrt{4}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4\\sqrt{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              },
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$4 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{32}$"
+            },
+            {
+              "result": "$\\sqrt{16} \\sqrt{2}$",
+              "description": "Vereenvoudig de wortel"
+            },
+            {
+              "result": "$4 \\sqrt{2}$",
+              "description": "Bepaal de wortel van  $16$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

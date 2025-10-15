@@ -1,0 +1,182 @@
+{
+  "success": true,
+  "creationTimestamp": 1732620261,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 n \\cdot \\text{-}5 n $"
+        },
+        {
+          "id": "K8AdN",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1732620269665,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplyNegative",
+                    "weight": -100,
+                    "errors": [
+                      "General"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt een tekenfout gemaakt bij het vermenigvuldigen</h1>$\\text{-}5\\cdot 5$  is niet gelijk aan  $25$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 25\\endgroup\\endgroup n ^{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$25n^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732620278628,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-25$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "UNKNOWN_STEP"
+              },
+              {
+                "timestamp": 1732620284126,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfPowerFunctions",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$n \\cdot n $  is niet gelijk aan  $n $ .</h1>$t ^{p }\\cdot t ^{q }=t ^{p + q }$",
+                    "expression": "$\\text{-}25 \\begingroup\\color{darkred}\\begingroup n \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-25n$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732620293203,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-25n^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplyNegative",
+                "weight": -100,
+                "errors": [
+                  "General"
+                ]
+              },
+              {
+                "id": "AlgebraProductOfPowerFunctions",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}25 n ^{2}$",
+          "derivation": [
+            {
+              "expression": "$5\\cdot \\text{-}5 n \\cdot n $"
+            },
+            {
+              "result": "$\\text{-}25 n \\cdot n $",
+              "description": "Reken uit:  $5\\cdot \\text{-}5$"
+            },
+            {
+              "result": "$\\text{-}25 n ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplyNegative": {
+      "descr": {
+        "nl": "Vermenigvuldigen met negatieve getallen"
+      },
+      "stepType": "CONCEPT",
+      "errors": [
+        {
+          "id": "General",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De regels voor vermenigvuldigen met een negatief getal niet kennen."
+          }
+        }
+      ]
+    },
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "nl": "De machtsregels voor vermenigvuldigen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

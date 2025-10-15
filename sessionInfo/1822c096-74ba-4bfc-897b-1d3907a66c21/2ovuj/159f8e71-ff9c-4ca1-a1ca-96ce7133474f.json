@@ -1,0 +1,120 @@
+{
+  "success": true,
+  "creationTimestamp": 1749292292,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$6 x ^{3}- 1- 9 x ^{2}- 4- 4 x ^{2}$"
+        },
+        {
+          "id": "2ovuj",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749292353577,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$6 x ^{3}- 1- 9 x ^{2}- 4- 4 x ^{2}$  does not equal  $6 x ^{3}$ .</h1>You forgot to add  $\\text{-}9 x ^{2}- 4 x ^{2}- 1- 4$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 6 x ^{3}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6x^{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749292386428,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$6x^{3}\\ -\\ 5\\ -\\ 13x^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$6 x ^{3}- 13 x ^{2}- 5$",
+          "derivation": [
+            {
+              "expression": "$6 x ^{3}- 1- 9 x ^{2}- 4- 4 x ^{2}$"
+            },
+            {
+              "result": "$6 x ^{3}- 5- 9 x ^{2}- 4 x ^{2}$",
+              "description": "Calculate:  $\\text{-}1- 4$"
+            },
+            {
+              "result": "$6 x ^{3}- 13 x ^{2}- 5$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "success": true,
+  "creationTimestamp": 1750368958,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}3 t ^{3}- 3 t ^{6}$"
+        },
+        {
+          "id": "44WB6",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750369033099,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt  $\\text{-}3 t ^{6}- 3 t ^{3}$  niet goed ontbonden in factoren.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 1 t ^{3} \\left(1 t ^{1}+ 1 t ^{2}\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$1t^{3}\\ \\left(1t^{1}+1t^{2}\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}3 t ^{3} \\left(t + 1\\right) \\left(t ^{2}- t + 1\\right)$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}3 t ^{3}- 3 t ^{6}$"
+            },
+            {
+              "result": "$\\text{-}3 \\left(t ^{6}+ t ^{3}\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Ontbind in factoren"
+            },
+            {
+              "result": "$\\text{-}3 t ^{3} \\left(t ^{3}+ 1\\right)$",
+              "skills": [
+                "FactorSingleBrackets",
+                "AlgebraProductOfPowerFunctions"
+              ],
+              "description": "Ontbind in factoren: haal de factor  $t ^{3}$  buiten haakjes."
+            },
+            {
+              "result": "$\\text{-}3 t ^{3} \\left(t + 1\\right) \\left(t ^{2}- t + 1\\right)$",
+              "skills": [
+                "FactorLinearFactor"
+              ],
+              "description": "Ontbind een factor  $t + 1$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "nl": "Een gemeenschappelijke factor buiten haakjes halen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "nl": "De machtsregels voor vermenigvuldigen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FactorLinearFactor": {
+      "descr": {
+        "nl": "Een lineaire factor ontbinden uit een polynoom van hogere graad"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

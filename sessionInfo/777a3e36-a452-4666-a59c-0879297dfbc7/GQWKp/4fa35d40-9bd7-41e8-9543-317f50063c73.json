@@ -1,0 +1,129 @@
+{
+  "success": true,
+  "creationTimestamp": 1733689272,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 \\sqrt{3}\\cdot 5 \\sqrt{5}$"
+        },
+        {
+          "id": "GQWKp",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733689296817,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $5 \\sqrt{3}\\cdot 3$  is niet gelijk aan  $15$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 15\\endgroup\\endgroup \\sqrt{5}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$15\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733689304043,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup \\sqrt{3}\\cdot \\begingroup\\color{#336699}\\begingroup 5\\endgroup\\endgroup \\sqrt{5}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733689325835,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$15\\sqrt{15}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$15 \\sqrt{15}$",
+          "derivation": [
+            {
+              "expression": "$3\\cdot 5 \\sqrt{3} \\sqrt{5}$"
+            },
+            {
+              "result": "$15 \\sqrt{3} \\sqrt{5}$",
+              "description": "Reken uit:  $3\\cdot 5$"
+            },
+            {
+              "result": "$15 \\sqrt{15}$",
+              "description": "Vermenigvuldig de wortels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

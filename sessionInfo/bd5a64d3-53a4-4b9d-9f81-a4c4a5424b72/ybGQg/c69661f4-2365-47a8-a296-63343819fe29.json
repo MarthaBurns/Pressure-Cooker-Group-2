@@ -1,0 +1,186 @@
+{
+  "success": true,
+  "creationTimestamp": 1748869215,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Solve the equation."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2 t ^{2}=72$"
+        },
+        {
+          "id": "ybGQg",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1748869258762,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$72:2=36$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "TRUE_EXPRESSION"
+              },
+              {
+                "timestamp": 1748869301295,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\sqrt{36}$  does not equal  $6^{2}$ .",
+                    "expression": "$\\sqrt{36}=6^{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{36}=6^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1748869326843,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{36}=6^{ }$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "TRUE_EXPRESSION"
+              },
+              {
+                "timestamp": 1748869335577,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>There are more solutions</h1>Write your answer in the form  $t =\\ldots\\vee t =6$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup t =6\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$t=6$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1748869364446,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodDivideCoefficient",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsOperationsMultiply",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$t=6\\ or\\ t=-6$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsBalanceMethodDivideCoefficient",
+                "weight": 100
+              },
+              {
+                "id": "EquationsOperationsMultiply",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$t =\\text{-}6\\vee t =6$",
+          "derivation": [
+            {
+              "expression": "$2 t ^{2}=72$"
+            },
+            {
+              "result": "$t ^{2}=36$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Divide both sides by  $2$"
+            },
+            {
+              "result": "$t =\\sqrt{36}\\vee t =\\text{-}\\sqrt{36}$",
+              "description": "Take the root on both sides of the equation"
+            },
+            {
+              "result": "$t =\\text{-}6\\vee t =6$",
+              "description": "Calculate the square root of  $36$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "en": "Divide by the coefficient of the variable to get the solution."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "en": "Multiply or divide an equation using the balance method"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

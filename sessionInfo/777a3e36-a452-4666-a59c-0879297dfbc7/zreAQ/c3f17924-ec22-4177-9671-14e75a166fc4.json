@@ -1,0 +1,115 @@
+{
+  "success": true,
+  "creationTimestamp": 1740664554,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2 \\sqrt{3}\\cdot \\sqrt{3}- 5 \\sqrt{3}$"
+        },
+        {
+          "id": "zreAQ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1740664577490,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\sqrt{3} \\sqrt{3}$  is niet gelijk aan  $\\sqrt{6}$ .",
+                    "expression": "$2 \\begingroup\\color{darkred}\\begingroup \\sqrt{6}\\endgroup\\endgroup- 5 \\sqrt{3}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{6}-5\\sqrt{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1740664580631,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Vermenigvuldig de wortels</h1>$\\sqrt{a }\\cdot \\sqrt{a }=a $",
+                    "expression": "$2 \\begingroup\\color{#336699}\\begingroup \\sqrt{3}\\endgroup\\endgroup \\begingroup\\color{#336699}\\begingroup \\sqrt{3}\\endgroup\\endgroup- 5 \\sqrt{3}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -50
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$6- 5 \\sqrt{3}$",
+          "derivation": [
+            {
+              "expression": "$2 \\sqrt{3} \\sqrt{3}- 5 \\sqrt{3}$"
+            },
+            {
+              "result": "$2\\cdot 3- 5 \\sqrt{3}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$6- 5 \\sqrt{3}$",
+              "description": "Reken uit:  $2\\cdot 3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "nl": "De regels voor vermenigvuldigen van wortels toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "creationTimestamp": 1759927107,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{2}{3} : 4$"
+        },
+        {
+          "id": "fiI08",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1759927171135,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDivisionProperByNumber",
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Vereenvoudig de breuk</h1>Vermenigvuldig de teller en noemer met  $3$",
+                    "expression": "$\\frac{2}{3} : 4$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1759927229443,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{2}{3} : 4$  is niet gelijk aan  $\\frac{1}{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{1}{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1}{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticDivisionProperByNumber",
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{1}{6}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{2}{3} : 4$"
+            },
+            {
+              "result": "$\\frac{2}{4\\cdot 3}$",
+              "skills": [
+                "FractionArithmeticDivisionProperByNumber"
+              ],
+              "description": "Vereenvoudig de breuk"
+            },
+            {
+              "result": "$\\frac{1}{2\\cdot 3}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Deel de gemeenschappelijke factor weg uit teller en noemer"
+            },
+            {
+              "result": "$\\frac{1}{6}$",
+              "description": "Reken uit:  $2\\cdot 3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticDivisionProperByNumber": {
+      "descr": {
+        "nl": "Een echte breuk delen door een getal"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

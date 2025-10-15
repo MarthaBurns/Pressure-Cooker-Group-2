@@ -1,0 +1,159 @@
+{
+  "success": true,
+  "creationTimestamp": 1742932509,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Solve the equation."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "${4,\\!5} + {0,\\!125}  m ={0,\\!625}  m - 2$"
+        },
+        {
+          "id": "28Ceo",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1742932654696,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "${4,\\!5} + {0,\\!125} - {0,\\!625} $  is niet gelijk aan  $\\text{-}2$ .",
+                    "expression": "${4,\\!5} + {0,\\!125} - {0,\\!625} =\\text{-}2$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4,5+0,125-0,625=-2$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1742932698043,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "${0,\\!125} - {0,\\!625} $  is niet gelijk aan  $\\text{-}2- {4,\\!5} $ .",
+                    "expression": "${0,\\!125} - {0,\\!625} =\\text{-}2- {4,\\!5} $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$0,125-0,625=-2-4,5$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$m =13$",
+          "derivation": [
+            {
+              "expression": "${4,\\!5} + {0,\\!125}  m ={0,\\!625}  m - 2$"
+            },
+            {
+              "result": "${0,\\!125}  m - {0,\\!625}  m + {4,\\!5} =\\text{-}2$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: haal links en rechts er  ${0,\\!625}  m $  van af"
+            },
+            {
+              "result": "$\\text{-}{0,\\!5}  m + {4,\\!5} =\\text{-}2$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\text{-}{0,\\!5}  m =\\text{-}{6,\\!5} $",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Haal links en rechts  ${4,\\!5} $  eraf."
+            },
+            {
+              "result": "$m =13$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $\\text{-}{0,\\!5} $"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

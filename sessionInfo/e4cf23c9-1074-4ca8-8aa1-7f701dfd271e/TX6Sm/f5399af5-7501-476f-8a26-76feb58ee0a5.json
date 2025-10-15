@@ -1,0 +1,229 @@
+{
+  "success": true,
+  "creationTimestamp": 1757668002,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$4+ 5 \\left(n + 4\\right)^{2}$"
+        },
+        {
+          "id": "TX6Sm",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1757668037906,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$4+5\\left(n^{2}+4n+4n+16\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms",
+                  "ExpandSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1757668043899,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$4+5\\left(n^{2}+8n+16\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.25,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "ExpandSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1757668062311,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$4+ \\left(\\begingroup\\color{darkred}\\begingroup 5 n ^{2}+ 40 n + 90\\endgroup\\endgroup\\right)\\cdot 5$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4+5\\left(5n^{2}+40n+90\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.25,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1757668064942,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$4+ \\left(\\begingroup\\color{darkred}\\begingroup 5 n ^{2}+ 40 n + 80\\endgroup\\endgroup\\right)\\cdot 5$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4+5\\left(5n^{2}+40n+80\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.25,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1757668126743,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$4+5n^{2}+40n+80$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.875,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1757668131310,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsSquare",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$5n^{2}+40n+84$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsSquare",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$5 n ^{2}+ 40 n + 84$",
+          "derivation": [
+            {
+              "expression": "$4+ 5 \\left(n + 4\\right)^{2}$"
+            },
+            {
+              "result": "$4+ 5 \\left(n ^{2}+ 8 n + 4^{2}\\right)$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Werk het kwadraat uit"
+            },
+            {
+              "result": "$4+ 5 \\left(n ^{2}+ 8 n + 16\\right)$",
+              "description": "Bereken de macht door herhaald te vermenigvuldigen"
+            },
+            {
+              "result": "$4+ 5 n ^{2}+ 40 n + 80$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$5 n ^{2}+ 40 n + 84$",
+              "description": "Reken uit:  $4+ 80$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "nl": "Kwadraat van een tweeterm uitschrijven"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

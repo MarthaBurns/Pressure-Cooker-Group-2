@@ -1,0 +1,132 @@
+{
+  "success": true,
+  "creationTimestamp": 1750106076,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}p - 9 p ^{2}$"
+        },
+        {
+          "id": "3RF7y",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750106095457,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not factor  $\\text{-}9 p ^{2}- p $  correctly.</h1>$p \\times \\left(\\text{-}p \\right)$  does not equal  $\\text{-}p $",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup p  \\left(\\text{-}p - 9 p \\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$p\\left(-p-9p\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750106112174,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Factorise</h1>The terms have a common constant factor  $\\text{-}1$",
+                    "expression": "$\\text{-}p - 9 p ^{2}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "FactorSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}p  \\left(9 p + 1\\right)$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}p - 9 p ^{2}$"
+            },
+            {
+              "result": "$\\text{-}\\left(9 p ^{2}+ p \\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Factorise"
+            },
+            {
+              "result": "$\\text{-}p  \\left(9 p + 1\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Factorise: Move  $p $  in front of parentheses"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "en": "Factoring a common factor"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

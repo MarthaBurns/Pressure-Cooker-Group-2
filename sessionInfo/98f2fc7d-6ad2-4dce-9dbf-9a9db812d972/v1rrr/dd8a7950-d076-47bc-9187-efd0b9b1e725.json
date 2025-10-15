@@ -1,0 +1,159 @@
+{
+  "success": true,
+  "creationTimestamp": 1750076264,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 x ^{2}+ 3 x \\cdot \\text{-}3 x $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750076298227,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3x^{2}.9x^{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1750076301604,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $3\\cdot \\text{-}3$",
+                    "expression": "$3 x ^{2}+ \\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup x \\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}3\\endgroup\\endgroup x $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750076314594,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $3\\cdot \\text{-}3$  is niet gelijk aan  $9758$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 9758\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$9758$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750076316356,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $3\\cdot \\text{-}3$",
+                    "expression": "$3 x ^{2}+ \\begingroup\\color{#336699}\\begingroup 3\\endgroup\\endgroup x \\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}3\\endgroup\\endgroup x $"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}6 x ^{2}$",
+          "derivation": [
+            {
+              "expression": "$3 x ^{2}- 3\\cdot 3 x \\cdot x $"
+            },
+            {
+              "result": "$3 x ^{2}- 9 x \\cdot x $",
+              "description": "Reken uit:  $3\\cdot \\text{-}3$"
+            },
+            {
+              "result": "$3 x ^{2}- 9 x ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$\\text{-}6 x ^{2}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

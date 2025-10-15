@@ -1,0 +1,167 @@
+{
+  "success": true,
+  "creationTimestamp": 1732974313,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{\\frac{4}{5}}{\\text{-}1\\frac{2}{3}}$"
+        },
+        {
+          "id": "F3GYs",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1732974444312,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{4}{5\\ }=\\ 0,8\\ ,\\ -1\\ +\\ \\frac{2}{3\\ }=\\ -1\\ +\\ 0,667\\ =\\ -0,33\\ dus\\ eigenlijk\\ is\\ het\\ \\frac{0,8}{-0,33},\\ dat\\ maakt\\ -2.4$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "UNKNOWN_STEP"
+              },
+              {
+                "timestamp": 1732974450559,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{\\frac{4}{5}}{\\text{-}1\\frac{2}{3}}$  is niet gelijk aan  $\\text{-}{2,\\!4} $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}{2,\\!4} \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-2,4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1732974454093,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Maak de noemer positief door noemer en teller met -1 te vermenigvuldigen</h1>Vergeet niet de teller ook van teken te veranderen",
+                    "expression": "$\\frac{\\frac{4}{5}}{\\text{-}1\\frac{2}{3}}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1732974478884,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{\\frac{4}{5}}{\\text{-}1\\frac{2}{3}}$  is niet gelijk aan  ${2,\\!4} $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup {2,\\!4} \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2,4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}\\frac{12}{25}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{\\frac{4}{5}}{\\text{-}1\\frac{2}{3}}$"
+            },
+            {
+              "result": "$\\text{-}\\frac{4}{5} : 1\\frac{2}{3}$",
+              "description": "Maak de noemer positief door noemer en teller met -1 te vermenigvuldigen"
+            },
+            {
+              "result": "$\\text{-}\\frac{4}{5} : \\left(\\frac{5}{3}\\right)$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Schrijf  $1\\frac{2}{3}$  om naar een gewone breuk"
+            },
+            {
+              "result": "$\\text{-}\\frac{4}{5}\\cdot \\frac{3}{5}$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Delen door een breuk is vermenigvuldigen met het omgekeerde"
+            },
+            {
+              "result": "$\\text{-}\\frac{12}{25}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "nl": "Echte breuken delen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

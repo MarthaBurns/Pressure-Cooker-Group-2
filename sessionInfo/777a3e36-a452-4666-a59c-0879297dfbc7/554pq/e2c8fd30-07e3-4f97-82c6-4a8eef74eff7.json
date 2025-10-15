@@ -1,0 +1,114 @@
+{
+  "success": true,
+  "creationTimestamp": 1746778209,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{5} \\left(\\text{-}3 \\sqrt{20}- 3\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1746778537129,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Vermenigvuldig elke term binnen de haakjes met  $\\sqrt{5}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{5}\\endgroup\\endgroup+ \\begingroup\\color{darkred}\\begingroup 6 \\sqrt{20}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{5}+6\\sqrt{20}^{ }$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}30- 3 \\sqrt{5}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{5} \\left(\\text{-}3 \\sqrt{20}- 3\\right)$"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{5} \\sqrt{20}- 3 \\sqrt{5}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{100}- 3 \\sqrt{5}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$10\\cdot \\text{-}3- 3 \\sqrt{5}$",
+              "description": "Bepaal de wortel van  $100$"
+            },
+            {
+              "result": "$\\text{-}30- 3 \\sqrt{5}$",
+              "description": "Reken uit:  $10\\cdot \\text{-}3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "success": true,
+  "creationTimestamp": 1759735909,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{6}{1+ \\sqrt{8}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1759735927162,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{6}{1+ \\sqrt{8}}$  is niet gelijk aan  ${0,\\!5} $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup {0,\\!5} \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$0,5$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759735933037,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Haal de wortel uit de noemer</h1>Vermenigvuldig teller en noemer met  $1- \\sqrt{8}$",
+                    "expression": "$\\frac{6}{1+ \\sqrt{8}}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{\\text{-}6+ 12 \\sqrt{2}}{7}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{6}{1+ \\sqrt{8}}$"
+            },
+            {
+              "result": "$\\frac{6 \\left(1- \\sqrt{8}\\right)}{\\left(1+ \\sqrt{8}\\right) \\left(1- \\sqrt{8}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{6 \\left(1- \\sqrt{8}\\right)}{1- \\sqrt{8}+ \\sqrt{8}- \\sqrt{8} \\sqrt{8}}$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{6 \\left(1- \\sqrt{8}\\right)}{1- \\sqrt{8} \\sqrt{8}}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\frac{6 \\left(1- \\sqrt{8}\\right)}{1- 8}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\text{-}\\frac{6 \\left(1- \\sqrt{8}\\right)}{7}$",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\frac{\\text{-}6+ 6 \\sqrt{8}}{7}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\frac{\\text{-}6+ 6 \\sqrt{4} \\sqrt{2}}{7}$",
+              "description": "Vereenvoudig de wortel"
+            },
+            {
+              "result": "$\\frac{\\text{-}6+ 6\\cdot 2 \\sqrt{2}}{7}$",
+              "description": "Bepaal de wortel van  $4$"
+            },
+            {
+              "result": "$\\frac{\\text{-}6+ 12 \\sqrt{2}}{7}$",
+              "description": "Reken uit:  $6\\cdot 2$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

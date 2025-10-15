@@ -1,0 +1,151 @@
+{
+  "success": true,
+  "creationTimestamp": 1758017270,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$1\\frac{1}{2}+ 1\\frac{5}{7}$"
+        },
+        {
+          "id": "ldjrn",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1758017842087,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddMixed",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$1\\frac{1}{2}+ 1\\frac{5}{7}$  is niet gelijk aan  $3\\frac{13}{14}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3\\frac{13}{14}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\frac{13}{14}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758017850020,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddMixed",
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Splits de samengestelde breuken  $1\\frac{1}{2}$  en  $1\\frac{5}{7}$</h1>$1\\frac{1}{2}+ 1\\frac{5}{7}=1+ \\frac{1}{2}+ 1+ \\frac{5}{7}$",
+                    "expression": "$1\\frac{1}{2}+ 1\\frac{5}{7}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticAddMixed",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "FractionArithmeticAddMixed",
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{45}{14}$",
+          "derivation": [
+            {
+              "expression": "$1\\frac{1}{2}+ 1\\frac{5}{7}$"
+            },
+            {
+              "result": "$2+ \\frac{1}{2}+ \\frac{5}{7}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Splits de samengestelde breuken  $1\\frac{1}{2}$  en  $1\\frac{5}{7}$"
+            },
+            {
+              "result": "$2+ \\frac{17}{14}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Maak de breuken gelijknamig"
+            },
+            {
+              "result": "$\\frac{45}{14}$",
+              "skills": [
+                "FractionArithmeticIntegerToFraction"
+              ],
+              "description": "Schrijf  $2+ \\frac{17}{14}$  als één breuk:"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "nl": "Gemengde breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "nl": "Ongelijknamige breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticIntegerToFraction": {
+      "descr": {
+        "nl": "Een geheel getal als een breuk schrijven"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

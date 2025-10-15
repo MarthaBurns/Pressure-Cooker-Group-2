@@ -1,0 +1,134 @@
+{
+  "success": true,
+  "creationTimestamp": 1733066142,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}3 \\sqrt{2} \\left(\\sqrt{50}- 3\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1733066180919,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100,
+                    "errors": [
+                      "SkippingTerms"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Je hebt niet alle termen van  $\\sqrt{50}- 3$  met  $\\sqrt{2}\\cdot \\text{-}3$  vermenigvuldigd.",
+                    "expression": "$\\text{-}3 \\sqrt{2} \\sqrt{50}- \\begingroup\\color{darkred}\\begingroup 3\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-3\\sqrt{2}\\cdot\\sqrt{50}-3$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100,
+                "errors": [
+                  "SkippingTerms"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}30+ 9 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}3 \\sqrt{2} \\left(\\sqrt{50}- 3\\right)$"
+            },
+            {
+              "result": "$\\text{-}3 \\left(\\sqrt{2} \\sqrt{50}- 3 \\sqrt{2}\\right)$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}3 \\left(\\sqrt{100}- 3 \\sqrt{2}\\right)$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\text{-}3 \\left(10- 3 \\sqrt{2}\\right)$",
+              "description": "Bepaal de wortel van  $100$"
+            },
+            {
+              "result": "$\\text{-}30+ 9 \\sqrt{2}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "SkippingTerms",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Niet alle termen vermenigvuldigen met de coëfficiënt."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "success": true,
+  "creationTimestamp": 1744186893,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{3}{8+ \\sqrt{5}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1744186904320,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\frac{\\begingroup\\color{darkred}\\begingroup 8\\endgroup\\endgroup}{8+ \\sqrt{5}}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{8}{8+\\sqrt{5}}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1744186909844,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3}{8+\\sqrt{5}}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{24- 3 \\sqrt{5}}{59}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{3}{8+ \\sqrt{5}}$"
+            },
+            {
+              "result": "$\\frac{3 \\left(8- \\sqrt{5}\\right)}{\\left(8+ \\sqrt{5}\\right) \\left(8- \\sqrt{5}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{3 \\left(8- \\sqrt{5}\\right)}{64- 8 \\sqrt{5}+ 8 \\sqrt{5}- \\sqrt{5} \\sqrt{5}}$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{3 \\left(8- \\sqrt{5}\\right)}{64- \\sqrt{5} \\sqrt{5}}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\frac{3 \\left(8- \\sqrt{5}\\right)}{64- 5}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\frac{3 \\left(8- \\sqrt{5}\\right)}{59}$",
+              "description": "Reken uit:  $64- 5$"
+            },
+            {
+              "result": "$\\frac{24- 3 \\sqrt{5}}{59}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

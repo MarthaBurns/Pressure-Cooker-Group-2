@@ -1,0 +1,130 @@
+{
+  "success": true,
+  "creationTimestamp": 1744110235,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{2}{7}+ 1\\frac{1}{5}$"
+        },
+        {
+          "id": "Nno6J",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1744110477692,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{2}{7}+ \\frac{1}{5}$  is niet gelijk aan  $\\frac{10}{30}+ \\frac{7}{30}$ .",
+                    "expression": "$\\frac{2}{7}+ \\frac{1}{5}=\\frac{10}{30}+ \\frac{7}{30}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{2}{7}+\\frac{1}{5}=\\frac{10}{30}+\\frac{7}{30}=1\\frac{17}{30}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1744110497367,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Splits de samengestelde breuk</h1>$1\\frac{1}{5}=1+ \\frac{1}{5}$",
+                    "expression": "$\\frac{2}{7}+ 1\\frac{1}{5}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$1\\frac{17}{35}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{2}{7}+ 1\\frac{1}{5}$"
+            },
+            {
+              "result": "$1+ \\frac{1}{5}+ \\frac{2}{7}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Splits de samengestelde breuk"
+            },
+            {
+              "result": "$1+ \\frac{17}{35}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Maak de breuken gelijknamig"
+            },
+            {
+              "result": "$1\\frac{17}{35}$",
+              "skills": [
+                "FractionArithmeticSimilarImproperToMixed"
+              ],
+              "description": "Schrijf  $1+ \\frac{17}{35}$  als één breuk:"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "nl": "Gemengde breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "nl": "Ongelijknamige breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

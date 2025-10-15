@@ -1,0 +1,161 @@
+{
+  "success": true,
+  "creationTimestamp": 1749032208,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$135=\\text{-}65+ 2 t ^{2}$"
+        },
+        {
+          "id": "IQVCv",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1749032234314,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$10\\cdot 0 f  t $  is niet gelijk aan  $\\text{-}10$ .",
+                    "expression": "$10\\cdot 0 f  t =\\text{-}10$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$t=10\\ 0f\\ t=-10$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1749032242145,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Balansmethode: Tel links en rechts  $65$  erbij op.",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 135\\endgroup\\endgroup=\\begingroup\\color{#336699}\\begingroup \\text{-}65\\endgroup\\endgroup+ 2 t ^{2}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$t =\\text{-}10\\vee t =10$",
+          "derivation": [
+            {
+              "expression": "$135=\\text{-}65+ 2 t ^{2}$"
+            },
+            {
+              "result": "$200=2 t ^{2}$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Tel links en rechts  $65$  erbij op."
+            },
+            {
+              "result": "$t ^{2}=100$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $2$"
+            },
+            {
+              "result": "$t =\\sqrt{100}\\vee t =\\text{-}\\sqrt{100}$",
+              "description": "Herleid de vergelijking door links en rechts de wortel te nemen"
+            },
+            {
+              "result": "$t =\\text{-}10\\vee t =10$",
+              "description": "Bepaal de wortel van  $100$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

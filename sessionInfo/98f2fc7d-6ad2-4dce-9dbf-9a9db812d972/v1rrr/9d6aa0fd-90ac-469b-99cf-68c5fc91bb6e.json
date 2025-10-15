@@ -1,0 +1,153 @@
+{
+  "success": true,
+  "creationTimestamp": 1760079951,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}y \\cdot \\text{-}4 y - y $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1760080110457,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "errors": [
+                      "UnlikeTerms"
+                    ],
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt termen opgeteld die niet gelijksoortig zijn.</h1>$\\text{-}y \\cdot \\text{-}4 y \\text{ en } \\text{-}y $  zijn niet gelijksoortig met  $y $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}4 y - y \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-4y-y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1760080137776,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Negatief keer negatief wordt positief",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\text{-}1\\endgroup\\endgroup y \\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}4\\endgroup\\endgroup y - y $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1760080146134,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\text{-}y \\cdot \\text{-}4 y - y $  is niet gelijk aan  $4 y $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 4 y \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "errors": [
+                  "UnlikeTerms"
+                ],
+                "source": "ERROR_FEEDBACK"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$4 y ^{2}- y $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}\\text{-}4 y \\cdot y - y $"
+            },
+            {
+              "result": "$4 y \\cdot y - y $",
+              "description": "Negatief keer negatief wordt positief"
+            },
+            {
+              "result": "$4 y ^{2}- y $",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "UnlikeTerms",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Ongelijksoortige termen optellen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

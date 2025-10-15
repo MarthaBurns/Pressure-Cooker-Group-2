@@ -1,0 +1,171 @@
+{
+  "success": true,
+  "creationTimestamp": 1737211929,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{5}\\cdot 3 \\sqrt{5}- 3 \\sqrt{5}$"
+        },
+        {
+          "id": "zreAQ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1737211939915,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAdditionDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\sqrt{5}\\cdot 3 \\sqrt{5}- 3 \\sqrt{5}$  is niet gelijk aan  $\\sqrt{5}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{5}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737211979793,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\sqrt{5} \\sqrt{5}$  is niet gelijk aan  $\\sqrt{15}$ .",
+                    "expression": "$3 \\begingroup\\color{darkred}\\begingroup \\sqrt{15}\\endgroup\\endgroup- 3 \\sqrt{5}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\sqrt{15}-3\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737212002155,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $3 \\sqrt{5}$  is niet gelijk aan  $15$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 15\\endgroup\\endgroup \\sqrt{5}- 3 \\sqrt{5}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$15\\sqrt{5}-3\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticAdditionDecimal",
+                "weight": -100
+              },
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -50
+              },
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$15- 3 \\sqrt{5}$",
+          "derivation": [
+            {
+              "expression": "$3 \\sqrt{5} \\sqrt{5}- 3 \\sqrt{5}$"
+            },
+            {
+              "result": "$5\\cdot 3- 3 \\sqrt{5}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$15- 3 \\sqrt{5}$",
+              "description": "Reken uit:  $5\\cdot 3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticAdditionDecimal": {
+      "descr": {
+        "nl": "Decimale getallen optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "nl": "De regels voor vermenigvuldigen van wortels toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

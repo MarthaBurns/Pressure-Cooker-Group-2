@@ -1,0 +1,148 @@
+{
+  "success": true,
+  "creationTimestamp": 1750406196,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$p ^{2}+ 13 p + 36$"
+        },
+        {
+          "id": "2kfpZ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1750406307050,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not apply the Product-Sum Rule correctly.</h1>Find two numbers with sum  $13$  and product  $36$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\left(p + 5\\right) \\left(p + 6\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(p+5\\right)\\left(p+6\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750406340429,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Factorise using the product-sum method</h1>Write as  $\\left(p + \\ldots\\right) \\left(p + \\ldots\\right)$  where the numbers on the dots have sum  $13$  and product  $36$",
+                    "expression": "$p ^{2}+ 13 p + 36$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750406410660,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(p+9\\right)\\left(p+4\\right)$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": -100
+              },
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\left(p + 9\\right) \\left(p + 4\\right)$",
+          "derivation": [
+            {
+              "expression": "$p ^{2}+ 13 p + 36$"
+            },
+            {
+              "result": "$\\left(p + 9\\right) \\left(p + 4\\right)$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Factorise using the product-sum method"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "en": "Factoring a quadratic expression using the Sum-Product Rule"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

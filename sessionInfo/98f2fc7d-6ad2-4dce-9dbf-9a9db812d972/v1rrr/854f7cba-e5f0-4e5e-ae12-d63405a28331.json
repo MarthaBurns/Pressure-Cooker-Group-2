@@ -1,0 +1,116 @@
+{
+  "success": true,
+  "creationTimestamp": 1747305978,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$6+ 4 x \\cdot 5$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1747305995142,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ArithmeticOrderMultiplication",
+                    "weight": -100,
+                    "errors": [
+                      "MultiplicationAddition"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Bereken in de juiste volgorde</h1>$6+ 4 x \\cdot 5=6+ \\left(4\\cdot 5 x \\right)$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 26 x \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$26x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ArithmeticOrderMultiplication",
+                "weight": -100,
+                "errors": [
+                  "MultiplicationAddition"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$6+ 20 x $",
+          "derivation": [
+            {
+              "expression": "$6+ 4\\cdot 5 x $"
+            },
+            {
+              "result": "$6+ 20 x $",
+              "description": "Reken uit:  $4\\cdot 5$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ArithmeticOrderMultiplication": {
+      "descr": {
+        "nl": "Volgorde van operaties met vermenigvuldiging"
+      },
+      "stepType": "CALCULATE",
+      "errors": [
+        {
+          "id": "MultiplicationAddition",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Optellen terwijl vermenigvuldiging voorrang heeft."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "success": true,
+  "creationTimestamp": 1732546206,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf als een breuk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "${10,\\!4} $"
+        },
+        {
+          "id": "xL52Z",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0.7142857142857143,
+            "events": [
+              {
+                "timestamp": 1732546215987,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{4}{10}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1732546221478,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{10}{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1732546222796,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticDecimalToFraction",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Schrijf  ${10,\\!4} $  als  $\\frac{104}{10}$",
+                    "expression": "${10,\\!4} $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1732546235081,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{104}{10}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.7142857142857143,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FractionArithmeticSimplifyProper"
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticDecimalToFraction",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{52}{5}$",
+          "derivation": [
+            {
+              "expression": "${10,\\!4} $"
+            },
+            {
+              "result": "$\\frac{104}{10}$",
+              "skills": [
+                "FractionArithmeticDecimalToFraction"
+              ],
+              "description": "Schrijf  ${10,\\!4} $  als  $\\frac{104}{10}$"
+            },
+            {
+              "result": "$\\frac{52}{5}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Vereenvoudig de breuk"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticDecimalToFraction": {
+      "descr": {
+        "nl": "Een decimaal getal als een breuk schrijven"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

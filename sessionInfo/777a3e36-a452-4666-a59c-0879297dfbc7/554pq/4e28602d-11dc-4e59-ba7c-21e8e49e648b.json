@@ -1,0 +1,170 @@
+{
+  "success": true,
+  "creationTimestamp": 1737211550,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{5} \\left(\\text{-}3 \\sqrt{20}- 3\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1737211575577,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-3\\sqrt{20}\\cdot\\sqrt{5}-3\\cdot\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1737211594067,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\text{-}3 \\sqrt{100}+ \\begingroup\\color{darkred}\\begingroup \\text{-}5\\endgroup\\endgroup \\sqrt{5}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-3\\sqrt{100}-5\\cdot\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737211606459,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-3\\sqrt{100}-3\\cdot\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1737211620776,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-3\\cdot10-3\\cdot\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.6666666666666666,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1737211631407,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-30-3\\cdot\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}30- 3 \\sqrt{5}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{5} \\left(\\text{-}3 \\sqrt{20}- 3\\right)$"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{5} \\sqrt{20}- 3 \\sqrt{5}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{100}- 3 \\sqrt{5}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$10\\cdot \\text{-}3- 3 \\sqrt{5}$",
+              "description": "Bepaal de wortel van  $100$"
+            },
+            {
+              "result": "$\\text{-}30- 3 \\sqrt{5}$",
+              "description": "Reken uit:  $10\\cdot \\text{-}3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

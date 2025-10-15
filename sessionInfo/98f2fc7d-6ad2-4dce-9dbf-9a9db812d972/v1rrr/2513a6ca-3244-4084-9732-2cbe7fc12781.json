@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "creationTimestamp": 1749150434,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3+ 5 x \\cdot \\text{-}x + \\text{-}5 x \\cdot \\text{-}1$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749150492792,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt afgetrokken, maar je moet optellen.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}5 x ^{2}- 5 x \\endgroup\\endgroup+ 3$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3+-5x^{2}+-5x$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749150597551,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3+-5x^{2}+5x$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}5 x ^{2}+ 5 x + 3$",
+          "derivation": [
+            {
+              "expression": "$3- 5 x \\cdot x - 5\\cdot \\text{-}1 x $"
+            },
+            {
+              "result": "$3- 5 x \\cdot x + 5 x $",
+              "description": "Negatief keer negatief wordt positief"
+            },
+            {
+              "result": "$\\text{-}5 x ^{2}+ 5 x + 3$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {},
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

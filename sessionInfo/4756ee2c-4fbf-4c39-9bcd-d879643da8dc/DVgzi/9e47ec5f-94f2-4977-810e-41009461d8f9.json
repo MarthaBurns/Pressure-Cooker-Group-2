@@ -1,0 +1,233 @@
+{
+  "success": true,
+  "creationTimestamp": 1746967140,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}35+ 19 n - 13 n =\\text{-}19 n + 119+ 14 n $"
+        },
+        {
+          "id": "DVgzi",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1746967302584,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": -10
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de balansmethode niet goed toegepast.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 10 n =134\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$10n=134$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1746967355218,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAdditionDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt de balansmethode niet goed toegepast.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 10 n =154\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$10n=154$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1746967472415,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": -100,
+                    "errors": [
+                      "AddSubtract"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de balansmethode niet goed toegepast.</h1>Je hebt aan de ene zijde  $5 n $  opgeteld, maar aan de andere zijde  $5 n $  afgetrokken.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup n =154\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$n=154$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": -10
+              },
+              {
+                "id": "NumberArithmeticAdditionDecimal",
+                "weight": -100
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": -100,
+                "errors": [
+                  "AddSubtract"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$n =14$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}35+ 19 n - 13 n =\\text{-}19 n + 119+ 14 n $"
+            },
+            {
+              "result": "$\\text{-}35+ 6 n =\\text{-}5 n + 119$",
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$6 n + 5 n - 35=119$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: tel er links en rechts  $5 n $  bij op"
+            },
+            {
+              "result": "$11 n - 35=119$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$11 n =154$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Tel links en rechts  $35$  erbij op."
+            },
+            {
+              "result": "$n =14$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $11$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY",
+      "errors": [
+        {
+          "id": "AddSubtract",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Optellen aan één kant en aftrekken aan de andere kant van de vergelijking."
+          }
+        }
+      ]
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "NumberArithmeticAdditionDecimal": {
+      "descr": {
+        "nl": "Decimale getallen optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

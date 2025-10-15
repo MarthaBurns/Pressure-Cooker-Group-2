@@ -1,0 +1,144 @@
+{
+  "success": true,
+  "creationTimestamp": 1729339312,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{7}{6+ \\sqrt{11}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1729339341080,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$=\\frac{7\\left(6-\\sqrt{11}\\right)}{\\left(6+\\sqrt{11}\\right)\\left(6-\\sqrt{11}\\right)}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "ExpandDoubleDifferenceSquares",
+                  "ExpandSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1729339365338,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleDifferenceSquares",
+                    "weight": 100
+                  },
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{42-7\\sqrt{11}}{25}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleDifferenceSquares",
+                "weight": 100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{42- 7 \\sqrt{11}}{25}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{7}{6+ \\sqrt{11}}$"
+            },
+            {
+              "result": "$\\frac{7 \\left(6- \\sqrt{11}\\right)}{\\left(6+ \\sqrt{11}\\right) \\left(6- \\sqrt{11}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{7 \\left(6- \\sqrt{11}\\right)}{36- \\left(\\sqrt{11}\\right)^{2}}$",
+              "skills": [
+                "ExpandDoubleDifferenceSquares"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{7 \\left(6- \\sqrt{11}\\right)}{25}$",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\frac{42- 7 \\sqrt{11}}{25}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleDifferenceSquares": {
+      "descr": {
+        "nl": "Een product uitschrijven als het het verschil van twee kwadraten"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

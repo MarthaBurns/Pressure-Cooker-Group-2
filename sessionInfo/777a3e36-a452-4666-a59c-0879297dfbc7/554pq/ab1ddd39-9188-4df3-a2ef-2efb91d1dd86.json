@@ -1,0 +1,128 @@
+{
+  "success": true,
+  "creationTimestamp": 1736958451,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{2} \\left(4 \\sqrt{32}+ 4\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1736958480414,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Vermenigvuldig elke term binnen de haakjes met  $\\sqrt{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{2}\\endgroup\\endgroup+ \\begingroup\\color{darkred}\\begingroup 8 \\sqrt{32}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{2}+8\\sqrt{32}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1736958522330,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$8\\sqrt{64}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$32+ 4 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{2} \\left(4 \\sqrt{32}+ 4\\right)$"
+            },
+            {
+              "result": "$4 \\sqrt{2} \\sqrt{32}+ 4 \\sqrt{2}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$4 \\sqrt{64}+ 4 \\sqrt{2}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$8\\cdot 4+ 4 \\sqrt{2}$",
+              "description": "Bepaal de wortel van  $64$"
+            },
+            {
+              "result": "$32+ 4 \\sqrt{2}$",
+              "description": "Reken uit:  $8\\cdot 4$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

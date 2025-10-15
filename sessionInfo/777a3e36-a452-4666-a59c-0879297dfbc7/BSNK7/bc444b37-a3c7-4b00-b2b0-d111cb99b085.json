@@ -1,0 +1,109 @@
+{
+  "success": true,
+  "creationTimestamp": 1749473831,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{2}+ 2 \\sqrt{4}\\cdot 5 \\sqrt{2}$"
+        },
+        {
+          "id": "BSNK7",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749473840775,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{2}+10\\sqrt{8}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$21 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{2}+ 2\\cdot 5 \\sqrt{4} \\sqrt{2}$"
+            },
+            {
+              "result": "$\\sqrt{2}+ 10 \\sqrt{4} \\sqrt{2}$",
+              "description": "Reken uit:  $2\\cdot 5$"
+            },
+            {
+              "result": "$\\sqrt{2}+ 10\\cdot 2 \\sqrt{2}$",
+              "description": "Bepaal de wortel van  $4$"
+            },
+            {
+              "result": "$\\sqrt{2}+ 20 \\sqrt{2}$",
+              "description": "Reken uit:  $10\\cdot 2$"
+            },
+            {
+              "result": "$21 \\sqrt{2}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

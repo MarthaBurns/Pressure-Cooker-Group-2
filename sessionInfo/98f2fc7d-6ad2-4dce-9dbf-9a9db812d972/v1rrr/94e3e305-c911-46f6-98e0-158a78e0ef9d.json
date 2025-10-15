@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "creationTimestamp": 1749107300,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}t \\cdot \\text{-}3 t + 4 t - t \\cdot \\text{-}2 t $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749107398630,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Negatief keer negatief wordt positief",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\text{-}1\\endgroup\\endgroup t \\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}3\\endgroup\\endgroup t + 4 t - \\text{-}t \\cdot 2 t $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1749107400366,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$5t^{2}\\ +\\ 4t$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$5 t ^{2}+ 4 t $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}\\text{-}3 t \\cdot t + 4 t - \\text{-}2 t \\cdot t $"
+            },
+            {
+              "result": "$3 t \\cdot t + 4 t + 2 t \\cdot t $",
+              "description": "Negatief keer negatief wordt positief"
+            },
+            {
+              "result": "$5 t \\cdot t + 4 t $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$5 t ^{2}+ 4 t $",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "success": true,
+  "creationTimestamp": 1729324377,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{8}{\\sqrt{8}}$"
+        },
+        {
+          "id": "A3l5S",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1729324419616,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{8}{8}\\sqrt{8}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1729324431796,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$1\\sqrt{8}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1729324462513,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Vereenvoudig de wortel</h1>Splits de wortel op een handige manier:  $\\sqrt{8}=\\sqrt{4} \\sqrt{2}$",
+                    "expression": "$\\sqrt{8}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729324497024,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Deze invoer kan niet worden nagekeken.",
+                    "expression": "$\\text{Ongeldige invoer}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{2}.\\sqrt{4}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              },
+              {
+                "timestamp": 1729324522076,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je hebt een eenheid bij je antwoord gegeven die niet nodig was",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{2} \\sqrt{4}\\;{{\\!\\!\\degree\\!}}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{2}\\degree\\sqrt{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729324547809,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$2 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{8}{\\sqrt{8}}$"
+            },
+            {
+              "result": "$\\frac{8}{8^{\\frac{1}{2}}}$",
+              "skills": [
+                "AlgebraPowerRuleRoots"
+              ],
+              "description": "Schrijf de wortel om naar een machtsfunctie"
+            },
+            {
+              "result": "$8^{\\frac{1}{2}}$",
+              "skills": [
+                "AlgebraDivisionOfPowerFunctions"
+              ],
+              "description": "Deel  $8^{\\frac{1}{2}}$  weg uit teller en noemer"
+            },
+            {
+              "result": "$\\sqrt{8}$",
+              "description": "Herschrijf de machtsfunctie tot een machtswortel"
+            },
+            {
+              "result": "$2 \\sqrt{2}$",
+              "description": "Vereenvoudig de wortel"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraPowerRuleRoots": {
+      "descr": {
+        "nl": "De machtsregels voor wortels toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraDivisionOfPowerFunctions": {
+      "descr": {
+        "nl": "De regel voor delen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

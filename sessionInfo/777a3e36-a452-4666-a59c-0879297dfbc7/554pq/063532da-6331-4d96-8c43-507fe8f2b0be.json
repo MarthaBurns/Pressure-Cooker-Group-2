@@ -1,0 +1,142 @@
+{
+  "success": true,
+  "creationTimestamp": 1737114190,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}2 \\sqrt{2} \\left(\\text{-}2+ \\sqrt{8}\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1737114224294,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Je moet vermenigvuldigen met  $\\text{-}2 \\left(\\text{-}2+ \\sqrt{8}\\right)$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737114249696,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\text{-}2 \\left(\\text{-}2+ \\sqrt{8}\\right)$  is niet gelijk aan  $4$ .",
+                    "expression": "$\\sqrt{2}\\cdot \\begingroup\\color{darkred}\\begingroup 4\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{2}4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$4 \\sqrt{2}- 8$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}2 \\sqrt{2} \\left(\\text{-}2+ \\sqrt{8}\\right)$"
+            },
+            {
+              "result": "$\\text{-}2 \\left(\\text{-}2 \\sqrt{2}+ \\sqrt{2} \\sqrt{8}\\right)$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}2 \\left(\\text{-}2 \\sqrt{2}+ \\sqrt{16}\\right)$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\text{-}2 \\left(\\text{-}2 \\sqrt{2}+ 4\\right)$",
+              "description": "Bepaal de wortel van  $16$"
+            },
+            {
+              "result": "$4 \\sqrt{2}- 8$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

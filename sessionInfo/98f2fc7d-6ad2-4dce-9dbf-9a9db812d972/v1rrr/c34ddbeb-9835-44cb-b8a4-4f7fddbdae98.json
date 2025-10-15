@@ -1,0 +1,124 @@
+{
+  "success": true,
+  "creationTimestamp": 1743349829,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}9\\cdot \\text{-}y + 5 y + \\text{-}5 y \\cdot \\text{-}9$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1743349866153,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Negatief keer negatief wordt positief",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\text{-}9\\endgroup\\endgroup\\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}1\\endgroup\\endgroup y + 5 y - \\text{-}5 y \\cdot 9$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1743349907206,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAdditionDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\text{-}9\\cdot \\text{-}1 y + 5 y - \\text{-}5 y \\cdot 9$  is niet gelijk aan  $\\text{-}81 y $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}81 y \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-81y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticAdditionDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$59 y $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}9\\cdot \\text{-}1 y + 5 y - \\text{-}5\\cdot 9 y $"
+            },
+            {
+              "result": "$9 y + 5 y + 45 y $",
+              "description": "Herleid."
+            },
+            {
+              "result": "$59 y $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAdditionDecimal": {
+      "descr": {
+        "nl": "Decimale getallen optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

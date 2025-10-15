@@ -1,0 +1,123 @@
+{
+  "success": true,
+  "creationTimestamp": 1737454588,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5 \\sqrt{6} \\left(\\sqrt{24}- 5\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1737454793324,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\text{-}5 \\left(\\sqrt{24}- 5\\right)$  is niet gelijk aan  $\\text{-}8$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}8\\endgroup\\endgroup \\sqrt{6}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-8\\sqrt{6}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}60+ 25 \\sqrt{6}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5 \\sqrt{6} \\left(\\sqrt{24}- 5\\right)$"
+            },
+            {
+              "result": "$\\text{-}5 \\left(\\sqrt{6} \\sqrt{24}- 5 \\sqrt{6}\\right)$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}5 \\left(\\sqrt{144}- 5 \\sqrt{6}\\right)$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\text{-}5 \\left(12- 5 \\sqrt{6}\\right)$",
+              "description": "Bepaal de wortel van  $144$"
+            },
+            {
+              "result": "$\\text{-}60+ 25 \\sqrt{6}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

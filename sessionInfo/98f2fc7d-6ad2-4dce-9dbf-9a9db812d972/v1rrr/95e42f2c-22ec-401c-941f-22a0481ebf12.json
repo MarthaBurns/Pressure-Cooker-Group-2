@@ -1,0 +1,122 @@
+{
+  "success": true,
+  "creationTimestamp": 1750409702,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2 y \\times 3 y + 5$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750409716667,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfPowerFunctions",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$y \\times y $  does not equal  $y $ .</h1>$t ^{p }\\times t ^{q }=t ^{p + q }$",
+                    "expression": "$6 \\begingroup\\color{darkred}\\begingroup y \\endgroup\\endgroup+ 5$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6y+5$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750409781531,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "This is not a valid mathematical expression.",
+                    "expression": "$\\text{Incorrect expression}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6y_{^{^{^{2}}}}+5$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "PARSE_ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfPowerFunctions",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$6 y ^{2}+ 5$",
+          "derivation": [
+            {
+              "expression": "$2\\times 3 y \\times y + 5$"
+            },
+            {
+              "result": "$6 y \\times y + 5$",
+              "description": "Calculate:  $2\\times 3$"
+            },
+            {
+              "result": "$6 y ^{2}+ 5$",
+              "description": "Write the repeated multiplication as a power"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "en": "Apply the rule for multiplying power functions"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

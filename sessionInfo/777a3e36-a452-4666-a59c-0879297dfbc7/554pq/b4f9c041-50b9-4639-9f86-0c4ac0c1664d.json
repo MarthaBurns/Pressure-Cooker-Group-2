@@ -1,0 +1,214 @@
+{
+  "success": true,
+  "creationTimestamp": 1734007561,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{2} \\left(5 \\sqrt{32}+ 5\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1734007569721,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de haakjes uit</h1>Vermenigvuldig elke term binnen de haakjes met  $\\sqrt{2}$",
+                    "expression": "$\\sqrt{2} \\left(5 \\sqrt{32}+ 5\\right)$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1734007641858,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 10 \\sqrt{64}\\endgroup\\endgroup \\sqrt{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$10\\sqrt{2}\\sqrt{64}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1734007666769,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAdditionDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $5 \\sqrt{32}+ 5$  is niet gelijk aan  $80$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 80\\endgroup\\endgroup \\sqrt{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$80\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1734007696036,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$10\\sqrt{32\\ }$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1734007756644,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\sqrt{2} \\left(5 \\sqrt{32}+ 5\\right)$  is niet gelijk aan  $80$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 80\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$80$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1734007777958,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\sqrt{2} \\left(5 \\sqrt{32}+ 5\\right)$  is niet gelijk aan  $800$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 800\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$800$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "NumberArithmeticAdditionDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 5
+              },
+              "finished": false
+            }
+          },
+          "solution": "$40+ 5 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{2} \\left(5 \\sqrt{32}+ 5\\right)$"
+            },
+            {
+              "result": "$5 \\sqrt{2} \\sqrt{32}+ 5 \\sqrt{2}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$5 \\sqrt{64}+ 5 \\sqrt{2}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$8\\cdot 5+ 5 \\sqrt{2}$",
+              "description": "Bepaal de wortel van  $64$"
+            },
+            {
+              "result": "$40+ 5 \\sqrt{2}$",
+              "description": "Reken uit:  $8\\cdot 5$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAdditionDecimal": {
+      "descr": {
+        "nl": "Decimale getallen optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 5,
+      "marksPenalty": 0
+    }
+  }
+}

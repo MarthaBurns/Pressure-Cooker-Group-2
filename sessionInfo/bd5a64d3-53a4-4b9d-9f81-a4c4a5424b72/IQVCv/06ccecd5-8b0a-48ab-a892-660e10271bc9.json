@@ -1,0 +1,199 @@
+{
+  "success": true,
+  "creationTimestamp": 1749026258,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$93=\\text{-}28+ t ^{2}$"
+        },
+        {
+          "id": "IQVCv",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749026335542,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$121=t^{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1749026392405,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsOperationsPower",
+                    "weight": -100,
+                    "errors": [
+                      "MissingSolutions"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Hoeveel oplossingen verwacht je?</h1>Als  $t ^{2}=c $ , met  $c > 0$ ,  dan geldt  $t =\\sqrt{c }\\vee t =\\text{-}\\sqrt{c }$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup t =11\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$t=11$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749026424316,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$t=\\sqrt{121}v\\ t=-\\sqrt{121}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1749026437326,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodArrangeTerms",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsOperationsAdd",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$t=11\\ v\\ t=-11$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsOperationsPower",
+                "weight": -100,
+                "errors": [
+                  "MissingSolutions"
+                ]
+              },
+              {
+                "id": "EquationsBalanceMethodArrangeTerms",
+                "weight": 100
+              },
+              {
+                "id": "EquationsOperationsAdd",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$t =\\text{-}11\\vee t =11$",
+          "derivation": [
+            {
+              "expression": "$93=\\text{-}28+ t ^{2}$"
+            },
+            {
+              "result": "$121=t ^{2}$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Tel links en rechts  $28$  erbij op."
+            },
+            {
+              "result": "$t =\\sqrt{121}\\vee t =\\text{-}\\sqrt{121}$",
+              "description": "Herleid de vergelijking door links en rechts de wortel te nemen"
+            },
+            {
+              "result": "$t =\\text{-}11\\vee t =11$",
+              "description": "Bepaal de wortel van  $121$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsPower": {
+      "descr": {
+        "nl": "Een macht toepassen op een vergelijking"
+      },
+      "stepType": "STRATEGY",
+      "errors": [
+        {
+          "id": "MissingSolutions",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Zich niet realiseren dat er meerdere oplossingen zijn van de machtsvergelijking."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "success": true,
+  "creationTimestamp": 1744359687,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5 y \\cdot 8- y ^{2}+ \\text{-}3 y \\cdot \\text{-}4 y $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1744359786777,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\text{-}4\\cdot \\text{-}3$  is niet gelijk aan  $13$ .",
+                    "expression": "$\\text{-}40 y - y ^{2}+ \\begingroup\\color{darkred}\\begingroup 13\\endgroup\\endgroup y ^{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-40y\\ -y^{2}+13y^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}40 y + 11 y ^{2}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5\\cdot 8 y - y ^{2}- \\text{-}3\\cdot 4 y \\cdot y $"
+            },
+            {
+              "result": "$\\text{-}40 y - y ^{2}+ 12 y \\cdot y $",
+              "description": "Reken uit:  $\\text{-}3\\cdot \\text{-}4$"
+            },
+            {
+              "result": "$\\text{-}40 y - y ^{2}+ 12 y ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$\\text{-}40 y + 11 y ^{2}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

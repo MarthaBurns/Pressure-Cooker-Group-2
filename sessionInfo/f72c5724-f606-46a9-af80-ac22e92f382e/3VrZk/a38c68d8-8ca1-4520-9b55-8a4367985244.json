@@ -1,0 +1,109 @@
+{
+  "success": true,
+  "creationTimestamp": 1750411531,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}12 x - 24 x ^{2}$"
+        },
+        {
+          "id": "3VrZk",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750411640039,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not factor  $\\text{-}24 x ^{2}- 12 x $  correctly.</h1>$\\text{-}12\\times \\left(\\text{-}2 x ^{2}\\right)$  does not equal  $\\text{-}24 x ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}12 \\left(\\text{-}2 x ^{2}+ x \\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-12\\left(x-2x^{2}\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}12 x  \\left(2 x + 1\\right)$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}12 x - 24 x ^{2}$"
+            },
+            {
+              "result": "$\\text{-}12 \\left(2 x ^{2}+ x \\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Factorise"
+            },
+            {
+              "result": "$\\text{-}12 x  \\left(2 x + 1\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Factorise: Move  $x $  in front of parentheses"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "en": "Factoring a common factor"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

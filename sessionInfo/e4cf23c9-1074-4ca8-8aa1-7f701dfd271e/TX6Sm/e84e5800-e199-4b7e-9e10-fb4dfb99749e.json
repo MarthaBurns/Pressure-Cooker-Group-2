@@ -1,0 +1,133 @@
+{
+  "success": true,
+  "creationTimestamp": 1750122619,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Expand the brackets."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3- 2 \\left(s - 3\\right)^{2}$"
+        },
+        {
+          "id": "TX6Sm",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750122639542,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleDifferenceSquares",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not factor  $3- 2 \\left(s - 3\\right)^{2}$  correctly.</h1>Use the Difference of Squares pattern:  $p ^{2}- q ^{2}=\\left(p - q \\right) \\left(p + q \\right)$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\left(s - 3\\right) \\left(s - 3\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(s-3\\right)\\left(s-3\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorDoubleDifferenceSquares",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}2 s ^{2}+ 12 s - 15$",
+          "derivation": [
+            {
+              "expression": "$3- 2 \\left(s - 3\\right)^{2}$"
+            },
+            {
+              "result": "$3- 2 \\left(s ^{2}- 6 s + \\left(\\text{-}3\\right)^{2}\\right)$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Expand the square"
+            },
+            {
+              "result": "$3- 2 \\left(s ^{2}- 6 s + 3^{2}\\right)$",
+              "description": "When the exponent is an even number, the result is always positive"
+            },
+            {
+              "result": "$3- 2 \\left(s ^{2}- 6 s + 9\\right)$",
+              "description": "Calculate the power by repeated multiplication"
+            },
+            {
+              "result": "$3+ \\left(\\text{-}2 s ^{2}+ 12 s - 18\\right)$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Expand the brackets"
+            },
+            {
+              "result": "$\\text{-}2 s ^{2}+ 12 s - 15$",
+              "description": "Calculate:  $\\text{-}18+ 3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "en": "Expanding a square of a sum of terms"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "en": "Expanding a single pair of parentheses"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FactorDoubleDifferenceSquares": {
+      "descr": {
+        "en": "Factoring differences of squares"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

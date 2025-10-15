@@ -1,0 +1,142 @@
+{
+  "success": true,
+  "creationTimestamp": 1741058811,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$6+ 5 x + x ^{2}$"
+        },
+        {
+          "id": "vHITD",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1741058828755,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": -100,
+                    "errors": [
+                      "SwitchedSumProduct"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not apply the Product-Sum Rule correctly.</h1>The product of the numbers should equal  $6$  and the sum should equal  $5$ . You did it the other way around!",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\left(x + 1\\right) \\left(x + 5\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(x+1\\right)\\left(x+5\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1741058847256,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Factorise using the product-sum method</h1>Write as  $\\left(x + \\ldots\\right) \\left(x + \\ldots\\right)$  where the numbers on the dots have sum  $5$  and product  $6$",
+                    "expression": "$x ^{2}+ 5 x + 6$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": -100,
+                "errors": [
+                  "SwitchedSumProduct"
+                ]
+              },
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\left(x + 3\\right) \\left(x + 2\\right)$",
+          "derivation": [
+            {
+              "expression": "$x ^{2}+ 5 x + 6$"
+            },
+            {
+              "result": "$\\left(x + 3\\right) \\left(x + 2\\right)$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Factorise using the product-sum method"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "en": "Factoring a quadratic expression using the Sum-Product Rule"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "SwitchedSumProduct",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "en": "Switching the values for sum and product."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

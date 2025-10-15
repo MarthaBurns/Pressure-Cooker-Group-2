@@ -1,0 +1,122 @@
+{
+  "success": true,
+  "creationTimestamp": 1747225395,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3+ 8\\cdot t $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1747225413849,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ArithmeticOrderMultiplication",
+                    "weight": -100,
+                    "errors": [
+                      "MultiplicationAddition"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Bereken in de juiste volgorde</h1>$3+ 8 t =3+ \\left(8 t \\right)$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 11 t \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$11t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1747225428471,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3+8t$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ArithmeticOrderMultiplication",
+                "weight": -100,
+                "errors": [
+                  "MultiplicationAddition"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$3+ 8 t $",
+          "derivation": []
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ArithmeticOrderMultiplication": {
+      "descr": {
+        "nl": "Volgorde van operaties met vermenigvuldiging"
+      },
+      "stepType": "CALCULATE",
+      "errors": [
+        {
+          "id": "MultiplicationAddition",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Optellen terwijl vermenigvuldiging voorrang heeft."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

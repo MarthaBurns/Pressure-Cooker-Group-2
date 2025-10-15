@@ -1,0 +1,148 @@
+{
+  "success": true,
+  "creationTimestamp": 1744032779,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{300}$"
+        },
+        {
+          "id": "rJQ8D",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1744032797022,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{3\\ }\\sqrt{100}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1744032810846,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{3\\times100}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1744032827945,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -100,
+                    "errors": [
+                      "MultiplyingFactor"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt rechtstreeks  $3$  buiten de wortel gehaald, maar dat is niet toegestaan.</h1>De regel voor vermenigvuldigen met wortels luidt:  $\\sqrt{a \\cdot b }=\\sqrt{a }\\cdot \\sqrt{b }$ . Als je deze wilt\ntoepassen zul je eerst de wortel moeten nemen van  $3$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3 \\sqrt{100}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\sqrt{100}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -100,
+                "errors": [
+                  "MultiplyingFactor"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$10 \\sqrt{3}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{300}$"
+            },
+            {
+              "result": "$\\sqrt{100} \\sqrt{3}$",
+              "description": "Vereenvoudig de wortel"
+            },
+            {
+              "result": "$10 \\sqrt{3}$",
+              "description": "Bepaal de wortel van  $100$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "nl": "De regels voor vermenigvuldigen van wortels toepassen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "MultiplyingFactor",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De factor direct met de radicand vermenigvuldigen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

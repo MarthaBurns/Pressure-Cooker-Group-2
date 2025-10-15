@@ -1,0 +1,164 @@
+{
+  "success": true,
+  "creationTimestamp": 1750940512,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{t ^{10}}{t ^{2}}$"
+        },
+        {
+          "id": "5ypvz",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750940545084,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$5t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1750940561124,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{t ^{10}}{t ^{2}}$  is niet gelijk aan  $5$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 5\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$5$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750940576911,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraDivisionOfPowerFunctions",
+                    "weight": -100,
+                    "errors": [
+                      "DividingExponents"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de machtsregel voor delen niet goed toegepast.</h1>Je moet de exponenten aftrekken, maar je hebt ze gedeeld.",
+                    "expression": "$\\frac{\\begingroup\\color{darkred}\\begingroup t ^{5}\\endgroup\\endgroup}{1}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$t^{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750940745770,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Deel de gemeenschappelijke factor weg uit teller en noemer</h1>Bij het delen van machten met hetzelfde grondtal kun je de exponenten aftrekken.",
+                    "expression": "$\\frac{t ^{10}}{t ^{2}}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraDivisionOfPowerFunctions",
+                "weight": -100,
+                "errors": [
+                  "DividingExponents"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$t ^{8}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{t ^{10}}{t ^{2}}$"
+            },
+            {
+              "result": "$t ^{8}$",
+              "skills": [
+                "AlgebraDivisionOfPowerFunctions"
+              ],
+              "description": "Deel de gemeenschappelijke factor weg uit teller en noemer"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraDivisionOfPowerFunctions": {
+      "descr": {
+        "nl": "De regel voor delen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "DividingExponents",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De exponenten delen bij het delen van machtsfuncties."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

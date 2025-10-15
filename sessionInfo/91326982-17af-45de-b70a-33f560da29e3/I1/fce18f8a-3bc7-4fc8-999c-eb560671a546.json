@@ -1,0 +1,111 @@
+{
+  "success": true,
+  "creationTimestamp": 1729771080,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 a ^{2}\\cdot a ^{2}\\cdot a $"
+        },
+        {
+          "id": "I1",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1729771092128,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfPowerFunctions",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de machtsregel voor vermenigvuldiging niet goed toegepast.</h1>$t ^{p }\\cdot t ^{q }=t ^{p + q }$",
+                    "expression": "$5 a ^{\\begingroup\\color{darkred}\\begingroup 2\\endgroup\\endgroup} a $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$5a^{2}\\cdot a$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729771117639,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bij vermenigvuldigen van machten kun je de exponenten optellen",
+                    "expression": "$5 \\begingroup\\color{#336699}\\begingroup a ^{2}\\endgroup\\endgroup \\begingroup\\color{#336699}\\begingroup a ^{2}\\endgroup\\endgroup \\begingroup\\color{#336699}\\begingroup a \\endgroup\\endgroup$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfPowerFunctions",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$5 RandVarResult ^{5}\\left(a \\right)$",
+          "derivation": [
+            {
+              "expression": "$5 RandVarResult \\left(a \\right) RandVarResult ^{2}\\left(a \\right) RandVarResult ^{2}\\left(a \\right)$"
+            },
+            {
+              "result": "$5 RandVarResult ^{5}\\left(a \\right)$",
+              "description": "Bij vermenigvuldigen van machten kun je de exponenten optellen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "nl": "De machtsregels voor vermenigvuldigen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

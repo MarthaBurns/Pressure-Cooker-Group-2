@@ -1,0 +1,125 @@
+{
+  "success": true,
+  "creationTimestamp": 1742639951,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Write as concise as possible."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{72}- \\sqrt{15}+ \\sqrt{72}+ \\sqrt{72}$"
+        },
+        {
+          "id": "WbEOf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1742639974213,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{15}+2\\sqrt{72}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1742639979152,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Combine the similar terms</h1>The terms with  $\\sqrt{72}$  are similar.",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\sqrt{72}\\endgroup\\endgroup- \\sqrt{15}+ \\begingroup\\color{#336699}\\begingroup \\left(\\sqrt{72}\\right)\\endgroup\\endgroup+ \\begingroup\\color{#336699}\\begingroup \\sqrt{72}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1742639996955,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{15}+3\\sqrt{72}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$3 \\sqrt{72}- \\sqrt{15}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{72}- \\sqrt{15}+ \\sqrt{72}+ \\sqrt{72}$"
+            },
+            {
+              "result": "$3 \\sqrt{72}- \\sqrt{15}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

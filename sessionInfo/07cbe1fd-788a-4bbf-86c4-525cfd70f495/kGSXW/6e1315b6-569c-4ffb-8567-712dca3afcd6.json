@@ -1,0 +1,147 @@
+{
+  "success": true,
+  "creationTimestamp": 1750876021,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$n ^{2}- 6 n + 5$"
+        },
+        {
+          "id": "kGSXW",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750876242286,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": -100,
+                    "errors": [
+                      "SwitchedSumProduct"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not apply the Product-Sum Rule correctly.</h1>The product of the numbers should equal  $5$  and the sum should equal  $\\text{-}6$ . You did it the other way around!",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\left(n + 6\\right) \\left(n - 1\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(n+6\\right)\\left(n-1\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750876289272,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not apply the Product-Sum Rule correctly.</h1>Find two numbers with sum  $\\text{-}6$  and product  $5$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\left(n - 6\\right) \\left(n + 1\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(n-6\\right)\\left(n+1\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": -100,
+                "errors": [
+                  "SwitchedSumProduct"
+                ]
+              },
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\left(n - 1\\right) \\left(n - 5\\right)$",
+          "derivation": [
+            {
+              "expression": "$n ^{2}- 6 n + 5$"
+            },
+            {
+              "result": "$\\left(n - 1\\right) \\left(n - 5\\right)$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Factorise using the product-sum method"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "en": "Factoring a quadratic expression using the Sum-Product Rule"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "SwitchedSumProduct",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "en": "Switching the values for sum and product."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

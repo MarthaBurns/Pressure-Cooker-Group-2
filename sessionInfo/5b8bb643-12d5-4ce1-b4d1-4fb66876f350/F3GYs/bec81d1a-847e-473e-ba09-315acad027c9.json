@@ -1,0 +1,153 @@
+{
+  "success": true,
+  "creationTimestamp": 1758026869,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{\\frac{2}{3}}{\\text{-}2\\frac{1}{2}}$"
+        },
+        {
+          "id": "F3GYs",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1758027005849,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{\\frac{2}{3}}{\\text{-}2\\frac{1}{2}}$  is niet gelijk aan  $\\text{-}4$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}4\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758027012086,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Maak de noemer positief door noemer en teller met -1 te vermenigvuldigen</h1>Vergeet niet de teller ook van teken te veranderen",
+                    "expression": "$\\frac{\\frac{2}{3}}{\\text{-}2\\frac{1}{2}}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1758027043410,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{\\frac{2}{3}}{\\text{-}2\\frac{1}{2}}$  is niet gelijk aan  $4$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 4\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}\\frac{4}{15}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{\\frac{2}{3}}{\\text{-}2\\frac{1}{2}}$"
+            },
+            {
+              "result": "$\\text{-}\\frac{2}{3} : 2\\frac{1}{2}$",
+              "description": "Maak de noemer positief door noemer en teller met -1 te vermenigvuldigen"
+            },
+            {
+              "result": "$\\text{-}\\frac{2}{3} : \\left(\\frac{5}{2}\\right)$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Schrijf  $2\\frac{1}{2}$  om naar een gewone breuk"
+            },
+            {
+              "result": "$\\text{-}\\frac{2}{3}\\cdot \\frac{2}{5}$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Delen door een breuk is vermenigvuldigen met het omgekeerde"
+            },
+            {
+              "result": "$\\text{-}\\frac{4}{15}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Vermenigvuldig de breuken"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "nl": "Echte breuken delen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "nl": "Echte breuken vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

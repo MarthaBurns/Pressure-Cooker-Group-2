@@ -1,0 +1,185 @@
+{
+  "success": true,
+  "creationTimestamp": 1743752309,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$6 s ^{2}=96$"
+        },
+        {
+          "id": "ybGQg",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1743752344853,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$s^{2}=16$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1743752349636,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsOperationsPower",
+                    "weight": -100,
+                    "errors": [
+                      "MissingSolutions"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Hoeveel oplossingen verwacht je?</h1>Als  $t ^{2}=c $ , met  $c > 0$ ,  dan geldt  $t =\\sqrt{c }\\vee t =\\text{-}\\sqrt{c }$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup s =4\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$s=4$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1743752363324,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "EquationsBalanceMethodDivideCoefficient",
+                    "weight": 100
+                  },
+                  {
+                    "id": "EquationsOperationsMultiply",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$s=4\\ \\vee\\ s=-4$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "EquationsOperationsPower",
+                "weight": -100,
+                "errors": [
+                  "MissingSolutions"
+                ]
+              },
+              {
+                "id": "EquationsBalanceMethodDivideCoefficient",
+                "weight": 100
+              },
+              {
+                "id": "EquationsOperationsMultiply",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$s =\\text{-}4\\vee s =4$",
+          "derivation": [
+            {
+              "expression": "$6 s ^{2}=96$"
+            },
+            {
+              "result": "$s ^{2}=16$",
+              "skills": [
+                "EquationsBalanceMethodDivideCoefficient",
+                "EquationsOperationsMultiply"
+              ],
+              "description": "Deel links en rechts door  $6$"
+            },
+            {
+              "result": "$s =\\sqrt{16}\\vee s =\\text{-}\\sqrt{16}$",
+              "description": "Herleid de vergelijking door links en rechts de wortel te nemen"
+            },
+            {
+              "result": "$s =\\text{-}4\\vee s =4$",
+              "description": "Bepaal de wortel van  $16$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodDivideCoefficient": {
+      "descr": {
+        "nl": "Delen door de coëfficiënt voor de variabele om de oplossing te krijgen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsMultiply": {
+      "descr": {
+        "nl": "Vermenigvuldigen of delen van een vergelijking via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsPower": {
+      "descr": {
+        "nl": "Een macht toepassen op een vergelijking"
+      },
+      "stepType": "STRATEGY",
+      "errors": [
+        {
+          "id": "MissingSolutions",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Zich niet realiseren dat er meerdere oplossingen zijn van de machtsvergelijking."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

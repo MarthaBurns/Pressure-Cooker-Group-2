@@ -1,0 +1,193 @@
+{
+  "success": true,
+  "creationTimestamp": 1759693282,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{5}{\\sqrt{5}}$"
+        },
+        {
+          "id": "A3l5S",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1759693296630,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "source": "NEXT_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{5\\sqrt{5}}{\\sqrt{5}\\cdot\\sqrt{5}}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.5714285714285714,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraProductOfRoots",
+                  "FractionArithmeticSimplifyProper"
+                ]
+              },
+              {
+                "timestamp": 1759693301157,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraPowerRuleRoots",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "AlgebraDivisionOfPowerFunctions",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticAddProperCommonDenominator",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticIntegerToFraction",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraPowerRuleRoots",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "AlgebraDivisionOfPowerFunctions",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticAddProperCommonDenominator",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticIntegerToFraction",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\sqrt{5}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{5}{\\sqrt{5}}$"
+            },
+            {
+              "result": "$\\frac{5}{5^{\\frac{1}{2}}}$",
+              "skills": [
+                "AlgebraPowerRuleRoots"
+              ],
+              "description": "Schrijf de wortel om naar een machtsfunctie"
+            },
+            {
+              "result": "$5^{1- \\frac{1}{2}}$",
+              "skills": [
+                "AlgebraDivisionOfPowerFunctions"
+              ],
+              "description": "Deel  $5^{\\frac{1}{2}}$  weg uit teller en noemer"
+            },
+            {
+              "result": "$5^{\\frac{1}{2}}$",
+              "skills": [
+                "FractionArithmeticAddProperCommonDenominator",
+                "FractionArithmeticIntegerToFraction"
+              ],
+              "description": "Schrijf  $1- \\frac{1}{2}$  als één breuk:"
+            },
+            {
+              "result": "$\\sqrt{5}$",
+              "description": "Herschrijf de machtsfunctie tot een machtswortel"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraPowerRuleRoots": {
+      "descr": {
+        "nl": "De machtsregels voor wortels toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraDivisionOfPowerFunctions": {
+      "descr": {
+        "nl": "De regel voor delen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FractionArithmeticAddProperCommonDenominator": {
+      "descr": {
+        "nl": "Gelijknamige echte breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticIntegerToFraction": {
+      "descr": {
+        "nl": "Een geheel getal als een breuk schrijven"
+      },
+      "stepType": "CALCULATE"
+    },
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "nl": "De regels voor vermenigvuldigen van wortels toepassen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "nl": "Een breuk vereenvoudigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

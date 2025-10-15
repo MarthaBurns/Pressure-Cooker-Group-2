@@ -1,0 +1,125 @@
+{
+  "success": true,
+  "creationTimestamp": 1734458132,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Reken uit."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{2\\frac{1}{2}}{2\\frac{2}{4}}$"
+        },
+        {
+          "id": "cH76j",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1734458194702,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\frac{2\\frac{1}{2}}{2\\frac{2}{4}}$  is niet gelijk aan  $\\frac{20}{10}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\frac{20}{10}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{20}{10}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$1$",
+          "derivation": [
+            {
+              "expression": "$\\frac{2\\frac{1}{2}}{2\\frac{2}{4}}$"
+            },
+            {
+              "result": "$\\frac{2\\frac{1}{2}}{2\\frac{1}{2}}$",
+              "skills": [
+                "FractionArithmeticSimilarMixed"
+              ],
+              "description": "Vereenvoudig de breuk"
+            },
+            {
+              "result": "$\\frac{5}{2}/2\\frac{1}{2}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Schrijf  $2\\frac{1}{2}$  om naar een gewone breuk"
+            },
+            {
+              "result": "$\\frac{5}{2}/\\left(\\frac{5}{2}\\right)$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Schrijf  $2\\frac{1}{2}$  om naar een gewone breuk"
+            },
+            {
+              "result": "$1$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Bereken  $\\frac{5}{2}/\\left(\\frac{5}{2}\\right)$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixed": {
+      "descr": {
+        "nl": "Een gelijkwaardige gemengde breuk schrijven"
+      },
+      "stepType": "CONCEPT"
+    },
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "nl": "Echte breuken delen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

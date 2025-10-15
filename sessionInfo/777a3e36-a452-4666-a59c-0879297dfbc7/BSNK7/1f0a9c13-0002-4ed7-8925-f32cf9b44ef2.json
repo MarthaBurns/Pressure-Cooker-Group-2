@@ -1,0 +1,129 @@
+{
+  "success": true,
+  "creationTimestamp": 1740665464,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{6}+ 4 \\sqrt{12}\\cdot 4 \\sqrt{2}$"
+        },
+        {
+          "id": "BSNK7",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1740665553875,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $4 \\sqrt{12}\\cdot 4 \\sqrt{2}$  is niet gelijk aan  $192$ .",
+                    "expression": "$\\sqrt{6}+ \\begingroup\\color{darkred}\\begingroup 192\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{6}+192$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1740665582431,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$\\sqrt{6}+ \\begingroup\\color{#336699}\\begingroup 4\\endgroup\\endgroup \\sqrt{12}\\cdot \\begingroup\\color{#336699}\\begingroup 4\\endgroup\\endgroup \\sqrt{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1740665626327,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{6}+16\\sqrt{24}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\sqrt{6}+ 16 \\sqrt{24}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{6}+ 4\\cdot 4 \\sqrt{12} \\sqrt{2}$"
+            },
+            {
+              "result": "$\\sqrt{6}+ 16 \\sqrt{12} \\sqrt{2}$",
+              "description": "Reken uit:  $4\\cdot 4$"
+            },
+            {
+              "result": "$\\sqrt{6}+ 16 \\sqrt{24}$",
+              "description": "Vermenigvuldig de wortels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

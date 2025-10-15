@@ -1,0 +1,174 @@
+{
+  "success": true,
+  "creationTimestamp": 1733240537,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf zo kort mogelijk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{8}+ \\sqrt{8}+ \\sqrt{17}- \\sqrt{17}$"
+        },
+        {
+          "id": "WbEOf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1733240587243,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$\\sqrt{8}+ \\sqrt{8}+ \\sqrt{17}$  is niet gelijk aan  $2 \\sqrt{8}$ .</h1>Je bent vergeten  $\\sqrt{17}$  op te tellen.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2 \\sqrt{8}\\endgroup\\endgroup- \\sqrt{17}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{8}-\\sqrt{17}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733240627670,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{8}-2\\sqrt{17}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1733240638667,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{8}+2\\sqrt{17}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1733240704523,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{33}\\endgroup\\endgroup- \\sqrt{17}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{33}-\\sqrt{17}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733240727937,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $\\sqrt{17}$  zijn gelijksoortig.",
+                    "expression": "$\\sqrt{8}+ \\sqrt{8}+ \\begingroup\\color{#336699}\\begingroup \\sqrt{17}\\endgroup\\endgroup- \\begingroup\\color{#336699}\\begingroup \\sqrt{17}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733240738694,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{8}-2\\sqrt{17}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 5
+              },
+              "finished": false
+            }
+          },
+          "solution": "$2 \\sqrt{8}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{8}+ \\sqrt{8}+ \\sqrt{17}- \\sqrt{17}$"
+            },
+            {
+              "result": "$2 \\sqrt{8}$",
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 5,
+      "marksPenalty": 0
+    }
+  }
+}

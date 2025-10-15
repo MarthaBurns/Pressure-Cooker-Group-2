@@ -1,0 +1,177 @@
+{
+  "success": true,
+  "creationTimestamp": 1759927495,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Bereken en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$1\\frac{2}{3}+ \\frac{1}{5}$"
+        },
+        {
+          "id": "Nno6J",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1759927561342,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{5}{3}+ \\frac{1}{5}$  is niet gelijk aan  $\\frac{10}{15}+ \\frac{3}{15}$ .",
+                    "expression": "$\\frac{5}{3}+ \\frac{1}{5}=\\frac{10}{15}+ \\frac{3}{15}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{5}{3}\\ +\\ \\frac{1}{5}\\ =\\ \\frac{10}{15}\\ +\\ \\frac{3}{15}\\ =\\ \\frac{13}{15}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1759927668075,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{28}{15}$  is niet gelijk aan  $1\\frac{12}{15}$ .",
+                    "expression": "$\\frac{28}{15}=1\\frac{12}{15}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{5}{3}\\ +\\ \\frac{1}{5}\\ =\\ \\frac{25}{15}\\ +\\ \\frac{3}{15}\\ =\\ \\frac{28}{15}\\ =\\ 1\\ \\frac{12}{15}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1759927759588,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticAddMixed",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticAddProperUnlikeDenominator",
+                    "source": "FINISHED_STEP"
+                  },
+                  {
+                    "id": "FractionArithmeticSimilarImproperToMixed",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{5}{3}\\ +\\ \\frac{1}{5}\\ =\\ \\frac{25}{15}\\ +\\ \\frac{3}{15}\\ =\\ \\frac{28}{15}\\ =\\ 1\\ \\frac{13}{15}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticAddMixed",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticAddProperUnlikeDenominator",
+                "source": "FINISHED_STEP"
+              },
+              {
+                "id": "FractionArithmeticSimilarImproperToMixed",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$1\\frac{13}{15}$",
+          "derivation": [
+            {
+              "expression": "$1\\frac{2}{3}+ \\frac{1}{5}$"
+            },
+            {
+              "result": "$1+ \\frac{2}{3}+ \\frac{1}{5}$",
+              "skills": [
+                "FractionArithmeticAddMixed"
+              ],
+              "description": "Splits de samengestelde breuk"
+            },
+            {
+              "result": "$1+ \\frac{13}{15}$",
+              "skills": [
+                "FractionArithmeticAddProperUnlikeDenominator"
+              ],
+              "description": "Maak de breuken gelijknamig"
+            },
+            {
+              "result": "$1\\frac{13}{15}$",
+              "skills": [
+                "FractionArithmeticSimilarImproperToMixed"
+              ],
+              "description": "Schrijf  $1+ \\frac{13}{15}$  als één breuk:"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticAddMixed": {
+      "descr": {
+        "nl": "Gemengde breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticAddProperUnlikeDenominator": {
+      "descr": {
+        "nl": "Ongelijknamige breuken optellen"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimilarImproperToMixed": {
+      "descr": {
+        "nl": "Een onechte breuk schrijven als een gemengde breuk"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

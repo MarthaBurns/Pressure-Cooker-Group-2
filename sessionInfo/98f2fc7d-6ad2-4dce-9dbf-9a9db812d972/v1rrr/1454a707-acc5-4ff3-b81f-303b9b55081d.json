@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "creationTimestamp": 1750857825,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 y ^{2}+ 3 y \\cdot \\text{-}y + 7\\cdot 2 y $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750857932099,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$5 y ^{2}- 3 y \\cdot y $  is niet gelijk aan  $\\text{-}2 y ^{2}$ .</h1>Herleid  $\\text{-}3 y \\cdot y $  eerst naar de vorm  $\\ldots y ^{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}2 y ^{2}\\endgroup\\endgroup+ 14 y $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-2y^{2}+14y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$2 y ^{2}+ 14 y $",
+          "derivation": [
+            {
+              "expression": "$5 y ^{2}- 3 y \\cdot y + 7\\cdot 2 y $"
+            },
+            {
+              "result": "$5 y ^{2}- 3 y \\cdot y + 14 y $",
+              "description": "Reken uit:  $7\\cdot 2$"
+            },
+            {
+              "result": "$5 y ^{2}- 3 y ^{2}+ 14 y $",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$2 y ^{2}+ 14 y $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

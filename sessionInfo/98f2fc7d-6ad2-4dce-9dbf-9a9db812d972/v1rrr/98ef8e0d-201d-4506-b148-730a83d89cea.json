@@ -1,0 +1,128 @@
+{
+  "success": true,
+  "creationTimestamp": 1744799972,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}4 y \\cdot \\text{-}4 y - 2 y ^{2}+ 6\\cdot 2 y $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1744800000641,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$8y^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1744800100837,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$18y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1744800120122,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$\\text{-}4 y \\cdot \\text{-}4 y - 2 y ^{2}$  is niet gelijk aan  $6 y ^{2}$ .</h1>Herleid  $\\text{-}4 y \\cdot \\text{-}4 y $  eerst naar de vorm  $\\ldots y ^{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 6 y ^{2}\\endgroup\\endgroup+ 12 y $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6y^{2}+12y$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$14 y ^{2}+ 12 y $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}4\\cdot \\text{-}4 y \\cdot y - 2 y ^{2}+ 6\\cdot 2 y $"
+            },
+            {
+              "result": "$16 y \\cdot y - 2 y ^{2}+ 12 y $",
+              "description": "Reken uit:  $6\\cdot 2$"
+            },
+            {
+              "result": "$16 y ^{2}- 2 y ^{2}+ 12 y $",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$14 y ^{2}+ 12 y $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

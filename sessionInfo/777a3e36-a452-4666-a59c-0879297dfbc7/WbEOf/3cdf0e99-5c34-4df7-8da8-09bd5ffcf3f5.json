@@ -1,0 +1,146 @@
+{
+  "success": true,
+  "creationTimestamp": 1733689381,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf zo kort mogelijk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{80}+ \\sqrt{70}- \\sqrt{80}+ \\sqrt{80}+ \\sqrt{70}$"
+        },
+        {
+          "id": "WbEOf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1733689414293,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{80}+2\\sqrt{70}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1733689420513,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $\\sqrt{80}+ \\sqrt{70}- \\sqrt{80}+ \\sqrt{80}+ \\sqrt{70}$  is niet gelijk aan  $2$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733689424832,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $\\sqrt{70}$  zijn gelijksoortig.",
+                    "expression": "$\\sqrt{80}+ \\begingroup\\color{#336699}\\begingroup \\sqrt{70}\\endgroup\\endgroup- \\sqrt{80}+ \\sqrt{80}+ \\begingroup\\color{#336699}\\begingroup \\sqrt{70}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733689458879,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$\\sqrt{80}+ \\sqrt{70}- \\sqrt{80}+ \\sqrt{80}+ \\sqrt{70}$  is niet gelijk aan  $\\text{-}\\sqrt{80}+ \\sqrt{70}$ .</h1>Je bent vergeten  $\\sqrt{80}+ \\sqrt{70}+ \\sqrt{80}$  op te tellen.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}\\sqrt{80}+ \\sqrt{70}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-\\sqrt{80}+\\sqrt{70}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\sqrt{80}+ 2 \\sqrt{70}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{80}+ \\sqrt{70}- \\sqrt{80}+ \\sqrt{80}+ \\sqrt{70}$"
+            },
+            {
+              "result": "$\\sqrt{80}+ 2 \\sqrt{70}$",
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

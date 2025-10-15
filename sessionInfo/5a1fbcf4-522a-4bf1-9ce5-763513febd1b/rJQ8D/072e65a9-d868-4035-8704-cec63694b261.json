@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "creationTimestamp": 1758954176,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{200}$"
+        },
+        {
+          "id": "rJQ8D",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1758954185055,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Simplify the square root</h1>Simplify the root in a convenient way:  $\\sqrt{200}=\\sqrt{100} \\sqrt{2}$",
+                    "expression": "$\\sqrt{200}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1758954224962,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "This part is not correct.",
+                    "expression": "$\\sqrt{\\begingroup\\color{darkred}\\begingroup 100 \\sqrt{2}\\endgroup\\endgroup}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{100\\ \\sqrt{2}}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758954242956,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{100}\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1758954333895,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\sqrt{200}$  does not equal  $\\left(\\sqrt{100}\\right)^{\\sqrt{2}}$ .",
+                    "expression": "$\\sqrt{200}=\\left(\\sqrt{100}\\right)^{\\sqrt{2}}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{200}=\\sqrt{100\\ }^{\\sqrt{2}}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$10 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{200}$"
+            },
+            {
+              "result": "$\\sqrt{100} \\sqrt{2}$",
+              "description": "Simplify the square root"
+            },
+            {
+              "result": "$10 \\sqrt{2}$",
+              "description": "Calculate the square root of  $100$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {},
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

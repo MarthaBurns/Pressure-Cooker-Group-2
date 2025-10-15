@@ -1,0 +1,135 @@
+{
+  "success": true,
+  "creationTimestamp": 1755693867,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{3} \\left(\\text{-}3+ 2 \\sqrt{12}\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1755693902830,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-3\\sqrt{3}+2\\sqrt{36}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1755693919768,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Bepaal de wortel van  $36$</h1>Bedenk welk getal met zichzelf vermenigvuldigd gelijk is aan  $36$",
+                    "expression": "$\\text{-}3 \\sqrt{3}+ 2 \\begingroup\\color{#336699}\\begingroup \\sqrt{36}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1755693953256,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-3\\sqrt{3}+12$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}3 \\sqrt{3}+ 12$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{3} \\left(\\text{-}3+ 2 \\sqrt{12}\\right)$"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{3}+ 2 \\sqrt{3} \\sqrt{12}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{3}+ 2 \\sqrt{36}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{3}+ 6\\cdot 2$",
+              "description": "Bepaal de wortel van  $36$"
+            },
+            {
+              "result": "$\\text{-}3 \\sqrt{3}+ 12$",
+              "description": "Reken uit:  $6\\cdot 2$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

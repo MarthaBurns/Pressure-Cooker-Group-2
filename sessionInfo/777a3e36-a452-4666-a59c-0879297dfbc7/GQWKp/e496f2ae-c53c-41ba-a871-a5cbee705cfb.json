@@ -1,0 +1,105 @@
+{
+  "success": true,
+  "creationTimestamp": 1757446563,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$4 \\sqrt{2}\\cdot 7 \\sqrt{3}$"
+        },
+        {
+          "id": "GQWKp",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1757446603600,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": 50,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\sqrt{3}\\cdot 4\\cdot 7 \\sqrt{2}$  is niet gelijk aan  $\\sqrt{2 \\sqrt{3\\cdot 28}}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{2 \\sqrt{3\\cdot 28}}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{2\\sqrt{3\\times28}}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": 50,
+                "source": "ERROR_FEEDBACK"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$28 \\sqrt{6}$",
+          "derivation": [
+            {
+              "expression": "$4\\cdot 7 \\sqrt{2} \\sqrt{3}$"
+            },
+            {
+              "result": "$28 \\sqrt{2} \\sqrt{3}$",
+              "description": "Reken uit:  $4\\cdot 7$"
+            },
+            {
+              "result": "$28 \\sqrt{6}$",
+              "description": "Vermenigvuldig de wortels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "nl": "De regels voor vermenigvuldigen van wortels toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

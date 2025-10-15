@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "creationTimestamp": 1737021166,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$3 \\sqrt{5}- 4 \\sqrt{25}\\cdot \\sqrt{5}$"
+        },
+        {
+          "id": "BSNK7",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1737021266940,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$5$  is niet gelijk aan  $\\text{-}1$ .",
+                    "expression": "$3 \\sqrt{5}- 4 \\sqrt{25} \\sqrt{5}=3 \\sqrt{5- 4 \\sqrt{\\begingroup\\color{darkred}\\begingroup 5=\\text{-}1\\endgroup\\endgroup}}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\sqrt{5}-4\\sqrt{25}\\sqrt{5}=3\\sqrt{5}-4\\sqrt{125}=3\\sqrt{5-4\\sqrt{5=-1}}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}17 \\sqrt{5}$",
+          "derivation": [
+            {
+              "expression": "$3 \\sqrt{5}- 4 \\sqrt{25} \\sqrt{5}$"
+            },
+            {
+              "result": "$3 \\sqrt{5}- 4\\cdot 5 \\sqrt{5}$",
+              "description": "Bepaal de wortel van  $25$"
+            },
+            {
+              "result": "$3 \\sqrt{5}- 20 \\sqrt{5}$",
+              "description": "Reken uit:  $\\text{-}4\\cdot 5$"
+            },
+            {
+              "result": "$\\text{-}17 \\sqrt{5}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

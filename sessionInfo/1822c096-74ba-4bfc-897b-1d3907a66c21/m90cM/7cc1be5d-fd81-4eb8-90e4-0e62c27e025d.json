@@ -1,0 +1,202 @@
+{
+  "success": true,
+  "creationTimestamp": 1730233729,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$9 a  p + 4 a  p + p $"
+        },
+        {
+          "id": "m90cM",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1730233737367,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$9 p  a + 4 p  a + p $  is niet gelijk aan  $14 p $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 14 p \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$14p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1730233748023,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$9 p  a + 4 p  a + p $  is niet gelijk aan  $13 p $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 13 p \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$13p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1730233766083,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$14pa$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1730233772361,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$9 p  a + 4 p  a + p $  is niet gelijk aan  $13 p  a $ .</h1>Je bent vergeten  $p $  op te tellen.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 13 p  a \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$13pa$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1730233780585,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $a  p $  zijn gelijksoortig.",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 9 p  a \\endgroup\\endgroup+ \\begingroup\\color{#336699}\\begingroup 4 p  a \\endgroup\\endgroup+ p $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1730233785611,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticAdditionInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$9 p  a + 4 p  a $  is niet gelijk aan  $14 p  a $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 14 p  a \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$14pa$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "NumberArithmeticAdditionInteger",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 5
+              },
+              "finished": false
+            }
+          },
+          "solution": "$13 RandVarResult \\left(p \\right) RandVarResult \\left(a \\right)+ RandVarResult \\left(p \\right)$",
+          "derivation": [
+            {
+              "expression": "$9 RandVarResult \\left(p \\right) RandVarResult \\left(a \\right)+ 4 RandVarResult \\left(p \\right) RandVarResult \\left(a \\right)+ RandVarResult \\left(p \\right)$"
+            },
+            {
+              "result": "$13 RandVarResult \\left(p \\right) RandVarResult \\left(a \\right)+ RandVarResult \\left(p \\right)$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticAdditionInteger": {
+      "descr": {
+        "nl": "Gehele getallen optellen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 5,
+      "marksPenalty": 0
+    }
+  }
+}

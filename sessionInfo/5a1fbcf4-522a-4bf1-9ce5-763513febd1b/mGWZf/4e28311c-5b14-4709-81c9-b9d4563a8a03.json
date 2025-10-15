@@ -1,0 +1,249 @@
+{
+  "success": true,
+  "creationTimestamp": 1729540339,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{3}{1+ \\sqrt{5}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1729540367448,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Haal de wortel uit de noemer</h1>Maak gebruik van het merkwaardig product:  $\\left(a - \\sqrt{b }\\right) \\left(a + \\sqrt{b }\\right)=a ^{2}- b $",
+                    "expression": "$\\frac{3}{1+ \\sqrt{5}}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729540475020,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3-3\\sqrt{5}}{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1729540477538,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Haal de wortel uit de noemer</h1>Maak gebruik van het merkwaardig product:  $\\left(a - \\sqrt{b }\\right) \\left(a + \\sqrt{b }\\right)=a ^{2}- b $",
+                    "expression": "$\\frac{3}{1+ \\sqrt{5}}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729540518844,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-\\frac{3-3\\sqrt{5}}{4}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "ExpandSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1729540526153,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Vermenigvuldig de teller met -1",
+                    "expression": "$\\text{-}\\frac{3- 3 \\sqrt{5}}{4}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729540555499,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100,
+                    "errors": [
+                      "SkippingTerms"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Je hebt niet alle termen van  $3- 3 \\sqrt{5}$  met  $\\text{-}1$  vermenigvuldigd.",
+                    "expression": "$\\frac{\\text{-}3- \\begingroup\\color{darkred}\\begingroup 3 \\sqrt{5}\\endgroup\\endgroup}{4}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{-3-3\\sqrt{5}}{4}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729540596306,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleDifferenceSquares",
+                    "weight": 100
+                  },
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{-3+3\\sqrt{5}}{4}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100,
+                "errors": [
+                  "SkippingTerms"
+                ]
+              },
+              {
+                "id": "ExpandDoubleDifferenceSquares",
+                "weight": 100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 3,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{\\text{-}3+ 3 \\sqrt{5}}{4}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{3}{1+ \\sqrt{5}}$"
+            },
+            {
+              "result": "$\\frac{3 \\left(1- \\sqrt{5}\\right)}{\\left(1+ \\sqrt{5}\\right) \\left(1- \\sqrt{5}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{3 \\left(1- \\sqrt{5}\\right)}{1- \\left(\\sqrt{5}\\right)^{2}}$",
+              "skills": [
+                "ExpandDoubleDifferenceSquares"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\text{-}\\frac{3 \\left(1- \\sqrt{5}\\right)}{4}$",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\frac{\\text{-}3+ 3 \\sqrt{5}}{4}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleDifferenceSquares": {
+      "descr": {
+        "nl": "Een product uitschrijven als het het verschil van twee kwadraten"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "SkippingTerms",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Niet alle termen vermenigvuldigen met de coëfficiënt."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 3,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

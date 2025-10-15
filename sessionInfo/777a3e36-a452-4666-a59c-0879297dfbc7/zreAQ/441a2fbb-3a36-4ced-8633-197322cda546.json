@@ -1,0 +1,107 @@
+{
+  "success": true,
+  "creationTimestamp": 1732882660,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{6}+ 3 \\sqrt{5}\\cdot 3 \\sqrt{5}$"
+        },
+        {
+          "id": "zreAQ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1732882702739,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $3 \\sqrt{5}\\cdot 3 \\sqrt{5}$  is niet gelijk aan  $5$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 5\\endgroup\\endgroup+ \\sqrt{6}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$5+\\sqrt{6}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\sqrt{6}+ 45$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{6}+ 3\\cdot 3 \\sqrt{5} \\sqrt{5}$"
+            },
+            {
+              "result": "$\\sqrt{6}+ 9 \\sqrt{5} \\sqrt{5}$",
+              "description": "Reken uit:  $3\\cdot 3$"
+            },
+            {
+              "result": "$\\sqrt{6}+ 9\\cdot 5$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\sqrt{6}+ 45$",
+              "description": "Reken uit:  $9\\cdot 5$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "nl": "Decimale getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

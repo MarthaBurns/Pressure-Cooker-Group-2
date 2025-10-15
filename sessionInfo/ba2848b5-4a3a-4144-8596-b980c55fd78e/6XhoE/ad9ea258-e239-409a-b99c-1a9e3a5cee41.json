@@ -1,0 +1,127 @@
+{
+  "success": true,
+  "creationTimestamp": 1758809332,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2\\frac{4}{7}\\times 1\\frac{4}{5}$"
+        },
+        {
+          "id": "6XhoE",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1758809443053,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\left(2\\times 1\\right)\\times \\frac{4\\times 4}{7\\times 5}$  does not equal  $2\\frac{16}{35}$ .",
+                    "expression": "$\\left(2\\times 1\\right)\\times \\frac{4\\times 4}{7\\times 5}=2\\frac{16}{35}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(2\\times1\\right)\\frac{4\\times4}{7\\times5}=2\\frac{16}{35}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1758809451916,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FractionArithmeticSimilarMixedToImproper",
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Rewrite  $2\\frac{4}{7}$  and  $1\\frac{4}{5}$  into improper fractions",
+                    "expression": "$2\\frac{4}{7}\\times 1\\frac{4}{5}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FractionArithmeticSimilarMixedToImproper",
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{162}{35}$",
+          "derivation": [
+            {
+              "expression": "$2\\frac{4}{7}\\times 1\\frac{4}{5}$"
+            },
+            {
+              "result": "$\\frac{18}{7}\\times \\frac{9}{5}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Rewrite  $2\\frac{4}{7}$  and  $1\\frac{4}{5}$  into improper fractions"
+            },
+            {
+              "result": "$\\frac{162}{35}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Multiply the fractions"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "en": "Writing a mixed fraction into a similar improper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "en": "Multiplying proper fractions"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

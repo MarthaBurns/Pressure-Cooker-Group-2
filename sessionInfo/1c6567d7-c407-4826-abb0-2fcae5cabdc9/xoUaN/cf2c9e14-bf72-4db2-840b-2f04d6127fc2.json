@@ -1,0 +1,125 @@
+{
+  "success": true,
+  "creationTimestamp": 1729239960,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes weg en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}6 \\left(\\text{-}3 a - 5\\right)+ 2+ 3 \\left(\\text{-}2 a - 3\\right)$"
+        },
+        {
+          "id": "xoUaN",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1729240046883,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$12a+17$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1729240049647,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de haakjes uit</h1>Vermenigvuldig elke term binnen de haakjes met  $\\text{-}6$",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\text{-}6 \\left(\\text{-}3 a - 5\\right)\\endgroup\\endgroup+ 2+ 3 \\left(\\text{-}2 a - 3\\right)$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$12 RandVarResult \\left(a \\right)+ 23$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}6 \\left(\\text{-}3 RandVarResult \\left(a \\right)- 5\\right)+ 2+ 3 \\left(\\text{-}2 RandVarResult \\left(a \\right)- 3\\right)$"
+            },
+            {
+              "result": "$18 RandVarResult \\left(a \\right)+ 30+ 2- 6 RandVarResult \\left(a \\right)- 9$",
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$18 RandVarResult \\left(a \\right)+ 23- 6 RandVarResult \\left(a \\right)$",
+              "description": "Reken uit:  $30+ 2- 9$"
+            },
+            {
+              "result": "$12 RandVarResult \\left(a \\right)+ 23$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

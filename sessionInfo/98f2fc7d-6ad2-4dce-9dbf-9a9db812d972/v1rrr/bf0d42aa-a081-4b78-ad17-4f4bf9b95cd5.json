@@ -1,0 +1,105 @@
+{
+  "success": true,
+  "creationTimestamp": 1733343784,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5 x ^{2}+ 3 x \\times \\left(\\text{-}4 x \\right)+ 2\\times \\left(\\text{-}5 x \\right)$"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733343810595,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-17x^{2}-10x$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}17 x ^{2}- 10 x $",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5 x ^{2}- 3\\times 4 x \\times x - 2\\times 5 x $"
+            },
+            {
+              "result": "$\\text{-}5 x ^{2}- 12 x \\times x - 10 x $",
+              "description": "Calculate:  $2\\times \\left(\\text{-}5\\right)$"
+            },
+            {
+              "result": "$\\text{-}5 x ^{2}- 12 x ^{2}- 10 x $",
+              "description": "Write the repeated multiplication as a power"
+            },
+            {
+              "result": "$\\text{-}17 x ^{2}- 10 x $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

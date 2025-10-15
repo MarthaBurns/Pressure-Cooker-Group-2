@@ -1,0 +1,116 @@
+{
+  "success": true,
+  "creationTimestamp": 1741881241,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Write as concise as possible."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{99}+ \\sqrt{21}- \\sqrt{99}- \\sqrt{99}- \\sqrt{99}$"
+        },
+        {
+          "id": "WbEOf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1741881294945,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "this part is not correct.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}\\sqrt{198}\\endgroup\\endgroup+ \\sqrt{21}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-\\sqrt{198}+\\sqrt{21}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1741881312067,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Combine the similar terms</h1>The terms with  $\\sqrt{99}$  are similar.",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\sqrt{99}\\endgroup\\endgroup+ \\sqrt{21}- \\begingroup\\color{#336699}\\begingroup \\sqrt{99}\\endgroup\\endgroup- \\begingroup\\color{#336699}\\begingroup \\sqrt{99}\\endgroup\\endgroup- \\begingroup\\color{#336699}\\begingroup \\sqrt{99}\\endgroup\\endgroup$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}2 \\sqrt{99}+ \\sqrt{21}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{99}+ \\sqrt{21}- \\sqrt{99}- \\sqrt{99}- \\sqrt{99}$"
+            },
+            {
+              "result": "$\\text{-}2 \\sqrt{99}+ \\sqrt{21}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "success": true,
+  "creationTimestamp": 1750194020,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Expand the brackets."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\left(3 m - 5\\right) \\left(3+ m \\right)+ 4 m $"
+        },
+        {
+          "id": "O3mgi",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750194129788,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -100,
+                    "errors": [
+                      "MissingTerms"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not expand the double brackets correctly.</h1>You did not multiply all terms.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 3 m ^{2}- 15\\endgroup\\endgroup+ 4 m $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$3m^{2}+4m-15$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750194140194,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -10
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not expand the double brackets correctly.</h1>$\\left(a + b \\right) \\left(c + d \\right)=a \\times c + a \\times d + b \\times c + b \\times d $",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 9 m ^{2}- 15\\endgroup\\endgroup+ 4 m $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$9m^{2}+4m-15$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750194182113,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Expand the double brackets</h1>$\\left(a + b \\right) \\left(c + d \\right)=a \\times c + a \\times d + b \\times c + b \\times d $",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\left(3 m - 5\\right) \\left(3+ m \\right)\\endgroup\\endgroup+ 4 m $"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -100,
+                "errors": [
+                  "MissingTerms"
+                ]
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -10
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$3 m ^{2}+ 8 m - 15$",
+          "derivation": [
+            {
+              "expression": "$\\left(3 m - 5\\right) \\left(3+ m \\right)+ 4 m $"
+            },
+            {
+              "result": "$9 m + 3 m \\times m - 15- 5 m + 4 m $",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Expand the double brackets"
+            },
+            {
+              "result": "$4 m + 3 m \\times m - 15+ 4 m $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            },
+            {
+              "result": "$4 m + 3 m ^{2}- 15+ 4 m $",
+              "description": "Write the repeated multiplication as a power"
+            },
+            {
+              "result": "$3 m ^{2}+ 8 m - 15$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Combine the similar terms"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "en": "Expanding a product of two sums"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "MissingTerms",
+          "type": [
+            "MISCONCEPTION",
+            "MISTAKE"
+          ],
+          "descr": {
+            "en": "There are terms missing when expanding double brackets."
+          }
+        }
+      ]
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "en": "Adding like terms"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

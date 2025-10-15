@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "creationTimestamp": 1756892492,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$2 p ^{2}- p \\cdot \\text{-}9+ 2 p \\cdot \\text{-}5 p $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1756892550573,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$2 p ^{2}- 2 p \\cdot 5 p $  is niet gelijk aan  $8 p ^{2}$ .</h1>Herleid  $2 p \\cdot \\text{-}5 p $  eerst naar de vorm  $\\ldots p ^{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 8 p ^{2}\\endgroup\\endgroup+ 9 p $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$8p^{2}+9p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}8 p ^{2}+ 9 p $",
+          "derivation": [
+            {
+              "expression": "$2 p ^{2}- \\text{-}9 p - 2\\cdot 5 p \\cdot p $"
+            },
+            {
+              "result": "$2 p ^{2}+ 9 p - 10 p \\cdot p $",
+              "description": "Herleid."
+            },
+            {
+              "result": "$2 p ^{2}+ 9 p - 10 p ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$\\text{-}8 p ^{2}+ 9 p $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

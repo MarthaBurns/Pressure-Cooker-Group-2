@@ -1,0 +1,154 @@
+{
+  "success": true,
+  "creationTimestamp": 1750668531,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{3}{4+ \\sqrt{3}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750668570232,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3\\sqrt{3}}{4\\sqrt{3\\ +\\ 3}}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1750668585482,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{3\\sqrt{3}}{4\\sqrt{3}+3}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "ExpandDoubleDifferenceSquares",
+                  "FractionArithmeticSimplifyProper",
+                  "ExpandSingleBrackets",
+                  "ExpandSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1750668605934,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Rationalise the denominator</h1>Use the rule for factoring differences of squares to remove the surds from the denominator:  $\\left(a - \\sqrt{b }\\right) \\left(a + \\sqrt{b }\\right)=a ^{2}- b $ .",
+                    "expression": "$\\frac{3 \\sqrt{3}}{4 \\sqrt{3}+ 3}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{12- 3 \\sqrt{3}}{13}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{3}{4+ \\sqrt{3}}$"
+            },
+            {
+              "result": "$\\frac{3 \\left(4- \\sqrt{3}\\right)}{\\left(4+ \\sqrt{3}\\right) \\left(4- \\sqrt{3}\\right)}$",
+              "description": "Rationalise the denominator"
+            },
+            {
+              "result": "$\\frac{3 \\left(4- \\sqrt{3}\\right)}{4^{2}- \\left(\\sqrt{3}\\right)^{2}}$",
+              "skills": [
+                "ExpandDoubleDifferenceSquares"
+              ],
+              "description": "Expand the double brackets"
+            },
+            {
+              "result": "$\\frac{3 \\left(4- \\sqrt{3}\\right)}{16- \\left(\\sqrt{3}\\right)^{2}}$",
+              "description": "Calculate the power by repeated multiplication"
+            },
+            {
+              "result": "$\\frac{3 \\left(4- \\sqrt{3}\\right)}{16- 3}$",
+              "description": "The root and the square cancel"
+            },
+            {
+              "result": "$\\frac{3 \\left(4- \\sqrt{3}\\right)}{13}$",
+              "description": "Calculate:  $16- 3$"
+            },
+            {
+              "result": "$\\frac{12- 3 \\sqrt{3}}{13}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Expand the brackets"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleDifferenceSquares": {
+      "descr": {
+        "en": "Expanding into a differences of squares"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "en": "Expanding a single pair of parentheses"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

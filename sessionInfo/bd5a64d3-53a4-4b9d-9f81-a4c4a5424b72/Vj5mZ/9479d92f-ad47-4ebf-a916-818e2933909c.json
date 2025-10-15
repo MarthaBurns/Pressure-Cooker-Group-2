@@ -1,0 +1,128 @@
+{
+  "success": true,
+  "creationTimestamp": 1748869410,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Solve the equation."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$n ^{2}- 15 n + 56=0$"
+        },
+        {
+          "id": "Vj5mZ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1748869501442,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(n-7\\right)\\left(n-8\\right)=0\\ n=7\\ V\\ n=8$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1748869505254,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Factorise using the product-sum method</h1>Write as  $\\left(n + \\ldots\\right) \\left(n + \\ldots\\right)$  where the numbers on the dots have sum  $\\text{-}15$  and product  $56$",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup n ^{2}- 15 n + 56\\endgroup\\endgroup=0$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$n =7\\vee n =8$",
+          "derivation": [
+            {
+              "expression": "$n ^{2}- 15 n + 56=0$"
+            },
+            {
+              "result": "$\\left(n - 7\\right) \\left(n - 8\\right)=0$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Factorise using the product-sum method"
+            },
+            {
+              "result": "$n - 7=0\\vee n - 8=0$",
+              "skills": [
+                "EquationsSplitFactors"
+              ],
+              "description": "At least one of the factors must be zero"
+            },
+            {
+              "result": "$n =7\\vee n =8$",
+              "description": "Balance method: add  $8$  to both sides."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "en": "Factoring a quadratic expression using the Sum-Product Rule"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "EquationsSplitFactors": {
+      "descr": {
+        "en": "Equating each factor to zero"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

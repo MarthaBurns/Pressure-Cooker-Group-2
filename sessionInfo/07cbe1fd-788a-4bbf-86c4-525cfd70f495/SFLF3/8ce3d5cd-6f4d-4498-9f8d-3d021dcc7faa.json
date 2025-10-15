@@ -1,0 +1,142 @@
+{
+  "success": true,
+  "creationTimestamp": 1750868844,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}8 m ^{2}+ 144 m - 648$"
+        },
+        {
+          "id": "SFLF3",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1750869145727,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$8\\left(-m^{2}\\ +\\ 18m\\ -\\ 81\\right)=\\ -8\\left(m\\ +\\ 9\\right)\\left(m-9\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1750869202260,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-8\\left(m^{2}\\ 18m\\ 81\\right)=\\ -8\\left(m-9\\right)^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1750869216492,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorIdentitySquare",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-8\\left(m^{2}-\\ 18m\\ +\\ 81\\right)=\\ -8\\left(m-9\\right)^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorIdentitySquare",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}\\left(\\sqrt{8} m - \\sqrt{648}\\right)^{2}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}8 m ^{2}+ 144 m - 648$"
+            },
+            {
+              "result": "$\\text{-}\\left(8 m ^{2}- 144 m + 648\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Factor out a negative term so that the leading term has a positive coefficient"
+            },
+            {
+              "result": "$\\text{-}\\left(\\sqrt{8} m - \\sqrt{648}\\right) \\left(\\sqrt{8} m - \\sqrt{648}\\right)$",
+              "skills": [
+                "FactorIdentitySquare"
+              ],
+              "description": "Factorise"
+            },
+            {
+              "result": "$\\text{-}\\left(\\sqrt{8} m - \\sqrt{648}\\right)^{2}$",
+              "description": "Write the repeated multiplication as a power"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "en": "Factoring a common factor"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FactorIdentitySquare": {
+      "descr": {
+        "en": "Using the factoring identity 'square of a sum' when factoring a polynomial"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

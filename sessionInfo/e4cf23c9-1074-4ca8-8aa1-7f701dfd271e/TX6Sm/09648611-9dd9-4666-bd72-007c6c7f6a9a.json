@@ -1,0 +1,112 @@
+{
+  "success": true,
+  "creationTimestamp": 1750843837,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Expand the brackets."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5- 3 \\left(n - 2\\right)^{2}$"
+        },
+        {
+          "id": "TX6Sm",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750843950312,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-4+n^{2}-4n$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}3 n ^{2}+ 12 n - 17$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5- 3 \\left(n - 2\\right)^{2}$"
+            },
+            {
+              "result": "$\\text{-}5- 3 \\left(n ^{2}- 4 n + \\left(\\text{-}2\\right)^{2}\\right)$",
+              "skills": [
+                "ExpandDoubleBracketsSquare"
+              ],
+              "description": "Expand the square"
+            },
+            {
+              "result": "$\\text{-}5- 3 \\left(n ^{2}- 4 n + 2^{2}\\right)$",
+              "description": "When the exponent is an even number, the result is always positive"
+            },
+            {
+              "result": "$\\text{-}5- 3 \\left(n ^{2}- 4 n + 4\\right)$",
+              "description": "Calculate the power by repeated multiplication"
+            },
+            {
+              "result": "$\\text{-}5+ \\left(\\text{-}3 n ^{2}+ 12 n - 12\\right)$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Expand the brackets"
+            },
+            {
+              "result": "$\\text{-}3 n ^{2}+ 12 n - 17$",
+              "description": "Calculate:  $\\text{-}12- 5$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsSquare": {
+      "descr": {
+        "en": "Expanding a square of a sum of terms"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "en": "Expanding a single pair of parentheses"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

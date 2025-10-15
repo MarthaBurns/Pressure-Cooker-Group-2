@@ -1,0 +1,158 @@
+{
+  "success": true,
+  "creationTimestamp": 1740661972,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf als één wortel."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{15}\\cdot \\sqrt{10}$"
+        },
+        {
+          "id": "wm0IM",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1740662096900,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\sqrt{10} \\sqrt{15}$  is niet gelijk aan  $\\sqrt{13}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{13}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{13}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1740662109754,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -100,
+                    "errors": [
+                      "MultiplyingFactor"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt rechtstreeks  $\\sqrt{10}\\cdot 15$  berekend, maar dat is niet toegestaan.</h1>De regel voor vermenigvuldigen met wortels luidt:  $\\sqrt{a }\\cdot \\sqrt{b }=\\sqrt{a \\cdot b }$ . Als je deze wilt\ntoepassen kun je  $\\sqrt{10}$  eerst omschrijven naar een wortel.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{15 \\sqrt{10}}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{15\\sqrt{10}}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1740662132896,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{150}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -50
+              },
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -100,
+                "errors": [
+                  "MultiplyingFactor"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\sqrt{150}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{15} \\sqrt{10}$"
+            },
+            {
+              "result": "$\\sqrt{150}$",
+              "description": "Vermenigvuldig de wortels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "nl": "De regels voor vermenigvuldigen van wortels toepassen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "MultiplyingFactor",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De factor direct met de radicand vermenigvuldigen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

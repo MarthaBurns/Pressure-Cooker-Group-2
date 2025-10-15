@@ -1,0 +1,203 @@
+{
+  "success": true,
+  "creationTimestamp": 1737211658,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{3} \\left(2 \\sqrt{12}+ 2\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1737211678301,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{12}\\cdot\\sqrt{3}+2\\cdot\\sqrt{3}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1737211702718,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Hier zit een fout.",
+                    "expression": "$2 \\sqrt{\\begingroup\\color{darkred}\\begingroup 36\\endgroup\\endgroup} \\sqrt{3}+ 2 \\sqrt{3}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{36}\\cdot\\sqrt{3}+2\\cdot\\sqrt{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737211722641,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{36}\\cdot+2\\cdot\\sqrt{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1737211728836,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{36}+2\\cdot\\sqrt{3}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1737211743118,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Hier zit een fout.",
+                    "expression": "$2 \\sqrt{\\begingroup\\color{darkred}\\begingroup 6\\endgroup\\endgroup}+ 2 \\sqrt{3}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{6}+2\\cdot\\sqrt{3}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1737211761570,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\cdot6+2\\cdot\\sqrt{3}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.6666666666666666,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1737211772745,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$12+2\\cdot\\sqrt{3}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 3
+              },
+              "finished": true
+            }
+          },
+          "solution": "$12+ 2 \\sqrt{3}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{3} \\left(2 \\sqrt{12}+ 2\\right)$"
+            },
+            {
+              "result": "$2 \\sqrt{3} \\sqrt{12}+ 2 \\sqrt{3}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$2 \\sqrt{36}+ 2 \\sqrt{3}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$6\\cdot 2+ 2 \\sqrt{3}$",
+              "description": "Bepaal de wortel van  $36$"
+            },
+            {
+              "result": "$12+ 2 \\sqrt{3}$",
+              "description": "Reken uit:  $6\\cdot 2$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

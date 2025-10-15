@@ -1,0 +1,253 @@
+{
+  "success": true,
+  "creationTimestamp": 1733327463,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{5} \\left(2- 3 \\sqrt{20}\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1733327467664,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de haakjes uit</h1>Vermenigvuldig elke term binnen de haakjes met  $\\sqrt{5}$",
+                    "expression": "$\\sqrt{5} \\left(2- 3 \\sqrt{20}\\right)$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733327481124,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Ben je de term  $\\text{-}3 \\sqrt{20}$  vergeten?",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2\\endgroup\\endgroup \\sqrt{5}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{5}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733327499802,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-\\sqrt{20}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1733327532949,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{5\\cdot20}=\\sqrt{100}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "TRUE_EXPRESSION"
+              },
+              {
+                "timestamp": 1733327553625,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$2- 3 \\sqrt{100}$  is niet gelijk aan  $\\text{-}\\sqrt{100}$ .",
+                    "expression": "$2- 3 \\sqrt{100}=\\text{-}\\sqrt{100}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2-3\\sqrt{100}=-\\sqrt{100}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1733327572031,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100,
+                    "errors": [
+                      "SkippingTerms"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Je hebt niet alle termen van  $2- 3 \\sqrt{20}$  met  $\\sqrt{5}$  vermenigvuldigd.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 2\\endgroup\\endgroup- 3 \\sqrt{100}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2-3\\sqrt{100}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733327598236,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{5}-3\\sqrt{100}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1733327631925,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $2 \\sqrt{5}- 3 \\sqrt{100}$  is niet gelijk aan  $\\text{-}{12,\\!5} $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}{12,\\!5} \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-12,5$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100,
+                "errors": [
+                  "SkippingTerms"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 5
+              },
+              "finished": false
+            }
+          },
+          "solution": "$2 \\sqrt{5}- 30$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{5} \\left(2- 3 \\sqrt{20}\\right)$"
+            },
+            {
+              "result": "$2 \\sqrt{5}- 3 \\sqrt{5} \\sqrt{20}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$2 \\sqrt{5}- 3 \\sqrt{100}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$2 \\sqrt{5}- 10\\cdot 3$",
+              "description": "Bepaal de wortel van  $100$"
+            },
+            {
+              "result": "$2 \\sqrt{5}- 30$",
+              "description": "Reken uit:  $10\\cdot \\text{-}3$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "SkippingTerms",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Niet alle termen vermenigvuldigen met de coëfficiënt."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 5,
+      "marksPenalty": 0
+    }
+  }
+}

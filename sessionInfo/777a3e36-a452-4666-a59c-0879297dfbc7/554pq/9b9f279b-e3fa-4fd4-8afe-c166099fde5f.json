@@ -1,0 +1,135 @@
+{
+  "success": true,
+  "creationTimestamp": 1738001913,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{2} \\left(3+ 2 \\sqrt{50}\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1738001944780,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\sqrt{2}+2\\sqrt{100}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1738001983961,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Bepaal de wortel van  $100$</h1>Bedenk welk getal met zichzelf vermenigvuldigd gelijk is aan  $100$",
+                    "expression": "$3 \\sqrt{2}+ 2 \\begingroup\\color{#336699}\\begingroup \\sqrt{100}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1738002005155,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$3\\sqrt{2}+20$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$3 \\sqrt{2}+ 20$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{2} \\left(3+ 2 \\sqrt{50}\\right)$"
+            },
+            {
+              "result": "$3 \\sqrt{2}+ 2 \\sqrt{2} \\sqrt{50}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$3 \\sqrt{2}+ 2 \\sqrt{100}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$3 \\sqrt{2}+ 10\\cdot 2$",
+              "description": "Bepaal de wortel van  $100$"
+            },
+            {
+              "result": "$3 \\sqrt{2}+ 20$",
+              "description": "Reken uit:  $10\\cdot 2$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

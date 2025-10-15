@@ -1,0 +1,130 @@
+{
+  "success": true,
+  "creationTimestamp": 1728809114,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{9}{2+ \\sqrt{11}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1728809140378,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "hier zit een fout.",
+                    "expression": "$\\frac{9}{2+ \\begingroup\\color{darkred}\\begingroup {3,\\!316625} \\endgroup\\endgroup}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{9}{2+3,316625}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{\\text{-}18+ 9 \\sqrt{11}}{7}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{9}{2+ \\sqrt{11}}$"
+            },
+            {
+              "result": "$\\frac{9 \\left(2- \\sqrt{11}\\right)}{\\left(2+ \\sqrt{11}\\right) \\left(2- \\sqrt{11}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{9 \\left(2- \\sqrt{11}\\right)}{4- 2 \\sqrt{11}+ 2 \\sqrt{11}- \\sqrt{11} \\sqrt{11}}$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{9 \\left(2- \\sqrt{11}\\right)}{4- \\sqrt{11} \\sqrt{11}}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\frac{9 \\left(2- \\sqrt{11}\\right)}{4- 11}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\text{-}\\frac{9 \\left(2- \\sqrt{11}\\right)}{7}$",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\frac{\\text{-}18+ 9 \\sqrt{11}}{7}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

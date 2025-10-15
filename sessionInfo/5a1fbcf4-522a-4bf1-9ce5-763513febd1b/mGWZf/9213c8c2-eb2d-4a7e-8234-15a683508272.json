@@ -1,0 +1,141 @@
+{
+  "success": true,
+  "creationTimestamp": 1742715668,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{8}{9+ \\sqrt{11}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1742715801358,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{4\\sqrt{11}}{55}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1742715803321,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Rationalise the denominator</h1>Use the rule for factoring differences of squares to remove the surds from the denominator:  $\\left(a - \\sqrt{b }\\right) \\left(a + \\sqrt{b }\\right)=a ^{2}- b $ .",
+                    "expression": "$\\frac{8}{9+ \\sqrt{11}}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{36- 4 \\sqrt{11}}{35}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{8}{9+ \\sqrt{11}}$"
+            },
+            {
+              "result": "$\\frac{8 \\left(9- \\sqrt{11}\\right)}{\\left(9+ \\sqrt{11}\\right) \\left(9- \\sqrt{11}\\right)}$",
+              "description": "Rationalise the denominator"
+            },
+            {
+              "result": "$\\frac{8 \\left(9- \\sqrt{11}\\right)}{9^{2}- \\left(\\sqrt{11}\\right)^{2}}$",
+              "skills": [
+                "ExpandDoubleDifferenceSquares"
+              ],
+              "description": "Expand the double brackets"
+            },
+            {
+              "result": "$\\frac{8 \\left(9- \\sqrt{11}\\right)}{81- \\left(\\sqrt{11}\\right)^{2}}$",
+              "description": "Calculate the power by repeated multiplication"
+            },
+            {
+              "result": "$\\frac{8 \\left(9- \\sqrt{11}\\right)}{81- 11}$",
+              "description": "The root and the square cancel"
+            },
+            {
+              "result": "$\\frac{8 \\left(9- \\sqrt{11}\\right)}{70}$",
+              "description": "Calculate:  $81- 11$"
+            },
+            {
+              "result": "$\\frac{4 \\left(9- \\sqrt{11}\\right)}{35}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Simplify the fraction"
+            },
+            {
+              "result": "$\\frac{36- 4 \\sqrt{11}}{35}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Expand the brackets"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleDifferenceSquares": {
+      "descr": {
+        "en": "Expanding into a differences of squares"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "en": "Expanding a single pair of parentheses"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

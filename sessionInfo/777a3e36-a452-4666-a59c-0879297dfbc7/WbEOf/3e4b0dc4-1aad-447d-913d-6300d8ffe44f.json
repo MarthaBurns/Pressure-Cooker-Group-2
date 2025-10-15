@@ -1,0 +1,127 @@
+{
+  "success": true,
+  "creationTimestamp": 1733580485,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf zo kort mogelijk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}\\sqrt{93}+ \\sqrt{93}- \\sqrt{93}+ \\sqrt{14}+ \\sqrt{14}$"
+        },
+        {
+          "id": "WbEOf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1733580554179,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$\\text{-}\\sqrt{93}- \\sqrt{93}+ \\sqrt{14}+ \\sqrt{14}$  is niet gelijk aan  $2 \\sqrt{14}$ .</h1>Je bent vergeten  $\\text{-}\\sqrt{93}- \\sqrt{93}$  op te tellen.",
+                    "expression": "$\\sqrt{93}+ \\begingroup\\color{darkred}\\begingroup 2 \\sqrt{14}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{93}+2\\sqrt{14}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733580629327,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-2\\sqrt{93}2\\sqrt{14}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1733580634103,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $\\sqrt{14}$  zijn gelijksoortig.",
+                    "expression": "$\\text{-}\\sqrt{93}+ \\sqrt{93}- \\sqrt{93}+ \\begingroup\\color{#336699}\\begingroup \\sqrt{14}\\endgroup\\endgroup+ \\begingroup\\color{#336699}\\begingroup \\sqrt{14}\\endgroup\\endgroup$"
+                  }
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}\\sqrt{93}+ 2 \\sqrt{14}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}\\sqrt{93}+ \\sqrt{93}- \\sqrt{93}+ \\sqrt{14}+ \\sqrt{14}$"
+            },
+            {
+              "result": "$\\text{-}\\sqrt{93}+ 2 \\sqrt{14}$",
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

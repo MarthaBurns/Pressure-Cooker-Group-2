@@ -1,0 +1,135 @@
+{
+  "success": true,
+  "creationTimestamp": 1733998032,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{2} \\left(4 \\sqrt{8}+ 4\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733998051538,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$4\\sqrt{16}+4\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1733998062350,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Bepaal de wortel van  $16$</h1>Bedenk welk getal met zichzelf vermenigvuldigd gelijk is aan  $16$",
+                    "expression": "$4 \\begingroup\\color{#336699}\\begingroup \\sqrt{16}\\endgroup\\endgroup+ 4 \\sqrt{2}$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733998071294,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$16+4\\sqrt{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$16+ 4 \\sqrt{2}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{2} \\left(4 \\sqrt{8}+ 4\\right)$"
+            },
+            {
+              "result": "$4 \\sqrt{2} \\sqrt{8}+ 4 \\sqrt{2}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$4 \\sqrt{16}+ 4 \\sqrt{2}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$4\\cdot 4+ 4 \\sqrt{2}$",
+              "description": "Bepaal de wortel van  $16$"
+            },
+            {
+              "result": "$16+ 4 \\sqrt{2}$",
+              "description": "Reken uit:  $4\\cdot 4$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

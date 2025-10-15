@@ -1,0 +1,135 @@
+{
+  "success": true,
+  "creationTimestamp": 1748339200,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$4 t \\cdot 5 t - 3 t ^{2}+ 9\\cdot 3 t $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1748339331397,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationInteger",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Rekenfout:  $5\\cdot 4$  is niet gelijk aan  $10$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 10\\endgroup\\endgroup t ^{2}- 3 t ^{2}+ 27 t $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$10t^{2}-3t^{2}+27t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1748339428498,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$4 t \\cdot 5 t - 3 t ^{2}$  is niet gelijk aan  $7 t ^{2}$ .</h1>Herleid  $4 t \\cdot 5 t $  eerst naar de vorm  $\\ldots t ^{2}$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 7 t ^{2}\\endgroup\\endgroup+ 27 t $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$7t^{2}+27t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "NumberArithmeticMultiplicationInteger",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$17 t ^{2}+ 27 t $",
+          "derivation": [
+            {
+              "expression": "$4\\cdot 5 t \\cdot t - 3 t ^{2}+ 9\\cdot 3 t $"
+            },
+            {
+              "result": "$20 t \\cdot t - 3 t ^{2}+ 27 t $",
+              "description": "Reken uit:  $9\\cdot 3$"
+            },
+            {
+              "result": "$20 t ^{2}- 3 t ^{2}+ 27 t $",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$17 t ^{2}+ 27 t $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "NumberArithmeticMultiplicationInteger": {
+      "descr": {
+        "nl": "Gehele getallen vermenigvuldigen"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

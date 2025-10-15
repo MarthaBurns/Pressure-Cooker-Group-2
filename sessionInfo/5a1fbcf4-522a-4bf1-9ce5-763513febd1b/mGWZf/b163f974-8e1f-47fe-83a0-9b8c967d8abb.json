@@ -1,0 +1,134 @@
+{
+  "success": true,
+  "creationTimestamp": 1734474104,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{6}{3+ \\sqrt{2}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1734474238286,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleDifferenceSquares",
+                    "weight": 100
+                  },
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{18-6\\sqrt{2}}{7}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandDoubleDifferenceSquares",
+                "weight": 100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{18- 6 \\sqrt{2}}{7}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{6}{3+ \\sqrt{2}}$"
+            },
+            {
+              "result": "$\\frac{6 \\left(3- \\sqrt{2}\\right)}{\\left(3+ \\sqrt{2}\\right) \\left(3- \\sqrt{2}\\right)}$",
+              "description": "Rationalise the denominator"
+            },
+            {
+              "result": "$\\frac{6 \\left(3- \\sqrt{2}\\right)}{3^{2}- \\left(\\sqrt{2}\\right)^{2}}$",
+              "skills": [
+                "ExpandDoubleDifferenceSquares"
+              ],
+              "description": "Expand the double brackets"
+            },
+            {
+              "result": "$\\frac{6 \\left(3- \\sqrt{2}\\right)}{9- \\left(\\sqrt{2}\\right)^{2}}$",
+              "description": "Calculate the power by repeated multiplication"
+            },
+            {
+              "result": "$\\frac{6 \\left(3- \\sqrt{2}\\right)}{9- 2}$",
+              "description": "The root and the square cancel"
+            },
+            {
+              "result": "$\\frac{6 \\left(3- \\sqrt{2}\\right)}{7}$",
+              "description": "Calculate:  $9- 2$"
+            },
+            {
+              "result": "$\\frac{18- 6 \\sqrt{2}}{7}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Expand the brackets"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleDifferenceSquares": {
+      "descr": {
+        "en": "Expanding into a differences of squares"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "en": "Expanding a single pair of parentheses"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

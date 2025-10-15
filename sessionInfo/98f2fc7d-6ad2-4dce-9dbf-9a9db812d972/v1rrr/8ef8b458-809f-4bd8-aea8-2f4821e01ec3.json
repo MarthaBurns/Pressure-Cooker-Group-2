@@ -1,0 +1,209 @@
+{
+  "success": true,
+  "creationTimestamp": 1733214014,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 p \\cdot 5 p + 3 p + \\text{-}2 p \\cdot 2 p $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0.33333333333333326,
+            "events": [
+              {
+                "timestamp": 1733214020029,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 5\\endgroup\\endgroup p \\cdot \\begingroup\\color{#336699}\\begingroup 5\\endgroup\\endgroup p + 3 p + \\text{-}2 p \\cdot 2 p $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733214065478,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$5 p \\cdot 5 p + 3 p + \\text{-}2 p \\cdot 2 p $  is niet gelijk aan  $24 p $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 24 p \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$24p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733214085877,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfPowerFunctions",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$p \\cdot p $  is niet gelijk aan  $p $ .</h1>$t ^{p }\\cdot t ^{q }=t ^{p + q }$",
+                    "expression": "$25 \\begingroup\\color{darkred}\\begingroup p \\endgroup\\endgroup+ 3 p - 4 p ^{2}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$25p+3p+-4p^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733214124099,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$25p^{2}+3p-4p^{2}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.33333333333333326,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "AlgebraAddingLikeTerms"
+                ]
+              },
+              {
+                "timestamp": 1733214151277,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -100,
+                    "errors": [
+                      "ChangingTermType"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de gelijksoortige termen  $25 p ^{2}\\text{ en } \\text{-}4 p ^{2}$  niet goed samengenomen.</h1>De som is van de vorm  $\\ldots\\cdot p ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 21 p \\endgroup\\endgroup+ 3 p $"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$21p+3p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0.33333333333333326,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfPowerFunctions",
+                "weight": -100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -100,
+                "errors": [
+                  "ChangingTermType"
+                ]
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 3
+              },
+              "finished": false
+            }
+          },
+          "solution": "$21 p ^{2}+ 3 p $",
+          "derivation": [
+            {
+              "expression": "$5\\cdot 5 p \\cdot p + 3 p + \\text{-}2\\cdot 2 p \\cdot p $"
+            },
+            {
+              "result": "$25 p \\cdot p + 3 p - 4 p \\cdot p $",
+              "description": "Reken uit:  $\\text{-}2\\cdot 2$"
+            },
+            {
+              "result": "$21 p \\cdot p + 3 p $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$21 p ^{2}+ 3 p $",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "ChangingTermType",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De soort aanpassen bij optellen van gelijksoortige termen."
+          }
+        }
+      ]
+    },
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "nl": "De machtsregels voor vermenigvuldigen van machtsfuncties toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "success": true,
+  "creationTimestamp": 1734473864,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{2}{6+ \\sqrt{7}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1734474020725,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{12-2\\sqrt{7}}{-13}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              },
+              {
+                "timestamp": 1734474044851,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Rationalise the denominator</h1>Use the rule for factoring differences of squares to remove the surds from the denominator:  $\\left(a - \\sqrt{b }\\right) \\left(a + \\sqrt{b }\\right)=a ^{2}- b $ .",
+                    "expression": "$\\frac{2}{6+ \\sqrt{7}}$"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\frac{12- 2 \\sqrt{7}}{29}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{2}{6+ \\sqrt{7}}$"
+            },
+            {
+              "result": "$\\frac{2 \\left(6- \\sqrt{7}\\right)}{\\left(6+ \\sqrt{7}\\right) \\left(6- \\sqrt{7}\\right)}$",
+              "description": "Rationalise the denominator"
+            },
+            {
+              "result": "$\\frac{2 \\left(6- \\sqrt{7}\\right)}{6^{2}- \\left(\\sqrt{7}\\right)^{2}}$",
+              "skills": [
+                "ExpandDoubleDifferenceSquares"
+              ],
+              "description": "Expand the double brackets"
+            },
+            {
+              "result": "$\\frac{2 \\left(6- \\sqrt{7}\\right)}{36- \\left(\\sqrt{7}\\right)^{2}}$",
+              "description": "Calculate the power by repeated multiplication"
+            },
+            {
+              "result": "$\\frac{2 \\left(6- \\sqrt{7}\\right)}{36- 7}$",
+              "description": "The root and the square cancel"
+            },
+            {
+              "result": "$\\frac{2 \\left(6- \\sqrt{7}\\right)}{29}$",
+              "description": "Calculate:  $36- 7$"
+            },
+            {
+              "result": "$\\frac{12- 2 \\sqrt{7}}{29}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Expand the brackets"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleDifferenceSquares": {
+      "descr": {
+        "en": "Expanding into a differences of squares"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "en": "Expanding a single pair of parentheses"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

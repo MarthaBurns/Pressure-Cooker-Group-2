@@ -1,0 +1,172 @@
+{
+  "success": true,
+  "creationTimestamp": 1759147787,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{500}$"
+        },
+        {
+          "id": "rJQ8D",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1759148095777,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": 100,
+                    "errors": [
+                      "MultiplyingFactor"
+                    ],
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You took  $4$  out of the root directly, but this is not allowed.</h1>The rule for multiplication of roots is:  $\\sqrt{a \\times b }=\\sqrt{a }\\times \\sqrt{b }$ . To use this rule, you have\nto take the root of  $4$  first.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 4 \\sqrt{125}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$4\\sqrt{125}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1759148123482,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{125}$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1759148218786,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "NumberArithmeticMultiplicationDecimal",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "Arithmetic error:  $2 \\sqrt{125}$  is not equal to  $15$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 15\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$15$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": 100,
+                "errors": [
+                  "MultiplyingFactor"
+                ],
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "NumberArithmeticMultiplicationDecimal",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$10 \\sqrt{5}$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{500}$"
+            },
+            {
+              "result": "$\\sqrt{100} \\sqrt{5}$",
+              "description": "Simplify the square root"
+            },
+            {
+              "result": "$10 \\sqrt{5}$",
+              "description": "Calculate the square root of  $100$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "en": "Apply the rule for multiplying roots"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "MultiplyingFactor",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "en": "Applying the factor on the radicand when multiplying a root."
+          }
+        }
+      ]
+    },
+    "NumberArithmeticMultiplicationDecimal": {
+      "descr": {
+        "en": "Multiplying decimal numbers"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

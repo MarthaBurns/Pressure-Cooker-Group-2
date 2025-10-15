@@ -1,0 +1,198 @@
+{
+  "success": true,
+  "creationTimestamp": 1729543228,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$6 t - 24 t ^{2}+ 66 t ^{3}$"
+        },
+        {
+          "id": "ceNjl",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1729543266995,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "You did not factor  $66 t ^{3}- 24 t ^{2}+ 6 t $  correctly.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 6 \\left(66 t ^{3}- 24 t ^{2}+ t \\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6\\left(t-24t^{2}\\ +\\ 66t^{3}\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729543273043,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Factorise</h1>The terms have a common constant factor  $6$",
+                    "expression": "$66 t ^{3}- 24 t ^{2}+ 6 t $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729543313121,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$6\\left(11t^{3}-4t^{2}+t\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FactorSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1729543317722,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Factorise: Move  $t $  in front of parentheses",
+                    "expression": "$6 \\left(\\begingroup\\color{#336699}\\begingroup 11 t ^{3}- 4 t ^{2}+ t \\endgroup\\endgroup\\right)$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729543340655,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "this part is not correct.",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup t  \\left(11 t ^{3}- 4 t ^{2}\\right)\\endgroup\\endgroup\\times 6$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$6t\\left(11t^{3}-4t^{2}\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "FactorSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FactorSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$6 RandVarResult \\left(t \\right) \\left(1- 4 RandVarResult \\left(t \\right)+ 11 RandVarResult ^{2}\\left(t \\right)\\right)$",
+          "derivation": [
+            {
+              "expression": "$6 RandVarResult \\left(t \\right)- 24 RandVarResult ^{2}\\left(t \\right)+ 66 RandVarResult ^{3}\\left(t \\right)$"
+            },
+            {
+              "result": "$6 \\left(RandVarResult \\left(t \\right)- 4 RandVarResult ^{2}\\left(t \\right)+ 11 RandVarResult ^{3}\\left(t \\right)\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Factorise: Move a factor  $6$  in front of parentheses"
+            },
+            {
+              "result": "$6 RandVarResult \\left(t \\right) \\left(1- 4 RandVarResult \\left(t \\right)+ 11 RandVarResult ^{2}\\left(t \\right)\\right)$",
+              "skills": [
+                "FactorSingleBrackets",
+                "AlgebraProductOfPowerFunctions"
+              ],
+              "description": "Factorise: Move factor  $RandVarResult \\left(t \\right)$  in front of parentheses"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "en": "Factoring a common factor"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "en": "Apply the rule for multiplying power functions"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

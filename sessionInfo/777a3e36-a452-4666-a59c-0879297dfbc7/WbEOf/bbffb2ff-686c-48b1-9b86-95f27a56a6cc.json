@@ -1,0 +1,154 @@
+{
+  "success": true,
+  "creationTimestamp": 1733684795,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Schrijf zo kort mogelijk."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}\\sqrt{7}+ \\sqrt{7}+ \\sqrt{10}+ \\sqrt{7}$"
+        },
+        {
+          "id": "WbEOf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1733684982856,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraPowerRuleRoots",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de machtsfunctie niet goed omgezet naar een wortel.</h1>$x ^{\\frac{m }{n }}=x ^{m \\cdot \\frac{1}{n }}=\\sqrt[n ]{x ^{m }}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\sqrt{7^{2}}\\endgroup\\endgroup+ \\sqrt{10}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{7^{2\\ }}\\ +\\ \\sqrt{10}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1733684999529,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Neem de gelijksoortige termen samen</h1>De termen met  $\\sqrt{7}$  zijn gelijksoortig.",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup \\text{-}\\sqrt{7}\\endgroup\\endgroup+ \\begingroup\\color{#336699}\\begingroup \\sqrt{7}\\endgroup\\endgroup+ \\sqrt{10}+ \\begingroup\\color{#336699}\\begingroup \\sqrt{7}\\endgroup\\endgroup$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1733685023395,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\sqrt{7}\\ +\\ \\sqrt{10}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraPowerRuleRoots",
+                "weight": -100
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\sqrt{7}+ \\sqrt{10}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}\\sqrt{7}+ \\sqrt{7}+ \\sqrt{10}+ \\sqrt{7}$"
+            },
+            {
+              "result": "$\\sqrt{7}+ \\sqrt{10}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraPowerRuleRoots": {
+      "descr": {
+        "nl": "De machtsregels voor wortels toepassen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

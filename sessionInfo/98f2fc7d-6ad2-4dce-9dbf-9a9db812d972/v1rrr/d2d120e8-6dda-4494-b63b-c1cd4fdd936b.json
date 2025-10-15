@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "creationTimestamp": 1744537466,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}3 t + \\text{-}4 t \\cdot \\text{-}5 t + 9\\cdot 5 t $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1744537517966,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\text{-}3 t - \\text{-}4 t \\cdot 5 t + 9\\cdot 5 t $  is niet gelijk aan  $80 t $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 80 t \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$80t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1744537524521,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$\\text{-}3 t + \\begingroup\\color{#336699}\\begingroup \\text{-}4\\endgroup\\endgroup t \\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}5\\endgroup\\endgroup t + 9\\cdot 5 t $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1744537558418,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\text{-}3 t - \\text{-}4 t \\cdot 5 t + 9\\cdot 5 t $  is niet gelijk aan  $62 t $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 62 t \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$62t$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$42 t + 20 t ^{2}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}3 t - \\text{-}4\\cdot 5 t \\cdot t + 9\\cdot 5 t $"
+            },
+            {
+              "result": "$\\text{-}3 t + 20 t \\cdot t + 45 t $",
+              "description": "Reken uit:  $9\\cdot 5$"
+            },
+            {
+              "result": "$42 t + 20 t \\cdot t $",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$42 t + 20 t ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

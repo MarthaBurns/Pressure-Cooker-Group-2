@@ -1,0 +1,128 @@
+{
+  "success": true,
+  "creationTimestamp": 1734470549,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\sqrt{2} \\left(\\text{-}2+ 5 \\sqrt{8}\\right)$"
+        },
+        {
+          "id": "554pq",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "CORRECT",
+            "progress": 0.33333333333333326,
+            "events": [
+              {
+                "timestamp": 1734470910534,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2^{\\frac{1}{2}}\\left(-2+5\\cdot8^{\\frac{1}{2}}\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "ExpandSingleBrackets"
+                ]
+              },
+              {
+                "timestamp": 1734471000775,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2^{\\frac{1}{2}}\\cdot-2+20$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0.33333333333333326,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1734471057615,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Herschrijf de machtsfunctie tot een machtswortel</h1>$x ^{\\frac{1}{2}}=\\sqrt{x }$",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 2^{\\frac{1}{2}}\\endgroup\\endgroup\\cdot \\text{-}2+ 20$"
+                  }
+                ]
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 0
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}2 \\sqrt{2}+ 20$",
+          "derivation": [
+            {
+              "expression": "$\\sqrt{2} \\left(\\text{-}2+ 5 \\sqrt{8}\\right)$"
+            },
+            {
+              "result": "$\\text{-}2 \\sqrt{2}+ 5 \\sqrt{2} \\sqrt{8}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$\\text{-}2 \\sqrt{2}+ 5 \\sqrt{16}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\text{-}2 \\sqrt{2}+ 4\\cdot 5$",
+              "description": "Bepaal de wortel van  $16$"
+            },
+            {
+              "result": "$\\text{-}2 \\sqrt{2}+ 20$",
+              "description": "Reken uit:  $4\\cdot 5$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

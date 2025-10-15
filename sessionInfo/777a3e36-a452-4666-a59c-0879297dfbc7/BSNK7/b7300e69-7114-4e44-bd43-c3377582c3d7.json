@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "creationTimestamp": 1741282692,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Simplify."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 \\sqrt{7}+ 2 \\sqrt{42}\\times \\sqrt{6}$"
+        },
+        {
+          "id": "BSNK7",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1741282804964,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraProductOfRoots",
+                    "weight": -50
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\sqrt{6} \\sqrt{42}$  does not equal  $\\sqrt{270}$ .",
+                    "expression": "$2 \\begingroup\\color{darkred}\\begingroup \\sqrt{270}\\endgroup\\endgroup+ 5 \\sqrt{7}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{270}+5\\sqrt{7}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1741282841253,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$2\\sqrt{252}+5\\sqrt{7}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraProductOfRoots",
+                "weight": -50
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$5 \\sqrt{7}+ 2 \\sqrt{252}$",
+          "derivation": [
+            {
+              "expression": "$5 \\sqrt{7}+ 2 \\sqrt{42} \\sqrt{6}$"
+            },
+            {
+              "result": "$5 \\sqrt{7}+ 2 \\sqrt{252}$",
+              "description": "Simplify the product of two roots"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraProductOfRoots": {
+      "descr": {
+        "en": "Apply the rule for multiplying roots"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

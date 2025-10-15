@@ -1,0 +1,174 @@
+{
+  "success": true,
+  "creationTimestamp": 1758217877,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Ontbind in factoren."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$6+ x ^{2}+ 5 x $"
+        },
+        {
+          "id": "vHITD",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1758217898341,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100,
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de product-som-methode niet goed toegepast.</h1>Je zoekt twee getallen die opgeteld gelijk zijn aan  $5$  en vermenigvuldigd gelijk aan  $6$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\left(x + 5\\right) \\left(x + 6\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(x+5\\right)\\left(x+6\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758217911049,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": 100,
+                    "errors": [
+                      "SwitchedSumProduct"
+                    ],
+                    "source": "ERROR_FEEDBACK"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de product-som-methode niet goed toegepast.</h1>Het product van de getallen moet gelijk zijn aan  $6$  en de som gelijk aan  $5$ . Je hebt het precies andersom gedaan!",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\left(x + 5\\right) \\left(x + 1\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(x+5\\right)\\left(x+1\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1758217931933,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "source": "FINISHED_STEP"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(x+3\\right)\\left(x+2\\right)$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100,
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": 100,
+                "errors": [
+                  "SwitchedSumProduct"
+                ],
+                "source": "ERROR_FEEDBACK"
+              },
+              {
+                "id": "FactorDoubleSumProduct",
+                "source": "FINISHED_STEP"
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\left(x + 3\\right) \\left(x + 2\\right)$",
+          "derivation": [
+            {
+              "expression": "$x ^{2}+ 5 x + 6$"
+            },
+            {
+              "result": "$\\left(x + 3\\right) \\left(x + 2\\right)$",
+              "skills": [
+                "FactorDoubleSumProduct"
+              ],
+              "description": "Ontbind met de som-product-methode"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "nl": "Een kwadratische expressie ontbinden via de som-productmethode"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "SwitchedSumProduct",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "De getallen voor de som en het product verwisselen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "success": true,
+  "creationTimestamp": 1740136555,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$5 p \\cdot \\text{-}9+ 5 p ^{2}+ \\text{-}5 p \\cdot \\text{-}3 p $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1740136613842,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": -100,
+                    "errors": [
+                      "UnlikeTerms"
+                    ]
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt termen opgeteld die niet gelijksoortig zijn.</h1>$5 p \\cdot \\text{-}9, 5 p ^{2}\\text{ en } \\text{-}5 p \\cdot \\text{-}3 p $  zijn niet gelijksoortig met  $p $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\text{-}30 p + 5 p ^{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-30p+5p^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1740136633085,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 5\\endgroup\\endgroup p \\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}9\\endgroup\\endgroup+ 5 p ^{2}- \\text{-}5 p \\cdot 3 p $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1740136707403,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>$5 p ^{2}- \\text{-}5 p \\cdot 3 p $  is niet gelijk aan  $\\text{-}10 p ^{2}$ .</h1>Herleid  $\\text{-}5 p \\cdot \\text{-}3 p $  eerst naar de vorm  $\\ldots p ^{2}$ .",
+                    "expression": "$\\text{-}45 p - \\begingroup\\color{darkred}\\begingroup 10 p ^{2}\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$-45p-10p^{2}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1740136725038,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Bereken de vermenigvuldiging",
+                    "expression": "$\\begingroup\\color{#336699}\\begingroup 5\\endgroup\\endgroup p \\cdot \\begingroup\\color{#336699}\\begingroup \\text{-}9\\endgroup\\endgroup+ 5 p ^{2}- \\text{-}5 p \\cdot 3 p $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1740136821476,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "AlgebraAddingLikeTerms",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-45p+20p^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": -100,
+                "errors": [
+                  "UnlikeTerms"
+                ]
+              },
+              {
+                "id": "AlgebraAddingLikeTerms",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 2
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\text{-}45 p + 20 p ^{2}$",
+          "derivation": [
+            {
+              "expression": "$5\\cdot \\text{-}9 p + 5 p ^{2}- \\text{-}5\\cdot 3 p \\cdot p $"
+            },
+            {
+              "result": "$\\text{-}45 p + 5 p ^{2}+ 15 p \\cdot p $",
+              "description": "Reken uit:  $\\text{-}5\\cdot \\text{-}3$"
+            },
+            {
+              "result": "$\\text{-}45 p + 5 p ^{2}+ 15 p ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            },
+            {
+              "result": "$\\text{-}45 p + 20 p ^{2}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA",
+      "errors": [
+        {
+          "id": "UnlikeTerms",
+          "type": [
+            "MISCONCEPTION"
+          ],
+          "descr": {
+            "nl": "Ongelijksoortige termen optellen."
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

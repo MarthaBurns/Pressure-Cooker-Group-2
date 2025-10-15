@@ -1,0 +1,112 @@
+{
+  "success": true,
+  "creationTimestamp": 1749029683,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$4 p + 4 p \\cdot 2 p $"
+        },
+        {
+          "id": "v1rrr",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749029764176,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$4 p + 4 p \\cdot 2 p $  is niet gelijk aan  $12 p $ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 12 p \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$12p$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1749029769801,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Reken uit:  $4\\cdot 2$",
+                    "expression": "$4 p + \\begingroup\\color{#336699}\\begingroup 4\\endgroup\\endgroup p \\cdot \\begingroup\\color{#336699}\\begingroup 2\\endgroup\\endgroup p $"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1749029785688,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$4p+8p^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$4 p + 8 p ^{2}$",
+          "derivation": [
+            {
+              "expression": "$4 p + 4\\cdot 2 p \\cdot p $"
+            },
+            {
+              "result": "$4 p + 8 p \\cdot p $",
+              "description": "Reken uit:  $4\\cdot 2$"
+            },
+            {
+              "result": "$4 p + 8 p ^{2}$",
+              "description": "Schrijf de herhaalde vermenigvuldiging als een macht"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {},
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

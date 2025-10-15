@@ -1,0 +1,237 @@
+{
+  "success": true,
+  "creationTimestamp": 1750853147,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$t ^{2}+ 8 t + 16$"
+        },
+        {
+          "id": "2kfpZ",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1750853208867,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "FactorIdentitySquare",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Factorise</h1>$p ^{2}+ 2 p  q + q ^{2}=\\left(p + q \\right)^{2}$",
+                    "expression": "$t ^{2}+ 8 t + 16$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750853427458,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorDoubleSumProduct",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not apply the Product-Sum Rule correctly.</h1>Find two numbers with sum  $8$  and product  $16$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup \\left(t + 4 t \\right) \\left(t + 4\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(t+4t\\right)\\left(t+4\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750853452706,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(t+4\\right)\\left(t+4\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT"
+              },
+              {
+                "timestamp": 1750853489803,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "this part is not correct.",
+                    "expression": "$\\left(t + 4\\right) \\left(t + \\begingroup\\color{darkred}\\begingroup t \\endgroup\\endgroup\\times 4\\right)$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(t+4\\right)\\left(t+4t\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750853510491,
+                "event": "HINT",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "Write the repeated multiplication as a power",
+                    "expression": "$\\left(t + 4\\right) \\left(t + 4\\right)$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1750853587792,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandDoubleBracketsMultiplication",
+                    "weight": -10
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not expand the double brackets correctly.</h1>$\\left(a + b \\right) \\left(a + b \\right)=a ^{2}+ 2 a  b + b ^{2}$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup t + 4\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(t+4\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1750853593063,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorIdentitySquare",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(t+4\\right)^{2}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorIdentitySquare",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "FactorDoubleSumProduct",
+                "weight": -100
+              },
+              {
+                "id": "ExpandDoubleBracketsMultiplication",
+                "weight": -10
+              },
+              {
+                "id": "FactorIdentitySquare",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 2,
+                "mathErrors": 3
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\left(t + 4\\right)^{2}$",
+          "derivation": [
+            {
+              "expression": "$t ^{2}+ 8 t + 16$"
+            },
+            {
+              "result": "$\\left(t + 4\\right) \\left(t + 4\\right)$",
+              "skills": [
+                "FactorIdentitySquare"
+              ],
+              "description": "Factorise"
+            },
+            {
+              "result": "$\\left(t + 4\\right)^{2}$",
+              "description": "Write the repeated multiplication as a power"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorIdentitySquare": {
+      "descr": {
+        "en": "Using the factoring identity 'square of a sum' when factoring a polynomial"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FactorDoubleSumProduct": {
+      "descr": {
+        "en": "Factoring a quadratic expression using the Sum-Product Rule"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "en": "Expanding a product of two sums"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 2,
+      "mathErrors": 3,
+      "marksPenalty": 0
+    }
+  }
+}

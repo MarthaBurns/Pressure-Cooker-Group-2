@@ -1,0 +1,125 @@
+{
+  "success": true,
+  "creationTimestamp": 1729543915,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$49- 77 s ^{6}+ 77 s ^{4}$"
+        },
+        {
+          "id": "r5KQO",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1729543946777,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>You did not factor  $\\text{-}77 s ^{6}+ 77 s ^{4}+ 49$  correctly.</h1>$7\\times \\left(\\text{-}7\\right)$  does not equal  $49$",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 7 \\left(\\text{-}11 s ^{6}+ 11 s ^{4}- 7\\right)\\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$7\\left(11s^{4}-11s^{6}-7\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729543996557,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "FactorSingleBrackets",
+                    "weight": 100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$7\\left(11s^{4}-11s^{6}+7\\right)$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [
+              {
+                "id": "FactorSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "FactorSingleBrackets",
+                "weight": 100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": true
+            }
+          },
+          "solution": "$7 \\left(7- 11 RandVarResult ^{6}\\left(s \\right)+ 11 RandVarResult ^{4}\\left(s \\right)\\right)$",
+          "derivation": [
+            {
+              "expression": "$49- 77 RandVarResult ^{6}\\left(s \\right)+ 77 RandVarResult ^{4}\\left(s \\right)$"
+            },
+            {
+              "result": "$7 \\left(7- 11 RandVarResult ^{6}\\left(s \\right)+ 11 RandVarResult ^{4}\\left(s \\right)\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Factorise: Move a factor  $7$  in front of parentheses"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "en": "Factoring a common factor"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

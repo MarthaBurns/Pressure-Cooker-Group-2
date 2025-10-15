@@ -1,4 +1,85 @@
-First file
-x <- 2
+library(tidyverse)
+library(jsonlite)
 
-y <- 1
+#clear workspace
+rm(list = ls())
+
+
+# Recursively find all JSON files under 'sessionInfo'
+json_files <- list.files(path = "~/Pressure-Cooker-Group-2/sessionInfo", 
+                         pattern = "\\.json$", 
+                         full.names = TRUE, 
+                         recursive = TRUE)
+
+# Check how many files were found
+length(json_files)
+
+results <- list()
+
+#extract basic info first
+for (i in seq_along(json_files)) {
+  file_path <- json_files[i]
+  
+  #Try-catch block in case any file is malformed
+  try({
+    tmp <- fromJSON(txt = file_path)
+    
+    #select which variables you want to extract
+    out <- tibble(
+      file = basename(file_path),
+      correct_answer = tmp$scoring$marksEarned,
+      hints_requested = tmp$scoring$penalties$hintsRequested
+    )
+    
+    results[[i]] <- out
+  }, silent = TRUE)
+}
+
+
+
+# Combine all extracted rows into a single data frame
+data_raw <- bind_rows(results)
+
+
+#extract all events and timestamps for each session
+extract_events_from_file <- function(file_path) {
+  tryCatch({
+    tmp <- fromJSON(file_path)
+    
+    # Extract creation timestamp and convert to POSIX
+    creation_ts <- tmp$creationTimestamp
+    session_id <- tools::file_path_sans_ext(basename(file_path))
+    
+    start_event <- tibble(
+      file = session_id,
+      event = "START",
+      timestamp = as.POSIXct(creation_ts, origin = "1970-01-01", tz = "UTC")
+    )
+    
+    # Try to get actual events
+    events <- tmp$elements$items[[1]]$result$events
+    
+    if (!is.null(events) && is.list(events)) {
+      real_events <- map_dfr(events, function(e) {
+        tibble(
+          sessionID = session_id,
+          event = e$event,
+          timestamp = as.POSIXct(e$timestamp / 1000, origin = "1970-01-01", tz = "UTC")
+        )
+      })
+      
+      # Combine "START" with real events
+      bind_rows(start_event, real_events)
+    } else {
+      # No events, return just the START
+      start_event
+    }
+  }, error = function(e) {
+    # On error, return empty tibble
+    tibble()
+  })
+}
+
+
+# Run the extraction across all files
+all_events <- map_dfr(json_files, extract_events_from_file)

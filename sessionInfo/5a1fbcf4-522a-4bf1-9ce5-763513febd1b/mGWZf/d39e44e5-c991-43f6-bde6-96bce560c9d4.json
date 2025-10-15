@@ -1,0 +1,133 @@
+{
+  "success": true,
+  "creationTimestamp": 1749478282,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{1}{1+ \\sqrt{8}}$"
+        },
+        {
+          "id": "mGWZf",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "FINISHED",
+            "progress": 1,
+            "events": [
+              {
+                "timestamp": 1749478311860,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\frac{1}{1+2\\sqrt{2}}$"
+                  }
+                ],
+                "exerciseStatus": "FINISHED",
+                "progress": 1,
+                "inputStatus": "FINISHED"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 1,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 0
+              },
+              "finished": true
+            }
+          },
+          "solution": "$\\frac{\\text{-}1+ 2 \\sqrt{2}}{7}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{1}{1+ \\sqrt{8}}$"
+            },
+            {
+              "result": "$\\frac{1- \\sqrt{8}}{\\left(1+ \\sqrt{8}\\right) \\left(1- \\sqrt{8}\\right)}$",
+              "description": "Haal de wortel uit de noemer"
+            },
+            {
+              "result": "$\\frac{1- \\sqrt{8}}{1- \\sqrt{8}+ \\sqrt{8}- \\sqrt{8} \\sqrt{8}}$",
+              "skills": [
+                "ExpandDoubleBracketsMultiplication"
+              ],
+              "description": "Werk de dubbele haakjes weg"
+            },
+            {
+              "result": "$\\frac{1- \\sqrt{8}}{1- \\sqrt{8} \\sqrt{8}}$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            },
+            {
+              "result": "$\\frac{1- \\sqrt{8}}{1- 8}$",
+              "description": "Vermenigvuldig de wortels"
+            },
+            {
+              "result": "$\\text{-}\\frac{1- \\sqrt{8}}{7}$",
+              "description": "Herleid."
+            },
+            {
+              "result": "$\\frac{\\text{-}1+ \\sqrt{8}}{7}$",
+              "skills": [
+                "ExpandSingleBrackets"
+              ],
+              "description": "Vermenigvuldig de teller met -1"
+            },
+            {
+              "result": "$\\frac{\\text{-}1+ \\sqrt{4} \\sqrt{2}}{7}$",
+              "description": "Vereenvoudig de wortel"
+            },
+            {
+              "result": "$\\frac{\\text{-}1+ 2 \\sqrt{2}}{7}$",
+              "description": "Bepaal de wortel van  $4$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "ExpandDoubleBracketsMultiplication": {
+      "descr": {
+        "nl": "Dubbele haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": true,
+    "marksEarned": 1,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 0,
+      "marksPenalty": 0
+    }
+  }
+}

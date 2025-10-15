@@ -1,0 +1,155 @@
+{
+  "success": true,
+  "creationTimestamp": 1750411223,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Factorise."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$9 m ^{5}+ 9 m ^{2}$"
+        },
+        {
+          "id": "44WB6",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1750411330811,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$9\\left(m^{5}+m^{2}\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FactorSingleBrackets",
+                  "AlgebraProductOfPowerFunctions"
+                ]
+              },
+              {
+                "timestamp": 1750411360448,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$9\\left(1m^{5}+1m^{2}\\right)$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "CORRECT",
+                "skillsTodo": [
+                  "FactorSingleBrackets",
+                  "AlgebraProductOfPowerFunctions"
+                ]
+              },
+              {
+                "timestamp": 1750411467669,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "this part is not correct.",
+                    "expression": "$\\left(\\begingroup\\color{darkred}\\begingroup m ^{4}+ m \\endgroup\\endgroup\\right)\\times 9$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$9\\left(m^{4}+m\\right)$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$9 m ^{2} \\left(m + 1\\right) \\left(m ^{2}- m + 1\\right)$",
+          "derivation": [
+            {
+              "expression": "$9 m ^{5}+ 9 m ^{2}$"
+            },
+            {
+              "result": "$9 \\left(m ^{5}+ m ^{2}\\right)$",
+              "skills": [
+                "FactorSingleBrackets"
+              ],
+              "description": "Factorise"
+            },
+            {
+              "result": "$9 m ^{2} \\left(m ^{3}+ 1\\right)$",
+              "skills": [
+                "FactorSingleBrackets",
+                "AlgebraProductOfPowerFunctions"
+              ],
+              "description": "Factorise: Move  $m ^{2}$  in front of parentheses"
+            },
+            {
+              "result": "$9 m ^{2} \\left(m + 1\\right) \\left(m ^{2}- m + 1\\right)$",
+              "skills": [
+                "FactorLinearFactor"
+              ],
+              "description": "Factorise factor  $m + 1$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FactorSingleBrackets": {
+      "descr": {
+        "en": "Factoring a common factor"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "AlgebraProductOfPowerFunctions": {
+      "descr": {
+        "en": "Apply the rule for multiplying power functions"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "FactorLinearFactor": {
+      "descr": {
+        "en": "Factoring a linear factor from a higher degree polynomial"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

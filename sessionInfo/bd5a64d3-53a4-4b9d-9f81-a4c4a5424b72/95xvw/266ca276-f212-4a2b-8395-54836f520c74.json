@@ -1,0 +1,124 @@
+{
+  "success": true,
+  "creationTimestamp": 1748000419,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Los de vergelijking op."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}81+ \\left(5 m - 5\\right)^{2}=0$"
+        },
+        {
+          "id": "95xvw",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1748000455699,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$-81+\\left(81\\right)=0$"
+                  }
+                ],
+                "exerciseStatus": "CORRECT",
+                "progress": 0,
+                "inputStatus": "TRUE_EXPRESSION"
+              },
+              {
+                "timestamp": 1748000665271,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "INPUT",
+                    "content": "$\\left(5m-5\\right)\\left(5m-5\\right)=5m^{2}+5m-5-5^{2}-5+5m$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "NO_MATCH"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 1
+              },
+              "finished": false
+            }
+          },
+          "solution": "$m =\\text{-}\\frac{4}{5}\\vee m =\\frac{14}{5}$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}81+ \\left(5 m - 5\\right)^{2}=0$"
+            },
+            {
+              "result": "$\\left(5 m - 5\\right)^{2}=81$",
+              "skills": [
+                "EquationsBalanceMethodArrangeTerms",
+                "EquationsOperationsAdd"
+              ],
+              "description": "Balansmethode: Tel links en rechts  $81$  erbij op."
+            },
+            {
+              "result": "$5 m - 5=\\sqrt{81}\\vee 5 m - 5=\\text{-}\\sqrt{81}$",
+              "description": "Herleid de vergelijking door links en rechts de wortel te nemen"
+            },
+            {
+              "result": "$5 m - 5=9\\vee 5 m - 5=\\text{-}9$",
+              "description": "Bepaal de wortel van  $81$"
+            },
+            {
+              "result": "$5 m =14\\vee 5 m =\\text{-}4$",
+              "description": "Balansmethode: Tel links en rechts  $5$  erbij op."
+            },
+            {
+              "result": "$m =\\text{-}\\frac{4}{5}\\vee m =\\frac{14}{5}$",
+              "description": "Deel links en rechts door  $5$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "EquationsBalanceMethodArrangeTerms": {
+      "descr": {
+        "nl": "Termen met de variabele naar links en andere termen naar rechts halen."
+      },
+      "stepType": "STRATEGY"
+    },
+    "EquationsOperationsAdd": {
+      "descr": {
+        "nl": "Termen optellen of aftrekken via de balansmethode"
+      },
+      "stepType": "STRATEGY"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 1,
+      "marksPenalty": 0
+    }
+  }
+}

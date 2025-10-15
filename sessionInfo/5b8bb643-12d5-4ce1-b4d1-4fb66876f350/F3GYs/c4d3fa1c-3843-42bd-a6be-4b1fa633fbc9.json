@@ -1,0 +1,158 @@
+{
+  "success": true,
+  "creationTimestamp": 1757489539,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Calculate."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\frac{\\frac{2}{5}}{\\text{-}2\\frac{2}{7}}$"
+        },
+        {
+          "id": "F3GYs",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1757489623698,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{\\frac{2}{5}}{\\text{-}2\\frac{2}{7}}$  does not equal  $\\text{-}\\frac{7}{30}$ .",
+                    "expression": "$\\frac{\\frac{2}{5}}{\\text{-}2\\frac{2}{7}}=\\text{-}\\frac{7}{30}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$=-\\frac{7}{30}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              },
+              {
+                "timestamp": 1757489796617,
+                "event": "EVALUATE",
+                "tags": [],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "$\\frac{\\frac{2}{5}}{\\text{-}2\\frac{2}{7}}$  does not equal  $\\text{-}\\frac{32}{35}$ .",
+                    "expression": "$\\frac{\\frac{2}{5}}{\\text{-}2\\frac{2}{7}}=\\text{-}\\frac{32}{35}$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$=-\\frac{32}{35}$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "FALSE_EXPRESSION"
+              }
+            ],
+            "tags": [],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 0,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$\\text{-}\\frac{7}{40}$",
+          "derivation": [
+            {
+              "expression": "$\\frac{\\frac{2}{5}}{\\text{-}2\\frac{2}{7}}$"
+            },
+            {
+              "result": "$\\left(\\text{-}\\frac{2}{5}\\right) \\div 2\\frac{2}{7}$",
+              "description": "Make the denominator positive by multiplying numerator and denominator by -1"
+            },
+            {
+              "result": "$\\left(\\text{-}\\frac{2}{5}\\right) \\div \\frac{16}{7}$",
+              "skills": [
+                "FractionArithmeticSimilarMixedToImproper"
+              ],
+              "description": "Rewrite  $2\\frac{2}{7}$  into an improper fraction"
+            },
+            {
+              "result": "$\\text{-}\\frac{2}{5}\\times \\frac{7}{16}$",
+              "skills": [
+                "FractionArithmeticDivisionProper"
+              ],
+              "description": "Use 'Invert and multiply' to calculate the division by  $\\frac{16}{7}$"
+            },
+            {
+              "result": "$\\text{-}\\frac{2\\times 7}{5\\times 16}$",
+              "skills": [
+                "FractionArithmeticMultiplicationProper"
+              ],
+              "description": "Multiply the fractions"
+            },
+            {
+              "result": "$\\text{-}\\frac{7}{8\\times 5}$",
+              "skills": [
+                "FractionArithmeticSimplifyProper"
+              ],
+              "description": "Divide the numerator and the denominator by their common factor"
+            },
+            {
+              "result": "$\\text{-}\\frac{7}{40}$",
+              "description": "Calculate:  $8\\times 5$"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "FractionArithmeticSimilarMixedToImproper": {
+      "descr": {
+        "en": "Writing a mixed fraction into a similar improper fraction"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticDivisionProper": {
+      "descr": {
+        "en": "Dividing proper fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticMultiplicationProper": {
+      "descr": {
+        "en": "Multiplying proper fractions"
+      },
+      "stepType": "CALCULATE"
+    },
+    "FractionArithmeticSimplifyProper": {
+      "descr": {
+        "en": "Simplifying a proper fraction"
+      },
+      "stepType": "CALCULATE"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 0,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}

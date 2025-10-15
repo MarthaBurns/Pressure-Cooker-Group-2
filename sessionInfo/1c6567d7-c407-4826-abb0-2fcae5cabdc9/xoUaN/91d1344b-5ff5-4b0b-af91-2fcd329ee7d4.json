@@ -1,0 +1,167 @@
+{
+  "success": true,
+  "creationTimestamp": 1729239361,
+  "elements": [
+    {
+      "id": "Q1",
+      "type": "QUESTION",
+      "items": [
+        {
+          "itemType": "TEXT",
+          "content": "Werk de haakjes weg en vereenvoudig."
+        },
+        {
+          "itemType": "TEXT",
+          "content": "$\\text{-}5+ 6 \\left(4 m + 2\\right)- \\left(3 m - 6\\right)$"
+        },
+        {
+          "id": "xoUaN",
+          "itemType": "INTERACTION",
+          "interactionType": "MULTISTEP",
+          "result": {
+            "status": "ERROR",
+            "progress": 0,
+            "events": [
+              {
+                "timestamp": 1729239420118,
+                "event": "HINT",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": 100,
+                    "source": "HINT"
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "HINT",
+                    "content": "<h1>Werk de haakjes uit</h1>Vermenigvuldig elke term binnen de haakjes met  $6$",
+                    "expression": "$\\text{-}5+ \\begingroup\\color{#336699}\\begingroup 6 \\left(4 m + 2\\right)\\endgroup\\endgroup- \\left(3 m - 6\\right)$"
+                  }
+                ]
+              },
+              {
+                "timestamp": 1729239597379,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Vermenigvuldig elke term binnen de haakjes met  $6$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 43\\endgroup\\endgroup+ \\begingroup\\color{darkred}\\begingroup 6 m \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$43+6m$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              },
+              {
+                "timestamp": 1729239696391,
+                "event": "EVALUATE",
+                "tags": [
+                  {
+                    "id": "ExpandSingleBrackets",
+                    "weight": -100
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "ERROR_FEEDBACK",
+                    "content": "<h1>Je hebt de vermenigvuldiging niet goed uitgewerkt.</h1>Vermenigvuldig elke term binnen de haakjes met  $6$ .",
+                    "expression": "$\\begingroup\\color{darkred}\\begingroup 21\\endgroup\\endgroup+ \\begingroup\\color{darkred}\\begingroup 6 m \\endgroup\\endgroup$"
+                  },
+                  {
+                    "type": "INPUT",
+                    "content": "$21+6m$"
+                  }
+                ],
+                "exerciseStatus": "ERROR",
+                "progress": 0,
+                "inputStatus": "ERROR"
+              }
+            ],
+            "tags": [
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": 100,
+                "source": "HINT"
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100
+              },
+              {
+                "id": "ExpandSingleBrackets",
+                "weight": -100
+              }
+            ],
+            "scoring": {
+              "marksEarned": 0,
+              "marksTotal": 1,
+              "penalties": {
+                "marksPenalty": 0,
+                "hintsRequested": 1,
+                "mathErrors": 2
+              },
+              "finished": false
+            }
+          },
+          "solution": "$13+ 21 RandVarResult \\left(m \\right)$",
+          "derivation": [
+            {
+              "expression": "$\\text{-}5+ 6 \\left(4 RandVarResult \\left(m \\right)+ 2\\right)- \\left(3 RandVarResult \\left(m \\right)- 6\\right)$"
+            },
+            {
+              "result": "$\\text{-}5+ 24 RandVarResult \\left(m \\right)+ 12- 3 RandVarResult \\left(m \\right)+ 6$",
+              "description": "Werk de haakjes uit"
+            },
+            {
+              "result": "$13+ 24 RandVarResult \\left(m \\right)- 3 RandVarResult \\left(m \\right)$",
+              "description": "Reken uit:  $\\text{-}5+ 12+ 6$"
+            },
+            {
+              "result": "$13+ 21 RandVarResult \\left(m \\right)$",
+              "skills": [
+                "AlgebraAddingLikeTerms"
+              ],
+              "description": "Neem de gelijksoortige termen samen"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDescriptions": {
+    "AlgebraAddingLikeTerms": {
+      "descr": {
+        "nl": "Gelijksoortige termen optellen"
+      },
+      "stepType": "ALGEBRA"
+    },
+    "ExpandSingleBrackets": {
+      "descr": {
+        "nl": "Eén paar haakjes uitwerken"
+      },
+      "stepType": "ALGEBRA"
+    }
+  },
+  "scoring": {
+    "finished": false,
+    "marksEarned": 0,
+    "marksTotal": 1,
+    "penalties": {
+      "hintsRequested": 1,
+      "mathErrors": 2,
+      "marksPenalty": 0
+    }
+  }
+}
