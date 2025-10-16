@@ -4,7 +4,7 @@ library(jsonlite)
 #clear workspace
 rm(list = ls())
 
-file_path <- "~/Pressure-Cooker-Group-2/sessionInfo"
+file_path <- "~/Documents/Pressure-Cooker-Group-2/sessionInfo"
 
 # Recursively find all JSON files under 'sessionInfo'
 json_files <- list.files(path = file_path, 
@@ -40,20 +40,16 @@ data_raw <- bind_rows(results)
 extract_events_from_file <- function(file_path) {
   tryCatch({
     tmp <- fromJSON(file_path)
-    
     # Extract creation timestamp and convert to POSIX
     creation_ts <- tmp$creationTimestamp
     session_id <- tools::file_path_sans_ext(basename(file_path))
-    
     start_event <- tibble(
       file = session_id,
       event = "START",
       timestamp = as.POSIXct(creation_ts, origin = "1970-01-01", tz = "UTC")
     )
-    
     # Try to get actual events
     events <- tmp$elements$items[[1]]$result$events
-    
     if (!is.null(events) && is.list(events)) {
       real_events <- map_dfr(events, function(e) {
         tibble(
@@ -62,7 +58,6 @@ extract_events_from_file <- function(file_path) {
           timestamp = as.POSIXct(e$timestamp / 1000, origin = "1970-01-01", tz = "UTC")
         )
       })
-      
       # Combine "START" with real events
       bind_rows(start_event, real_events)
     } else {
@@ -78,3 +73,34 @@ extract_events_from_file <- function(file_path) {
 
 # Run the extraction across all files
 all_events <- map_dfr(json_files, extract_events_from_file)
+
+
+# Fill all the sessionID NAs
+all_events_filled <- all_events %>%
+  arrange(desc(row_number())) %>%
+  fill(sessionID, .direction = "down") %>%
+  arrange(row_number())
+
+all_events_filled <- all_events_filled %>%
+  arrange(desc(row_number()))  %>%
+  fill(file, .direction = "down")
+  
+data_raw$file <- sub("\\.json$", "", data_raw$file)
+  
+full_data <- left_join(all_events_filled, data_raw, by = "file")
+
+full_data <- full_data %>%
+  mutate(file_id = paste0("f", dense_rank(file)))
+  
+full_data <- full_data %>%
+  mutate(session_id = paste0("s", dense_rank(sessionID)))
+  
+# Add difficulty
+
+
+
+
+
+
+
+
