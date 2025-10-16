@@ -4,9 +4,10 @@ library(jsonlite)
 #clear workspace
 rm(list = ls())
 
+file_path <- "~/Pressure-Cooker-Group-2/sessionInfo"
 
 # Recursively find all JSON files under 'sessionInfo'
-json_files <- list.files(path = "~/Pressure-Cooker-Group-2/sessionInfo", 
+json_files <- list.files(path = file_path, 
                          pattern = "\\.json$", 
                          full.names = TRUE, 
                          recursive = TRUE)
@@ -16,18 +17,15 @@ results <- list()
 #extract basic info first
 for (i in seq_along(json_files)) {
   file_path <- json_files[i]
-  
   #Try-catch block in case any file is malformed
   try({
     tmp <- fromJSON(txt = file_path)
-    
     #select which variables you want to extract
     out <- tibble(
       file = basename(file_path),
       correct_answer = tmp$scoring$marksEarned,
       hints_requested = tmp$scoring$penalties$hintsRequested
     )
-    
     results[[i]] <- out
   }, silent = TRUE)
 }
