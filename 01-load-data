@@ -14,27 +14,26 @@ json_files <- list.files(path = file_path,
 
 results <- list()
 
-#extract basic info first
 for (i in seq_along(json_files)) {
   file_path <- json_files[i]
-  #Try-catch block in case any file is malformed
   try({
     tmp <- fromJSON(txt = file_path)
-    #select which variables you want to extract
+    items_df <- tmp$elements$items[[1]]
+    interaction_row <- items_df[!is.na(items_df$interactionType), ]
     out <- tibble(
       file = basename(file_path),
       correct_answer = tmp$scoring$marksEarned,
-      hints_requested = tmp$scoring$penalties$hintsRequested
+      hints_requested = tmp$scoring$penalties$hintsRequested,
+      content = interaction_row$interactionType,
+      maybe_person_id = interaction_row$id
+      #marks_total = tmp$scoring$marksTotal only adds a column of 1s
     )
     results[[i]] <- out
   }, silent = TRUE)
 }
 
-
-
 # Combine all extracted rows into a single data frame
 data_raw <- bind_rows(results)
-
 
 #extract all events and timestamps for each session
 extract_events_from_file <- function(file_path) {
@@ -86,21 +85,48 @@ all_events_filled <- all_events_filled %>%
   fill(file, .direction = "down")
   
 data_raw$file <- sub("\\.json$", "", data_raw$file)
-  
+
+# Create full data table
 full_data <- left_join(all_events_filled, data_raw, by = "file")
 
 full_data <- full_data %>%
-  mutate(file_id = paste0("f", dense_rank(file)))
+  mutate(file_id = paste0(dense_rank(file)))
   
 full_data <- full_data %>%
-  mutate(session_id = paste0("s", dense_rank(sessionID)))
+  mutate(session_id = paste0(dense_rank(sessionID)))
+
+# The code below showed that file and sessionID identified the same things.
+mean(full_data$session_id == full_data$file_id)
+
+full_data <- full_data %>%
+  select(-sessionID, -file_id)
   
-# Add difficulty
+# Adding row whether hint event was spammed or not
+full_data <- full_data %>%
+  arrange(session_id, timestamp) %>%  # ensure chronological order
+  group_by(session_id) %>%
+  mutate(
+    time_diff = timestamp - lag(timestamp),
+    prev_hint = lag(event) == "HINT",
+    spam_hint = case_when(
+      event == "HINT" & prev_hint & time_diff <= 3 ~ 1, # here I set spamming to requesting a hint in less than 3 seconds
+      event == "HINT" ~ 0,
+      TRUE ~ NA_real_
+    )
+  ) %>%
+  ungroup()
 
-length(unique(full_data$file))
-length(unique(full_data$sessionID))
+full_data <- full_data %>%
+  select(-time_diff, -prev_hint)
 
+# First data exploration
+mean(full_data$rapid_hint, na.rm = TRUE)
+  
+################################################################################ 
+# Adding difficulty did not seem possible as its not a variable in the data
 
+# Tidying the environment
+rm(all_events, interaction_row, items_df, out, results, stuff, tmp, i)
 
 
 
