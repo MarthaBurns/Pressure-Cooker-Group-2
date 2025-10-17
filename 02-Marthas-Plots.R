@@ -1,7 +1,9 @@
 library(dplyr)
 library(ggplot2)
 
-########################################### SOURCE THING #####################################
+rm(list = ls())
+# Takes forever
+source("~/Documents/Pressure-Cooker-Group-2/01-load-data.r") # Probably has to be adapted to each person
 
 #  Does using hints improve performance? + Does using evaluates improve performance? + full effect - Martha 
 ##################################### DATA #####################################
