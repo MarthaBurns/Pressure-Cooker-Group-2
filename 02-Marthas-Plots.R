@@ -27,6 +27,7 @@ first_plot_data <- first_plot_data %>%
   ) %>%
   group_by(event, progress_bin) %>%
   summarise(count = n(), .groups = "drop") %>%
+  complete(event = c("HINT", "EVALUATE"), progress_bin = levels(progress_bin), fill = list(count = 0)) %>%
   group_by(event) %>%
   mutate(percentage = count / sum(count) * 100)
 
