@@ -19,6 +19,19 @@ threshold <- 3
 ### DENSITIES
 
 # Compute densities manually for each event
+
+# Separate standardized tables for hints and evaluations
+hints <- consecutive_hints %>%
+  mutate(event_type = "HINT") %>%
+  rename(time_between = time_between_hints)
+
+evals <- consecutive_evals %>%
+  mutate(event_type = "EVALUATE") %>%
+  rename(time_between = time_between_evals)
+
+# Combine
+combined <- bind_rows(hints, evals)
+
 densities <- combined %>%
   group_by(event_type) %>%
   do({
@@ -32,24 +45,20 @@ densities <- densities %>%
     x <= threshold + epsilon ~ "before",
     TRUE ~ "after"
   ))
-  
 
 ## Hint density
 dens_hint <- density(consecutive_hints$time_between_hints, from = 0, to = 20)
 dens_df_hint <- data.frame(x = dens_hint$x, y = dens_hint$y)
-
 # Split
 dens_df_hint$segment <- ifelse(dens_df_hint$x <= threshold, "before", "after")
 
 ## Eval density
 dens_eval <- density(consecutive_evals$time_between_evals, from = 0, to = 60)
 dens_df_eval <- data.frame(x = dens_eval$x, y = dens_eval$y)
-
 # Split
 dens_df_eval$segment <- ifelse(dens_df_eval$x <= threshold, "before", "after")
 
 ### THEME
-
 base_theme <- theme_minimal(base_size = 16)
 
 title_left_theme <- theme(
@@ -138,7 +147,6 @@ dense_plot <- hint_dist / eval_dist +
 
 dense_plot
 
-
 ### SEPARATE BARS PLOT
 
 # THEME
@@ -146,7 +154,6 @@ plot2_theme <- theme(
   plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
   axis.text.x = element_text(angle = 45, hjust = 1)
   )
-
 
 # Set colors and labels for legend
 fill_scale <- scale_fill_manual(
