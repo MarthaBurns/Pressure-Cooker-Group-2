@@ -17,6 +17,8 @@ json_files <- list.files(path = file_path,
 
 results <- list()
 
+tmp
+
 for (i in seq_along(json_files)) {
   file_path <- json_files[i]
   try({
@@ -29,7 +31,6 @@ for (i in seq_along(json_files)) {
       hints_requested = tmp$scoring$penalties$hintsRequested,
       content = interaction_row$interactionType,
       maybe_person_id = interaction_row$id
-      #marks_total = tmp$scoring$marksTotal only adds a column of 1s
     )
     results[[i]] <- out
   }, silent = TRUE)
