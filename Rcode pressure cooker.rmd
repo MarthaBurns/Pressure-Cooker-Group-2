@@ -2,13 +2,14 @@
 title: "Report Code"
 author: "Martha Brenner"
 date: "2025-10-20"
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```{r, results = 'hide'}
 # All needed libraries
 library(tidyverse)
 library(jsonlite)
@@ -16,19 +17,21 @@ library(ggplot2)
 library(showtext)
 library(ggtext)
 library(patchwork)
+library(lintr)
+library(rstudioapi)
 ```
 
 ## Loading the data
 
-```{r setup, include=FALSE}
+```{r, eval=FALSE}
 # This likely needs to be adpated to your computer
 # Input the file path to the Pressure Cooker data below
-file_path <- # e.g. "~/Documents/Pressure-Cooker-Group-2/sessionInfo"
+file_path <- "~/Documents/Pressure-Cooker-Group-2/sessionInfo"
 
 # Recursively find all JSON files under 'sessionInfo'
-json_files <- list.files(path = file_path, 
-                         pattern = "\\.json$", 
-                         full.names = TRUE, 
+json_files <- list.files(path = file_path,
+                         pattern = "\\.json$",
+                         full.names = TRUE,
                          recursive = TRUE)
 
 results <- list()
@@ -76,7 +79,9 @@ extract_events_from_file <- function(file_path) {
         tibble(
           sessionID = session_id,
           event = e$event,
-          timestamp = as.POSIXct(e$timestamp / 1000, origin = "1970-01-01", tz = "UTC"),
+          timestamp = as.POSIXct(e$timestamp / 1000,
+                                 origin = "1970-01-01",
+                                 tz = "UTC"),
           progress = e$progress
         )
       })
@@ -114,7 +119,8 @@ data_raw$file <- sub("\\.json$", "", data_raw$file)
 # Create full data table
 full_data <- left_join(all_events_filled, data_raw, by = "file")
 
-# The files and sessions didn't have nice names, so we created file_ID and session_ID
+# The files and sessions didn't have nice names, 
+# so we created file_ID and session_ID
 full_data <- full_data %>%
   mutate(file_id = paste0(dense_rank(file)))
 
@@ -136,7 +142,7 @@ full_data <- full_data %>%
     time_diff = timestamp - lag(timestamp),
     prev_hint = lag(event) == "HINT",
     spam_hint = case_when(
-      event == "HINT" & prev_hint & time_diff <= 3 ~ 1, # here I set spamming to requesting a hint in less than 5 seconds
+      event == "HINT" & prev_hint & time_diff <= 3 ~ 1,
       event == "HINT" ~ 0,
       TRUE ~ NA_real_
     )
@@ -154,28 +160,30 @@ consecutive_hints <- full_data %>%
   ungroup()
 
 #do the same for spamming evaluate
-full_data <- full_data %>% 
+full_data <- full_data %>%
   arrange(session_id, timestamp) %>%  # ensure chronological order
   group_by(session_id) %>%
   mutate(
     time_diff_eval = timestamp - lag(timestamp),
     prev_eval = lag(event) == "EVALUATE",
     spam_eval = case_when(
-      event == "EVALUATE" & prev_eval & time_diff_eval <= 3 ~ 1, # here I set spamming to requesting a hint in less than 3 seconds
+      event == "EVALUATE" & prev_eval & time_diff_eval <= 3 ~ 1,
       event == "EVALUATE" ~ 0,
       TRUE ~ NA_real_
     )
-  ) %>% 
+  ) %>%
   ungroup()
 
-#include rows where event 1 and event 2 are both evaluate, and evaluate 2 is incorrect
+# include rows where event 1 and event 2 are both evaluate, 
+# and evaluate 2 is incorrect
 consecutive_evals <- full_data %>%
   arrange(session_id, timestamp) %>%
   group_by(session_id) %>%
   mutate(
     prev_event = lag(event),
     prev_progress = lag(progress),
-    time_between_evals = as.numeric(timestamp - lag(timestamp), units = "secs")
+    time_between_evals = as.numeric(timestamp - lag(timestamp),
+                                    units = "secs")
   ) %>%
   filter(
     event == "EVALUATE",
@@ -190,46 +198,45 @@ rm(all_events, interaction_row, items_df, out, results, tmp, i)
 
 ## Exploring the data 
 
-```{R}
-#check number of times where hints or eval were spammed, as well as total number of cases with consecutive hints or evals
+```{r, eval=FALSE}
+# check number of times where hints or eval were spammed, 
+# as well as total number of cases with consecutive hints or evals
 full_data %>% filter(spam_hint == c(0, 1))
 full_data %>% filter(spam_hint == 1)
 full_data %>% filter(spam_eval == c(0, 1))
 full_data %>% filter(spam_eval == 1)
 
-#proportion of cases where hint was spammed (cases, not people)
-25/3855
+# proportion of cases where hint was spammed (cases, not people)
+25 / 3855
 
-#proportion where eval was spammed (cases, not people) - this is also given the second eval was wrong
-13424/67114
+# proportion where eval was spammed (cases, not people)
+# - this is also given the second eval was wrong
+13424 / 67114
 
-#comparing whether people who spam hints get the right answer in the end (correct vs incorrect)
-#code might be incorrect, and does not count individual sessions, rather each event
-#full_data %>% 
-#  filter(event == "HINT") %>% 
-#  group_by(spam_hint) %>% 
-#  summarise(correct = mean(correct_answer == 1), incorrect = mean(correct_answer == 0))
+# comparing whether people who spam hints 
+# get the right answer in the end (correct vs incorrect)
+# code might be incorrect, and does not count individual sessions, 
+# rather each event
 
-#full_data %>% 
-#  filter(event == c("EVALUATE", "HINT")) %>% 
-#  group_by(event, spam_hint, spam_eval) %>% 
-#  summarise(correct = mean(correct_answer == 1), incorrect = mean(correct_answer == 0))
-
-
-#out of all sessions, we check how many spammed evaluate and got it wrong in the end
+# out of all sessions, we check how many 
+# spammed evaluate and got it wrong in the end
 full_data %>% 
   filter(spam_eval == 1 & correct_answer == 0) %>% 
   distinct(file, .keep_all = TRUE)
 
-#comparing whether people who spam evaluate get the right answer in the end
+# comparing whether people who spam evaluate 
+# get the right answer in the end
 full_data %>% 
   filter(event == "EVALUATE") %>% 
   group_by(spam_eval) %>% 
   summarise(correct = mean(correct_answer == 1), incorrect = mean(correct_answer == 0))
-#doesn't make a difference in whether they get the answer correct
+# doesn't make a difference 
+# in whether they get the answer correct
 
 
-#initial response is incorrect or there is no response before pressing hint, do they use hint afterwards or not?
+# initial response is incorrect or there is no 
+# response before pressing hint,
+# do they use hint afterwards or not?
 session_behaviours <- full_data %>%
   group_by(session_id) %>%
   summarise(
@@ -287,7 +294,7 @@ data_eval %>%
 
 ## Calculating the data we used in our tables
 
-```{R}
+```{r, eval=FALSE}
 # -------------- Calculating proportions for hints and evaluates ---------------
 
 # 1. Sessions where a hint was used
@@ -402,7 +409,10 @@ hint_improvement <- filtered_data %>%
     prev_event = lag(event)
   ) %>%
   filter(event == "HINT" & next_event == "EVALUATE") %>%
-  mutate(progress_change = next_eval_progress - if_else(prev_event == "EVALUATE", prev_eval_progress, 0)) %>%
+  mutate(progress_change = next_eval_progress -
+           if_else(prev_event == "EVALUATE",
+                   prev_eval_progress,
+                   0)) %>%
   ungroup()
 
 # Step 5: For each session, calculate progress improvement after EVALUATE
@@ -433,7 +443,7 @@ summary_table <- tibble(
 
 summary_table
 
-full_data %>% 
+full_data %>%
   filter(progress >= 0.9 & progress < 1 & spam_eval == 1)
 ```
 
@@ -441,7 +451,7 @@ full_data %>%
 
 ### The density plots
 
-```{R}
+```{r, eval=FALSE}
 #plot the density on y axis and x axis is time between consecutive hints
 font_add_google("Tenor Sans", "tenor_sans")
 showtext_auto()
@@ -507,18 +517,24 @@ title_left_theme <- theme(
 
 ### TITLES
 # Optional: the thoughts was to add the titles as a textblock to the left
-# of the plots. 
+# of the plots.
 
 # Title block for hint
 title_h <- ggplot() +
-  annotate("text", x = 0, y = 0.5, label = "Density of Time Between\nConsecutive Hints", 
+  annotate("text",
+           x = 0,
+           y = 0.5,
+           label = "Density of Time Between\nConsecutive Hints",
            hjust = 0, vjust = 0.5, size = 2, fontface = "bold") +
   theme_void() +
   theme(plot.margin = margin(0, 0, 0, 0))
 
 # Title block for evaluation
 title_e <- ggplot() +
-  annotate("text", x = 0, y = 0.5, label = "Density of Time Between\nConsecutive Evaluations", 
+  annotate("text",
+           x = 0,
+           y = 0.5,
+           label = "Density of Time Between\nConsecutive Evaluations",
            hjust = 0, vjust = 0.5, size = 2, fontface = "bold") +
   theme_void() +
   theme(plot.margin = margin(0, 0, 0, 0))
@@ -536,7 +552,10 @@ hint_dist <- ggplot(dens_df_hint, aes(x = x, y = y, fill = segment)) +
             fill = "#01317a", alpha = 0.3) +
   geom_line(data = subset(dens_df_hint, segment == "after"),
             color = "#01317a", alpha = 0.3) +
-  geom_vline(xintercept = threshold, linetype = "solid", colour = "#383838", linewidth = 0.6) +
+  geom_vline(xintercept = threshold,
+             linetype = "solid",
+             colour = "#383838",
+             linewidth = 0.6) +
   labs(
     title = "Density of Time Between Consecutive Hints",
     x = "Time Between Hints (seconds)",
@@ -562,7 +581,10 @@ eval_dist <- ggplot(dens_df_eval, aes(x = x, y = y, fill = segment)) +
             fill = "#d55e00", alpha = 0.3) +
   geom_line(data = subset(dens_df_eval, segment == "after"),
             color = "#d55e00", alpha = 0.3) +
-  geom_vline(xintercept = threshold, linetype = "solid", colour = "#383838", linewidth = 0.6) +
+  geom_vline(xintercept = threshold,
+             linetype = "solid",
+             colour = "#383838",
+             linewidth = 0.6) +
   labs(
     title = "Density of Time Between Consecutive Evaluations",
     x = "Time Between Evaluations (seconds)",
@@ -576,7 +598,7 @@ eval_dist <- ggplot(dens_df_eval, aes(x = x, y = y, fill = segment)) +
 eval_block <- title_e | eval_dist
 
 ### FINAL DENSITY PLOT
-dense_plot <- hint_dist / eval_dist + 
+dense_plot <- hint_dist / eval_dist +
   plot_layout(widths = c(0.5, 2))
 
 dense_plot
@@ -584,7 +606,7 @@ dense_plot
 
 ### The plots comparing how much progress is made after spamming hint or evaluate
 
-```{R}
+```{r, eval=FALSE}
 # ------------------- Code for the Data Needed for the Plot -------------------
 second_plot_data <- full_data %>%
   arrange(desc(row_number())) %>%
@@ -603,7 +625,9 @@ second_plot_data <- second_plot_data %>%
       breaks = seq(0, 1, by = bin_width),
       include.lowest = TRUE,
       right = FALSE,
-      labels = paste0(seq(0, 0.95, by = bin_width) * 100, "%–", seq(bin_width, 1, by = bin_width) * 100, "%")
+      labels = paste0(seq(0, 0.95, by = bin_width) * 100, 
+                      "%–", 
+                      seq(bin_width, 1, by = bin_width) * 100, "%")
     )
   ) %>%
   group_by(event, progress_bin) %>%
@@ -616,7 +640,7 @@ second_plot_data <- second_plot_data %>%
 plot2_theme <- theme(
   plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
   axis.text.x = element_text(angle = 45, hjust = 1)
-  )
+)
 
 # Set colors and labels for legend
 fill_scale <- scale_fill_manual(
@@ -633,7 +657,7 @@ fill_scale <- scale_fill_manual(
 spam_hint <- ggplot(
   subset(second_plot_data, event == "HINT"),
   aes(x = progress_bin, y = percentage, fill = event)
-  ) +
+) +
   geom_col(linewidth = 0.4) +
   fill_scale +
   labs(x = NULL, y = "Percentage of Events") +
@@ -644,59 +668,59 @@ spam_hint <- ggplot(
   base_theme +
   scale_y_continuous(labels = scales::label_percent(scale = 1)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 9)
-        )
+  )
 
 # EVALUATE
 spam_eval <- ggplot(
   subset(second_plot_data, event == "EVALUATE"),
   aes(x = progress_bin, y = percentage, fill = event)
-  ) +
+) +
   geom_col(linewidth = 0.4) +
   fill_scale +
   labs(x = "Progress (%)", y = NULL) +
   scale_x_discrete(
-    labels = c("0–10", "10–20", "20–30", "30–40", "40–50", 
+    labels = c("0–10", "10–20", "20–30", "30–40", "40–50",
                "50–60", "60–70", "70–80", "80–90", "90–100")
   ) +
   plot2_theme +
   base_theme +
-  ylim(0,60) +
+  ylim(0, 60) +
   theme(axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
-        axis.line.y  = element_blank(),
-        axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 9),
-        axis.title.x = element_text(hjust = 0)
-        )
-  
+    axis.ticks.y = element_blank(),
+    axis.line.y  = element_blank(),
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 9),
+    axis.title.x = element_text(hjust = 0)
+  )
 
 # Combine side by side and collect the single legend
-spam_combined_plot <- (spam_hint | spam_eval) + 
+spam_combined_plot <- (spam_hint | spam_eval) +
   plot_layout(widths = c(0.33, 1), guides = "collect") &
   theme(
-    legend.position="right"
+    legend.position = "right"
   )
 
 
 ### FINAL PROGRESS PLOT
-spam_prog_plot <- spam_combined_plot + 
+spam_prog_plot <- spam_combined_plot +
   plot_annotation(
     title = "Distribution of Spammed Hints and Evaluations Across Progress",
     subtitle = "",
     theme = theme(plot.title = element_text(hjust = 0,
                                             vjust = -2,
-                                            face = "bold", 
+                                            face = "bold",
                                             color = "#383838")
-                  )
+    )
   )
 
 spam_prog_plot
-# Possible conclusion: 
-# Spamming patterns might suggest initial lack of direction and end-of-task disengagement.
+# Possible conclusion:
+# Spamming patterns might suggest initial 
+# lack of direction and end-of-task disengagement.
 ```
 
 ### The plots comparing how much progress is made after using a hint or evaluation
 
-```{R}
+```{r, eval=FALSE}
 # ------------------- Code for the Data Needed for the Plot -------------------
 first_plot_data <- full_data %>%
   arrange(desc(row_number())) %>%
@@ -713,12 +737,16 @@ first_plot_data <- first_plot_data %>%
       breaks = seq(0, 1, by = bin_width),
       include.lowest = TRUE,
       right = FALSE,
-      labels = paste0(seq(0, 0.95, by = bin_width) * 100, "%–", seq(bin_width, 1, by = bin_width) * 100, "%")
+      labels = paste0(seq(0, 0.95, by = bin_width) * 100,
+                      "%–",
+                      seq(bin_width, 1, by = bin_width) * 100, "%")
     )
   ) %>%
   group_by(event, progress_bin) %>%
   summarise(count = n(), .groups = "drop") %>%
-  complete(event = c("HINT", "EVALUATE"), progress_bin = levels(progress_bin), fill = list(count = 0)) %>%
+  complete(event = c("HINT", "EVALUATE"),
+           progress_bin = levels(progress_bin),
+           fill = list(count = 0)) %>%
   group_by(event) %>%
   mutate(percentage = count / sum(count) * 100)
 
@@ -733,12 +761,13 @@ p_hint <- ggplot(
   fill_scale +
   labs(x = "Progress (%)", y = "Percentage of Events") +
   scale_x_discrete(
-    labels = c("0–10", "10–20", "20–30", "30–40", "40–50", 
+    labels = c("0–10", "10–20", "20–30", "30–40", "40–50",
                "50–60", "60–70", "70–80", "80–90", "90–100")
   ) +
   plot2_theme +
   base_theme +
-  scale_y_continuous(limits = c(0, 60), labels = scales::label_percent(scale = 1)) +
+  scale_y_continuous(limits = c(0, 60),
+                     labels = scales::label_percent(scale = 1)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 9),
         axis.title.x = element_text(hjust = 0))
 
@@ -751,37 +780,36 @@ p_eval <- ggplot(
   fill_scale +
   labs(x = NULL, y = NULL) +
   scale_x_discrete(
-    labels = c("0–10", "10–20", "20–30", "30–40", "40–50", 
+    labels = c("0–10", "10–20", "20–30", "30–40", "40–50",
                "50–60", "60–70", "70–80", "80–90", "90–100")
   ) +
   plot2_theme +
   base_theme +
   scale_y_continuous(limits = c(0, 60)) +
-  theme(axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
-        axis.line.y  = element_blank(),
-        axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 9),
+  theme(axis.text.y = element_blank()
+    axis.ticks.y = element_blank(),
+    axis.line.y  = element_blank(),
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 9),
   )
 
 
 # Combine side by side and collect the single legend
-combined_plot <- (p_hint | p_eval) + 
+combined_plot <- (p_hint | p_eval) +
   plot_layout(widths = c(1, 1), guides = "collect") &
   theme(
-    legend.position="right"
+    legend.position = "right"
   )
 
 ### FINAL PROGRESS PLOT
 
-prog_plot <- combined_plot + 
+prog_plot <- combined_plot +
   plot_annotation(
     title = "Distribution of All Hints and Evaluations Across Progress",
     subtitle = "",
     theme = theme(plot.title = element_text(hjust = 0,
                                             vjust = -2,
-                                            face = "bold", 
+                                            face = "bold",
                                             color = "#383838")
-                  # plot.subtitle = element_text(hjust = 0, size = 9)
     )
   )
 
@@ -789,6 +817,9 @@ prog_plot
 ```
 
 
+```{R}
+lint(rstudioapi::getSourceEditorContext()$path)
+```
 
 
 
