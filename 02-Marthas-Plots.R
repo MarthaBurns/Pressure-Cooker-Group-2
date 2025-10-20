@@ -166,6 +166,9 @@ ggplot(plot_data_with_both, aes(x = progress_bin, y = percentage, fill = event))
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 
+##############################################################################
+
+
 
 
 
