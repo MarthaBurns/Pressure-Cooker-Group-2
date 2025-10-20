@@ -119,7 +119,7 @@ data_raw$file <- sub("\\.json$", "", data_raw$file)
 # Create full data table
 full_data <- left_join(all_events_filled, data_raw, by = "file")
 
-# The files and sessions didn't have nice names, 
+# The files and sessions didn't have nice names,
 # so we created file_ID and session_ID
 full_data <- full_data %>%
   mutate(file_id = paste0(dense_rank(file)))
@@ -174,7 +174,7 @@ full_data <- full_data %>%
   ) %>%
   ungroup()
 
-# include rows where event 1 and event 2 are both evaluate, 
+# include rows where event 1 and event 2 are both evaluate,
 # and evaluate 2 is incorrect
 consecutive_evals <- full_data %>%
   arrange(session_id, timestamp) %>%
@@ -199,7 +199,7 @@ rm(all_events, interaction_row, items_df, out, results, tmp, i)
 ## Exploring the data 
 
 ```{r, eval=FALSE}
-# check number of times where hints or eval were spammed, 
+# check number of times where hints or eval were spammed,
 # as well as total number of cases with consecutive hints or evals
 full_data %>% filter(spam_hint == c(0, 1))
 full_data %>% filter(spam_hint == 1)
@@ -213,28 +213,29 @@ full_data %>% filter(spam_eval == 1)
 # - this is also given the second eval was wrong
 13424 / 67114
 
-# comparing whether people who spam hints 
+# comparing whether people who spam hints
 # get the right answer in the end (correct vs incorrect)
-# code might be incorrect, and does not count individual sessions, 
+# code might be incorrect, and does not count individual sessions,
 # rather each event
 
 # out of all sessions, we check how many 
 # spammed evaluate and got it wrong in the end
-full_data %>% 
-  filter(spam_eval == 1 & correct_answer == 0) %>% 
+full_data %>%
+  filter(spam_eval == 1 & correct_answer == 0) %>%
   distinct(file, .keep_all = TRUE)
 
-# comparing whether people who spam evaluate 
+# comparing whether people who spam evaluate
 # get the right answer in the end
-full_data %>% 
-  filter(event == "EVALUATE") %>% 
-  group_by(spam_eval) %>% 
-  summarise(correct = mean(correct_answer == 1), incorrect = mean(correct_answer == 0))
-# doesn't make a difference 
+full_data %>%
+  filter(event == "EVALUATE") %>%
+  group_by(spam_eval) %>%
+  summarise(correct = mean(correct_answer == 1),
+            incorrect = mean(correct_answer == 0))
+# doesn't make a difference
 # in whether they get the answer correct
 
 
-# initial response is incorrect or there is no 
+# initial response is incorrect or there is no
 # response before pressing hint,
 # do they use hint afterwards or not?
 session_behaviours <- full_data %>%
@@ -245,21 +246,25 @@ session_behaviours <- full_data %>%
   ) %>%
   mutate(
     # Condition 1: First two events are START then HINT
-    start_then_hint = map_lgl(events, ~ length(.) >= 2 && .[[1]] == "START" && .[[2]] == "HINT"),
+    start_then_hint = map_lgl(events, ~ length(.) >= 2 &&
+                                .[[1]] == "START" &&
+                                .[[2]] == "HINT"),
     # Condition 2: First EVALUATE is incorrect, followed by any HINT
     hint_after_wrong = map2_lgl(events, progresses, function(ev, prog) {
       eval_indices <- which(ev == "EVALUATE")
       hint_indices <- which(ev == "HINT")
       if (length(eval_indices) == 0 || length(hint_indices) == 0) return(FALSE)
       first_eval <- eval_indices[1]
-      first_eval_correct <- !is.na(prog[[first_eval]]) && prog[[first_eval]] == 1
-      return(!first_eval_correct && any(hint_indices > first_eval))
+      first_eval_correct <- !is.na(prog[[first_eval]]) &&
+        prog[[first_eval]] == 1
     }),
     # Combined flag
     used_hint_after_start_or_wrong = start_then_hint | hint_after_wrong
   )
 
-full_data <- left_join(full_data, session_behaviours %>% select(session_id, used_hint_after_start_or_wrong),
+full_data <- left_join(full_data,
+                       session_behaviours %>%
+                         select(session_id, used_hint_after_start_or_wrong),
                        by = "session_id")
 
 #proportion of people who used a hint after start or wrong answer
@@ -272,24 +277,30 @@ full_data %>%
 #code might not be fully correct, check for logic
 data_eval <- full_data %>%
   filter(event == "EVALUATE") %>%
-  arrange(session_id, timestamp) %>% 
+  arrange(session_id, timestamp) %>%
   group_by(session_id) %>%
   mutate(
     progress1 = progress,
     progress2 = lead(progress),
     improved = case_when(
-      !is.na(progress1) & !is.na(progress2) & progress2 > progress1 ~ "Improved",
-      !is.na(progress1) & !is.na(progress2) & progress2 <= progress1 ~ "No improvement",
+      !is.na(progress1) & 
+        !is.na(progress2) & 
+        progress2 > progress1 ~ "Improved",
+      !is.na(progress1) & 
+        !is.na(progress2) & 
+        progress2 <= progress1 ~ "No improvement",
       TRUE ~ NA_character_
     )
   ) %>%
   ungroup()
 
-#remove NAs in improved column, and then do calculations
-#proportion of people who improved vs didnt improve after pressing "evaluate" once
+# remove NAs in improved column, and then do calculations
+# proportion of people who improved vs 
+# didnt improve after pressing "evaluate" once
 data_eval %>%
   filter(!is.na(improved)) %>%
-  summarise(Improved = mean(improved == "Improved"), No_improvement = mean(improved == "No improvement"))
+  summarise(Improved = mean(improved == "Improved"),
+            No_improvement = mean(improved == "No improvement"))
 ```
 
 ## Calculating the data we used in our tables
@@ -299,11 +310,14 @@ data_eval %>%
 
 # 1. Sessions where a hint was used
 hint_spam_summary <- full_data %>%
-  filter(event == "HINT") %>%  # only consider sessions with at least one HINT
+  # only consider sessions with at least one HINT
+  filter(event == "HINT") %>%
   group_by(session_id) %>%
-  summarise(spammed_hint = any(spam_hint == 1, na.rm = TRUE))  # check if any spam occurred in session
+  # check if any spam occurred in session
+  summarise(spammed_hint = any(spam_hint == 1, na.rm = TRUE))
 
-# Proportion of sessions where hints were spammed (among sessions where hint used)
+# Proportion of sessions where hints were spammed
+# (among sessions where hint used)
 hint_spam_summary %>%
   summarise(
     prop_spammed = mean(spammed_hint),
@@ -318,12 +332,12 @@ eval_spam_summary <- full_data %>%
   mutate(
     time_diff = as.numeric(timestamp - lag(timestamp), units = "secs"),
     progress_diff = progress - lag(progress),
-    is_spam_eval = time_diff <= 3 & progress_diff <= 0  # define spam as quick repeat without improvement
+    # define spam as quick repeat without improvement
+    is_spam_eval = time_diff <= 3 & progress_diff <= 0  
   ) %>%
-  summarise(
-    num_evals = n(),
-    spammed_eval = any(is_spam_eval, na.rm = TRUE),
-    .groups = "drop") %>%
+  summarise(num_evals = n(),
+            spammed_eval = any(is_spam_eval, na.rm = TRUE),
+            .groups = "drop") %>%
   filter(num_evals >= 2) # exclude sessions with only 1 evaluate
 
 # 3. Get sessions that did not get full marks on first EVALUATE (progress < 1)
@@ -332,7 +346,7 @@ sessions_wrong_first_eval <- full_data %>%
   arrange(session_id, timestamp) %>%
   group_by(session_id) %>%
   summarise(first_progress = first(progress)) %>%
-  filter(first_progress < 1) %>% 
+  filter(first_progress < 1) %>%
   pull(session_id)
 
 # 4. Get list of session_ids for spammed hint and evaluate
@@ -349,11 +363,13 @@ spam_eval_sessions <- full_data %>%
     progress_diff = progress - lag(progress),
     is_spam_eval = time_diff <= 3 & progress_diff <= 0
   ) %>%
-  summarise(spammed_eval = any(is_spam_eval, na.rm = TRUE), .groups = "drop") %>%
+  summarise(spammed_eval =
+              any(is_spam_eval, na.rm = TRUE), .groups = "drop") %>%
   filter(spammed_eval) %>%
   pull(session_id)
 
-# Proportion of sessions where evaluate was spammed (among sessions where the first evaluate wasn't correct)
+# Proportion of sessions where evaluate was spammed
+# (among sessions where the first evaluate wasn't correct)
 tibble(
   total_sessions = length(sessions_wrong_first_eval),
   spammy_sessions = length(spam_eval_sessions),
@@ -625,8 +641,8 @@ second_plot_data <- second_plot_data %>%
       breaks = seq(0, 1, by = bin_width),
       include.lowest = TRUE,
       right = FALSE,
-      labels = paste0(seq(0, 0.95, by = bin_width) * 100, 
-                      "%–", 
+      labels = paste0(seq(0, 0.95, by = bin_width) * 100,
+                      "%–",
                       seq(bin_width, 1, by = bin_width) * 100, "%")
     )
   ) %>%
@@ -714,7 +730,7 @@ spam_prog_plot <- spam_combined_plot +
 
 spam_prog_plot
 # Possible conclusion:
-# Spamming patterns might suggest initial 
+# Spamming patterns might suggest initial
 # lack of direction and end-of-task disengagement.
 ```
 
@@ -810,8 +826,8 @@ prog_plot <- combined_plot +
                                             vjust = -2,
                                             face = "bold",
                                             color = "#383838")
-)
-)
+    )
+  )
 
 prog_plot
 ```
