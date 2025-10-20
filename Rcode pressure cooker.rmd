@@ -218,7 +218,7 @@ full_data %>% filter(spam_eval == 1)
 # code might be incorrect, and does not count individual sessions,
 # rather each event
 
-# out of all sessions, we check how many 
+# out of all sessions, we check how many
 # spammed evaluate and got it wrong in the end
 full_data %>%
   filter(spam_eval == 1 & correct_answer == 0) %>%
@@ -283,11 +283,11 @@ data_eval <- full_data %>%
     progress1 = progress,
     progress2 = lead(progress),
     improved = case_when(
-      !is.na(progress1) & 
-        !is.na(progress2) & 
+      !is.na(progress1) &
+        !is.na(progress2) &
         progress2 > progress1 ~ "Improved",
-      !is.na(progress1) & 
-        !is.na(progress2) & 
+      !is.na(progress1) &
+        !is.na(progress2) &
         progress2 <= progress1 ~ "No improvement",
       TRUE ~ NA_character_
     )
@@ -295,7 +295,7 @@ data_eval <- full_data %>%
   ungroup()
 
 # remove NAs in improved column, and then do calculations
-# proportion of people who improved vs 
+# proportion of people who improved vs
 # didnt improve after pressing "evaluate" once
 data_eval %>%
   filter(!is.na(improved)) %>%
@@ -333,7 +333,7 @@ eval_spam_summary <- full_data %>%
     time_diff = as.numeric(timestamp - lag(timestamp), units = "secs"),
     progress_diff = progress - lag(progress),
     # define spam as quick repeat without improvement
-    is_spam_eval = time_diff <= 3 & progress_diff <= 0  
+    is_spam_eval = time_diff <= 3 & progress_diff <= 0
   ) %>%
   summarise(num_evals = n(),
             spammed_eval = any(is_spam_eval, na.rm = TRUE),
